@@ -1,11 +1,10 @@
 import dotenv from "dotenv";
-import cyber from "./cyber";
 dotenv.config();
 
 class AppConfig {
   public port = process.env.PORT;
   public host = process.env.MYSQL_HOST;
-  public user = cyber.decrypt(process.env.MYSQL_USER);
+  public user = process.env.MYSQL_USER;
   public password = process.env.MYSQL_PASSWORD;
   public database = process.env.MYSQL_DATABASE;
 }
