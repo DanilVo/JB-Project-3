@@ -11,6 +11,7 @@ import catchAll from './4-middleware/catch-all';
 import routeNotFound from './4-middleware/route-not-found';
 import sanitize from './4-middleware/sanitize';
 import vocationController from './6-controllers/vocation-controller';
+import authController from './6-controllers/auth-controller';
 
 const server = express();
 
@@ -34,7 +35,7 @@ server.use(helmet());
 server.use(expressFileUpload());
 server.use(activities);
 server.use(sanitize);
-server.use('/api', vocationController); // Add here routes for controller
+server.use('/api', vocationController,authController); // Add here routes for controller
 server.use('*', routeNotFound);
 server.use(catchAll);
 
