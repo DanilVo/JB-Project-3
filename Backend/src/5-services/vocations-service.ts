@@ -9,12 +9,10 @@ class VocationService {
   private async getExistingImageName(id: number): Promise<string> {
     const sql = `SELECT vocationImageUrl FROM vocations
                 WHERE vocationId = ?`;
-    const employees = await dal.execute(sql, [id]);
-    const employee = employees[0];
-    console.log(employee.PhotoPath);
-
-    if (!employee) return '';
-    return employee.PhotoPath;
+    const vocations = await dal.execute(sql, [id]);
+    const vocation = vocations[0];
+    if (!vocation) return '';
+    return vocation.vocationImageUrl;
   }
 
   // All vocations

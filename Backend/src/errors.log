@@ -540,3 +540,70 @@ Stack: TypeError: Cannot read properties of undefined (reading 'size')
     at Generator.next (<anonymous>)
     at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:8:71
 ----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:04:41 GMT
+Cannot read properties of undefined (reading 'size')
+Stack: TypeError: Cannot read properties of undefined (reading 'size')
+    at VocationModel.validation (C:\Users\PC\Desktop\JB Project 3\Backend\src\3-models\vocation-model.ts:42:20)
+    at VocationService.<anonymous> (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:58:14)
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:4:12)
+    at VocationService.updateVocation (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:72:16)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:61:51
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:8:71
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:05:04 GMT
+Cannot read properties of undefined (reading 'size')
+Stack: TypeError: Cannot read properties of undefined (reading 'size')
+    at VocationModel.validation (C:\Users\PC\Desktop\JB Project 3\Backend\src\3-models\vocation-model.ts:42:20)
+    at VocationService.<anonymous> (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:36:14)
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:4:12)
+    at VocationService.addVocation (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:50:16)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:43:51
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:8:71
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:06:21 GMT
+Cannot read properties of undefined (reading 'size')
+Stack: TypeError: Cannot read properties of undefined (reading 'size')
+    at VocationModel.validation (C:\Users\PC\Desktop\JB Project 3\Backend\src\3-models\vocation-model.ts:42:20)
+    at VocationService.<anonymous> (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:58:14)
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:4:12)
+    at VocationService.updateVocation (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:72:16)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:59:51
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vocation-controller.ts:8:71
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:06:35 GMT
+Cannot read properties of undefined (reading 'PhotoPath')
+Stack: TypeError: Cannot read properties of undefined (reading 'PhotoPath')
+    at VocationService.<anonymous> (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:14:26)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:06:45 GMT
+Cannot read properties of undefined (reading 'PhotoPath')
+Stack: TypeError: Cannot read properties of undefined (reading 'PhotoPath')
+    at VocationService.<anonymous> (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:14:26)
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\vocations-service.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:08:39 GMT
+id undefined not exist
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:08:46 GMT
+id undefined not exist
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 16:10:02 GMT
+"vocationId" is not allowed
+----------------------------------------------------------------------------------------------------

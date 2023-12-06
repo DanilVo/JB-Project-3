@@ -36,7 +36,7 @@ router.get(
 router.post(
   '/vocations',
   async (request: Request, response: Response, next: NextFunction) => {
-    try {      
+    try {
       request.body.image = request.files?.image;
       const vocation = new VocationModel(request.body);
       const addedVocation = await vocationService.addVocation(vocation);
@@ -51,12 +51,10 @@ router.post(
 router.put(
   '/vocations/:id([0-9]+)',
   async (request: Request, response: Response, next: NextFunction) => {
-    
-    try {      
-      request.body.id = +request.params.id;
-      request.body.image = request.files?.image;      
+    try {
+      request.body.vocationId = +request.params.id;
+      request.body.image = request.files?.image;
       const vocation = new VocationModel(request.body);
-      console.log(vocation);
       const addedVocation = await vocationService.updateVocation(vocation);
       response.json(addedVocation);
     } catch (err: any) {

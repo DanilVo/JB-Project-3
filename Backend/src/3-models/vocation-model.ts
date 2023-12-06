@@ -24,7 +24,7 @@ export default class VocationModel {
   }
 
   private static validationSchema = Joi.object({
-    vocationId: Joi.number().forbidden(),
+    vocationId: Joi.number().optional(),
     destination: Joi.string().required().min(10).max(25),
     description: Joi.string().required().min(10).max(75),
     vocationStartDate: Joi.date().required(),
