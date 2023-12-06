@@ -52,9 +52,7 @@ class VocationService {
 
   // Update vocation
   public async updateVocation(vocation: VocationModel): Promise<VocationModel> {
-    console.log('here');
     vocation.validation();
-
     const existingImageName = await this.getExistingImageName(
       vocation.vocationId
     );
