@@ -10,3 +10,465 @@ Method: GET
 Route: /api/vocations
 Body: {}
 ----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 09:32:32 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 09:33:39 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 09:33:54 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 09:34:10 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 10:21:50 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 10:23:10 GMT
+
+Method: GET
+Route: /api/vocations/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 10:57:06 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 10:57:08 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 10:57:12 GMT
+
+Method: GET
+Route: /api/vocations/2
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:06:03 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:06:58 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:07:00 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:08:42 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:09:10 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:09:57 GMT
+
+Method: POST
+Route: /api/employees
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:10:08 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:10:16 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:12:29 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:12:56 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test","description":"test","vocationStartDate":"2023-07-23"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:13:36 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:14:44 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:14:57 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:15:24 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:16:07 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:16:18 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:17:37 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:18:04 GMT
+
+Method: POST
+Route: /api/vocationszdfvdf
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:18:08 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:19:48 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test","description":"test","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":1000}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:19:58 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":1000}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:20:20 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:20:31 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:27:27 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:28:00 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:28:21 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:33:16 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:34:14 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:34:26 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:35:15 GMT
+
+Method: DELETE
+Route: /api/vocations/16
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:35:20 GMT
+
+Method: DELETE
+Route: /api/vocations/17
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:36:01 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,tes","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:36:10 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-22","price":"1000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:36:21 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"100000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:50:13 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"100000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:50:19 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:53:22 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:54:17 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:56:24 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 14:56:45 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:01:00 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:02:01 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:02:35 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:02:56 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:06:28 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:11:17 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:12:19 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:14:18 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:14:27 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:15:41 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:16:52 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:17:27 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:17:41 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:18:31 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:19:22 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:19:57 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:20:22 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:21:42 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:31:17 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:31:38 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:31:39 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:32:26 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:32:38 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:33:20 GMT
+
+Method: PUT
+Route: /api/vocations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:36:17 GMT
+
+Method: PUT
+Route: /api/vocations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:36:23 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:37:18 GMT
+
+Method: PUT
+Route: /api/vocations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Wed, 06 Dec 2023 15:56:03 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
