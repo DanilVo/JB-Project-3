@@ -20,7 +20,7 @@ server.use(
     windowMs: 1000,
     limit: 2,
   })
-);
+);  
 
 if (appConfig.isDevelopment) {
   server.use(cors({ origin: 'http://localhost:4000' }));

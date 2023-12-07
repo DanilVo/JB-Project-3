@@ -556,3 +556,39 @@ Method: PUT
 Route: /api/vocations/20
 Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
+Thu, 07 Dec 2023 13:28:13 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {}
+----------------------------------------------------------------------------------------------------
+Thu, 07 Dec 2023 13:28:59 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Thu, 07 Dec 2023 13:29:19 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Thu, 07 Dec 2023 13:29:26 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Thu, 07 Dec 2023 13:29:36 GMT
+
+Method: GET
+Route: /api/vocations/2
+Body: {}
+----------------------------------------------------------------------------------------------------
+Thu, 07 Dec 2023 13:29:45 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------

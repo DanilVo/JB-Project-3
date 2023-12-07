@@ -1,13 +1,54 @@
+import { OkPacket } from "mysql";
+import cyber from "../2-utils/cyber";
+import dal from "../2-utils/dal";
+import CredentialModel from "../3-models/credentials-model";
+import { UnauthorizedError, ValidationError } from "../3-models/error-models";
 import UserModel from "../3-models/user-model";
+import RoleModel from "../3-models/role-model";
 
 class AuthService {
-    
-    public async register(user: UserModel) {
-        user.validation()
+  public async register(user: UserModel): Promise<string> {
+    user.validation();
+    if (this.isEmailTaken(user.email))
+      throw new ValidationError(
+        `User with Email ${user.email} already exists.`
+      );
+    user.password = cyber.hashPassword(user.password);
+    user.role = RoleModel.user;
+    const sql = "INSERT INTO users VALUES(DEFAULT,?,?,?,?,?)";
+    const info: OkPacket = await dal.execute(sql, [
+      user.firstName,
+      user.lastName,
+      user.email,
+      user.password,
+      user.role,
+    ]);
+    user.userId = info.insertId;
+    const token = cyber.getNewToken(user);
+    return token;
+  }
 
-        
-    }
+  public async login(credentials: CredentialModel): Promise<string> {
+    credentials.validation();
+    credentials.userPassword = cyber.hashPassword(credentials.userPassword);
+    const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+    const users = await dal.execute(
+      sql[(credentials.userEmail, credentials.userPassword)]
+    );
+    if (users.length === 0)
+      throw new UnauthorizedError("Incorrect Email or Password");
+    const user = users[0];
+    const token = cyber.getNewToken(user);
+    return token;
+  }
 
+  public async isEmailTaken(username: string): Promise<boolean> {
+    const sql = `SELECT COUNT(*) FROM users WHERE username = '${username}'`;
+
+    const count = await dal.execute(sql)[0];
+
+    return count > 0;
+  }
 }
 
 const authService = new AuthService();

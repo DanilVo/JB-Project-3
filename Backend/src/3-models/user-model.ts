@@ -1,6 +1,6 @@
-import Joi from 'joi';
-import RoleModel from './role-model';
-import { ValidationError } from './error-models';
+import Joi from "joi";
+import RoleModel from "./role-model";
+import { ValidationError } from "./error-models";
 
 export default class UserModel {
   public userId: number;
@@ -14,6 +14,7 @@ export default class UserModel {
     this.userId = user.userId;
     this.firstName = user.firstName;
     this.lastName = user.lastName;
+    this.email = user.email;
     this.password = user.password;
     this.role = user.role;
   }
@@ -24,10 +25,10 @@ export default class UserModel {
     lastName: Joi.string().required().min(2).max(50),
     email: Joi.string().email().required().min(2).max(50),
     password: Joi.string()
-      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/)
       .required()
-      .min(2)
-      .max(50),
+      .min(6)
+      .max(20)
+      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/),
     roleId: Joi.number().optional().min(1).max(2).positive(),
   });
 
