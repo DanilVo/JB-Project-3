@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import vocationService from '../5-services/vocations-service';
 import StatusCode from '../3-models/status-codes';
 import VocationModel from '../3-models/vocation-model';
+import verifyToken from '../4-middleware/verify-token';
 
 const router = express.Router();
 
@@ -34,7 +35,7 @@ router.get(
 
 // Add vocation
 router.post(
-  '/vocations',
+  '/vocations',verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       request.body.image = request.files?.image;

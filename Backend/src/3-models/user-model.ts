@@ -8,7 +8,7 @@ export default class UserModel {
   public lastName: string;
   public email: string;
   public password: string;
-  public role: RoleModel;
+  public roleId: RoleModel;
 
   public constructor(user: UserModel) {
     this.userId = user.userId;
@@ -16,18 +16,16 @@ export default class UserModel {
     this.lastName = user.lastName;
     this.email = user.email;
     this.password = user.password;
-    this.role = user.role;
+    this.roleId = user.roleId;
   }
 
   private static validationSchema = Joi.object({
-    id: Joi.number().optional().integer().positive(),
+    userId: Joi.number().optional().integer().positive(),
     firstName: Joi.string().required().min(2).max(50),
     lastName: Joi.string().required().min(2).max(50),
     email: Joi.string().email().required().min(2).max(50),
     password: Joi.string()
       .required()
-      .min(6)
-      .max(20)
       .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/),
     roleId: Joi.number().optional().min(1).max(2).positive(),
   });

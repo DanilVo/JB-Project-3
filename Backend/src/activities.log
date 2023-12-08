@@ -592,3 +592,435 @@ Method: POST
 Route: /api/vocations
 Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:00:32 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:01:56 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {"firstname":"Danil","lastname":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:02:03 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {"firstName":"Danil","lastname":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:02:34 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:03:37 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:04:46 GMT
+
+Method: POST
+Route: /api/auth/register?firstName=Danil&lastName=Volobuyev&email=dani736@gmail.com&password=Test1234
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:05:54 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:06:04 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test123@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:06:36 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:06:43 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:06:58 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test123@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:09:07 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:09:15 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:09:31 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:10:31 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:10:50 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:10:53 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:11:01 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:11:35 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:12:21 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:12:41 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:13:20 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:14:08 GMT
+
+Method: POST
+Route: /api/vocations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000","image":""}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:14:33 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:16:19 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:16:25 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:16:52 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:17:21 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:17:38 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:18:30 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:19:29 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:19:49 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:20:35 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:21:12 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:22:16 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:23:06 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:24:40 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:25:14 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:25:27 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:25:36 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:26:01 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:26:53 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:27:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:27:48 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:28:41 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:29:37 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:30:07 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:31:08 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:32:08 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 12:32:12 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:41:18 GMT
+
+Method: GET
+Route: /api/vocations/2
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:41:22 GMT
+
+Method: GET
+Route: /api/vocations/2
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:43:42 GMT
+
+Method: GET
+Route: /api/vocations/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:44:36 GMT
+
+Method: GET
+Route: /api/vocations/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:44:40 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:47:33 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:47:45 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:48:03 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:48:19 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:48:43 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:49:06 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:49:52 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:49:56 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:51:07 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:51:41 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:52:09 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:53:55 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:54:29 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:57:06 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:57:31 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:57:33 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 08 Dec 2023 13:58:34 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------

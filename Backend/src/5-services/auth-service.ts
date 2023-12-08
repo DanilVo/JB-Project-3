@@ -9,19 +9,20 @@ import RoleModel from "../3-models/role-model";
 class AuthService {
   public async register(user: UserModel): Promise<string> {
     user.validation();
-    if (this.isEmailTaken(user.email))
+
+    if (!this.isEmailTaken(user.email))
       throw new ValidationError(
         `User with Email ${user.email} already exists.`
       );
     user.password = cyber.hashPassword(user.password);
-    user.role = RoleModel.user;
+    user.roleId = RoleModel.user;
     const sql = "INSERT INTO users VALUES(DEFAULT,?,?,?,?,?)";
     const info: OkPacket = await dal.execute(sql, [
       user.firstName,
       user.lastName,
       user.email,
       user.password,
-      user.role,
+      user.roleId,
     ]);
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
@@ -29,11 +30,12 @@ class AuthService {
   }
 
   public async login(credentials: CredentialModel): Promise<string> {
+    
     credentials.validation();
-    credentials.userPassword = cyber.hashPassword(credentials.userPassword);
+    credentials.password = cyber.hashPassword(credentials.password);
     const sql = "SELECT * FROM users WHERE email = ? AND password = ?";
     const users = await dal.execute(
-      sql[(credentials.userEmail, credentials.userPassword)]
+      sql,[credentials.email, credentials.password]
     );
     if (users.length === 0)
       throw new UnauthorizedError("Incorrect Email or Password");
@@ -42,8 +44,8 @@ class AuthService {
     return token;
   }
 
-  public async isEmailTaken(username: string): Promise<boolean> {
-    const sql = `SELECT COUNT(*) FROM users WHERE username = '${username}'`;
+  public async isEmailTaken(email: string): Promise<boolean> {
+    const sql = `SELECT COUNT(*) FROM users WHERE email = '${email}'`;
 
     const count = await dal.execute(sql)[0];
 
