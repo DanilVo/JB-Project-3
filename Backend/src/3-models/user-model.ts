@@ -26,7 +26,7 @@ export default class UserModel {
     email: Joi.string().email().required().min(2).max(50),
     password: Joi.string()
       .required()
-      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/),
+      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/),
     roleId: Joi.number().optional().min(1).max(2).positive(),
   });
 

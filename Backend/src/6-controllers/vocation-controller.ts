@@ -71,8 +71,8 @@ router.delete(
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const id = +request.params.id;
-      const vocations = await vocationService.deleteVocation(id);
-      response.json(vocations);
+      const vocation = await vocationService.deleteVocation(id);
+      response.status(StatusCode.OK);
     } catch (err: any) {
       next(err);
     }

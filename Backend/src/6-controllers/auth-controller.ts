@@ -24,8 +24,6 @@ router.post(
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const credentials = new CredentialModel(request.body);
-      // console.log(credentials);
-      
       const token = await authService.login(credentials);
       response.json(token);
     } catch (err: any) {

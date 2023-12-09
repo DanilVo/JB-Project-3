@@ -1,17 +1,18 @@
-import UserModel from '../3-models/user-model';
-import { Request } from 'express';
-import jwt, { JsonWebTokenError } from 'jsonwebtoken';
 import crypto from 'crypto';
+import jwt from 'jsonwebtoken';
 import { UnauthorizedError } from '../3-models/error-models';
 import RoleModel from '../3-models/role-model';
+import UserModel from '../3-models/user-model';
 
 class Cyber {
-  private secretKey = 'DanilVolobuyevJ`honBryceProject3';
+  private secretKey = process.env.JWT_SECRET || 'defaultSecretKey';
+  private salt = process.env.SALT_SECRET || 'defaultSaltKey';
+  private expiresIn = '1d';
 
   public getNewToken(user: UserModel): string {
     delete user.password;
     const container = { user };
-    const options = { expiresIn: '1d' };
+    const options = { expiresIn: this.expiresIn };
     const token = jwt.sign(container, this.secretKey, options);
     return token;
   }
@@ -31,12 +32,12 @@ class Cyber {
     const container = jwt.verify(token, this.secretKey) as { user: UserModel };
     const user = container.user;
     if (user.roleId !== RoleModel.admin)
-      throw new UnauthorizedError('Access restricted');
+      throw new UnauthorizedError('Access denied');
   }
 
   public hashPassword(plainText: string): string {
     if (!plainText) return null;
-    const salt = 's3cr3tS@ltForH@sh1ng';
+    const salt = this.salt;
     const hashedPassword = crypto
       .createHmac('sha512', salt)
       .update(plainText)

@@ -39,6 +39,6 @@ export default class VocationModel {
   public validation(): void {
     const result = VocationModel.validationSchema.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
-    if (this.image.size > 100000) throw new ValidationError('Image to large');
+    if (this.image && this.image.size > 100000) throw new ValidationError('Image to large');
   }
 }
