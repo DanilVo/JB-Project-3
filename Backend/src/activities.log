@@ -1,97 +1,97 @@
 Tue, 05 Dec 2023 13:54:21 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Tue, 05 Dec 2023 13:56:26 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 09:32:32 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 09:33:39 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 09:33:54 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 09:34:10 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 10:21:50 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 10:23:10 GMT
 
 Method: GET
-Route: /api/vocations/1
+Route: /api/vacations/1
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 10:57:06 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 10:57:08 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 10:57:12 GMT
 
 Method: GET
-Route: /api/vocations/2
+Route: /api/vacations/2
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:06:03 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:06:58 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:07:00 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:08:42 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:09:10 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:09:57 GMT
@@ -103,458 +103,458 @@ Body: {}
 Wed, 06 Dec 2023 14:10:08 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:10:16 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:12:29 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:12:56 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test","description":"test","vocationStartDate":"2023-07-23"}
+Route: /api/vacations
+Body: {"destination":"test","description":"test","vacationStartDate":"2023-07-23"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:13:36 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:14:44 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:14:57 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:15:24 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:16:07 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:16:18 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:17:37 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:18:04 GMT
 
 Method: POST
-Route: /api/vocationszdfvdf
+Route: /api/vacationszdfvdf
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:18:08 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:19:48 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test","description":"test","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":1000}
+Route: /api/vacations
+Body: {"destination":"test","description":"test","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":1000}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:19:58 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":1000}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":1000}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:20:20 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:20:31 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:27:27 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:28:00 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:28:21 GMT
 
 Method: POST
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:33:16 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"1000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:34:14 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"1000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:34:26 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"1000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:35:15 GMT
 
 Method: DELETE
-Route: /api/vocations/16
+Route: /api/vacations/16
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:35:20 GMT
 
 Method: DELETE
-Route: /api/vocations/17
+Route: /api/vacations/17
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:36:01 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,tes","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"1000"}
+Route: /api/vacations
+Body: {"destination":"test,tes","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"1000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:36:10 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-22","price":"1000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-22","price":"1000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:36:21 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"100000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"100000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:50:13 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"100000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"100000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:50:19 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:53:22 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:54:17 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:56:24 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 14:56:45 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:01:00 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:02:01 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:02:35 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:02:56 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:06:28 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:11:17 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:12:19 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:14:18 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:14:27 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:15:41 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:16:52 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:17:27 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:17:41 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:18:31 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:19:22 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:19:57 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:20:22 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:21:42 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:31:17 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:31:38 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:31:39 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:32:26 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:32:38 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:33:20 GMT
 
 Method: PUT
-Route: /api/vocations/18
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/18
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:36:17 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:36:23 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:37:18 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 15:56:03 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:04:41 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:05:04 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:05:19 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:06:11 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:06:14 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:06:21 GMT
 
 Method: PUT
-Route: /api/vocations/22
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/22
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:06:35 GMT
 
 Method: PUT
-Route: /api/vocations/22
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/22
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:06:45 GMT
 
 Method: PUT
-Route: /api/vocations/22
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/22
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:08:39 GMT
 
 Method: PUT
-Route: /api/vocations/22
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/22
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:08:46 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:08:53 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:10:02 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:11:01 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Wed, 06 Dec 2023 16:11:31 GMT
 
 Method: PUT
-Route: /api/vocations/20
-Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
 ----------------------------------------------------------------------------------------------------
 Thu, 07 Dec 2023 13:28:13 GMT
 
@@ -565,32 +565,32 @@ Body: {}
 Thu, 07 Dec 2023 13:28:59 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Thu, 07 Dec 2023 13:29:19 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Thu, 07 Dec 2023 13:29:26 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Thu, 07 Dec 2023 13:29:36 GMT
 
 Method: GET
-Route: /api/vocations/2
+Route: /api/vacations/2
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Thu, 07 Dec 2023 13:29:45 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000"}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 12:00:32 GMT
 
@@ -727,8 +727,8 @@ Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test@gmail.com","pass
 Fri, 08 Dec 2023 12:14:08 GMT
 
 Method: POST
-Route: /api/vocations
-Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000","image":""}
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000","image":""}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 12:14:33 GMT
 
@@ -895,67 +895,67 @@ Body: {"email":"test@gmail.com","password":"Danil123"}
 Fri, 08 Dec 2023 13:41:18 GMT
 
 Method: GET
-Route: /api/vocations/2
+Route: /api/vacations/2
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:41:22 GMT
 
 Method: GET
-Route: /api/vocations/2
+Route: /api/vacations/2
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:43:42 GMT
 
 Method: GET
-Route: /api/vocations/1
+Route: /api/vacations/1
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:44:36 GMT
 
 Method: GET
-Route: /api/vocations/1
+Route: /api/vacations/1
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:44:40 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:47:33 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:47:45 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:48:03 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:48:19 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:48:43 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:49:06 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:49:52 GMT
@@ -973,55 +973,55 @@ Body: {"email":"test@gmail.com","password":"Danil123"}
 Fri, 08 Dec 2023 13:51:07 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:51:41 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:52:09 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:53:55 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:54:29 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:57:06 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:57:31 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:57:33 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Fri, 08 Dec 2023 13:58:34 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:08:36 GMT
@@ -1057,109 +1057,109 @@ Body: {"email":"test@gmail.com","password":"Danil123"}
 Sat, 09 Dec 2023 11:12:21 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:12:45 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:12:56 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:13:03 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:13:14 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:13:21 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:13:38 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:14:20 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:21:11 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:25:25 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:25:53 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:26:00 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:26:04 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:29:43 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:30:07 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:30:32 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:32:19 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 11:36:46 GMT
 
 Method: GET
-Route: /api/vocations
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------
 Sat, 09 Dec 2023 12:18:10 GMT
@@ -1395,4 +1395,214 @@ Sat, 09 Dec 2023 12:32:09 GMT
 Method: POST
 Route: /api/auth/register
 Body: {"firstName":"Danil","lastName":"Volobuyev","email":"test1234567@gmail.com","password":"Danil123"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 12:35:36 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"test@gmail.com","password":"Danil1234"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:33:34 GMT
+
+Method: GET
+Route: /api/vocations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:33:59 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:34:46 GMT
+
+Method: GET
+Route: /api/vacations/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:34:53 GMT
+
+Method: POST
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10000","image":""}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:35:15 GMT
+
+Method: POST
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:37:40 GMT
+
+Method: POST
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:37:48 GMT
+
+Method: PUT
+Route: /api/vocations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:37:53 GMT
+
+Method: PUT
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vocationStartDate":"2023-07-23","vocationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:38:10 GMT
+
+Method: PUT
+Route: /api/vacations/20
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:38:15 GMT
+
+Method: PUT
+Route: /api/vacations/16
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:38:21 GMT
+
+Method: DELETE
+Route: /api/vocations/17
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:38:24 GMT
+
+Method: DELETE
+Route: /api/vocations/16
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:38:29 GMT
+
+Method: DELETE
+Route: /api/vacations/16
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:39:01 GMT
+
+Method: GET
+Route: /api/vacations/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:39:05 GMT
+
+Method: GET
+Route: /api/vacations/16
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:39:09 GMT
+
+Method: GET
+Route: /api/vacations/15
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:39:36 GMT
+
+Method: POST
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:39:56 GMT
+
+Method: PUT
+Route: /api/vacations/17
+Body: {"destination":"test,test,111","description":"test,test,111","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:40:18 GMT
+
+Method: DELETE
+Route: /api/vacations/17
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:40:52 GMT
+
+Method: POST
+Route: /api/vacations
+Body: {"destination":"test,test,","description":"test,test,","vacationStartDate":"2023-07-23","vacationEndDate":"2023-07-24","price":"10000"}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:40:58 GMT
+
+Method: DELETE
+Route: /api/vacations/18
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:50:30 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:50:52 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:50:56 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:51:34 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:51:47 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:54:49 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:55:11 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:55:40 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:57:13 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:57:24 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:57:34 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:58:07 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Sat, 09 Dec 2023 14:58:33 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
 ----------------------------------------------------------------------------------------------------

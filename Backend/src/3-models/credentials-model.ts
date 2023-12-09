@@ -14,7 +14,7 @@ export default class CredentialModel {
     email: Joi.string().email().required().min(2).max(50),
     password: Joi.string()
       .required()
-      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/),
+      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/),
   });
 
   public validation(): void {
@@ -22,4 +22,3 @@ export default class CredentialModel {
     if (result?.error?.message) throw new ValidationError(result.error.message);
   }
 }
-

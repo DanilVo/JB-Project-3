@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2023 at 12:49 PM
+-- Generation Time: Dec 09, 2023 at 03:48 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vocation`
+-- Database: `vacation`
 --
-CREATE DATABASE IF NOT EXISTS `vocation` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `vocation`;
+CREATE DATABASE IF NOT EXISTS `vacation` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `vacation`;
 
 -- --------------------------------------------------------
 
@@ -64,31 +64,31 @@ CREATE TABLE `users` (
   `firstname` varchar(20) DEFAULT NULL,
   `lastname` varchar(20) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
-  `roleId` int(11) DEFAULT NULL
+  `password` varchar(200) DEFAULT NULL,
+  `role` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vocations`
+-- Table structure for table `vacations`
 --
 
-CREATE TABLE `vocations` (
-  `vocationId` int(11) NOT NULL,
+CREATE TABLE `vacations` (
+  `vacationId` int(11) NOT NULL,
   `destination` varchar(20) DEFAULT NULL,
   `description` varchar(250) DEFAULT NULL,
-  `vocationStartDate` date DEFAULT NULL,
-  `vocationEndDate` date DEFAULT NULL,
+  `vacationStartDate` date DEFAULT NULL,
+  `vacationEndDate` date DEFAULT NULL,
   `price` int(11) DEFAULT NULL,
-  `vocationImageUrl` varchar(255) DEFAULT NULL
+  `vacationImageUrl` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `vocations`
+-- Dumping data for table `vacations`
 --
 
-INSERT INTO `vocations` (`vocationId`, `destination`, `description`, `vocationStartDate`, `vocationEndDate`, `price`, `vocationImageUrl`) VALUES
+INSERT INTO `vacations` (`vacationId`, `destination`, `description`, `vacationStartDate`, `vacationEndDate`, `price`, `vacationImageUrl`) VALUES
 (1, 'Paris', 'Explore the romantic city of Paris', '2023-01-15', '2023-01-20', 1000, 'paris.jpg'),
 (2, 'New York', 'Experience the vibrant culture of New York City', '2023-02-10', '2023-02-18', 1200, 'new_york.jpg'),
 (3, 'Tokyo', 'Discover the unique blend of tradition and modernity in Tokyo', '2023-03-05', '2023-03-15', 1500, 'tokyo.jpg'),
@@ -103,13 +103,7 @@ INSERT INTO `vocations` (`vocationId`, `destination`, `description`, `vocationSt
 (12, 'Dubai', 'Explore the futuristic city of Dubai', '2023-12-01', '2023-12-10', 1600, 'dubai.jpg'),
 (13, 'Venice', 'Enjoy the romantic canals of Venice', '2024-01-08', '2024-01-15', 1100, 'venice.jpg'),
 (14, 'Cape Town', 'Discover the beauty of Cape Town', '2024-02-14', '2024-02-22', 1400, 'cape_town.jpg'),
-(15, 'Seoul', 'Experience the dynamic culture of Seoul', '2024-03-10', '2024-03-18', 1200, 'seoul.jpg'),
-(18, 'test,test,', 'test,test,', '2023-07-23', '2023-07-24', 10000, '468c22e5-5ad9-457f-871d-4f668637c026.jpeg'),
-(19, 'test,test,', 'test,test,', '2023-07-23', '2023-07-24', 10000, '8e11ec8b-0511-4d29-8fdd-cef42b7fadb6.jpeg'),
-(20, 'test,test,111', 'test,test,111', '2023-07-23', '2023-07-24', 10, 'f51804cf-ebe4-4e29-a2e8-f2fa9f491927.jpeg'),
-(21, 'test,test,', 'test,test,', '2023-07-23', '2023-07-24', 10000, '4caf835b-1ad8-42b6-85b4-295220d46e3e.jpeg'),
-(22, 'test,test,', 'test,test,', '2023-07-23', '2023-07-24', 10000, '73a171d4-4e0c-4e68-8a74-975ee6fa4fbe.jpeg'),
-(23, 'test,test,', 'test,test,', '2023-07-23', '2023-07-24', 10000, 'a06e559d-0e7e-4a69-8e68-d55de05ec8c9.jpeg');
+(15, 'Seoul', 'Experience the dynamic culture of Seoul', '2024-03-10', '2024-03-18', 1200, 'seoul.jpg');
 
 --
 -- Indexes for dumped tables
@@ -132,36 +126,29 @@ ALTER TABLE `roles`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`userId`),
-  ADD KEY `role` (`roleId`);
+  ADD PRIMARY KEY (`userId`);
 
 --
--- Indexes for table `vocations`
+-- Indexes for table `vacations`
 --
-ALTER TABLE `vocations`
-  ADD PRIMARY KEY (`vocationId`);
+ALTER TABLE `vacations`
+  ADD PRIMARY KEY (`vacationId`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `roles`
---
-ALTER TABLE `roles`
-  MODIFY `roleId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `vocations`
+-- AUTO_INCREMENT for table `vacations`
 --
-ALTER TABLE `vocations`
-  MODIFY `vocationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+ALTER TABLE `vacations`
+  MODIFY `vacationId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables
@@ -172,13 +159,7 @@ ALTER TABLE `vocations`
 --
 ALTER TABLE `followers`
   ADD CONSTRAINT `followers_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`),
-  ADD CONSTRAINT `followers_ibfk_2` FOREIGN KEY (`vocationId`) REFERENCES `vocations` (`vocationId`);
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`roleId`) REFERENCES `roles` (`roleId`);
+  ADD CONSTRAINT `followers_ibfk_2` FOREIGN KEY (`vocationId`) REFERENCES `vacations` (`vacationId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

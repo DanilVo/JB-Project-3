@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "A backend service for managing and serving data for JB Vocation Project.",
+  "description": "A backend service for managing and serving data for JB vacation Project.",
   "scripts": {
     "start": "nodemon --exec ts-node src/app.ts --quiet"
   },

@@ -1,9 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import ReactDOM from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+import Layout from './Components/LayoutArea/Layout/Layout';
+import './index.css';
+import Home from './Components/HomeArea/Home/Home';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    Hello
-  </React.StrictMode>,
-)
+  <HashRouter>
+    <Home />
+  </HashRouter>
+);
