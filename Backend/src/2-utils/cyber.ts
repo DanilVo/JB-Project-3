@@ -2,6 +2,8 @@ import UserModel from '../3-models/user-model';
 import { Request } from 'express';
 import jwt, { JsonWebTokenError } from 'jsonwebtoken';
 import crypto from 'crypto';
+import { UnauthorizedError } from '../3-models/error-models';
+import RoleModel from '../3-models/role-model';
 
 class Cyber {
   private secretKey = 'DanilVolobuyevJ`honBryceProject3';
@@ -14,30 +16,22 @@ class Cyber {
     return token;
   }
 
-  public verifyToken(request: Request): Promise<boolean> {
-    return new Promise<boolean>((resolve, reject) => {
-      try {
-        const header = request.header('authorization');
-        if (!header) {
-          resolve(false);
-          return;
-        }
-        const token = header.substring(7);
-        if (!token) {
-          resolve(false);
-          return;
-        }
-        jwt.verify(token, this.secretKey, (err: JsonWebTokenError) => {
-          if (err) {
-            resolve(false);
-            return;
-          }
-          resolve(true);
-        });
-      } catch (err: any) {
-        reject(err);
-      }
-    });
+  public verifyToken(token: string): boolean {
+    if (!token) throw new UnauthorizedError('You are not logged in');
+    try {
+      jwt.verify(token, this.secretKey);
+      return true;
+    } catch (err: any) {
+      throw new UnauthorizedError(err.message);
+    }
+  }
+
+  public verifyAdmin(token: string): void {
+    this.verifyToken(token);
+    const container = jwt.verify(token, this.secretKey) as { user: UserModel };
+    const user = container.user;
+    if (user.roleId !== RoleModel.admin)
+      throw new UnauthorizedError('Access restricted');
   }
 
   public hashPassword(plainText: string): string {

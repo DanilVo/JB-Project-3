@@ -3,12 +3,13 @@ import vocationService from '../5-services/vocations-service';
 import StatusCode from '../3-models/status-codes';
 import VocationModel from '../3-models/vocation-model';
 import verifyToken from '../4-middleware/verify-token';
+import verifyAdmin from '../4-middleware/verify-admin';
 
 const router = express.Router();
 
 // Get All vocation
 router.get(
-  '/vocations',
+  '/vocations',verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const vocations = await vocationService.getAllVocations();
