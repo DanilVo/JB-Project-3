@@ -1,0 +1,6 @@
+.hero-carousel {
+  border-radius: 20px;
+  width: 50vw;
+  height: fit-content;
+  display: flex;
+}

@@ -1,7 +1,61 @@
-body {
-    background-image: url(../../../assets/images/background.jpg);
+* {
+  box-sizing: border-box;
+}
+
+/* ALL SCREENS */
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* LARGE */
+@media screen and (min-width: 1025px) {
+  body {
+    height: 100%;
     width: 100vw;
-    height: 1000vh;
+    background-image: url(../../../assets/images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow-x: hidden;
-    background-size:contain;
+  }
+
+  .smallNav {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 25px;
+    height: 25px;
+  }
+  
+  header {
+    height: 100vh;
+  }
+  
+  .carousel1 {
+    height: 100vh;
+  }
+  
+  .title {
+    width: 50%;
+    margin: auto;
+    margin-top: 90px;
+    text-align: center;
+    text-justify: inter-word;
+  }
+  .title h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 6vw;
+    margin-bottom: 30px;
+  }
+  
+  .title .startNow {
+    height: 5vw;
+      font-size: 2.5vw;
+      border-radius: 15px;
+  }
 }
