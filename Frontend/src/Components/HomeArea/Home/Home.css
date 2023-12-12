@@ -1,23 +1,22 @@
-* {
-  box-sizing: border-box;
-}
-
 /* ALL SCREENS */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   body {
-    background-color: green;
+    background-color: black;
   }
 }
 
 /* LARGE */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
   body {
     height: 100%;
-    width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background-image: url(../../../assets/images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    background-attachment: scroll;
+    overflow: auto;
   }
 
   .smallNav {
@@ -30,32 +29,72 @@
     width: 25px;
     height: 25px;
   }
-  
+
   header {
     height: 100vh;
   }
-  
-  .carousel1 {
-    height: 100vh;
-  }
-  
+
   .title {
-    width: 50%;
+    width: 45%;
     margin: auto;
-    margin-top: 90px;
+    margin-top: 8vw;
     text-align: center;
     text-justify: inter-word;
   }
   .title h2 {
     color: white;
     font-weight: bold;
-    font-size: 6vw;
-    margin-bottom: 30px;
+    font-size: 5vw;
+    margin-bottom: 5vw;
   }
-  
+
   .title .startNow {
     height: 5vw;
-      font-size: 2.5vw;
-      border-radius: 15px;
+    font-size: 2.5vw;
+    border-radius: 15px;
+  }
+
+  .firstLine {
+    position: absolute;
+    height: 100vh;
+  }
+
+  .firstLine button {
+    
+  }
+
+  .line1 {
+    position: absolute;
+    width: 320px;
+    top: 950px;
+    left: 80px;
+  }
+
+  .line1 h3 {
+    font-weight: bold;
+  }
+
+  .carouselSection {
+    position: relative;
+    height: 100vh;
+  }
+
+  .hero-carousel {
+    position: absolute;
+    top: 250vh;
+    right: 20px;
+  }
+
+  .carousel3 {
+    position: relative;
+    height: 100vh;
+  }
+  .carousel4 {
+    position: relative;
+    height: 100vh;
+  }
+  .carousel5 {
+    position: relative;
+    height: 100vh;
   }
 }

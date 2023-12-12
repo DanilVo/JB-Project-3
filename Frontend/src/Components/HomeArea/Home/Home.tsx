@@ -1,8 +1,10 @@
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import logo from "../../../assets/images/DV.png";
-import "./Home.css";
-import HeroCarousel from "../../HeroCarousel/HeroCarousel";
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import logo from '../../../assets/images/DV.png';
+import background from '../../../assets/images/background.jpg';
+import './Home.css';
+import HeroCarousel from '../../HeroCarousel/HeroCarousel';
+import { motion } from 'framer-motion';
 
 function Home(): JSX.Element {
   return (
@@ -20,8 +22,21 @@ function Home(): JSX.Element {
           </Button>
         </div>
       </header>
-      <div className="carousel1"><HeroCarousel/></div>
-      <div className="carousel2"></div>
+      <div className="firstLine">
+        <motion.div
+          className="line1"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+          <Typography variant="h3">Best Vacation on Best Price</Typography>
+          <Button className="startNow" variant="contained" size="large">
+            Start now
+          </Button>
+        </motion.div>
+      </div>
+      <div className="carouselSection">
+        <HeroCarousel />
+      </div>
       <div className="carousel3"></div>
       <div className="carousel4"></div>
       <div className="carousel5"></div>
