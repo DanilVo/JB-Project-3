@@ -33,7 +33,7 @@
   header {
     height: 100vh;
   }
-
+  /* ----------------------------------------------------- */
   .title {
     width: 45%;
     margin: auto;
@@ -53,48 +53,136 @@
     font-size: 2.5vw;
     border-radius: 15px;
   }
+  /* ----------------------------------------------------- */
 
   .firstLine {
-    position: absolute;
+    display: flex;
     height: 100vh;
   }
 
-  .firstLine button {
-    
-  }
-
-  .line1 {
+  .firstLine .firstLineDiv {
     position: absolute;
-    width: 320px;
-    top: 950px;
-    left: 80px;
+    width: 500px;
+    top: 110vw;
   }
 
-  .line1 h3 {
+  .firstLineDiv h3 {
     font-weight: bold;
+    font-size: 4em;
   }
+
+  .firstLine .startNow {
+    left: 100px;
+    margin-top: 20px;
+    font-size: x-large;
+  }
+  /* ----------------------------------------------------- */
 
   .carouselSection {
-    position: relative;
-    height: 100vh;
+    height: 100vw;
+    display: flex;
+  }
+
+  .carousel {
+    border-radius: 40px;
   }
 
   .hero-carousel {
     position: absolute;
-    top: 250vh;
-    right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    top: 175vw;
+    right: 0;
+    border-radius: 10px;
   }
 
-  .carousel3 {
-    position: relative;
+  .hero-carousel .startNow {
+    margin-top: 10px;
+    width: 40%;
+    align-self: center;
+    font-size: x-large;
+  }
+  /* ----------------------------------------------------- */
+
+  .supportAd {
+    position: absolute;
+    display: flex;
+    top: 180vw;
     height: 100vh;
   }
-  .carousel4 {
+
+  .supportAd .supportAdDiv {
     position: relative;
-    height: 100vh;
+    top: 65vw;
   }
-  .carousel5 {
-    position: relative;
+
+  .supportAdDiv h3 {
+    font-weight: bold;
+    font-size: 4em;
+  }
+
+  .supportAd .startNow {
+    left: 40%;
+    margin-top: 20px;
+    font-size: x-large;
+  }
+  /* ----------------------------------------------------- */
+
+  .bookNow {
+    position: absolute;
+    display: flex;
+    top: 100vw;
     height: 100vh;
+    right: 0;
+  }
+
+  .bookNow .bookNowDiv {
+    position: relative;
+    top: 210vw;
+  }
+
+  .bookNowDiv h3 {
+    font-weight: bold;
+    font-size: 4em;
+    width: 500px;
+  }
+
+  .bookNow .startNow {
+    left: 20%;
+    margin-top: 20px;
+    font-size: x-large;
+  }
+  /* ----------------------------------------------------- */
+
+  .dreamVacation {
+    position: absolute;
+    display: flex;
+    top: 100vw;
+    height: 0;
+  }
+
+  .dreamVacation .dreamVacationDiv {
+    position: relative;
+    top: 260vw;
+    left: 30vw;
+  }
+
+  .dreamVacationDiv h3 {
+    width: 700px;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+  }
+
+  .dreamVacation .startNow {
+    left: 35%;
+    margin-top: 20px;
+    font-size: x-large;
+  }
+
+  footer {
+    /* position: absolute;
+    height: 100vh; */
   }
 }
