@@ -1,7 +1,114 @@
 /* ALL SCREENS */
 @media screen and (max-width: 1023px) {
   body {
-    background-color: black;
+    background: #2bc0e4;
+    background: -webkit-linear-gradient(to right, #eaecc6, #2bc0e4);
+    background: linear-gradient(to right, #eaecc6, #2bc0e4);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .smallNav {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title h2 {
+    width: 500px;
+  }
+  /* -------------------------------------------------------------------- */
+  .firstLine {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 200px;
+  }
+
+  .firstLine h3 {
+    width: 500px;
+  }
+  /* -------------------------------------------------------------------- */
+
+  .carouselSection {
+    display: flex;
+    align-self: center;
+    width: 450px;
+    margin-top: 50px;
+    padding-left: 40px;
+    
+  }
+
+  .carousel {
+    border-radius: 30px;
+  }
+
+  .carousel-root {
+    margin-bottom: 10px;
+  }
+  /* -------------------------------------------------------------------- */
+
+  .supportAd {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 200px;
+  }
+  /* -------------------------------------------------------------------- */
+
+  .bookNow {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 200px;
+  }
+  /* -------------------------------------------------------------------- */
+
+  .dreamVacation {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
@@ -19,21 +126,16 @@
     overflow: auto;
   }
 
-  .smallNav {
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
-  }
-
   .logo {
-    width: 25px;
-    height: 25px;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    margin-top: 20px;
   }
 
   header {
     height: 100vh;
   }
-  /* ----------------------------------------------------- */
   .title {
     width: 45%;
     margin: auto;
@@ -42,7 +144,7 @@
     text-justify: inter-word;
   }
   .title h2 {
-    color: white;
+    color:white;
     font-weight: bold;
     font-size: 5vw;
     margin-bottom: 5vw;
@@ -53,7 +155,6 @@
     font-size: 2.5vw;
     border-radius: 15px;
   }
-  /* ----------------------------------------------------- */
 
   .firstLine {
     display: flex;
@@ -76,7 +177,6 @@
     margin-top: 20px;
     font-size: x-large;
   }
-  /* ----------------------------------------------------- */
 
   .carouselSection {
     height: 100vw;
@@ -103,7 +203,6 @@
     align-self: center;
     font-size: x-large;
   }
-  /* ----------------------------------------------------- */
 
   .supportAd {
     position: absolute;
@@ -127,7 +226,6 @@
     margin-top: 20px;
     font-size: x-large;
   }
-  /* ----------------------------------------------------- */
 
   .bookNow {
     position: absolute;
@@ -153,7 +251,6 @@
     margin-top: 20px;
     font-size: x-large;
   }
-  /* ----------------------------------------------------- */
 
   .dreamVacation {
     position: absolute;
@@ -164,7 +261,7 @@
 
   .dreamVacation .dreamVacationDiv {
     position: relative;
-    top: 260vw;
+    top: 280vw;
     left: 30vw;
   }
 
@@ -182,7 +279,17 @@
   }
 
   footer {
-    /* position: absolute;
-    height: 100vh; */
+    position: absolute;
+    top: 100vw;
+  }
+
+  footer .createdBy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 35vw;
+    top: 300vw;
+    margin-top: 12vw;
+    padding-bottom: 1vw;
   }
 }

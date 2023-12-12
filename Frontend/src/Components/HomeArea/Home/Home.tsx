@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
-import logo from "../../../assets/images/DV.png";
+import logo from "../../../assets/logo/logo-main-no-background.svg";
 import HeroCarousel from "../../HeroCarousel/HeroCarousel";
 import "./Home.css";
+
 
 function Home(): JSX.Element {
   return (
@@ -82,7 +83,14 @@ function Home(): JSX.Element {
           </motion.div>
         </div>
       </main>
-      <footer>asd</footer>
+      <footer>
+        <motion.div className="createdBy">
+          <Typography variant="body1" color="initial">
+            This Website Was Designed By Danil Volobuyev.
+          </Typography>
+          <Typography variant="body1" color="initial"> Inspired by WIX</Typography>
+        </motion.div>
+      </footer>
     </div>
   );
 }
