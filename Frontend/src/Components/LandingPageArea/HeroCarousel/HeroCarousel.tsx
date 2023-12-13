@@ -7,6 +7,7 @@ import hero3 from "../../../assets/images/vacation_images/hero-3.jpg";
 import hero4 from "../../../assets/images/vacation_images/hero-4.jpg";
 import { motion } from "framer-motion";
 import { Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const heroImages = [
   { imgUrl: hero1, alt: "greece" },
@@ -36,13 +37,11 @@ function HeroCarousel(): JSX.Element {
           <img src={image.imgUrl} alt={image.alt} key={image.alt} />
         ))}
       </Carousel>
-      <Button
-        className="startNow"
-        variant="contained"
-        size="large"
-      >
-        Start now
-      </Button>
+      <NavLink to="/auth/register">
+        <Button className="startNow" variant="contained" size="large">
+          Start now
+        </Button>
+      </NavLink>
     </motion.div>
   );
 }

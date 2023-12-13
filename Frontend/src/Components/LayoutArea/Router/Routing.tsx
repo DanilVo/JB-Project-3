@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Add from "../../DataArea/Add/Add";
-import List from "../../DataArea/List/List";
-import LandingPage from "../../HomeArea/LandingPage/LandingPage";
+import Register from "../../AuthArea/Register/Register";
+import LandingPage from "../../LandingPageArea/LandingPage/LandingPage";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import Login from "../../AuthArea/Login/Login";
 
 function Routing(): JSX.Element {
     return (
@@ -13,12 +13,12 @@ function Routing(): JSX.Element {
           {/* landing Page */}
           <Route path="/landingPage" element={<LandingPage />} />
 
-          {/* List Route */}
-          <Route path="/list" element={<List />} />
-
-          {/* Add Route */}
-          <Route path="/add" element={<Add />} />
-
+          {/* Register Route */}
+          <Route path="/auth/register" element={<Register />} />
+          
+          {/* Login Route */}
+          <Route path="/auth/logIn" element={<Login />} />
+          
           {/* Default Route */}
           <Route path="/" element={<Navigate to="/landingPage" />} />
 

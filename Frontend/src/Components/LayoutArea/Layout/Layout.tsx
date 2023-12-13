@@ -1,7 +1,3 @@
-import Home from "../../HomeArea/LandingPage/LandingPage";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
-import Menu from "../Menu/Menu";
 import Routing from "../Router/Routing";
 import "./Layout.css";
 

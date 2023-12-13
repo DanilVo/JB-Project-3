@@ -198,6 +198,7 @@
   .hero-carousel .startNow {
     margin-top: 10px;
     width: 50%;
+    left: 150px;
     align-self: center;
     font-size: x-large;
   }
