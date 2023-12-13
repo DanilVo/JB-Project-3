@@ -1,5 +1,5 @@
 class AppConfig {
-    public readonly dataUrl: string = "http://localhost:4000/api/____/";
+  public readonly baseUrl: string = "http://localhost:4000/";
 }
 
 // Singleton
