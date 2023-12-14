@@ -31,18 +31,21 @@ function Register(): JSX.Element {
           id="outlined-basic"
           label="First Name:"
           variant="outlined"
+          required
           {...register("firstName")}
         />
         <TextField
           id="outlined-basic"
           label="Last Name:"
           variant="outlined"
+          required
           {...register("lastName")}
         />
         <TextField
           id="outlined-basic"
           label="Email:"
           variant="outlined"
+          required
           {...register("email")}
         />
         <TextField
@@ -50,6 +53,7 @@ function Register(): JSX.Element {
           label="Password:"
           type="password"
           variant="outlined"
+          required
           {...register("password")}
         />
         <Button variant="outlined">Register</Button>

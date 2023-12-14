@@ -31,6 +31,7 @@ function Login(): JSX.Element {
           id="outlined-basic"
           label="Email:"
           variant="outlined"
+          required
           {...register("email")}
         />
         <TextField
@@ -38,6 +39,7 @@ function Login(): JSX.Element {
           label="Password:"
           type="password"
           variant="outlined"
+          required
           {...register("password")}
         />
         <Button variant="outlined">LogIn</Button>

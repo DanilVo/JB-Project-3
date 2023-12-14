@@ -1,6 +1,13 @@
-.Header {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.Header > .logo {
+  width: 15vh;
+  left: 50px;
+  top: 0;
+  margin: 0;
+}
+
+.Header > .userName {
+  position: absolute;
+  right: 10px;
+  top: 3vh;
 }

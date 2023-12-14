@@ -1,10 +1,10 @@
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { motion } from "framer-motion";
 import logo from "../../../assets/logo/logo-main-no-background.svg";
 import HeroCarousel from "../HeroCarousel/HeroCarousel";
 import "./LandingPage.css";
 import { NavLink } from "react-router-dom";
+import { motion} from "framer-motion";
 
 function LandingPage(): JSX.Element {
   return (
