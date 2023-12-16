@@ -1,33 +1,44 @@
-import { Notyf } from "notyf";
+import { toast } from 'react-toastify';
 
 class NotificationService {
-    private notification = new Notyf({
-        duration: 4000,
-        position: { x: 'center', y: 'top' }
+  public success(message: string): void {
+    toast.success(message,{
+        position:"top-right",
+        autoClose:3000,
+        hideProgressBar:false,
+        closeOnClick:true,
+        pauseOnHover:true,
+        draggable:true,
+        progress: undefined,
+        theme:'light'
     });
+  }
 
-    public success(message: string): void {
-        this.notification.success(message);
-    }
-    
-    public error(err: string): void {
-        const message = this.extractErrorMessage(err);
-        this.notification.error(message);
-    }
+  public error(err: string): void {
+    const message = this.extractErrorMessage(err);
+    toast.error(message,{
+        position:"top-right",
+        autoClose:3000,
+        hideProgressBar:false,
+        closeOnClick:true,
+        pauseOnHover:true,
+        draggable:true,
+        progress: undefined,
+        theme:'light'
+    });
+  }
 
-    private extractErrorMessage(err: any): string {
+  private extractErrorMessage(err: any): string {
+    if (typeof err === 'string') return err;
 
-        if (typeof err === "string") return err;
+    if (typeof err.response?.data === 'string') return err.response?.data; // axios
 
-        if (typeof err.response?.data === "string") return err.response?.data; // axios
+    if (Array.isArray(err.response?.data)) return err.response?.data[0]; // axios
 
-        if (Array.isArray(err.response?.data)) return err.response?.data[0]; // axios
+    if (typeof err.message === 'string') return err.message;
 
-        if (typeof err.message === "string") return err.message;
-
-        return "Unknown error";
-    }
-
+    return 'Unknown error';
+  }
 }
 
 const notificationService = new NotificationService();

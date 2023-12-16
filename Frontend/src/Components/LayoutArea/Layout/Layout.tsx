@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
-import LandingPage from "../../LandingPageArea/LandingPage/LandingPage";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
-import Menu from "../Menu/Menu";
-import Routing from "../Router/Routing";
-import "./Layout.css";
+import { useEffect, useState } from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import Menu from '../Menu/Menu';
+import NotAuthorizedRouting from '../Router/NotAuthorizedRoute';
+import Routing from '../Router/Routing';
+import './Layout.css';
 
 function Layout(): JSX.Element {
   const [isToken, setIsToken] = useState<boolean>(false);
 
-  const token = JSON.parse(localStorage.getItem("token"));
+  const token = JSON.parse(localStorage.getItem('token'));
   useEffect(() => {
     if (token === true) {
       setIsToken(true);
@@ -28,14 +28,14 @@ function Layout(): JSX.Element {
             <Menu />
           </nav>
           <main>
-            <Routing isToken={isToken}/>
+            <Routing />
           </main>
           <footer>
             <Footer />
           </footer>
         </div>
       ) : (
-        <LandingPage />
+        <NotAuthorizedRouting />
       )}
     </div>
   );
