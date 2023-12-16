@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2023 at 12:58 PM
+-- Generation Time: Dec 16, 2023 at 01:01 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `vacation`
 --
+CREATE DATABASE IF NOT EXISTS `vacation` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `vacation`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `followers`
 --
 
-DROP TABLE IF EXISTS `followers`;
 CREATE TABLE `followers` (
   `userId` int(11) NOT NULL,
   `vocationId` int(11) NOT NULL
@@ -39,7 +40,6 @@ CREATE TABLE `followers` (
 -- Table structure for table `roles`
 --
 
-DROP TABLE IF EXISTS `roles`;
 CREATE TABLE `roles` (
   `roleId` int(11) NOT NULL,
   `roleName` varchar(20) DEFAULT NULL
@@ -59,7 +59,6 @@ INSERT INTO `roles` (`roleId`, `roleName`) VALUES
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `userId` int(11) NOT NULL,
   `firstname` varchar(20) DEFAULT NULL,
@@ -75,7 +74,6 @@ CREATE TABLE `users` (
 -- Table structure for table `vacations`
 --
 
-DROP TABLE IF EXISTS `vacations`;
 CREATE TABLE `vacations` (
   `vacationId` int(11) NOT NULL,
   `destination` varchar(20) DEFAULT NULL,
