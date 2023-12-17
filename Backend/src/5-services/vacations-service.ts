@@ -1,16 +1,16 @@
-import { OkPacket } from 'mysql';
-import dal from '../2-utils/dal';
-import { ResourceNotFoundError } from '../3-models/error-models';
-import vacationModel from '../3-models/vacation-model';
-import appConfig from '../2-utils/app-config';
-import { fileSaver } from 'uploaded-file-saver';
+import { OkPacket } from "mysql";
+import dal from "../2-utils/dal";
+import { ResourceNotFoundError } from "../3-models/error-models";
+import vacationModel from "../3-models/vacation-model";
+import appConfig from "../2-utils/app-config";
+import { fileSaver } from "uploaded-file-saver";
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    'SELECT vacationImageUrl FROM vacations WHERE vacationId = ?';
-  private readonly SELECT_ALL_vacationS_SQL = 'SELECT * FROM vacations';
+    "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
+  private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/',vacationImageUrl) AS vacationImageUrl FROM vacations`;
   private readonly SELECT_ONE_vacation_SQL =
-    'SELECT * FROM vacations WHERE vacationId = ?';
+    "SELECT * FROM vacations WHERE vacationId = ?";
   private readonly INSERT_vacation_SQL = `
     INSERT INTO vacations(destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
     VALUES(?,?,?,?,?,?)`;
@@ -19,13 +19,13 @@ class VacationService {
     SET destination=?, description=?, vacationStartDate=?, vacationEndDate=?, price=?, vacationImageUrl=?
     WHERE vacationId = ?`;
   private readonly DELETE_vacation_SQL =
-    'DELETE FROM vacations WHERE vacationId = ?';
+    "DELETE FROM vacations WHERE vacationId = ?";
 
   private async getExistingImageName(id: number): Promise<string> {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return '';
+    if (!vacation) return "";
     return vacation.vacationImageUrl;
   }
 

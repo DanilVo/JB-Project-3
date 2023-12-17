@@ -1,9 +1,9 @@
 import express, { NextFunction, Request, Response } from 'express';
 import StatusCode from '../3-models/status-codes';
 import VacationModel from '../3-models/vacation-model';
-import verifyAdmin from '../4-middleware/verify-admin';
 import verifyToken from '../4-middleware/verify-token';
 import vacationService from '../5-services/vacations-service';
+import { fileSaver } from 'uploaded-file-saver';
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.get(
 
 // Get One vacation
 router.get(
-  '/vacations/:id',
+  "/vacations/:id([0-9]+)",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const id = +request.params.id;
@@ -74,6 +74,19 @@ router.delete(
       const id = +request.params.id;
       await vacationService.deleteVacation(id);
       response.sendStatus(StatusCode.OK);
+    } catch (err: any) {
+      next(err);
+    }
+  }
+);
+
+router.get(
+  "/vacations/:imageName",
+  async (request: Request, response: Response, next: NextFunction) => {
+    try {
+      const imageName = request.params.imageName;
+      const absolutePath = fileSaver.getFilePath(imageName);
+      response.sendFile(absolutePath);
     } catch (err: any) {
       next(err);
     }

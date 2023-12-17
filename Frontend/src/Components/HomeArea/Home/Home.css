@@ -1,0 +1,4 @@
+.Home .MediaCard {
+    display: flex;
+    justify-content: space-around;
+}

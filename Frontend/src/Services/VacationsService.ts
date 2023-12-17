@@ -1,10 +1,28 @@
-import axios from 'axios';
-import appConfig from '../Utils/AppConfig';
+import axios from "axios";
+import {
+  VacationAction,
+  VacationActionTypes,
+  vacationStore,
+} from "../Redux/VacationState";
+import appConfig from "../Utils/AppConfig";
+import VacationModel from "../Models/VacationModel";
 
 class VacationService {
-  public async getAllVacations() {
-    const { data } = await axios.get(appConfig.allVacations);
-    return data;
+  public async getAllVacations(): Promise<VacationModel[]> {
+    let vacations = vacationStore.getState().vacations;
+ 
+    if (vacations.length === 0) {
+      const response = await axios.get(appConfig.allVacations);
+
+      vacations = response.data;
+
+      const action: VacationAction = {
+        type: VacationActionTypes.SetVacations,
+        payload: vacations,
+      };
+      vacationStore.dispatch(action);
+    }
+    return vacations;
   }
 }
 

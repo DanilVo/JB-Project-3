@@ -18,7 +18,7 @@ const server = express();
 server.use(
   expressRateLimit({
     windowMs: 1000,
-    limit: 2,
+    limit: 16,
   })
 );
 
@@ -28,10 +28,10 @@ if (appConfig.isDevelopment) {
   server.use(cors({ origin: 'http://www.our-website.com' }));
 }
 
-fileSaver.config(path.join(__dirname, '1-assets', 'images'));
+fileSaver.config(path.join(__dirname, '1-assets', 'vacationImages'));
 
 server.use(express.json());
-server.use(helmet());
+server.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));
 server.use(expressFileUpload());
 server.use(activities);
 server.use(sanitize);

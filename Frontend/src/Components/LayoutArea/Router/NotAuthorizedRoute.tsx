@@ -18,7 +18,7 @@ function NotAuthorizedRouting(): JSX.Element {
         <Route path="/auth/logIn" element={<Login />} />
 
         {/* Default Route */}
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<LandingPage />} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />
