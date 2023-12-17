@@ -24,7 +24,7 @@ function Layout(): JSX.Element {
           <header>
             <Header />
           </header>
-          <nav>
+          <nav className='nav'>
             <Menu />
           </nav>
           <main>

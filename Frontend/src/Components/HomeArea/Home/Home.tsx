@@ -9,6 +9,17 @@ import { Pagination } from "@mui/material";
 function Home(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
 
+  const [currentPage, setCurrentPAge] = useState<number>(1);
+  const [postsPerPage, setPostsPerPage] = useState<number>(9);
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = vacations.slice(firstPostIndex, lastPostIndex);
+
+  const handleChange = (_e: any, p: number) => {
+    setCurrentPAge(p);
+  };
+
   useEffect(() => {
     vacationService
       .getAllVacations()
@@ -17,11 +28,20 @@ function Home(): JSX.Element {
   }, []);
 
   return (
-    <div className="Home">
-      {vacations.map((vacation: VacationModel) => (
-        <MediaCard vacation={vacation} key={vacation.destination} />
+    <div className="mainHome">
+      {currentPosts.map((vacation: VacationModel, i: number) => (
+        <MediaCard
+          vacation={vacation}
+          key={vacation.destination}
+          duration={(i + 2) * 0.1}
+        />
       ))}
-      <Pagination count={2}/>
+      <Pagination
+        className="pagination"
+        count={2}
+        color="primary"
+        onChange={handleChange}
+      />
     </div>
   );
 }
