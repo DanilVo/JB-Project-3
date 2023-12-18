@@ -1,11 +1,13 @@
-.Home .MediaCard {
+.mainHome {
+  position: relative;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.Home .pagination {
+.mainHome > .pagination {
   position: absolute;
-  bottom: 5vh;
+  bottom: -50px;
   left: 50%;
   transform: translate(-50%, -50%);
 }

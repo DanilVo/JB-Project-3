@@ -1,17 +1,24 @@
-import { useForm } from "react-hook-form";
-import "./Login.css";
-import CredentialsModel from "../../../Models/CredentialsModel";
-import { Button, TextField, Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { useForm } from 'react-hook-form';
+import './Login.css';
+import CredentialsModel from '../../../Models/CredentialsModel';
+import { Button, TextField, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import { NavLink, Navigate, redirect, useNavigate } from 'react-router-dom';
+import authService from '../../../Services/AuthService';
+import notificationService from '../../../Services/NotificationService';
 
 function Login(): JSX.Element {
   const { register, handleSubmit } = useForm<CredentialsModel>();
+  const navigate = useNavigate();
 
   async function login(credentials: CredentialsModel) {
     try {
+      await authService.logIn(credentials);
+      notificationService.success('You have been logged-in successfully');
+      navigate("/home")
+      window.location.reload();
     } catch (err: any) {
-      console.log(err.message);
+      notificationService.error(err.message);
     }
   }
 
@@ -21,7 +28,7 @@ function Login(): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: "easeOut", duration: 1.5 }}
+      transition={{ ease: 'easeOut', duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         LogIn:
@@ -32,7 +39,7 @@ function Login(): JSX.Element {
           label="Email:"
           variant="outlined"
           required
-          {...register("email")}
+          {...register('email')}
         />
         <TextField
           id="outlined-basic"
@@ -40,9 +47,11 @@ function Login(): JSX.Element {
           type="password"
           variant="outlined"
           required
-          {...register("password")}
+          {...register('password')}
         />
-        <Button variant="outlined">LogIn</Button>
+        <Button variant="outlined" type="submit">
+          LogIn
+        </Button>
         <NavLink to="/auth/register">
           <Button variant="text" size="small">
             Register

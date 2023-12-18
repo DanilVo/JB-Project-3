@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import VacationModel from "../../../Models/VacationModel";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import MediaCard from "../MediaCard/MediaCard";
-import "./Home.css";
-import { Pagination } from "@mui/material";
+import { useEffect, useState } from 'react';
+import VacationModel from '../../../Models/VacationModel';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import MediaCard from '../MediaCard/MediaCard';
+import './Home.css';
+import { Pagination } from '@mui/material';
 
 function Home(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
@@ -23,7 +23,9 @@ function Home(): JSX.Element {
   useEffect(() => {
     vacationService
       .getAllVacations()
-      .then((data) => setVacations(data))
+      .then((data) => {
+        setVacations(data);
+      })
       .catch((err: any) => notificationService.error(err));
   }, []);
 
@@ -36,12 +38,9 @@ function Home(): JSX.Element {
           duration={(i + 2) * 0.1}
         />
       ))}
-      <Pagination
-        className="pagination"
-        count={2}
-        color="primary"
-        onChange={handleChange}
-      />
+      <div className="pagination">
+        <Pagination count={2} color="primary" onChange={handleChange} />
+      </div>
     </div>
   );
 }

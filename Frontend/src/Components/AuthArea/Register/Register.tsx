@@ -1,17 +1,23 @@
-import { useForm } from "react-hook-form";
-import "./Register.css";
-import UserModel from "../../../Models/UserModel";
-import { motion } from "framer-motion";
-import { Button, TextField, Typography } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Button, TextField, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import { useForm } from 'react-hook-form';
+import { NavLink, useNavigate } from 'react-router-dom';
+import UserModel from '../../../Models/UserModel';
+import authService from '../../../Services/AuthService';
+import './Register.css';
+import notificationService from '../../../Services/NotificationService';
 
 function Register(): JSX.Element {
   const { register, handleSubmit } = useForm<UserModel>();
+  const navigate = useNavigate();
 
-  async function login(credentials: UserModel) {
+  async function registerNewUser(credentials: UserModel) {
     try {
+      await authService.register(credentials);
+      notificationService.success('User has been successfully created');
+      navigate('/');
     } catch (err: any) {
-      console.log(err.message);
+      notificationService.error(err.message);
     }
   }
 
@@ -21,32 +27,32 @@ function Register(): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: "easeOut", duration: 1.5 }}
+      transition={{ ease: 'easeOut', duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         Register:
       </Typography>
-      <form onSubmit={handleSubmit(login)}>
+      <form onSubmit={handleSubmit(registerNewUser)}>
         <TextField
           id="outlined-basic"
           label="First Name:"
           variant="outlined"
           required
-          {...register("firstName")}
+          {...register('firstName')}
         />
         <TextField
           id="outlined-basic"
           label="Last Name:"
           variant="outlined"
           required
-          {...register("lastName")}
+          {...register('lastName')}
         />
         <TextField
           id="outlined-basic"
           label="Email:"
           variant="outlined"
           required
-          {...register("email")}
+          {...register('email')}
         />
         <TextField
           id="outlined-basic"
@@ -54,9 +60,11 @@ function Register(): JSX.Element {
           type="password"
           variant="outlined"
           required
-          {...register("password")}
+          {...register('password')}
         />
-        <Button variant="outlined">Register</Button>
+        <Button variant="outlined" type="submit">
+          Register
+        </Button>
         <NavLink to="/auth/login">
           <Button variant="text" size="small">
             Login

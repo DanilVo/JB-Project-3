@@ -12,7 +12,7 @@ class VacationService {
     let vacations = vacationStore.getState().vacations;
  
     if (vacations.length === 0) {
-      const response = await axios.get(appConfig.allVacations);
+      const response = await axios.get(appConfig.allVacationsUrl);
 
       vacations = response.data;
 

@@ -9,13 +9,14 @@ import './Layout.css';
 function Layout(): JSX.Element {
   const [isToken, setIsToken] = useState<boolean>(false);
 
-  const token = JSON.parse(localStorage.getItem('token'));
+  const token = JSON.stringify(localStorage.getItem('token'));
   useEffect(() => {
-    if (token === true) {
+    if (token.length > 0 && token != 'null') {
+      console.log('here');
+
       setIsToken(true);
     }
   }, [token]);
-  console.log(isToken);
 
   return (
     <div className="Layout">
@@ -24,7 +25,7 @@ function Layout(): JSX.Element {
           <header>
             <Header />
           </header>
-          <nav className='nav'>
+          <nav className="nav">
             <Menu />
           </nav>
           <main>

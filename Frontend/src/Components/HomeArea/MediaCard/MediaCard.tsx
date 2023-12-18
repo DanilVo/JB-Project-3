@@ -22,7 +22,6 @@ function MediaCard({
   const endVacation = new Date(vacation.vacationEndDate).toLocaleDateString(
     "en-GB"
   );
-  console.log(duration);
 
   return (
     <motion.div

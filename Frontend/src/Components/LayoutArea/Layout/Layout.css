@@ -1,5 +1,5 @@
 .Layout .Home {
-  height: 1vh;
+  height: 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -32,6 +32,6 @@
 }
 .Layout .Home main {
   overflow: auto;
-  height: 75vh;
+  height: 80vh;
   grid-area: 3 / 1 / 5 / 6;
 }
