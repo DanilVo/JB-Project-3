@@ -16,7 +16,6 @@ function Login(): JSX.Element {
       await authService.logIn(credentials);
       notificationService.success('You have been logged-in successfully');
       navigate("/home")
-      window.location.reload();
     } catch (err: any) {
       notificationService.error(err.message);
     }

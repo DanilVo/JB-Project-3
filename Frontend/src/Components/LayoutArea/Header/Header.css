@@ -1,4 +1,6 @@
-
+.Header {
+  position: relative;
+}
 .Header > .logo {
   width: 15vh;
   left: 1vw;
@@ -8,6 +10,11 @@
 
 .Header > .userName {
   position: absolute;
-  right: 10px;
-  top: 3vh;
+  right: 20px;
+  top: 10px;
+}
+
+.Header > .userName > .MuiCardHeader-root {
+  margin: 0;
+  padding: 0;
 }

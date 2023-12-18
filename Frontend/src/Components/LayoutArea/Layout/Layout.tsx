@@ -12,8 +12,6 @@ function Layout(): JSX.Element {
   const token = JSON.stringify(localStorage.getItem('token'));
   useEffect(() => {
     if (token.length > 0 && token != 'null') {
-      console.log('here');
-
       setIsToken(true);
     }
   }, [token]);

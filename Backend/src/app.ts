@@ -35,7 +35,7 @@ server.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));
 server.use(expressFileUpload());
 server.use(activities);
 server.use(sanitize);
-server.use('/api', vacationController, authController); // Add here routes for controller
+server.use('/api', vacationController, authController);
 server.use('*', routeNotFound);
 server.use(catchAll);
 
