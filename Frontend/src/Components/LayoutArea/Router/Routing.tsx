@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import Edit from '../../DataArea/Edit/Edit';
 import Home from '../../HomeArea/Home/Home';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
@@ -11,6 +12,9 @@ function Routing(): JSX.Element {
 
         {/* Default Route */}
         <Route path="/" element={<Home />} />
+
+        {/* Update Route */}
+        <Route path="/edit/:vacationId" element={<Edit />} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

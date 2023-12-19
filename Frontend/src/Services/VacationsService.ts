@@ -10,7 +10,7 @@ import VacationModel from "../Models/VacationModel";
 class VacationService {
   public async getAllVacations(): Promise<VacationModel[]> {
     let vacations = vacationStore.getState().vacations;
- 
+
     if (vacations.length === 0) {
       const response = await axios.get(appConfig.allVacationsUrl);
 
@@ -23,6 +23,25 @@ class VacationService {
       vacationStore.dispatch(action);
     }
     return vacations;
+  }
+
+  public async deleteVacation(id: number): Promise<void> {
+    await axios.delete(appConfig.deleteVacationUrl + id);
+
+    const action: VacationAction = {
+      type: VacationActionTypes.DeleteVacation,
+    };
+    vacationStore.dispatch(action);
+  }
+
+  public async updateVacation(vacation: VacationModel): Promise<void> {
+    await axios.put(appConfig.deleteVacationUrl + vacation.vacationId);
+
+    const action: VacationAction = {
+      type: VacationActionTypes.UpdateVacation,
+      payload: vacation,
+    };
+    vacationStore.dispatch(action);
   }
 }
 

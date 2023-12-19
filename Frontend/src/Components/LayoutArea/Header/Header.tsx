@@ -12,9 +12,13 @@ import logo from '../../../assets/logo/logo-main-no-background.svg';
 import './Header.css';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
+import authService from '../../../Services/AuthService';
+import { useNavigate } from 'react-router-dom';
 
 function Header(): JSX.Element {
   const user: UserModel = authStore.getState().user;
+  
+  const navigate = useNavigate()
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -22,16 +26,18 @@ function Header(): JSX.Element {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-    setAnchorEl(null);
+    authService.logout()
+    navigate('/auth/login')
   };
+
+  const handleCloseWindow = () => {
+    setAnchorEl(null)
+  }
 
   return (
     <div className="Header">
       <img src={logo} alt="logo" className="logo" />
       <div className="userName">
-        {/* <Typography variant="body1" color="initial">
-          Hello {user.firstName + ' ' + user.lastName}
-        </Typography> */}
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
@@ -56,7 +62,7 @@ function Header(): JSX.Element {
           id="basic-menu"
           anchorEl={anchorEl}
           open={open}
-          onClose={handleClose}
+          onClose={handleCloseWindow}
           MenuListProps={{
             'aria-labelledby': 'basic-button',
           }}

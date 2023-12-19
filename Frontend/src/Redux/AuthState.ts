@@ -1,6 +1,6 @@
 import { legacy_createStore as createStore } from 'redux';
 import UserModel from '../Models/UserModel';
-import { jwtDecode } from 'jwt-decode';
+import { jwtDecode } from "jwt-decode";
 
 class AuthState {
   public user: UserModel = null;

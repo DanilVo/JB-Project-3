@@ -1,17 +1,19 @@
-import express, { NextFunction, Request, Response } from 'express';
-import StatusCode from '../3-models/status-codes';
-import VacationModel from '../3-models/vacation-model';
-import verifyToken from '../4-middleware/verify-token';
-import vacationService from '../5-services/vacations-service';
-import { fileSaver } from 'uploaded-file-saver';
+import express, { NextFunction, Request, Response } from "express";
+import StatusCode from "../3-models/status-codes";
+import VacationModel from "../3-models/vacation-model";
+import verifyToken from "../4-middleware/verify-token";
+import vacationService from "../5-services/vacations-service";
+import { fileSaver } from "uploaded-file-saver";
+import verifyAdmin from "../4-middleware/verify-admin";
 
 const router = express.Router();
 
 // Get All vacation
 router.get(
-  '/vacations',
+  "/vacations",
+  verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
-    try {  
+    try {
       const vacations = await vacationService.getAllVacations();
       response.json(vacations);
     } catch (err: any) {
@@ -36,8 +38,8 @@ router.get(
 
 // Add vacation
 router.post(
-  '/vacations',
-  verifyToken,
+  "/vacations",
+  verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       request.body.image = request.files?.image;
@@ -52,7 +54,8 @@ router.post(
 
 // Update vacation
 router.put(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
+  verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       request.body.vacationId = +request.params.id;
@@ -68,7 +71,8 @@ router.put(
 
 // Delete vacation
 router.delete(
-  '/vacations/:id',
+  "/vacations/:id([0-9]+)",
+  verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const id = +request.params.id;

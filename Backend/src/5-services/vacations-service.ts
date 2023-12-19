@@ -1,18 +1,18 @@
-import { OkPacket } from 'mysql';
-import dal from '../2-utils/dal';
-import { ResourceNotFoundError } from '../3-models/error-models';
-import vacationModel from '../3-models/vacation-model';
-import appConfig from '../2-utils/app-config';
-import { fileSaver } from 'uploaded-file-saver';
+import { OkPacket } from "mysql";
+import dal from "../2-utils/dal";
+import { ResourceNotFoundError } from "../3-models/error-models";
+import VacationModel from "../3-models/vacation-model";
+import appConfig from "../2-utils/app-config";
+import { fileSaver } from "uploaded-file-saver";
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    'SELECT vacationImageUrl FROM vacations WHERE vacationId = ?';
+    "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
   private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/',vacationImageUrl) AS vacationImageUrl
                                                FROM vacations 
                                                ORDER BY vacationStartDate ASC`;
   private readonly SELECT_ONE_vacation_SQL =
-    'SELECT * FROM vacations WHERE vacationId = ?';
+    "SELECT * FROM vacations WHERE vacationId = ?";
   private readonly INSERT_vacation_SQL = `
     INSERT INTO vacations(destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
     VALUES(?,?,?,?,?,?)`;
@@ -21,32 +21,49 @@ class VacationService {
     SET destination=?, description=?, vacationStartDate=?, vacationEndDate=?, price=?, vacationImageUrl=?
     WHERE vacationId = ?`;
   private readonly DELETE_vacation_SQL =
-    'DELETE FROM vacations WHERE vacationId = ?';
+    "DELETE FROM vacations WHERE vacationId = ?";
+  private readonly GET_following_vacations = `
+        SELECT DISTINCT
+        V.*,
+        EXISTS(SELECT * FROM followers WHERE vacationId = F.vacationId AND userId = ?) AS isFollowing,
+        COUNT(F.userId) AS followersCount
+        FROM vacations as V LEFT JOIN followers as F
+        ON V.vacationId = F.vacationId
+        GROUP BY vacationId
+        ORDER BY startDate`;
 
   private async getExistingImageName(id: number): Promise<string> {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return '';
+    if (!vacation) return "";
     return vacation.vacationImageUrl;
   }
 
+  public async getVacations(userId: number): Promise<VacationModel[]> {
+    const sql = this.GET_following_vacations;
+
+    const vacations = await dal.execute(sql, [userId]);
+
+    return vacations;
+  }
+
   // All vacations
-  public async getAllVacations(): Promise<vacationModel[]> {
+  public async getAllVacations(): Promise<VacationModel[]> {
     const sql = this.SELECT_ALL_vacationS_SQL;
     const vacations = await dal.execute(sql);
     return vacations;
   }
 
   // One vacation
-  public async getOneVacation(id: number): Promise<vacationModel> {
+  public async getOneVacation(id: number): Promise<VacationModel> {
     const sql = this.SELECT_ONE_vacation_SQL;
     const vacations = await dal.execute(sql, [id]);
     return vacations;
   }
 
   // Add vacation
-  public async addVacation(vacation: vacationModel): Promise<vacationModel> {
+  public async addVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.validation();
     const imageName = await fileSaver.add(vacation.image);
     const sql = this.INSERT_vacation_SQL;
@@ -65,7 +82,7 @@ class VacationService {
   }
 
   // Update vacation
-  public async updateVacation(vacation: vacationModel): Promise<vacationModel> {
+  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.validation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId

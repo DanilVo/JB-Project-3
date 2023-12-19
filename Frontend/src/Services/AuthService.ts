@@ -1,12 +1,12 @@
-import axios from 'axios';
-import appConfig from '../Utils/AppConfig';
-import CredentialsModel from '../Models/CredentialsModel';
-import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
-import UserModel from '../Models/UserModel';
+import axios from "axios";
+import appConfig from "../Utils/AppConfig";
+import CredentialsModel from "../Models/CredentialsModel";
+import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
+import UserModel from "../Models/UserModel";
 
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
-    const response = await axios.post(appConfig.loginUrl, credentials);
+    const response = await axios.post(appConfig.loginUserUrl, credentials);
 
     const token = response.data;
 
@@ -15,9 +15,8 @@ class AuthService {
   }
 
   public async register(credentials: UserModel): Promise<void> {
-    console.log(credentials);
 
-    const response = await axios.post(appConfig.registerUrl, credentials);
+    const response = await axios.post(appConfig.registerUserUrl, credentials);
 
     const token = response.data;
 

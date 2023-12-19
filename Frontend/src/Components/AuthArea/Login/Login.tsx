@@ -27,7 +27,7 @@ function Login(): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: 'easeOut', duration: 1.5 }}
+      transition={{ ease: "easeOut", duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         LogIn:
@@ -37,16 +37,18 @@ function Login(): JSX.Element {
           id="outlined-basic"
           label="Email:"
           variant="outlined"
+          type="email"
           required
-          {...register('email')}
+          {...register("email")}
         />
         <TextField
           id="outlined-basic"
           label="Password:"
           type="password"
+          minLength="4"
           variant="outlined"
           required
-          {...register('password')}
+          {...register("password")}
         />
         <Button variant="outlined" type="submit">
           LogIn

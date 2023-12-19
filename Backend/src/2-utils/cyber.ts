@@ -1,13 +1,13 @@
-import crypto from 'crypto';
-import jwt from 'jsonwebtoken';
-import { UnauthorizedError } from '../3-models/error-models';
-import RoleModel from '../3-models/role-model';
-import UserModel from '../3-models/user-model';
+import crypto from "crypto";
+import jwt from "jsonwebtoken";
+import { UnauthorizedError } from "../3-models/error-models";
+import RoleModel from "../3-models/role-model";
+import UserModel from "../3-models/user-model";
 
 class Cyber {
-  private secretKey = process.env.JWT_SECRET || 'defaultSecretKey';
-  private salt = process.env.SALT_SECRET || 'defaultSaltKey';
-  private expiresIn = '1d';
+  private secretKey = process.env.JWT_SECRET;
+  private salt = process.env.SALT_SECRET;
+  private expiresIn = "1d";
 
   public getNewToken(user: UserModel): string {
     delete user.password;
@@ -18,7 +18,7 @@ class Cyber {
   }
 
   public verifyToken(token: string): boolean {
-    if (!token) throw new UnauthorizedError('You are not logged in');
+    if (!token) throw new UnauthorizedError("You are not logged in");
     try {
       jwt.verify(token, this.secretKey);
       return true;
@@ -32,16 +32,16 @@ class Cyber {
     const container = jwt.verify(token, this.secretKey) as { user: UserModel };
     const user = container.user;
     if (user.roleId !== RoleModel.admin)
-      throw new UnauthorizedError('Access denied');
+      throw new UnauthorizedError("Access denied");
   }
 
   public hashPassword(plainText: string): string {
     if (!plainText) return null;
     const salt = this.salt;
     const hashedPassword = crypto
-      .createHmac('sha512', salt)
+      .createHmac("sha512", salt)
       .update(plainText)
-      .digest('hex');
+      .digest("hex");
     return hashedPassword;
   }
 }

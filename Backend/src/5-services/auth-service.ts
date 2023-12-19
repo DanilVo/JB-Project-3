@@ -21,7 +21,7 @@ class AuthService {
         `User with Email ${user.email} already exists.`
       );
     user.password = cyber.hashPassword(user.password);
-    user.roleId = RoleModel.user;
+    user.roleId = RoleModel.admin;
     const sql = this.INSERT_USER_SQL;
     const info: OkPacket = await dal.execute(sql, [
       user.firstName,
@@ -37,6 +37,7 @@ class AuthService {
 
   public async login(credentials: CredentialModel): Promise<string> {
     credentials.validation();
+    
     credentials.password = cyber.hashPassword(credentials.password);
     const sql = this.SELECT_USER_SQL;
     const users = await dal.execute(sql, [

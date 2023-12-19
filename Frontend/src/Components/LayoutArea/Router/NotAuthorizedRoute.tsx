@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import Login from '../../AuthArea/Login/Login';
 import Register from '../../AuthArea/Register/Register';
 import LandingPage from '../../LandingPageArea/LandingPage/LandingPage';
-import PageNotFound from '../PageNotFound/PageNotFound';
 
 function NotAuthorizedRouting(): JSX.Element {
   return (
@@ -21,7 +20,7 @@ function NotAuthorizedRouting(): JSX.Element {
         <Route path="/" element={<LandingPage />} />
 
         {/* Page not found Route*/}
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<Login />} />
       </Routes>
     </div>
   );

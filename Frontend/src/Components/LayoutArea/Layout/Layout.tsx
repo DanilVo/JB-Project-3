@@ -29,9 +29,9 @@ function Layout(): JSX.Element {
           <main>
             <Routing />
           </main>
-          <footer>
+          {/* <footer>
             <Footer />
-          </footer>
+          </footer> */}
         </div>
       ) : (
         <NotAuthorizedRouting />

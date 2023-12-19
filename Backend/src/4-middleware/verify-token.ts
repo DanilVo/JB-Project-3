@@ -7,7 +7,7 @@ function verifyToken(
   next: NextFunction
 ): void {
   const authorization = request.header('authorization');
-  const token = authorization?.substring(7);
+  const token = authorization?.substring(7);  
   cyber.verifyToken(token);
   next();
 }

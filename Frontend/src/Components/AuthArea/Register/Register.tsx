@@ -27,7 +27,7 @@ function Register(): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: 'easeOut', duration: 1.5 }}
+      transition={{ ease: "easeOut", duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         Register:
@@ -35,32 +35,36 @@ function Register(): JSX.Element {
       <form onSubmit={handleSubmit(registerNewUser)}>
         <TextField
           id="outlined-basic"
+          type="text"
           label="First Name:"
           variant="outlined"
           required
-          {...register('firstName')}
+          {...register("firstName")}
         />
         <TextField
           id="outlined-basic"
+          type="text"
           label="Last Name:"
           variant="outlined"
           required
-          {...register('lastName')}
+          {...register("lastName")}
         />
         <TextField
           id="outlined-basic"
+          type="email"
           label="Email:"
           variant="outlined"
           required
-          {...register('email')}
+          {...register("email")}
         />
         <TextField
           id="outlined-basic"
           label="Password:"
           type="password"
           variant="outlined"
+          minLength="4"
           required
-          {...register('password')}
+          {...register("password")}
         />
         <Button variant="outlined" type="submit">
           Register
