@@ -58,6 +58,7 @@ router.put(
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
+      console.log(request.body);
       request.body.vacationId = +request.params.id;
       request.body.image = request.files?.image;
       const vacation = new VacationModel(request.body);

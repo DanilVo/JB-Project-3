@@ -6,6 +6,8 @@ import UserModel from "../Models/UserModel";
 
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
+    console.log(credentials);
+    
     const response = await axios.post(appConfig.loginUserUrl, credentials);
 
     const token = response.data;

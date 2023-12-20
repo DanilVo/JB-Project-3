@@ -1,11 +1,11 @@
-import axios from "axios";
+import axios from 'axios';
 import {
   VacationAction,
   VacationActionTypes,
   vacationStore,
-} from "../Redux/VacationState";
-import appConfig from "../Utils/AppConfig";
-import VacationModel from "../Models/VacationModel";
+} from '../Redux/VacationState';
+import appConfig from '../Utils/AppConfig';
+import VacationModel from '../Models/VacationModel';
 
 class VacationService {
   public async getAllVacations(): Promise<VacationModel[]> {
@@ -34,9 +34,11 @@ class VacationService {
     vacationStore.dispatch(action);
   }
 
-  public async updateVacation(vacation: VacationModel): Promise<void> {
-    await axios.put(appConfig.deleteVacationUrl + vacation.vacationId);
-
+  public async updateVacation(
+    vacation: VacationModel,
+    vacationId: number
+  ): Promise<void> {
+    await axios.put(appConfig.updateVacationUrl + vacationId,vacation);
     const action: VacationAction = {
       type: VacationActionTypes.UpdateVacation,
       payload: vacation,

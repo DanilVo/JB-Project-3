@@ -1,50 +1,48 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom";
-import "./Edit.css";
-import { motion } from "framer-motion";
-import { Button, TextField, Typography } from "@mui/material";
-import { useForm } from "react-hook-form";
-import UserModel from "../../../Models/UserModel";
-import authService from "../../../Services/AuthService";
-import notificationService from "../../../Services/NotificationService";
-import VacationModel from "../../../Models/VacationModel";
-import { useEffect } from "react";
-import { vacationStore } from "../../../Redux/VacationState";
+import { Button, TextField, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate, useParams } from 'react-router-dom';
+import VacationModel from '../../../Models/VacationModel';
+import { vacationStore } from '../../../Redux/VacationState';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import './Edit.css';
 
 function Edit(): JSX.Element {
   const { vacationId } = useParams();
 
-  const { register, handleSubmit,setValue } = useForm<VacationModel>();
+  const { register, handleSubmit, setValue } = useForm<VacationModel>();
   const navigate = useNavigate();
 
-  async function registerNewUser(vacation: VacationModel) {
+  async function editVacation(vacation: VacationModel) {
     try {
-    //   await authService.register(credentials);
-    //   notificationService.success("User has been successfully created");
+      await vacationService.updateVacation(vacation, +vacationId);
+      notificationService.success('User has been successfully created');
       navigate(-1);
     } catch (err: any) {
-      notificationService.error(err.message);
+      notificationService.error('Failed to edit vacation: ' + err.message);
     }
   }
 
-  useEffect(()=>{
-    const vacations = vacationStore.getState().vacations 
-    const vacation = vacations.find(v=>v.vacationId === +vacationId);
-    const start = new Date(vacation.vacationStartDate).toLocaleDateString(
-      "en-GB"
-    );
-    const end = new Date(vacation.vacationStartDate).toLocaleDateString(
-      "en-GB"
-    );
-    const newDate = Date.parse(start)
-    console.log(vacation.vacationStartDate);
-    
-     
-    setValue("destination",vacation.destination)
-    setValue("description",vacation.description)
-    setValue("price",vacation.price)
-    // setValue("vacationStartDate",start)
-    // setValue("vacationEndDate", end);
-})
+  const dateParser = (date: Date | string): string => {
+    const initialDate = new Date(date);
+    const day = initialDate.getDate();
+    const month = initialDate.getMonth() + 1;
+    const year = initialDate.getFullYear();
+    return `${year}-${month < 9 ? '0' : ''}${month}-${day}`;
+  };
+
+  useEffect(() => {
+    const vacations = vacationStore.getState().vacations;
+    const vacation = vacations.find((v) => v.vacationId === +vacationId);
+
+    setValue('destination', vacation.destination);
+    setValue('description', vacation.description);
+    setValue('price', vacation.price);
+    setValue('vacationStartDate', dateParser(vacation.vacationStartDate));
+    setValue('vacationEndDate', dateParser(vacation.vacationEndDate));
+  }, []);
 
   return (
     <div className="Edit">
@@ -53,58 +51,52 @@ function Edit(): JSX.Element {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         animate={{ y: 100 }}
-        transition={{ ease: "easeOut", duration: 1.5 }}
+        transition={{ ease: 'easeOut', duration: 1.5 }}
       >
         <Typography variant="h4" color="Highlight" align="center">
           Edit:
         </Typography>
-        <form onSubmit={handleSubmit(registerNewUser)}>
+        <form onSubmit={handleSubmit(editVacation)}>
           <TextField
             id="outlined-basic"
             type="text"
             label="Destination:"
             variant="outlined"
-            required
-            {...register("destination")}
+            {...register('destination')}
           />
           <TextField
             id="outlined-basic"
             type="text"
             label="Description:"
             variant="outlined"
-            required
-            {...register("description")}
+            multiline
+            {...register('description')}
           />
           <TextField
             id="outlined-basic"
             type="number"
             label="Price:"
             variant="outlined"
-            required
-            {...register("price")}
+            {...register('price')}
           />
           <TextField
             id="outlined-basic"
             label="Start Date:"
             type="date"
             variant="outlined"
-            minLength="4"
-            required
             focused
-            {...register("vacationStartDate", { valueAsDate: true })}
+            {...register('vacationStartDate', { valueAsDate: true })}
           />
           <TextField
             id="outlined-basic"
             label="End Date:"
             type="date"
             variant="outlined"
-            minLength="4"
-            required
             focused
-            {...register("vacationEndDate", { valueAsDate: true })}
+            {...register('vacationEndDate', { valueAsDate: true })}
           />
           <Button variant="outlined" type="submit">
-            Register
+            Save Changes
           </Button>
         </form>
       </motion.div>
