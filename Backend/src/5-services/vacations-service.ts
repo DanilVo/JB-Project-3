@@ -4,6 +4,7 @@ import { ResourceNotFoundError } from "../3-models/error-models";
 import VacationModel from "../3-models/vacation-model";
 import appConfig from "../2-utils/app-config";
 import { fileSaver } from "uploaded-file-saver";
+import UserModel from "../3-models/user-model";
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
@@ -58,9 +59,11 @@ class VacationService {
   // One vacation
   public async getOneVacation(id: number): Promise<VacationModel> {
     const sql = this.SELECT_ONE_vacation_SQL;
-    const vacations = await dal.execute(sql, [id]);
-    return vacations;
+    const vacation = await dal.execute(sql, [id]);
+    return vacation;
   }
+
+
 
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {

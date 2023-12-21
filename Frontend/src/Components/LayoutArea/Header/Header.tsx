@@ -13,7 +13,7 @@ import './Header.css';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
 import authService from '../../../Services/AuthService';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function Header(): JSX.Element {
   const user: UserModel = authStore.getState().user;
@@ -40,16 +40,16 @@ function Header(): JSX.Element {
       <div className="userName">
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
+            <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
               R
             </Avatar>
           }
           action={
             <IconButton
               aria-label="settings"
-              aria-controls={open ? 'basic-menu' : undefined}
+              aria-controls={open ? "basic-menu" : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
+              aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
             >
               <MoreVertIcon />
@@ -64,10 +64,12 @@ function Header(): JSX.Element {
           open={open}
           onClose={handleCloseWindow}
           MenuListProps={{
-            'aria-labelledby': 'basic-button',
+            "aria-labelledby": "basic-button",
           }}
         >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <NavLink to="/">
+            <MenuItem>Settings</MenuItem>
+          </NavLink>
           <MenuItem onClick={handleClose}>Logout</MenuItem>
         </Menu>
       </div>
