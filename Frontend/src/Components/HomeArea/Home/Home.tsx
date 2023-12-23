@@ -18,7 +18,7 @@ function Home(): JSX.Element {
 
   const handleChange = (_e: any, p: number) => {
     setCurrentPAge(p);
-  };
+  };  
 
   useEffect(() => {
     vacationService

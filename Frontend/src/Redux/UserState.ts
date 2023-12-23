@@ -1,6 +1,5 @@
 import { legacy_createStore as createStore } from "redux";
 import UserModel from "../Models/UserModel";
-import { jwtDecode } from "jwt-decode";
 
 class UserState {
   public user: UserModel = new UserModel();
@@ -8,6 +7,7 @@ class UserState {
 
 export enum UserActionTypes {
   UpdateUser = "UpdateUser",
+  SetUser = "SetUser",
 }
 
 export interface UserAction {
@@ -23,10 +23,13 @@ function authReducer(
 
   switch (action.type) {
     case UserActionTypes.UpdateUser:
-
+      break;
+    case UserActionTypes.SetUser:
+      newState.user = action.payload;
+      break;
   }
 
   return newState;
 }
 
-export const authStore = createStore(authReducer);
+export const userStore = createStore(authReducer);

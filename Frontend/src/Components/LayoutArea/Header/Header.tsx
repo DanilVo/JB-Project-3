@@ -14,6 +14,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useState } from 'react';
 import authService from '../../../Services/AuthService';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { userStore } from '../../../Redux/UserState';
 
 function Header(): JSX.Element {
   const user: UserModel = authStore.getState().user;
@@ -33,6 +34,12 @@ function Header(): JSX.Element {
   const handleCloseWindow = () => {
     setAnchorEl(null)
   }
+
+      
+    const reduxUser = userStore.getState().user;
+    console.log(reduxUser);
+    
+
 
   return (
     <div className="Header">

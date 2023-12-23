@@ -9,19 +9,22 @@ import { jwtDecode } from 'jwt-decode';
 function Layout(): JSX.Element {
   const [isToken, setIsToken] = useState<boolean>(false);
 
+  const localStorageToken = localStorage.getItem('token');
+  
   useEffect(() => {
-    const localStorageToken = localStorage.getItem('token');
     if (!localStorageToken) return;
     const token = JSON.stringify(localStorageToken);
     const decoded = jwtDecode(localStorageToken);
     if (
       token.length > 0 &&
-      token != 'null' &&
+      token != "null" &&
       Date.now() <= decoded.exp * 1000
     ) {
       setIsToken(true);
     }
-  }, []);
+  }, [localStorageToken]);
+
+  
 
   return (
     <div className="Layout">
@@ -36,9 +39,6 @@ function Layout(): JSX.Element {
           <main>
             <Routing />
           </main>
-          {/* <footer>
-            <Footer />
-          </footer> */}
         </div>
       ) : (
         <NotAuthorizedRouting />

@@ -34,7 +34,7 @@ function Register(): JSX.Element {
       </Typography>
       <form onSubmit={handleSubmit(registerNewUser)}>
         <TextField
-          id="outlined-basic"
+          id="outlined-basic1"
           type="text"
           label="First Name:"
           variant="outlined"
@@ -42,7 +42,7 @@ function Register(): JSX.Element {
           {...register("firstName")}
         />
         <TextField
-          id="outlined-basic"
+          id="outlined-basic2"
           type="text"
           label="Last Name:"
           variant="outlined"
@@ -50,7 +50,7 @@ function Register(): JSX.Element {
           {...register("lastName")}
         />
         <TextField
-          id="outlined-basic"
+          id="outlined-basic3"
           type="email"
           label="Email:"
           variant="outlined"
@@ -58,7 +58,7 @@ function Register(): JSX.Element {
           {...register("email")}
         />
         <TextField
-          id="outlined-basic"
+          id="outlined-basic4"
           label="Password:"
           type="password"
           variant="outlined"

@@ -34,7 +34,7 @@ function Login(): JSX.Element {
       </Typography>
       <form onSubmit={handleSubmit(login)}>
         <TextField
-          id="outlined-basic"
+          id="outlined-basic1"
           label="Email:"
           variant="outlined"
           type="email"
@@ -42,7 +42,7 @@ function Login(): JSX.Element {
           {...register("email")}
         />
         <TextField
-          id="outlined-basic"
+          id="outlined-basic2"
           label="Password:"
           type="password"
           minLength="4"
