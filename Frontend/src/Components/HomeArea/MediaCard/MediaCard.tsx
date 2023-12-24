@@ -9,13 +9,14 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import VacationModel from '../../../Models/VacationModel';
-import './MediaCard.css';
 import {
   VacationAction,
   VacationActionTypes,
-  VacationState,
   vacationStore,
 } from '../../../Redux/VacationState';
+import './MediaCard.css';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -38,6 +39,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
       type: VacationActionTypes.DeleteVacation,
       payload: props.vacation.vacationId,
     };
+    vacationStore.dispatch(action);
   };
 
   return (
@@ -57,9 +59,13 @@ function MediaCard(props: MediaCardProps): JSX.Element {
           subheader={`${startVacation} - ${endVacation}`}
           action={
             <ButtonGroup>
-              <Button onClick={deleteVacation}>Delete</Button>
+              <Button onClick={deleteVacation}>
+                <DeleteForeverIcon titleAccess="Delete" />
+              </Button>
               <NavLink to={`/edit/${props.vacation.vacationId}`}>
-                <Button>Edit</Button>
+                <Button>
+                  <EditIcon titleAccess="Edit" />
+                </Button>
               </NavLink>
             </ButtonGroup>
           }
@@ -67,6 +73,8 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         <CardMedia
           sx={{ height: 140 }}
           image={props.vacation.vacationImageUrl}
+          component="div"
+          title={props.vacation.destination}
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">

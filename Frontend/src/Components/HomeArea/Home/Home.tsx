@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import VacationModel from "../../../Models/VacationModel";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import MediaCard from "../MediaCard/MediaCard";
-import "./Home.css";
-import { Pagination } from "@mui/material";
+import { useEffect, useState } from 'react';
+import VacationModel from '../../../Models/VacationModel';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import MediaCard from '../MediaCard/MediaCard';
+import './Home.css';
+import { Pagination } from '@mui/material';
 
 function Home(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
@@ -18,7 +18,7 @@ function Home(): JSX.Element {
 
   const handleChange = (_e: any, p: number) => {
     setCurrentPAge(p);
-  };  
+  };
 
   useEffect(() => {
     vacationService
@@ -31,9 +31,9 @@ function Home(): JSX.Element {
 
   const deleteVacation = async (id: number) => {
     try {
-      if (confirm("Are you sure?")) {
+      if (confirm('Are you sure?')) {
         await vacationService.deleteVacation(id);
-        notificationService.success("Vacation has been deleted!");
+        notificationService.success('Vacation has been deleted!');
         const remainingVacation = vacations.filter(
           (vacation) => vacation.vacationId !== id
         );
@@ -43,13 +43,14 @@ function Home(): JSX.Element {
       notificationService.error(err.message);
     }
   };
+
   return (
     <div className="mainHome">
-      {currentPosts.map((vacation: VacationModel, i: number) => (
+      {currentPosts.map((vacation: VacationModel, duration: number) => (        
         <MediaCard
           vacation={vacation}
           key={vacation.destination}
-          duration={(i + 2) * 0.1}
+          duration={(duration + 2) * 0.1}
           delete={deleteVacation}
         />
       ))}

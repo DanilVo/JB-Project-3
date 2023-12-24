@@ -1,4 +1,6 @@
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Button, TextField, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
@@ -17,7 +19,12 @@ function Edit(): JSX.Element {
 
   async function editVacation(vacation: VacationModel) {
     try {
+      vacation.vacationId = +vacationId;
+      vacation.image = (vacation.image as unknown as FileList)[0];
+
       await vacationService.updateVacation(vacation, +vacationId);
+      console.log(vacation);
+
       notificationService.success('User has been successfully created');
       navigate(-1);
     } catch (err: any) {
@@ -30,11 +37,14 @@ function Edit(): JSX.Element {
     const day = initialDate.getDate();
     const month = initialDate.getMonth() + 1;
     const year = initialDate.getFullYear();
-    return `${year}-${month < 9 ? '0' : ''}${month}-${day < 9 ? '0' : ''}${day}`;
+    return `${year}-${month < 9 ? '0' : ''}${month}-${
+      day < 9 ? '0' : ''
+    }${day}`;
   };
 
   useEffect(() => {
     const vacations = vacationStore.getState().vacations;
+
     const vacation = vacations.find((v) => v.vacationId === +vacationId);
 
     setValue('destination', vacation.destination);
@@ -42,7 +52,20 @@ function Edit(): JSX.Element {
     setValue('price', vacation.price);
     setValue('vacationStartDate', dateParser(vacation.vacationStartDate));
     setValue('vacationEndDate', dateParser(vacation.vacationEndDate));
+    setValue('vacationImageUrl', vacation.vacationImageUrl);
   }, []);
+
+  const VisuallyHiddenInput = styled('input')({
+    clip: 'rect(0 0 0 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    whiteSpace: 'nowrap',
+    width: 1,
+  });
 
   return (
     <div className="Edit">
@@ -95,6 +118,18 @@ function Edit(): JSX.Element {
             focused
             {...register('vacationEndDate', { valueAsDate: true })}
           />
+          <Button
+            component="label"
+            variant="contained"
+            startIcon={<CloudUploadIcon />}
+          >
+            Upload file
+            <VisuallyHiddenInput
+              type="file"
+              accept="image/*"
+              {...register('image')}
+            />
+          </Button>
           <Button variant="outlined" type="submit">
             Save Changes
           </Button>

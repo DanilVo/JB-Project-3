@@ -38,12 +38,17 @@ class VacationService {
     vacation: VacationModel,
     vacationId: number
   ): Promise<void> {
-    await axios.put(appConfig.updateVacationUrl + vacationId,vacation);
-    // console.log(vacation);
-    
+    const options = {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    };
+    const response = await axios.put(
+      appConfig.updateVacationUrl + vacationId,
+      vacation,
+      options
+    );
     const action: VacationAction = {
       type: VacationActionTypes.UpdateVacation,
-      payload: vacation,
+      payload: response.data,
     };
     vacationStore.dispatch(action);
   }
