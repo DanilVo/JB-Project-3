@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import VacationModel from '../../../Models/VacationModel';
 import notificationService from '../../../Services/NotificationService';
 import vacationService from '../../../Services/VacationsService';
@@ -43,10 +43,14 @@ function Home(): JSX.Element {
       notificationService.error(err.message);
     }
   };
-
+  const bottomRef = useRef(null);
+  const scrollToBottom = () => {
+    bottomRef.current.scrollIntoView();
+  };
   return (
     <div className="mainHome">
-      {currentPosts.map((vacation: VacationModel, duration: number) => (        
+      <div ref={bottomRef}></div>
+      {currentPosts.map((vacation: VacationModel, duration: number) => (
         <MediaCard
           vacation={vacation}
           key={vacation.destination}
@@ -55,7 +59,12 @@ function Home(): JSX.Element {
         />
       ))}
       <div className="pagination">
-        <Pagination count={2} color="primary" onChange={handleChange} />
+        <Pagination
+          count={2}
+          color="primary"
+          onChange={handleChange}
+          onClick={scrollToBottom}
+        />
       </div>
     </div>
   );

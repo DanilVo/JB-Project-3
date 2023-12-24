@@ -2,7 +2,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Button, TextField, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import VacationModel from '../../../Models/VacationModel';
@@ -13,24 +13,22 @@ import './Edit.css';
 
 function Edit(): JSX.Element {
   const { vacationId } = useParams();
-
-  const { register, handleSubmit, setValue } = useForm<VacationModel>();
   const navigate = useNavigate();
 
-  async function editVacation(vacation: VacationModel) {
-    try {
-      vacation.vacationId = +vacationId;
-      vacation.image = (vacation.image as unknown as FileList)[0];
+  const [image, setImage] = useState<any>();
+  const { register, handleSubmit, setValue } = useForm<VacationModel>();
 
-      await vacationService.updateVacation(vacation, +vacationId);
-      console.log(vacation);
-
-      notificationService.success('User has been successfully created');
-      navigate(-1);
-    } catch (err: any) {
-      notificationService.error('Failed to edit vacation: ' + err.message);
-    }
-  }
+  const VisuallyHiddenInput = styled('input')({
+    clip: 'rect(0 0 0 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    whiteSpace: 'nowrap',
+    width: 1,
+  });
 
   const dateParser = (date: Date | string): string => {
     const initialDate = new Date(date);
@@ -44,9 +42,7 @@ function Edit(): JSX.Element {
 
   useEffect(() => {
     const vacations = vacationStore.getState().vacations;
-
     const vacation = vacations.find((v) => v.vacationId === +vacationId);
-
     setValue('destination', vacation.destination);
     setValue('description', vacation.description);
     setValue('price', vacation.price);
@@ -55,17 +51,24 @@ function Edit(): JSX.Element {
     setValue('vacationImageUrl', vacation.vacationImageUrl);
   }, []);
 
-  const VisuallyHiddenInput = styled('input')({
-    clip: 'rect(0 0 0 0)',
-    clipPath: 'inset(50%)',
-    height: 1,
-    overflow: 'hidden',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    whiteSpace: 'nowrap',
-    width: 1,
-  });
+  async function editVacation(vacation: VacationModel) {
+    try {
+      vacation.vacationId = +vacationId;
+      vacation.image = (vacation.image as unknown as FileList)[0];
+
+      await vacationService.updateVacation(vacation, +vacationId);
+
+      notificationService.success('Vacation has been successfully updated');
+      navigate(-1);
+    } catch (err: any) {
+      notificationService.error('Failed to edit vacation: ' + err.message);
+    }
+  }
+
+  const imagePreview = (e: any) => {
+    console.log(e.target.files);
+    setImage(URL.createObjectURL(e.target.files[0]));
+  };
 
   return (
     <div className="Edit">
@@ -118,15 +121,17 @@ function Edit(): JSX.Element {
             focused
             {...register('vacationEndDate', { valueAsDate: true })}
           />
+          <img src={image} alt="" style={{height:"200px"}}/>
           <Button
             component="label"
             variant="contained"
             startIcon={<CloudUploadIcon />}
           >
-            Upload file
+            Upload image
             <VisuallyHiddenInput
               type="file"
               accept="image/*"
+              onInput={imagePreview}
               {...register('image')}
             />
           </Button>

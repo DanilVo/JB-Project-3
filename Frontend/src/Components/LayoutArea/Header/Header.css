@@ -11,7 +11,7 @@
 .Header > .userName {
   position: absolute;
   right: 20px;
-  top: 3vh;
+  top: 2vh;
 }
 
 .Header > .userName > .MuiCardHeader-root {
