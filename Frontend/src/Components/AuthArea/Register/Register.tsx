@@ -7,7 +7,11 @@ import authService from '../../../Services/AuthService';
 import './Register.css';
 import notificationService from '../../../Services/NotificationService';
 
-function Register(): JSX.Element {
+interface Parent {
+  setChild: Function;
+}
+
+function Register(props: Parent): JSX.Element {
   const { register, handleSubmit } = useForm<UserModel>();
   const navigate = useNavigate();
 
@@ -15,6 +19,7 @@ function Register(): JSX.Element {
     try {
       await authService.register(credentials);
       notificationService.success('User has been successfully created');
+      props.setChild(true);
       navigate('/');
     } catch (err: any) {
       notificationService.error(err.message);
@@ -27,7 +32,7 @@ function Register(): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: "easeOut", duration: 1.5 }}
+      transition={{ ease: 'easeOut', duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         Register:
@@ -39,7 +44,7 @@ function Register(): JSX.Element {
           label="First Name:"
           variant="outlined"
           required
-          {...register("firstName")}
+          {...register('firstName')}
         />
         <TextField
           id="outlined-basic2"
@@ -47,7 +52,7 @@ function Register(): JSX.Element {
           label="Last Name:"
           variant="outlined"
           required
-          {...register("lastName")}
+          {...register('lastName')}
         />
         <TextField
           id="outlined-basic3"
@@ -55,7 +60,7 @@ function Register(): JSX.Element {
           label="Email:"
           variant="outlined"
           required
-          {...register("email")}
+          {...register('email')}
         />
         <TextField
           id="outlined-basic4"
@@ -64,7 +69,7 @@ function Register(): JSX.Element {
           variant="outlined"
           minLength="4"
           required
-          {...register("password")}
+          {...register('password')}
         />
         <Button variant="outlined" type="submit">
           Register

@@ -27,6 +27,19 @@ function vacationsReducer(
     case VacationActionTypes.SetVacations:
       newState.vacations = action.payload;
       break;
+
+    case VacationActionTypes.UpdateVacation:
+      const vacationToUpdate = newState.vacations.findIndex(
+        (v) => v.description === action.payload.description
+      );
+      newState.vacations[vacationToUpdate] = action.payload;
+      break;
+
+    case VacationActionTypes.DeleteVacation:
+      const vacationToDelete = newState.vacations.findIndex(
+        (v) => v.vacationId === action.payload.vacationId
+      );
+      newState.vacations.splice(vacationToDelete, 1);
   }
 
   return newState;

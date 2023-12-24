@@ -30,7 +30,7 @@ function Edit(): JSX.Element {
     const day = initialDate.getDate();
     const month = initialDate.getMonth() + 1;
     const year = initialDate.getFullYear();
-    return `${year}-${month < 9 ? '0' : ''}${month}-${day}`;
+    return `${year}-${month < 9 ? '0' : ''}${month}-${day < 9 ? '0' : ''}${day}`;
   };
 
   useEffect(() => {

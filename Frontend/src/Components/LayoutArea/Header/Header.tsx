@@ -16,10 +16,14 @@ import authService from '../../../Services/AuthService';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { userStore } from '../../../Redux/UserState';
 
-function Header(): JSX.Element {
+interface Parent {
+  setToken: Function;
+}
+
+function Header(props: Parent): JSX.Element {
   const user: UserModel = authStore.getState().user;
-  
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -27,19 +31,14 @@ function Header(): JSX.Element {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
-    authService.logout()
-    navigate('/auth/login')
+    authService.logout();
+    props.setToken(false);
+    navigate('/auth/login');
   };
 
   const handleCloseWindow = () => {
-    setAnchorEl(null)
-  }
-
-      
-    const reduxUser = userStore.getState().user;
-    console.log(reduxUser);
-    
-
+    setAnchorEl(null);
+  };
 
   return (
     <div className="Header">
@@ -47,23 +46,23 @@ function Header(): JSX.Element {
       <div className="userName">
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+            <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
               R
             </Avatar>
           }
           action={
             <IconButton
               aria-label="settings"
-              aria-controls={open ? "basic-menu" : undefined}
+              aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
+              aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
             >
               <MoreVertIcon />
             </IconButton>
           }
-          title={`Hello ${user.firstName} ${user.lastName}`}
-          subheader={user.email}
+          title={`Hello ${user?.firstName} ${user?.lastName}`}
+          subheader={user?.email}
         />
         <Menu
           id="basic-menu"
@@ -71,7 +70,7 @@ function Header(): JSX.Element {
           open={open}
           onClose={handleCloseWindow}
           MenuListProps={{
-            "aria-labelledby": "basic-button",
+            'aria-labelledby': 'basic-button',
           }}
         >
           <NavLink to="/">

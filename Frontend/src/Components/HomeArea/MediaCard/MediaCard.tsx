@@ -1,15 +1,21 @@
-import { ButtonGroup } from "@mui/material";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
-import VacationModel from "../../../Models/VacationModel";
-import "./MediaCard.css";
+import { ButtonGroup } from '@mui/material';
+import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
+import VacationModel from '../../../Models/VacationModel';
+import './MediaCard.css';
+import {
+  VacationAction,
+  VacationActionTypes,
+  VacationState,
+  vacationStore,
+} from '../../../Redux/VacationState';
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -20,13 +26,18 @@ interface MediaCardProps {
 function MediaCard(props: MediaCardProps): JSX.Element {
   const startVacation = new Date(
     props.vacation.vacationStartDate
-  ).toLocaleDateString("en-GB");
+  ).toLocaleDateString('en-GB');
   const endVacation = new Date(
     props.vacation.vacationEndDate
-  ).toLocaleDateString("en-GB");
+  ).toLocaleDateString('en-GB');
 
   const deleteVacation = async () => {
     await props.delete(props.vacation.vacationId);
+
+    const action: VacationAction = {
+      type: VacationActionTypes.DeleteVacation,
+      payload: props.vacation.vacationId,
+    };
   };
 
   return (

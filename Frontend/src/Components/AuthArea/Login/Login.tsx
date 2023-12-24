@@ -1,21 +1,28 @@
-import { useForm } from 'react-hook-form';
-import './Login.css';
-import CredentialsModel from '../../../Models/CredentialsModel';
 import { Button, TextField, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import { NavLink, Navigate, redirect, useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { NavLink, useNavigate } from 'react-router-dom';
+import CredentialsModel from '../../../Models/CredentialsModel';
 import authService from '../../../Services/AuthService';
 import notificationService from '../../../Services/NotificationService';
+import './Login.css';
 
-function Login(): JSX.Element {
+interface Parent {
+  setChild: Function;
+}
+
+function Login(props: Parent): JSX.Element {
+
+  
   const { register, handleSubmit } = useForm<CredentialsModel>();
   const navigate = useNavigate();
-
+  
   async function login(credentials: CredentialsModel) {
     try {
       await authService.logIn(credentials);
+      props.setChild(true)
       notificationService.success('You have been logged-in successfully');
-      navigate("/home")
+      navigate('/home');
     } catch (err: any) {
       notificationService.error(err.message);
     }
@@ -27,7 +34,7 @@ function Login(): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: "easeOut", duration: 1.5 }}
+      transition={{ ease: 'easeOut', duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         LogIn:
@@ -39,7 +46,7 @@ function Login(): JSX.Element {
           variant="outlined"
           type="email"
           required
-          {...register("email")}
+          {...register('email')}
         />
         <TextField
           id="outlined-basic2"
@@ -48,7 +55,7 @@ function Login(): JSX.Element {
           minLength="4"
           variant="outlined"
           required
-          {...register("password")}
+          {...register('password')}
         />
         <Button variant="outlined" type="submit">
           LogIn

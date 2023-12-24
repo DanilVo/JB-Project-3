@@ -39,6 +39,8 @@ class VacationService {
     vacationId: number
   ): Promise<void> {
     await axios.put(appConfig.updateVacationUrl + vacationId,vacation);
+    // console.log(vacation);
+    
     const action: VacationAction = {
       type: VacationActionTypes.UpdateVacation,
       payload: vacation,
