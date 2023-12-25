@@ -10,6 +10,8 @@ class AppConfig {
   public readonly deleteVacationUrl: string = `${this.baseUrl}api/vacations/`;
 
   public readonly updateVacationUrl: string = `${this.baseUrl}api/vacations/`;
+
+  public readonly updateUserUrl: string = `${this.baseUrl}api/user/`;
 }
 
 // Singleton

@@ -23,9 +23,11 @@ function authReducer(
 
   switch (action.type) {
     case UserActionTypes.UpdateUser:
+      newState.user = action.payload
       break;
     case UserActionTypes.SetUser:
-      newState.user = action.payload;
+      const user = action.payload.user
+      newState.user = user;
       break;
   }
 

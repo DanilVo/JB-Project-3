@@ -1,20 +1,21 @@
 import axios from "axios";
-import appConfig from "../Utils/AppConfig";
-import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
 import UserModel from "../Models/UserModel";
-import { userStore } from "../Redux/UserState";
+import appConfig from "../Utils/AppConfig";
+import { UserAction, UserActionTypes, userStore } from "../Redux/UserState";
 
 class UserService {
-  public async getOneUser(userId:number): Promise<UserModel> {  
-
-    const response = await axios.get(appConfig.loginUserUrl+userId);
-
-    const user = response.data;
-
-    return user
+  public async updateUser(user: UserModel): Promise<UserModel> {
+    const { data } = await axios.post(
+      appConfig.updateUserUrl + user.userId,
+      user
+    );    
+    const action: UserAction = {
+      type: UserActionTypes.UpdateUser,
+      payload: data,
+    };
+    userStore.dispatch(action);
+    return data;
   }
-
-  
 }
 
 const userService = new UserService();

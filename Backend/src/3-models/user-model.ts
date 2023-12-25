@@ -19,7 +19,7 @@ export default class UserModel {
     this.roleId = user.roleId;
   }
 
-  private static validationSchema = Joi.object({
+  private static validationSchemaAdd = Joi.object({
     userId: Joi.number().optional().integer().positive(),
     firstName: Joi.string().required().min(2).max(50),
     lastName: Joi.string().required().min(2).max(50),
@@ -27,11 +27,27 @@ export default class UserModel {
     password: Joi.string()
       .required()
       .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/),
-    roleId: Joi.number().optional().min(1).max(2).positive(),
+    roleId: Joi.number().forbidden(),
   });
 
-  public validation(): void {
-    const result = UserModel.validationSchema.validate(this);
+  private static validationSchemaUpdate = Joi.object({
+    userId: Joi.number().optional().integer().positive(),
+    firstName: Joi.string().optional().min(2).max(50),
+    lastName: Joi.string().optional().min(2).max(50),
+    email: Joi.string().email().optional().min(2).max(50),
+    password: Joi.string()
+      .optional()
+      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/),
+    roleId: Joi.number().forbidden(),
+  });
+
+  public validationAdd(): void {
+    const result = UserModel.validationSchemaAdd.validate(this);
+    if (result?.error?.message) throw new ValidationError(result.error.message);
+  }
+
+  public validationUpdate(): void {
+    const result = UserModel.validationSchemaUpdate.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
   }
 }

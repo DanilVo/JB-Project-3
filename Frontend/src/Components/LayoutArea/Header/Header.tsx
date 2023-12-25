@@ -1,27 +1,25 @@
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {
   Avatar,
   CardHeader,
   IconButton,
   Menu,
-  MenuItem,
-  Typography,
+  MenuItem
 } from '@mui/material';
+import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import UserModel from '../../../Models/UserModel';
 import { authStore } from '../../../Redux/AuthState';
+import authService from '../../../Services/AuthService';
 import logo from '../../../assets/logo/logo-main-no-background.svg';
 import './Header.css';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { useState } from 'react';
-import authService from '../../../Services/AuthService';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { userStore } from '../../../Redux/UserState';
 
 interface Parent {
   setToken: Function;
 }
 
 function Header(props: Parent): JSX.Element {
-  const user: UserModel = authStore.getState().user;
+  const user: UserModel = authStore.getState().user;  
 
   const navigate = useNavigate();
 
@@ -73,7 +71,7 @@ function Header(props: Parent): JSX.Element {
             'aria-labelledby': 'basic-button',
           }}
         >
-          <NavLink to="/">
+          <NavLink to={`edit/user/${user.userId}`}>
             <MenuItem>Settings</MenuItem>
           </NavLink>
           <MenuItem onClick={handleClose}>Logout</MenuItem>

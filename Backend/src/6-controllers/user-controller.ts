@@ -17,4 +17,20 @@ router.get(
   }
 );
 
+// Update user
+router.post(
+  "/user/:id([0-9]+)",
+  async (request: Request, response: Response, next: NextFunction) => {
+    try {
+      // const id = +request.params.id;
+      console.log(request.body);
+      
+      const user = await userService.updateUser(request.body);
+      response.json(user);
+    } catch (err: any) {
+      next(err);
+    }
+  }
+);
+
 export default router;
