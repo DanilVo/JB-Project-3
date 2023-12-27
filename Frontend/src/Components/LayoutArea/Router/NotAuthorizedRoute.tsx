@@ -30,7 +30,7 @@ function NotAuthorizedRouting(prop: Parent): JSX.Element {
         <Route path="/" element={<LandingPage />} />
 
         {/* Page not found Route*/}
-        {/* <Route path="*" element={<Login />} /> */}
+        <Route path="*" element={<LandingPage />} />
       </Routes>
     </div>
   );

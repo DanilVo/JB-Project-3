@@ -7,11 +7,11 @@ import authService from '../../../Services/AuthService';
 import notificationService from '../../../Services/NotificationService';
 import './Login.css';
 
-interface Parent {
+interface Props {
   setChild: Function;
 }
 
-function Login(props: Parent): JSX.Element {
+function Login(props: Props): JSX.Element {
 
   
   const { register, handleSubmit } = useForm<CredentialsModel>();

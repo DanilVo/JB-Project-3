@@ -9,9 +9,9 @@ import VacationModel from '../../../Models/VacationModel';
 import { vacationStore } from '../../../Redux/VacationState';
 import notificationService from '../../../Services/NotificationService';
 import vacationService from '../../../Services/VacationsService';
-import './Edit.css';
+import './EditVacation.css';
 
-function Edit(): JSX.Element {
+function EditVacation(): JSX.Element {
   const { vacationId } = useParams();
   const navigate = useNavigate();
 
@@ -43,6 +43,7 @@ function Edit(): JSX.Element {
   useEffect(() => {
     const vacations = vacationStore.getState().vacations;
     const vacation = vacations.find((v) => v.vacationId === +vacationId);
+    setImage(vacation.vacationImageUrl)
     setValue('destination', vacation.destination);
     setValue('description', vacation.description);
     setValue('price', vacation.price);
@@ -66,7 +67,6 @@ function Edit(): JSX.Element {
   }
 
   const imagePreview = (e: any) => {
-    console.log(e.target.files);
     setImage(URL.createObjectURL(e.target.files[0]));
   };
 
@@ -121,7 +121,7 @@ function Edit(): JSX.Element {
             focused
             {...register('vacationEndDate', { valueAsDate: true })}
           />
-          <img src={image} alt="" style={{height:"200px"}}/>
+          <img src={image} style={{height:"200px"}}/>
           <Button
             component="label"
             variant="contained"
@@ -144,4 +144,4 @@ function Edit(): JSX.Element {
   );
 }
 
-export default Edit;
+export default EditVacation;

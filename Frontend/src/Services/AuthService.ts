@@ -1,10 +1,8 @@
-import axios from "axios";
-import appConfig from "../Utils/AppConfig";
-import CredentialsModel from "../Models/CredentialsModel";
-import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
-import UserModel from "../Models/UserModel";
-import { UserAction, UserActionTypes, userStore } from "../Redux/UserState";
-import { jwtDecode } from "jwt-decode";
+import axios from 'axios';
+import CredentialsModel from '../Models/CredentialsModel';
+import UserModel from '../Models/UserModel';
+import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
+import appConfig from '../Utils/AppConfig';
 
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
@@ -17,12 +15,6 @@ class AuthService {
       payload: token,
     };
     authStore.dispatch(authAction);
-
-    const userAction: UserAction = {
-      type: UserActionTypes.SetUser,
-      payload: jwtDecode(token),
-    };
-    userStore.dispatch(userAction);
   }
 
   public async register(credentials: UserModel): Promise<void> {

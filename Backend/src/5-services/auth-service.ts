@@ -21,7 +21,7 @@ class AuthService {
         `User with Email ${user.email} already exists.`
       );
     user.password = cyber.hashPassword(user.password);
-    user.roleId = RoleModel.admin;
+    user.roleId = RoleModel.user;
     const sql = this.INSERT_USER_SQL;
     const info: OkPacket = await dal.execute(sql, [
       user.firstName,

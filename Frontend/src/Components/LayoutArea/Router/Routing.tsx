@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import Edit from '../../DataArea/Edit/Edit';
+import EditVacation from '../../DataArea/EditVacation/EditVacation';
+import EditUser from '../../DataArea/EditUser/EditUser';
 import Home from '../../HomeArea/Home/Home';
 import PageNotFound from '../PageNotFound/PageNotFound';
-import EditUser from '../../DataArea/EditUser/EditUser';
 
 function Routing(): JSX.Element {
   return (
@@ -14,10 +14,10 @@ function Routing(): JSX.Element {
         {/* Default Route */}
         <Route path="/" element={<Home />} />
 
-        {/* Update Route */}
-        <Route path="/edit/:vacationId" element={<Edit />} />
+        {/* Update Vacation */}
+        <Route path="/edit/:vacationId" element={<EditVacation />} />
 
-        {/* Update Route */}
+        {/* Update User */}
         <Route path="edit/user/:userId" element={<EditUser />} />
 
         {/* Page not found Route*/}

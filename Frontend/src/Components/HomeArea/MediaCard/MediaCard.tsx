@@ -1,3 +1,6 @@
+import BookmarkTwoToneIcon from '@mui/icons-material/BookmarkTwoTone';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
 import { ButtonGroup } from '@mui/material';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -9,14 +12,13 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import VacationModel from '../../../Models/VacationModel';
+import { authStore } from '../../../Redux/AuthState';
 import {
   VacationAction,
   VacationActionTypes,
   vacationStore,
 } from '../../../Redux/VacationState';
 import './MediaCard.css';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import EditIcon from '@mui/icons-material/Edit';
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -25,6 +27,8 @@ interface MediaCardProps {
 }
 
 function MediaCard(props: MediaCardProps): JSX.Element {
+  const roleValidation = authStore.getState().user;
+
   const startVacation = new Date(
     props.vacation.vacationStartDate
   ).toLocaleDateString('en-GB');
@@ -42,6 +46,26 @@ function MediaCard(props: MediaCardProps): JSX.Element {
     vacationStore.dispatch(action);
   };
 
+  const action =
+    roleValidation.roleId === 1 ? (
+      <ButtonGroup>
+        <Button onClick={deleteVacation}>
+          <DeleteForeverIcon titleAccess="Delete" />
+        </Button>
+        <NavLink to={`/edit/${props.vacation.vacationId}`}>
+          <Button>
+            <EditIcon titleAccess="Edit" />
+          </Button>
+        </NavLink>
+      </ButtonGroup>
+    ) : (
+      <Button>
+        <BookmarkTwoToneIcon />
+        {/* Change to filled when subscribed (import BookmarkIcon from '@mui/icons-material/Bookmark')*/}
+        Follow
+      </Button>
+    );
+
   return (
     <motion.div
       className="MediaCard"
@@ -57,18 +81,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         <CardHeader
           title={props.vacation.destination}
           subheader={`${startVacation} - ${endVacation}`}
-          action={
-            <ButtonGroup>
-              <Button onClick={deleteVacation}>
-                <DeleteForeverIcon titleAccess="Delete" />
-              </Button>
-              <NavLink to={`/edit/${props.vacation.vacationId}`}>
-                <Button>
-                  <EditIcon titleAccess="Edit" />
-                </Button>
-              </NavLink>
-            </ButtonGroup>
-          }
+          action={action}
         />
         <CardMedia
           sx={{ height: 140 }}

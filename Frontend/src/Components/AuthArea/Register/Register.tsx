@@ -7,11 +7,11 @@ import authService from '../../../Services/AuthService';
 import './Register.css';
 import notificationService from '../../../Services/NotificationService';
 
-interface Parent {
+interface Props {
   setChild: Function;
 }
 
-function Register(props: Parent): JSX.Element {
+function Register(props: Props): JSX.Element {
   const { register, handleSubmit } = useForm<UserModel>();
   const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ function Register(props: Parent): JSX.Element {
       await authService.register(credentials);
       notificationService.success('User has been successfully created');
       props.setChild(true);
-      navigate('/');
+      navigate('/home');
     } catch (err: any) {
       notificationService.error(err.message);
     }

@@ -6,51 +6,63 @@ import {
 } from '../Redux/VacationState';
 import appConfig from '../Utils/AppConfig';
 import VacationModel from '../Models/VacationModel';
+import notificationService from './NotificationService';
 
 class VacationService {
   public async getAllVacations(): Promise<VacationModel[]> {
-    let vacations = vacationStore.getState().vacations;
+    try {
+      let vacations = vacationStore.getState().vacations;
 
-    if (vacations.length === 0) {
-      const response = await axios.get(appConfig.allVacationsUrl);
+      if (vacations.length === 0) {
+        const response = await axios.get(appConfig.allVacationsUrl);
 
-      vacations = response.data;
+        vacations = response.data;
 
-      const action: VacationAction = {
-        type: VacationActionTypes.SetVacations,
-        payload: vacations,
-      };
-      vacationStore.dispatch(action);
+        const action: VacationAction = {
+          type: VacationActionTypes.SetVacations,
+          payload: vacations,
+        };
+        vacationStore.dispatch(action);
+      }
+      return vacations;
+    } catch (err: any) {
+      notificationService.error(`Couldn't get vacations: ${err.message}`);
     }
-    return vacations;
   }
 
   public async deleteVacation(id: number): Promise<void> {
-    await axios.delete(appConfig.deleteVacationUrl + id);
-
-    const action: VacationAction = {
-      type: VacationActionTypes.DeleteVacation,
-    };
-    vacationStore.dispatch(action);
+    try {
+      await axios.delete(appConfig.deleteVacationUrl + id);
+      const action: VacationAction = {
+        type: VacationActionTypes.DeleteVacation,
+      };
+      vacationStore.dispatch(action);
+    } catch (err: any) {
+      notificationService.error(`Couldn't delete vacation: ${err.message}`);
+    }
   }
 
   public async updateVacation(
     vacation: VacationModel,
     vacationId: number
   ): Promise<void> {
-    const options = {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    };
-    const response = await axios.put(
-      appConfig.updateVacationUrl + vacationId,
-      vacation,
-      options
-    );
-    const action: VacationAction = {
-      type: VacationActionTypes.UpdateVacation,
-      payload: response.data,
-    };
-    vacationStore.dispatch(action);
+    try {
+      const options = {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      };
+      const response = await axios.put(
+        appConfig.updateVacationUrl + vacationId,
+        vacation,
+        options
+      );
+      const action: VacationAction = {
+        type: VacationActionTypes.UpdateVacation,
+        payload: response.data,
+      };
+      vacationStore.dispatch(action);
+    } catch (err: any) {
+      notificationService.error(`Couldn't update vacation: ${err.message}`);
+    }
   }
 }
 
