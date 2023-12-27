@@ -95,7 +95,6 @@ function MediaCard(props: MediaCardProps): JSX.Element {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Follow</Button>
           <Typography variant="body2">Price:{props.vacation.price}</Typography>
         </CardActions>
       </Card>

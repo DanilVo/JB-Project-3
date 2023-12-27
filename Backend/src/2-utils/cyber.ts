@@ -37,7 +37,7 @@ class Cyber {
       throw new UnauthorizedError("Access denied");
   }
 
-  public hashPassword(plainText: string): string {
+  public hashPassword(plainText: any): string {
     if (!plainText) return null;
     const salt = this.salt;
     const hashedPassword = crypto

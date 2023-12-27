@@ -8,12 +8,13 @@ import RoleModel from "../3-models/role-model";
 
 class AuthService {
   private readonly INSERT_USER_SQL =
-    "INSERT INTO users VALUES(DEFAULT,?,?,?,?,?)";
+    "INSERT INTO users VALUES(DEFAULT,?,?,?,?,?,?)";
   private readonly SELECT_USER_SQL =
     "SELECT * FROM users WHERE email = ? AND password = ?";
   private readonly COUNT_EMAIL_SQL = "SELECT * FROM users WHERE email = ?";
 
   public async register(user: UserModel): Promise<string> {
+    user.uuid = cyber.hashPassword(user.email)
     user.validationAdd();
 
     if (await this.isEmailTaken(user.email))
@@ -24,6 +25,7 @@ class AuthService {
     user.roleId = RoleModel.user;
     const sql = this.INSERT_USER_SQL;
     const info: OkPacket = await dal.execute(sql, [
+      user.uuid,
       user.firstName,
       user.lastName,
       user.email,
@@ -32,6 +34,8 @@ class AuthService {
     ]);
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
+    console.log(user);
+    
     return token;
   }
 

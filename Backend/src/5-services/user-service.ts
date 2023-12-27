@@ -21,7 +21,7 @@ class UserService {
 
   // UpdateUser
   public async updateUser(user: UserModel): Promise<UserModel> {
-    // user.validationUpdate();
+    user.validationUpdate();
     // const existingImageName = await this.getExistingImageName(
     //   vacation.vacationId
     // );

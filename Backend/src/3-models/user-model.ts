@@ -4,6 +4,7 @@ import { ValidationError } from "./error-models";
 
 export default class UserModel {
   public userId: number;
+  public uuid: string;
   public firstName: string;
   public lastName: string;
   public email: string;
@@ -12,6 +13,7 @@ export default class UserModel {
 
   public constructor(user: UserModel) {
     this.userId = user.userId;
+    this.uuid = user.uuid;
     this.firstName = user.firstName;
     this.lastName = user.lastName;
     this.email = user.email;
@@ -21,6 +23,7 @@ export default class UserModel {
 
   private static validationSchemaAdd = Joi.object({
     userId: Joi.number().optional().integer().positive(),
+    uuid: Joi.any().required(),
     firstName: Joi.string().required().min(2).max(50),
     lastName: Joi.string().required().min(2).max(50),
     email: Joi.string().email().required().min(2).max(50),
@@ -31,7 +34,8 @@ export default class UserModel {
   });
 
   private static validationSchemaUpdate = Joi.object({
-    userId: Joi.number().optional().integer().positive(),
+    userId: Joi.number().forbidden().integer().positive(),
+    uuid: Joi.any().forbidden(),
     firstName: Joi.string().optional().min(2).max(50),
     lastName: Joi.string().optional().min(2).max(50),
     email: Joi.string().email().optional().min(2).max(50),

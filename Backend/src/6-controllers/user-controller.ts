@@ -1,11 +1,11 @@
-import express, { NextFunction, Request, Response } from "express";
-import userService from "../5-services/user-service";
+import express, { NextFunction, Request, Response } from 'express';
+import userService from '../5-services/user-service';
 
 const router = express.Router();
 
 // Get One user
 router.get(
-  "/users/:id([0-9]+)",
+  '/users/:id([0-9]+)',
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const id = +request.params.id;
@@ -19,7 +19,7 @@ router.get(
 
 // Update user
 router.post(
-  "/user/:id([0-9]+)",
+  '/user/:id([0-9]+)',
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const user = await userService.updateUser(request.body);

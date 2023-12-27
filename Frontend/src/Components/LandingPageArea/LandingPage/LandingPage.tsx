@@ -1,10 +1,10 @@
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import logo from "../../../assets/logo/logo-main-no-background.svg";
-import HeroCarousel from "../HeroCarousel/HeroCarousel";
-import "./LandingPage.css";
-import { NavLink } from "react-router-dom";
-import { motion} from "framer-motion";
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import logo from '../../../assets/logo/logo-main-no-background.svg';
+import HeroCarousel from '../HeroCarousel/HeroCarousel';
+import './LandingPage.css';
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function LandingPage(): JSX.Element {
   return (
@@ -32,9 +32,12 @@ function LandingPage(): JSX.Element {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               animate={{ x: 100 }}
-              transition={{ ease: "easeOut", duration: 1.5 }}
+              transition={{ ease: 'easeOut', duration: 2 }}
             >
               <Typography variant="h3">Best Vacation On Best Price</Typography>
+              <Typography variant="subtitle1">
+                Affordable Getaways: Unbeatable Prices, Unforgettable Memories.
+              </Typography>
               <NavLink to="/auth/login">
                 <Button className="startNow" variant="contained" size="large">
                   Start now
@@ -51,9 +54,13 @@ function LandingPage(): JSX.Element {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               animate={{ x: 100 }}
-              transition={{ ease: "easeOut", duration: 1.5 }}
+              transition={{ ease: 'easeOut', duration: 2 }}
             >
               <Typography variant="h3">Anywhere, Anytime </Typography>
+              <Typography variant="subtitle1">
+                Around-the-Clock Support Anywhere, Anytime: Your Travel
+                Assistance 24/7 Worldwide.
+              </Typography>
               <NavLink to="/auth/login">
                 <Button className="startNow" variant="contained" size="large">
                   Start now
@@ -68,9 +75,13 @@ function LandingPage(): JSX.Element {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               animate={{ x: -100 }}
-              transition={{ ease: "easeOut", duration: 1.5 }}
+              transition={{ ease: 'easeOut', duration: 2 }}
             >
               <Typography variant="h3">Book Vacation With One Click</Typography>
+              <Typography variant="subtitle1">
+                Seamless Escapes: Book Your Perfect Vacation with a Single
+                Click.
+              </Typography>
               <NavLink to="/auth/login">
                 <Button className="startNow" variant="contained" size="large">
                   Start now
