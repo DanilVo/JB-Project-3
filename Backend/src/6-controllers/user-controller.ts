@@ -19,7 +19,7 @@ router.get(
 
 // Update user
 router.post(
-  '/user/:id([0-9]+)',
+  '/user/:userUuid',
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const user = await userService.updateUser(request.body);

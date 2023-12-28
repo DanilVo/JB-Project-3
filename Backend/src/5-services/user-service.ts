@@ -6,11 +6,11 @@ import { ResourceNotFoundError } from "../3-models/error-models";
 class UserService {
   // private readonly SELECT_EXISTING_IMAGE_NAME =
   //   "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
-  private readonly SELECT_ONE_user_SQL = "SELECT * FROM users WHERE userId = ?";
+  private readonly SELECT_ONE_user_SQL = "SELECT * FROM users WHERE userUuid = ?";
   private readonly UPDATE_user_SQL = `
     UPDATE users
     SET firstName=?, lastName=?, email=?
-    WHERE userId = ?`;
+    WHERE userUuid = ?`;
 
   // One user
   public async getOneUser(id: number): Promise<UserModel> {
@@ -21,7 +21,7 @@ class UserService {
 
   // UpdateUser
   public async updateUser(user: UserModel): Promise<UserModel> {
-    user.validationUpdate();
+    user.userValidationUpdate();
     // const existingImageName = await this.getExistingImageName(
     //   vacation.vacationId
     // );
@@ -33,9 +33,9 @@ class UserService {
       user.firstName,
       user.lastName,
       user.email,
-      user.userId,
+      user.userUuid,
     ]);
-    if (info.affectedRows === 0) throw new ResourceNotFoundError(user.userId);
+    if (info.affectedRows === 0) throw new ResourceNotFoundError();
     // delete vacation.image;
     // vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/${imageName}`;
     return user;

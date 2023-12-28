@@ -1,38 +1,39 @@
-import { Button, TextField, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { useNavigate, useParams } from 'react-router-dom';
-import UserModel from '../../../Models/UserModel';
-import { userStore } from '../../../Redux/UserState';
-import notificationService from '../../../Services/NotificationService';
-import userService from '../../../Services/UserService';
-import './EditUser.css';
-import { authStore } from '../../../Redux/AuthState';
+import { Button, TextField, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import UserModel from "../../../Models/UserModel";
+import { userStore } from "../../../Redux/UserState";
+import notificationService from "../../../Services/NotificationService";
+import userService from "../../../Services/UserService";
+import "./EditUser.css";
 
 function EditUser(): JSX.Element {
-  const { userId } = useParams();
+  const { userUuid } = useParams();
 
   const { register, handleSubmit, setValue } = useForm<UserModel>();
   const navigate = useNavigate();
 
   async function editUser(user: UserModel) {
     try {
-      user.userId = +userId;
+      user.userUuid = userUuid;
+      console.log(user);
+
       await userService.updateUser(user);
-      notificationService.success('User has been successfully updated');
+      notificationService.success("User has been successfully updated");
       navigate(-1);
     } catch (err: any) {
-      notificationService.error('Failed to edit user: ' + err.message);
+      notificationService.error("Failed to edit user: " + err.message);
     }
   }
 
   useEffect(() => {
     const user = userStore.getState().user;
 
-    setValue('firstName', user.firstName);
-    setValue('lastName', user.lastName);
-    setValue('email', user.email);
+    setValue("firstName", user.firstName);
+    setValue("lastName", user.lastName);
+    setValue("email", user.email);
 
     // setValue(); add password edit
     // setValue();
@@ -45,7 +46,7 @@ function EditUser(): JSX.Element {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         animate={{ y: 100 }}
-        transition={{ ease: 'easeOut', duration: 1.5 }}
+        transition={{ ease: "easeOut", duration: 1.5 }}
       >
         <Typography variant="h4" color="Highlight" align="center">
           Edit:
@@ -56,21 +57,21 @@ function EditUser(): JSX.Element {
             type="text"
             label="First Name:"
             variant="outlined"
-            {...register('firstName')}
+            {...register("firstName")}
           />
           <TextField
             id="outlined-basic"
             type="text"
             label="Last Name:"
             variant="outlined"
-            {...register('lastName')}
+            {...register("lastName")}
           />
           <TextField
             id="outlined-basic"
             type="email"
             label="Email:"
             variant="outlined"
-            {...register('email')}
+            {...register("email")}
           />
           <Button variant="outlined" type="submit">
             Save Changes

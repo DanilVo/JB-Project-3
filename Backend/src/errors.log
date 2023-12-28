@@ -70,3 +70,1511 @@ Wed, 27 Dec 2023 20:13:20 GMT
 Wed, 27 Dec 2023 20:14:49 GMT
 "email" must be a valid email
 ----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:22:56 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:23:51 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:29:12 GMT
+Route /api/user/undefined not exist
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:30:11 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:30:47 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:31:14 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:31:51 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:32:18 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:38:04 GMT
+user.userValidationUpdate is not a function
+Stack: TypeError: user.userValidationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 14:39:28 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:19:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:20:35 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:23:53 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:17 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:18 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:26:28 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:29:07 GMT
+ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+Stack: Error: ER_BAD_FIELD_ERROR: Unknown column 'vacationUuid' in 'where clause'
+    at Query.Sequence._packetToError (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:62:32)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.getOneVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:16)
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:32:12 GMT
+Route /favicon.ico not exist
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:44:25 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:49:48 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:49:57 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:50:18 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:51:12 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:51:40 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:52:07 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:55:01 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:55:11 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:55:15 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:55:23 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 15:55:25 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 16:05:33 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 16:05:34 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 16:05:41 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Thu, 28 Dec 2023 16:05:43 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------

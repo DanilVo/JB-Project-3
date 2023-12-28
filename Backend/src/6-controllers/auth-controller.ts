@@ -11,7 +11,7 @@ router.post(
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const user = new UserModel(request.body);
-      const token = await authService.register(user);
+      const token = await authService.register(user); 
       response.status(StatusCode.Created).json(token);
     } catch (err: any) {
       next(err);
