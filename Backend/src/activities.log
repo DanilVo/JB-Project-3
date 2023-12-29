@@ -1,222 +1,306 @@
-Wed, 27 Dec 2023 20:00:14 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: POST
-Route: /api/user/32
-Body: {"firstName":"Bart1","lastName":"Simpson","email":"bart@gmail.com","userId":32}
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:01:27 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"Veronica","lastName":"Soloduha","email":"veronica10@gmail.com","password":"Veronica1234"}
+Method: GET
+Route: /api/vacations
+Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:09:36 GMT
-
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"Veronica","lastName":"Soloduha","email":"veronica10@gmail.com","password":"Veronica1234"}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:10:02 GMT
-
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"Veronica","lastName":"Soloduha","email":"veronica10@gmail.com","password":"Veronica1234"}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:11:34 GMT
-
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"Veronica","lastName":"Soloduha","email":"veronica10@gmail.com","password":"Veronica1234"}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
-
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"Veronica","lastName":"Soloduha","email":"veronica10@gmail.com","password":"Veronica1234"}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/feca8fe3-68cb-4621-8ef9-bd75cbaa9531.jpeg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/new_york.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/tokyo.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/rome.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/sydney.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/cairo.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/rio.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
-
-Method: GET
-Route: /api/vacations/barcelona.jpg
-Body: {}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:12:30 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
 Method: GET
 Route: /api/vacations/auckland.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:20 GMT
+Fri, 29 Dec 2023 11:23:19 GMT
 
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"test","lastName":"test","email":"test@test.test","password":"Test1234"}
+Method: GET
+Route: /api/vacations/barcelona.jpg
+Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"test","lastName":"test","email":"test@gmail.com","password":"Test1234"}
+Method: GET
+Route: /api/vacations
+Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/feca8fe3-68cb-4621-8ef9-bd75cbaa9531.jpeg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/new_york.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/tokyo.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/rome.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/sydney.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/cairo.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/rio.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/barcelona.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:13:30 GMT
+Fri, 29 Dec 2023 11:23:36 GMT
 
 Method: GET
 Route: /api/vacations/auckland.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:49 GMT
-
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"test","lastName":"test","email":"test1@test.test","password":"Test1234"}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
-
-Method: POST
-Route: /api/auth/register
-Body: {"firstName":"test","lastName":"test","email":"test1@test.com","password":"Test1234"}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
+Fri, 29 Dec 2023 11:23:41 GMT
 
 Method: GET
 Route: /api/vacations/feca8fe3-68cb-4621-8ef9-bd75cbaa9531.jpeg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
+Fri, 29 Dec 2023 11:23:41 GMT
 
 Method: GET
 Route: /api/vacations/new_york.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
-
-Method: GET
-Route: /api/vacations/tokyo.jpg
-Body: {}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
-
-Method: GET
-Route: /api/vacations/rome.jpg
-Body: {}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
-
-Method: GET
-Route: /api/vacations/sydney.jpg
-Body: {}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
-
-Method: GET
-Route: /api/vacations/rio.jpg
-Body: {}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
-
-Method: GET
-Route: /api/vacations/barcelona.jpg
-Body: {}
-----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
+Fri, 29 Dec 2023 11:23:41 GMT
 
 Method: GET
 Route: /api/vacations/cairo.jpg
 Body: {}
 ----------------------------------------------------------------------------------------------------
-Wed, 27 Dec 2023 20:14:55 GMT
+Fri, 29 Dec 2023 11:23:41 GMT
+
+Method: GET
+Route: /api/vacations/sydney.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:23:41 GMT
+
+Method: GET
+Route: /api/vacations/rome.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:23:41 GMT
+
+Method: GET
+Route: /api/vacations/tokyo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:23:41 GMT
+
+Method: GET
+Route: /api/vacations/rio.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:23:41 GMT
+
+Method: GET
+Route: /api/vacations/barcelona.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:23:41 GMT
 
 Method: GET
 Route: /api/vacations/auckland.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/feca8fe3-68cb-4621-8ef9-bd75cbaa9531.jpeg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/new_york.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/tokyo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/rome.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/sydney.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/cairo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/rio.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/auckland.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:20 GMT
+
+Method: GET
+Route: /api/vacations/barcelona.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/feca8fe3-68cb-4621-8ef9-bd75cbaa9531.jpeg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/new_york.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/tokyo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/rome.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/sydney.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/cairo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/rio.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/barcelona.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:25:30 GMT
+
+Method: GET
+Route: /api/vacations/auckland.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 11:31:26 GMT
+
+Method: GET
+Route: /api/vacations
 Body: {}
 ----------------------------------------------------------------------------------------------------

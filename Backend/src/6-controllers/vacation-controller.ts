@@ -1,10 +1,10 @@
 import express, { NextFunction, Request, Response } from "express";
+import { fileSaver } from "uploaded-file-saver";
 import StatusCode from "../3-models/status-codes";
 import VacationModel from "../3-models/vacation-model";
+import verifyAdmin from "../4-middleware/verify-admin";
 import verifyToken from "../4-middleware/verify-token";
 import vacationService from "../5-services/vacations-service";
-import { fileSaver } from "uploaded-file-saver";
-import verifyAdmin from "../4-middleware/verify-admin";
 
 const router = express.Router();
 
@@ -24,11 +24,11 @@ router.get(
 
 // Get One vacation
 router.get(
-  "/vacations/:id([0-9]+)",
+  "/vacations/:vacationUuid",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      const id = +request.params.id;
-      const vacations = await vacationService.getOneVacation(id);
+      const vacationUuid = request.params.vacationUuid;
+      const vacations = await vacationService.getOneVacation(vacationUuid);
       response.json(vacations);
     } catch (err: any) {
       next(err);
@@ -54,11 +54,11 @@ router.post(
 
 // Update vacation
 router.put(
-  "/vacations/:id([0-9]+)",
+  "/vacations/:vacationUuid",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      request.body.vacationId = +request.params.id;
+      request.body.vacationUuid = request.params.vacationUuid;
       request.body.image = request.files?.image;
       const vacation = new VacationModel(request.body);
       const addedVacation = await vacationService.updateVacation(vacation);
@@ -71,12 +71,12 @@ router.put(
 
 // Delete vacation
 router.delete(
-  "/vacations/:id([0-9]+)",
+  "/vacations/:vacationUuid",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      const id = +request.params.id;
-      await vacationService.deleteVacation(id);
+      const vacationUuid = request.params.vacationUuid;
+      await vacationService.deleteVacation(vacationUuid);
       response.sendStatus(StatusCode.OK);
     } catch (err: any) {
       next(err);
@@ -85,7 +85,7 @@ router.delete(
 );
 
 router.get(
-  "/vacations/:imageName",
+  "/vacations/image/:imageName",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const imageName = request.params.imageName;

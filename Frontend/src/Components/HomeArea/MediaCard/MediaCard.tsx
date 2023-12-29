@@ -23,11 +23,11 @@ import './MediaCard.css';
 interface MediaCardProps {
   vacation: VacationModel;
   duration: number;
-  delete: (id: number) => Promise<void>;
+  delete: (vacationUuid: string) => Promise<void>;
 }
 
-function MediaCard(props: MediaCardProps): JSX.Element {
-  const roleValidation = authStore.getState().user;
+function MediaCard(props: MediaCardProps): JSX.Element {  
+  const roleValidation = authStore.getState().user;    
 
   const startVacation = new Date(
     props.vacation.vacationStartDate
@@ -37,11 +37,11 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   ).toLocaleDateString('en-GB');
 
   const deleteVacation = async () => {
-    await props.delete(props.vacation.vacationId);
+    await props.delete(props.vacation.vacationUuid);
 
     const action: VacationAction = {
       type: VacationActionTypes.DeleteVacation,
-      payload: props.vacation.vacationId,
+      payload: props.vacation.vacationUuid,
     };
     vacationStore.dispatch(action);
   };
@@ -52,7 +52,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         <Button onClick={deleteVacation}>
           <DeleteForeverIcon titleAccess="Delete" />
         </Button>
-        <NavLink to={`/edit/${props.vacation.vacationId}`}>
+        <NavLink to={`/edit/${props.vacation.vacationUuid}`}>
           <Button>
             <EditIcon titleAccess="Edit" />
           </Button>

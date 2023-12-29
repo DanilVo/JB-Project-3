@@ -30,9 +30,9 @@ class VacationService {
     }
   }
 
-  public async deleteVacation(id: number): Promise<void> {
+  public async deleteVacation(vacationUuid: string): Promise<void> {
     try {
-      await axios.delete(appConfig.deleteVacationUrl + id);
+      await axios.delete(appConfig.deleteVacationUrl + vacationUuid);
       const action: VacationAction = {
         type: VacationActionTypes.DeleteVacation,
       };
@@ -44,14 +44,14 @@ class VacationService {
 
   public async updateVacation(
     vacation: VacationModel,
-    vacationId: number
+    vacationUuid: string
   ): Promise<void> {
     try {
       const options = {
-        headers: { 'Content-Type': 'multipart/form-data' },
+        headers: { "Content-Type": "multipart/form-data" },
       };
       const response = await axios.put(
-        appConfig.updateVacationUrl + vacationId,
+        appConfig.updateVacationUrl + vacationUuid,
         vacation,
         options
       );

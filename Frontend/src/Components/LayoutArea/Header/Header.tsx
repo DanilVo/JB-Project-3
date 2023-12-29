@@ -18,7 +18,7 @@ interface Parent {
 }
 
 function Header(props: Parent): JSX.Element {
-  const user: UserModel = userStore.getState().user;
+  const user: UserModel = userStore.getState().user;  
   if (user.firstName === undefined) {
     const action: UserAction = {
       type: UserActionTypes.SetUser,
@@ -77,7 +77,7 @@ function Header(props: Parent): JSX.Element {
             'aria-labelledby': 'basic-button',
           }}
         >
-          <NavLink to={`edit/user/${user.userId}`}>
+          <NavLink to={`edit/user/${user.uuid}`}>
             <MenuItem>Settings</MenuItem>
           </NavLink>
           <MenuItem onClick={handleClose}>Logout</MenuItem>

@@ -37,7 +37,7 @@ function vacationsReducer(
 
     case VacationActionTypes.DeleteVacation:
       const vacationToDelete = newState.vacations.findIndex(
-        (v) => v.vacationId === action.payload.vacationId
+        (v) => v.vacationUuid === action.payload.vacationUuid
       );
       newState.vacations.splice(vacationToDelete, 1);
   }
