@@ -4,6 +4,7 @@ import appConfig from "../2-utils/app-config";
 import dal from "../2-utils/dal";
 import { ResourceNotFoundError } from "../3-models/error-models";
 import VacationModel from "../3-models/vacation-model";
+import cyber from "../2-utils/cyber";
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
@@ -65,7 +66,7 @@ class VacationService {
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.vacationUuid = cyber.hashPassword(vacation.vacationUuid);
-    vacation.vacationValidationAdd();
+    vacation.validation();
     const imageName = await fileSaver.add(vacation.image);
     const sql = this.INSERT_vacation_SQL;
     const info: OkPacket = await dal.execute(sql, [
@@ -85,7 +86,7 @@ class VacationService {
 
   // Update vacation
   public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.vacationValidationUpdate();
+    vacation.validation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
     );
