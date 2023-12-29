@@ -1,7 +1,10 @@
-import StatusCode from './status-codes';
+import StatusCode from "./status-codes";
 
 export class ClientError {
-  public constructor(public readonly message: string, public readonly status: number) {}
+  public constructor(
+    public readonly message: string,
+    public readonly status: number
+  ) {}
 }
 
 export class RouteNotFoundError extends ClientError {
@@ -11,8 +14,8 @@ export class RouteNotFoundError extends ClientError {
 }
 
 export class ResourceNotFoundError extends ClientError {
-  public constructor(id: number) {
-    super(`Resource with id ${id} not found`, StatusCode.NotFound);
+  public constructor() {
+    super(`Resource not found`, StatusCode.NotFound);
   }
 }
 

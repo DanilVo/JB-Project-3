@@ -20,10 +20,10 @@ function EditUser(): JSX.Element {
     try {
       user.userId = userFromState.userId;
       await userService.updateUser(user);
-      notificationService.success('User has been successfully updated');
+      notificationService.success("User has been successfully updated");
       navigate(-1);
     } catch (err: any) {
-      notificationService.error('Failed to edit user: ' + err.message);
+      notificationService.error("Failed to edit user: " + err.message);
     }
   }
 
@@ -43,7 +43,7 @@ function EditUser(): JSX.Element {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         animate={{ y: 100 }}
-        transition={{ ease: 'easeOut', duration: 1.5 }}
+        transition={{ ease: "easeOut", duration: 1.5 }}
       >
         <Typography variant="h4" color="Highlight" align="center">
           Edit:
@@ -54,21 +54,21 @@ function EditUser(): JSX.Element {
             type="text"
             label="First Name:"
             variant="outlined"
-            {...register('firstName')}
+            {...register("firstName")}
           />
           <TextField
             id="outlined-basic"
             type="text"
             label="Last Name:"
             variant="outlined"
-            {...register('lastName')}
+            {...register("lastName")}
           />
           <TextField
             id="outlined-basic"
             type="email"
             label="Email:"
             variant="outlined"
-            {...register('email')}
+            {...register("email")}
           />
           <Button variant="outlined" type="submit">
             Save Changes

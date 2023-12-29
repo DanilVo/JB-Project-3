@@ -15,7 +15,7 @@ class VacationService {
     "SELECT * FROM vacations WHERE vacationId = ?";
   private readonly INSERT_vacation_SQL = `
     INSERT INTO vacations(destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
-    VALUES(?,?,?,?,?,?)`;
+    VALUES(?,?,?,?,?,?,?)`;
   private readonly UPDATE_vacation_SQL = `
     UPDATE vacations
     SET vacationUuid=?, destination=?, description=?, vacationStartDate=?, vacationEndDate=?, price=?, vacationImageUrl=?
@@ -56,18 +56,20 @@ class VacationService {
   }
 
   // One vacation
-  public async getOneVacation(id: number): Promise<VacationModel> {
+  public async getOneVacation(vacationUuid: string): Promise<VacationModel> {
     const sql = this.SELECT_ONE_vacation_SQL;
-    const vacation = await dal.execute(sql, [id]);
+    const vacation = await dal.execute(sql, [vacationUuid]);
     return vacation;
   }
 
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.validation();
+    vacation.vacationUuid = cyber.hashPassword(vacation.vacationUuid);
+    vacation.vacationValidationAdd();
     const imageName = await fileSaver.add(vacation.image);
     const sql = this.INSERT_vacation_SQL;
     const info: OkPacket = await dal.execute(sql, [
+      vacation.vacationUuid,
       vacation.destination,
       vacation.description,
       String(vacation.vacationStartDate),
@@ -83,7 +85,7 @@ class VacationService {
 
   // Update vacation
   public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.validation();
+    vacation.vacationValidationUpdate();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
     );
@@ -99,20 +101,19 @@ class VacationService {
       String(vacation.vacationEndDate),
       vacation.price,
       imageName,
-      vacation.vacationId,
+      vacation.vacationUuid,
     ]);
-    if (info.affectedRows === 0)
-      throw new ResourceNotFoundError(vacation.vacationId);
+    if (info.affectedRows === 0) throw new ResourceNotFoundError();
     delete vacation.image;
     vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/${imageName}`;
     return vacation;
   }
 
   // Delete vacation
-  public async deleteVacation(id: number): Promise<void> {
+  public async deleteVacation(vacationUuid: string): Promise<void> {
     const sql = this.DELETE_vacation_SQL;
-    const info: OkPacket = await dal.execute(sql, [id]);
-    if (info.affectedRows === 0) throw new ResourceNotFoundError(id);
+    const info: OkPacket = await dal.execute(sql, [vacationUuid]);
+    if (info.affectedRows === 0) throw new ResourceNotFoundError();
   }
 }
 

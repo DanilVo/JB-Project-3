@@ -18,7 +18,7 @@ function Routing(): JSX.Element {
         <Route path="/edit/:vacationUuid" element={<EditVacation />} />
 
         {/* Update User */}
-        <Route path="edit/user/:uuid" element={<EditUser />} />
+        <Route path="edit/user/:userUuid" element={<EditUser />} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

@@ -10,7 +10,7 @@ class UserService {
     
     try {
       const { data } = await axios.post(
-        appConfig.updateUserUrl + user.userId,
+        appConfig.updateUserUrl + user.userUuid,
         user
       );
       

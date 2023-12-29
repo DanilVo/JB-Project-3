@@ -7,10 +7,8 @@ import './Home.css';
 import { Pagination } from '@mui/material';
 
 function Home(): JSX.Element {
-  const [vacations, setVacations] = useState<VacationModel[]>([]);
-  console.log(vacations);
+  const [vacations, setVacations] = useState<VacationModel[]>([]);  
   
-
   const [currentPage, setCurrentPAge] = useState<number>(1);
   const [postsPerPage, setPostsPerPage] = useState<number>(9);
 
@@ -31,13 +29,13 @@ function Home(): JSX.Element {
       .catch((err: any) => notificationService.error(err));
   }, []);
 
-  const deleteVacation = async (id: number) => {
+  const deleteVacation = async (vacationUuid: string) => {
     try {
-      if (confirm('Are you sure?')) {
-        await vacationService.deleteVacation(id);
-        notificationService.success('Vacation has been deleted!');
+      if (confirm("Are you sure?")) {
+        await vacationService.deleteVacation(vacationUuid);
+        notificationService.success("Vacation has been deleted!");
         const remainingVacation = vacations.filter(
-          (vacation) => vacation.vacationId !== id
+          (vacation) => vacation.vacationUuid !== vacationUuid
         );
         setVacations(remainingVacation);
       }

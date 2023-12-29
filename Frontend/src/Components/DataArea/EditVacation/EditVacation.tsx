@@ -12,11 +12,7 @@ import vacationService from "../../../Services/VacationsService";
 import "./EditVacation.css";
 
 function EditVacation(): JSX.Element {
-  const { vacationUuid } = useParams();
-  const vacationsFromState = vacationStore.getState().vacations;
-  const currentVacation = vacationsFromState.find(
-    (v) => v.vacationUuid === vacationUuid
-  );
+  const { vacationId } = useParams();
   const navigate = useNavigate();
 
   const [image, setImage] = useState<any>();
@@ -45,29 +41,23 @@ function EditVacation(): JSX.Element {
   };
 
   useEffect(() => {
-    setImage(currentVacation.vacationImageUrl);
-    setValue("destination", currentVacation.destination);
-    setValue("description", currentVacation.description);
-    setValue("price", currentVacation.price);
-    setValue(
-      "vacationStartDate",
-      dateParser(currentVacation.vacationStartDate)
-    );
-    setValue("vacationEndDate", dateParser(currentVacation.vacationEndDate));
-    setValue("vacationImageUrl", currentVacation.vacationImageUrl);
+    const vacations = vacationStore.getState().vacations;
+    const vacation = vacations.find((v) => v.vacationId === +vacationId);
+    setImage(vacation.vacationImageUrl)
+    setValue('destination', vacation.destination);
+    setValue('description', vacation.description);
+    setValue('price', vacation.price);
+    setValue('vacationStartDate', dateParser(vacation.vacationStartDate));
+    setValue('vacationEndDate', dateParser(vacation.vacationEndDate));
+    setValue('vacationImageUrl', vacation.vacationImageUrl);
   }, []);
 
   async function editVacation(vacation: VacationModel) {
     try {
-      vacation.vacationId = currentVacation.vacationId;
-      vacation.vacationUuid = vacationUuid;
+      vacation.vacationId = +vacationId;
       vacation.image = (vacation.image as unknown as FileList)[0];
 
-      console.log(vacation);
-      await vacationService.updateVacation(
-        vacation,
-        currentVacation.vacationId
-      );
+      await vacationService.updateVacation(vacation, +vacationId);
 
       notificationService.success("Vacation has been successfully updated");
       navigate(-1);
