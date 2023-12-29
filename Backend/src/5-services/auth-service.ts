@@ -14,8 +14,8 @@ class AuthService {
   private readonly COUNT_EMAIL_SQL = "SELECT * FROM users WHERE email = ?";
 
   public async register(user: UserModel): Promise<string> {
-    user.uuid = cyber.hashPassword(user.email)
-    user.validationAdd();
+    user.userUuid = cyber.hashPassword(user.email)
+    user.userValidationAdd();
 
     if (await this.isEmailTaken(user.email))
       throw new ValidationError(
@@ -25,7 +25,7 @@ class AuthService {
     user.roleId = RoleModel.user;
     const sql = this.INSERT_USER_SQL;
     const info: OkPacket = await dal.execute(sql, [
-      user.uuid,
+      user.userUuid,
       user.firstName,
       user.lastName,
       user.email,
@@ -34,7 +34,6 @@ class AuthService {
     ]);
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
-    console.log(user);
     
     return token;
   }

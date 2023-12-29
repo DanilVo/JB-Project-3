@@ -4,7 +4,7 @@ import { ValidationError } from "./error-models";
 
 export default class UserModel {
   public userId: number;
-  public uuid: string;
+  public userUuid: string;
   public firstName: string;
   public lastName: string;
   public email: string;
@@ -13,7 +13,7 @@ export default class UserModel {
 
   public constructor(user: UserModel) {
     this.userId = user.userId;
-    this.uuid = user.uuid;
+    this.userUuid = user.userUuid;
     this.firstName = user.firstName;
     this.lastName = user.lastName;
     this.email = user.email;
@@ -21,9 +21,9 @@ export default class UserModel {
     this.roleId = user.roleId;
   }
 
-  private static validationSchemaAdd = Joi.object({
-    userId: Joi.number().optional().integer().positive(),
-    uuid: Joi.any().required(),
+  private static userValidationSchemaAdd = Joi.object({
+    userId: Joi.number().forbidden().integer().positive(),
+    userUuid: Joi.any().optional(),
     firstName: Joi.string().required().min(2).max(50),
     lastName: Joi.string().required().min(2).max(50),
     email: Joi.string().email().required().min(2).max(50),
@@ -33,9 +33,9 @@ export default class UserModel {
     roleId: Joi.number().forbidden(),
   });
 
-  private static validationSchemaUpdate = Joi.object({
+  private static userValidationSchemaUpdate = Joi.object({
     userId: Joi.number().forbidden().integer().positive(),
-    uuid: Joi.any().forbidden(),
+    userUuid: Joi.any().forbidden(),
     firstName: Joi.string().optional().min(2).max(50),
     lastName: Joi.string().optional().min(2).max(50),
     email: Joi.string().email().optional().min(2).max(50),
@@ -45,13 +45,13 @@ export default class UserModel {
     roleId: Joi.number().forbidden(),
   });
 
-  public validationAdd(): void {
-    const result = UserModel.validationSchemaAdd.validate(this);
+  public userValidationAdd(): void {
+    const result = UserModel.userValidationSchemaAdd.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
   }
 
-  public validationUpdate(): void {
-    const result = UserModel.validationSchemaUpdate.validate(this);
+  public userValidationUpdate(): void {
+    const result = UserModel.userValidationSchemaUpdate.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
   }
 }

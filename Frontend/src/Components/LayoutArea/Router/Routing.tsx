@@ -15,10 +15,10 @@ function Routing(): JSX.Element {
         <Route path="/" element={<Home />} />
 
         {/* Update Vacation */}
-        <Route path="/edit/:vacationId" element={<EditVacation />} />
+        <Route path="/edit/:vacationUuid" element={<EditVacation />} />
 
         {/* Update User */}
-        <Route path="edit/user/:userId" element={<EditUser />} />
+        <Route path="edit/user/:userUuid" element={<EditUser />} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />
