@@ -27,7 +27,7 @@ export default class VacationModel {
 
   private static validationSchema = Joi.object({
     vacationId: Joi.number().optional().integer().positive(),
-    uuid: Joi.any().optional(),
+    vacationUuid: Joi.any().optional(),
     destination: Joi.string().required().min(2).max(25),
     description: Joi.string().required().min(5).max(75),
     vacationStartDate: Joi.date().required(),

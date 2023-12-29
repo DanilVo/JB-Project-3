@@ -24,11 +24,11 @@ router.get(
 
 // Get One vacation
 router.get(
-  "/vacations/:vacationUuid",
+  "/vacations/:id([0-9]+)",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      const vacationUuid = request.params.vacationUuid;
-      const vacations = await vacationService.getOneVacation(vacationUuid);
+      const id = +request.params.id;
+      const vacations = await vacationService.getOneVacation(id);
       response.json(vacations);
     } catch (err: any) {
       next(err);
@@ -54,11 +54,11 @@ router.post(
 
 // Update vacation
 router.put(
-  "/vacations/:vacationUuid",
+  "/vacations/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      request.body.vacationUuid = request.params.vacationUuid;
+      request.body.id = request.params.id;
       request.body.image = request.files?.image;
       const vacation = new VacationModel(request.body);
       const addedVacation = await vacationService.updateVacation(vacation);
@@ -71,12 +71,12 @@ router.put(
 
 // Delete vacation
 router.delete(
-  "/vacations/:vacationUuid",
+  "/vacations/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      const vacationUuid = request.params.vacationUuid;
-      await vacationService.deleteVacation(vacationUuid);
+      const id = +request.params.id;
+      await vacationService.deleteVacation(id);
       response.sendStatus(StatusCode.OK);
     } catch (err: any) {
       next(err);

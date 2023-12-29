@@ -44,14 +44,14 @@ class VacationService {
 
   public async updateVacation(
     vacation: VacationModel,
-    vacationUuid: string
+    vacationId: number
   ): Promise<void> {
     try {
       const options = {
         headers: { "Content-Type": "multipart/form-data" },
       };
       const response = await axios.put(
-        appConfig.updateVacationUrl + vacationUuid,
+        appConfig.updateVacationUrl + vacationId,
         vacation,
         options
       );

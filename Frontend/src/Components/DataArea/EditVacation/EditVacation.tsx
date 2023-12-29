@@ -12,10 +12,17 @@ import vacationService from "../../../Services/VacationsService";
 import "./EditVacation.css";
 
 function EditVacation(): JSX.Element {
-  const { vacationId } = useParams();
+  const { vacationUuid } = useParams();
+
+  const vacationsFromStore = vacationStore.getState().vacations;
+  const currentVacation = vacationsFromStore.find(
+    (v) => v.vacationUuid === vacationUuid
+  );
+
   const navigate = useNavigate();
 
-  const [image, setImage] = useState<any>();
+  const [previewImage, setPreviewImage] = useState<any>();
+  const [imageToUpload, setImageToUpload] = useState<any>();
   const { register, handleSubmit, setValue } = useForm<VacationModel>();
 
   const VisuallyHiddenInput = styled("input")({
@@ -41,23 +48,28 @@ function EditVacation(): JSX.Element {
   };
 
   useEffect(() => {
-    const vacations = vacationStore.getState().vacations;
-    const vacation = vacations.find((v) => v.vacationId === +vacationId);
-    setImage(vacation.vacationImageUrl)
-    setValue('destination', vacation.destination);
-    setValue('description', vacation.description);
-    setValue('price', vacation.price);
-    setValue('vacationStartDate', dateParser(vacation.vacationStartDate));
-    setValue('vacationEndDate', dateParser(vacation.vacationEndDate));
-    setValue('vacationImageUrl', vacation.vacationImageUrl);
+    setPreviewImage(currentVacation.vacationImageUrl);
+    setValue("destination", currentVacation.destination);
+    setValue("description", currentVacation.description);
+    setValue("price", currentVacation.price);
+    setValue(
+      "vacationStartDate",
+      dateParser(currentVacation.vacationStartDate)
+    );
+    setValue("vacationEndDate", dateParser(currentVacation.vacationEndDate));
+    setValue("vacationImageUrl", currentVacation.vacationImageUrl);
   }, []);
 
   async function editVacation(vacation: VacationModel) {
     try {
-      vacation.vacationId = +vacationId;
-      vacation.image = (vacation.image as unknown as FileList)[0];
-
-      await vacationService.updateVacation(vacation, +vacationId);
+      vacation.vacationUuid = vacationUuid
+      vacation.vacationId = currentVacation.vacationId;
+      vacation.image = (imageToUpload as unknown as FileList)[0];
+      
+      await vacationService.updateVacation(
+        vacation,
+        currentVacation.vacationId
+      );
 
       notificationService.success("Vacation has been successfully updated");
       navigate(-1);
@@ -66,8 +78,9 @@ function EditVacation(): JSX.Element {
     }
   }
 
-  const imagePreview = (e: any) => {
-    setImage(URL.createObjectURL(e.target.files[0]));
+  const imageExtract = (e: any) => {
+    setImageToUpload(e.target.files)
+    setPreviewImage(URL.createObjectURL(e.target.files[0]));
   };
 
   return (
@@ -121,7 +134,7 @@ function EditVacation(): JSX.Element {
             focused
             {...register("vacationEndDate", { valueAsDate: true })}
           />
-          <img src={image} style={{ height: "200px" }} />
+          <img src={previewImage} style={{ height: "200px" }} />
           <Button
             component="label"
             variant="contained"
@@ -131,7 +144,7 @@ function EditVacation(): JSX.Element {
             <VisuallyHiddenInput
               type="file"
               accept="image/*"
-              onInput={imagePreview}
+              onInput={imageExtract}
               {...register("image")}
             />
           </Button>

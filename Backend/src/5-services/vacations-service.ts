@@ -9,7 +9,7 @@ import cyber from "../2-utils/cyber";
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
     "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
-  private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/',vacationImageUrl) AS vacationImageUrl
+  private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl
                                                FROM vacations 
                                                ORDER BY vacationStartDate ASC`;
   private readonly SELECT_ONE_vacation_SQL =
@@ -57,15 +57,15 @@ class VacationService {
   }
 
   // One vacation
-  public async getOneVacation(vacationUuid: string): Promise<VacationModel> {
+  public async getOneVacation(id: number): Promise<VacationModel> {
     const sql = this.SELECT_ONE_vacation_SQL;
-    const vacation = await dal.execute(sql, [vacationUuid]);
+    const vacation = await dal.execute(sql, [id]);
     return vacation;
   }
 
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.vacationUuid = cyber.hashPassword(vacation.vacationUuid);
+    vacation.vacationUuid = cyber.hashPassword(vacation.destination);
     vacation.validation();
     const imageName = await fileSaver.add(vacation.image);
     const sql = this.INSERT_vacation_SQL;
@@ -80,12 +80,12 @@ class VacationService {
     ]);
     vacation.vacationId = info.insertId;
     delete vacation.image;
-    vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/${imageName}`;
+    vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/image/${imageName}`;
     return vacation;
   }
 
   // Update vacation
-  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
+  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {    
     vacation.validation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
@@ -102,18 +102,18 @@ class VacationService {
       String(vacation.vacationEndDate),
       vacation.price,
       imageName,
-      vacation.vacationUuid,
+      vacation.vacationId,
     ]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
     delete vacation.image;
-    vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/${imageName}`;
+    vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/image/${imageName}`;
     return vacation;
   }
 
   // Delete vacation
-  public async deleteVacation(vacationUuid: string): Promise<void> {
+  public async deleteVacation(id: number): Promise<void> {
     const sql = this.DELETE_vacation_SQL;
-    const info: OkPacket = await dal.execute(sql, [vacationUuid]);
+    const info: OkPacket = await dal.execute(sql, [id]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
   }
 }
