@@ -70,3 +70,54 @@ Wed, 27 Dec 2023 20:13:20 GMT
 Wed, 27 Dec 2023 20:14:49 GMT
 "email" must be a valid email
 ----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 10:32:31 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 10:32:33 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 10:32:40 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 10:43:52 GMT
+user.validationUpdate is not a function
+Stack: TypeError: user.validationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 10:48:17 GMT
+user.validationUpdate is not a function
+Stack: TypeError: user.validationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Fri, 29 Dec 2023 10:49:46 GMT
+user.validationUpdate is not a function
+Stack: TypeError: user.validationUpdate is not a function
+    at UserService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:24:10)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:4:12)
+    at UserService.updateUser (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\user-service.ts:44:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:25:38
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\user-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------

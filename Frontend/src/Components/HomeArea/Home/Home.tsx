@@ -8,6 +8,8 @@ import { Pagination } from '@mui/material';
 
 function Home(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
+  console.log(vacations);
+  
 
   const [currentPage, setCurrentPAge] = useState<number>(1);
   const [postsPerPage, setPostsPerPage] = useState<number>(9);

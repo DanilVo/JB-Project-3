@@ -52,7 +52,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         <Button onClick={deleteVacation}>
           <DeleteForeverIcon titleAccess="Delete" />
         </Button>
-        <NavLink to={`/edit/${props.vacation.vacationId}`}>
+        <NavLink to={`/edit/${props.vacation.vacationUuid}`}>
           <Button>
             <EditIcon titleAccess="Edit" />
           </Button>

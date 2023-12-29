@@ -34,7 +34,6 @@ class AuthService {
     ]);
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
-    console.log(user);
     
     return token;
   }

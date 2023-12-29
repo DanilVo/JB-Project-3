@@ -8,17 +8,17 @@ import { userStore } from '../../../Redux/UserState';
 import notificationService from '../../../Services/NotificationService';
 import userService from '../../../Services/UserService';
 import './EditUser.css';
-import { authStore } from '../../../Redux/AuthState';
 
 function EditUser(): JSX.Element {
   const { userId } = useParams();
+  const userFromState = userStore.getState().user;
 
   const { register, handleSubmit, setValue } = useForm<UserModel>();
   const navigate = useNavigate();
 
   async function editUser(user: UserModel) {
     try {
-      user.userId = +userId;
+      user.userId = userFromState.userId;
       await userService.updateUser(user);
       notificationService.success('User has been successfully updated');
       navigate(-1);
@@ -28,11 +28,9 @@ function EditUser(): JSX.Element {
   }
 
   useEffect(() => {
-    const user = userStore.getState().user;
-
-    setValue('firstName', user.firstName);
-    setValue('lastName', user.lastName);
-    setValue('email', user.email);
+    setValue('firstName', userFromState.firstName);
+    setValue('lastName', userFromState.lastName);
+    setValue('email', userFromState.email);
 
     // setValue(); add password edit
     // setValue();

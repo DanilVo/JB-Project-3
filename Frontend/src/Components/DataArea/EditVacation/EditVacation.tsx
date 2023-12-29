@@ -1,32 +1,36 @@
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { Button, TextField, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useNavigate, useParams } from 'react-router-dom';
-import VacationModel from '../../../Models/VacationModel';
-import { vacationStore } from '../../../Redux/VacationState';
-import notificationService from '../../../Services/NotificationService';
-import vacationService from '../../../Services/VacationsService';
-import './EditVacation.css';
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import { Button, TextField, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import VacationModel from "../../../Models/VacationModel";
+import { vacationStore } from "../../../Redux/VacationState";
+import notificationService from "../../../Services/NotificationService";
+import vacationService from "../../../Services/VacationsService";
+import "./EditVacation.css";
 
 function EditVacation(): JSX.Element {
-  const { vacationId } = useParams();
+  const { vacationUuid } = useParams();
+  const vacationsFromState = vacationStore.getState().vacations;
+  const currentVacation = vacationsFromState.find(
+    (v) => v.vacationUuid === vacationUuid
+  );
   const navigate = useNavigate();
 
   const [image, setImage] = useState<any>();
   const { register, handleSubmit, setValue } = useForm<VacationModel>();
 
-  const VisuallyHiddenInput = styled('input')({
-    clip: 'rect(0 0 0 0)',
-    clipPath: 'inset(50%)',
+  const VisuallyHiddenInput = styled("input")({
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
     height: 1,
-    overflow: 'hidden',
-    position: 'absolute',
+    overflow: "hidden",
+    position: "absolute",
     bottom: 0,
     left: 0,
-    whiteSpace: 'nowrap',
+    whiteSpace: "nowrap",
     width: 1,
   });
 
@@ -35,34 +39,40 @@ function EditVacation(): JSX.Element {
     const day = initialDate.getDate();
     const month = initialDate.getMonth() + 1;
     const year = initialDate.getFullYear();
-    return `${year}-${month < 9 ? '0' : ''}${month}-${
-      day < 9 ? '0' : ''
+    return `${year}-${month < 9 ? "0" : ""}${month}-${
+      day < 9 ? "0" : ""
     }${day}`;
   };
 
   useEffect(() => {
-    const vacations = vacationStore.getState().vacations;
-    const vacation = vacations.find((v) => v.vacationId === +vacationId);
-    setImage(vacation.vacationImageUrl)
-    setValue('destination', vacation.destination);
-    setValue('description', vacation.description);
-    setValue('price', vacation.price);
-    setValue('vacationStartDate', dateParser(vacation.vacationStartDate));
-    setValue('vacationEndDate', dateParser(vacation.vacationEndDate));
-    setValue('vacationImageUrl', vacation.vacationImageUrl);
+    setImage(currentVacation.vacationImageUrl);
+    setValue("destination", currentVacation.destination);
+    setValue("description", currentVacation.description);
+    setValue("price", currentVacation.price);
+    setValue(
+      "vacationStartDate",
+      dateParser(currentVacation.vacationStartDate)
+    );
+    setValue("vacationEndDate", dateParser(currentVacation.vacationEndDate));
+    setValue("vacationImageUrl", currentVacation.vacationImageUrl);
   }, []);
 
   async function editVacation(vacation: VacationModel) {
     try {
-      vacation.vacationId = +vacationId;
+      vacation.vacationId = currentVacation.vacationId;
+      vacation.vacationUuid = vacationUuid;
       vacation.image = (vacation.image as unknown as FileList)[0];
 
-      await vacationService.updateVacation(vacation, +vacationId);
+      console.log(vacation);
+      await vacationService.updateVacation(
+        vacation,
+        currentVacation.vacationId
+      );
 
-      notificationService.success('Vacation has been successfully updated');
+      notificationService.success("Vacation has been successfully updated");
       navigate(-1);
     } catch (err: any) {
-      notificationService.error('Failed to edit vacation: ' + err.message);
+      notificationService.error("Failed to edit vacation: " + err.message);
     }
   }
 
@@ -77,7 +87,7 @@ function EditVacation(): JSX.Element {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         animate={{ y: 100 }}
-        transition={{ ease: 'easeOut', duration: 1.5 }}
+        transition={{ ease: "easeOut", duration: 1.5 }}
       >
         <Typography variant="h4" color="Highlight" align="center">
           Edit:
@@ -88,7 +98,7 @@ function EditVacation(): JSX.Element {
             type="text"
             label="Destination:"
             variant="outlined"
-            {...register('destination')}
+            {...register("destination")}
           />
           <TextField
             id="outlined-basic"
@@ -96,14 +106,14 @@ function EditVacation(): JSX.Element {
             label="Description:"
             variant="outlined"
             multiline
-            {...register('description')}
+            {...register("description")}
           />
           <TextField
             id="outlined-basic"
             type="number"
             label="Price:"
             variant="outlined"
-            {...register('price')}
+            {...register("price")}
           />
           <TextField
             id="outlined-basic"
@@ -111,7 +121,7 @@ function EditVacation(): JSX.Element {
             type="date"
             variant="outlined"
             focused
-            {...register('vacationStartDate', { valueAsDate: true })}
+            {...register("vacationStartDate", { valueAsDate: true })}
           />
           <TextField
             id="outlined-basic"
@@ -119,9 +129,9 @@ function EditVacation(): JSX.Element {
             type="date"
             variant="outlined"
             focused
-            {...register('vacationEndDate', { valueAsDate: true })}
+            {...register("vacationEndDate", { valueAsDate: true })}
           />
-          <img src={image} style={{height:"200px"}}/>
+          <img src={image} style={{ height: "200px" }} />
           <Button
             component="label"
             variant="contained"
@@ -132,7 +142,7 @@ function EditVacation(): JSX.Element {
               type="file"
               accept="image/*"
               onInput={imagePreview}
-              {...register('image')}
+              {...register("image")}
             />
           </Button>
           <Button variant="outlined" type="submit">
