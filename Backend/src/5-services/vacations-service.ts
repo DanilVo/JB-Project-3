@@ -6,6 +6,11 @@ import { ResourceNotFoundError } from '../3-models/error-models';
 import VacationModel from '../3-models/vacation-model';
 import cyber from '../2-utils/cyber';
 
+interface VacationInfo {
+  userId: number;
+  vacationId: number;
+}
+
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
     'SELECT vacationImageUrl FROM vacations WHERE vacationId = ?';
@@ -121,14 +126,14 @@ class VacationService {
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
   }
 
-  public async followVacation(): Promise<void> {
+  public async followVacation(props: VacationInfo): Promise<void> {
     const sql = this.FOLLOW_VACATION;
-    await dal.execute(sql, ['userId,vacationId']); //
+    await dal.execute(sql, [props.userId, props.vacationId]);
   }
 
-  public async unFollowVacation(): Promise<void> {
+  public async unFollowVacation(props: VacationInfo): Promise<void> {
     const sql = this.UNFOLLOW_VACATION;
-    await dal.execute(sql, ['userId,vacationId']); //
+    await dal.execute(sql, [props.userId, props.vacationId]);
   }
 }
 

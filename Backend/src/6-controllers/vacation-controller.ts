@@ -111,12 +111,12 @@ router.get(
   }
 );
 
-router.get(
+router.post(
   '/follow',
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      await vacationService.followVacation();
+      await vacationService.followVacation(request.body);
       response.sendStatus(StatusCode.OK);
     } catch (err: any) {
       next(err);
@@ -129,7 +129,7 @@ router.delete(
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      await vacationService.followVacation();
+      await vacationService.unFollowVacation(request.body);
       response.sendStatus(StatusCode.OK);
     } catch (err: any) {
       next(err);

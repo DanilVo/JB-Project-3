@@ -24,8 +24,8 @@ import './MediaCard.css';
 interface MediaCardProps {
   vacation: VacationModel;
   duration: number;
-  delete: (vacationUuid: string) => Promise<void>;
-  follow: () => Promise<void>;
+  delete: (vacationId: number) => Promise<void>;
+  follow: (vacationId: number, isFollowing: number) => Promise<void>;
 }
 
 function MediaCard(props: MediaCardProps): JSX.Element {
@@ -39,16 +39,18 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   ).toLocaleDateString('en-GB');
 
   const deleteVacation = async () => {
-    await props.delete(props.vacation.vacationUuid);
+    await props.delete(props.vacation.vacationId);
 
     const action: VacationAction = {
       type: VacationActionTypes.DeleteVacation,
-      payload: props.vacation.vacationUuid,
+      payload: props.vacation.vacationId,
     };
     vacationStore.dispatch(action);
   };
 
-  const handleFollowVacation = () => {};
+  const handleFollowVacation = async () => {
+    await props.follow(props.vacation.vacationId, props.vacation.isFollowing);
+  };
 
   const action =
     roleValidation.roleId === 1 ? (

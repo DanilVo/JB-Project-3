@@ -9,7 +9,10 @@ import { vacationStore } from '../../../Redux/VacationState';
 
 function Home(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
-  // console.log(vacations);
+  console.log(vacations);
+  
+
+  const [following, setFollowing] = useState<boolean>(true);  
 
   const [currentPage, setCurrentPAge] = useState<number>(1);
   const [postsPerPage, setPostsPerPage] = useState<number>(9);
@@ -29,15 +32,15 @@ function Home(): JSX.Element {
         setVacations(data);
       })
       .catch((err: any) => notificationService.error(err));
-  }, []);
+  }, [following]);
 
-  const deleteVacation = async (vacationUuid: string) => {
+  const deleteVacation = async (vacationId: number) => {
     try {
       if (confirm('Are you sure?')) {
-        await vacationService.deleteVacation(vacationUuid);
+        await vacationService.deleteVacation(vacationId);
         notificationService.success('Vacation has been deleted!');
         const remainingVacation = vacations.filter(
-          (vacation) => vacation.vacationUuid !== vacationUuid
+          (vacation) => vacation.vacationId !== vacationId
         );
         setVacations(remainingVacation);
       }
@@ -46,14 +49,18 @@ function Home(): JSX.Element {
     }
   };
 
-  const handleFollowVacation = async () => {
+  const handleFollowVacation = async (
+    vacationId: number,
+    isFollowing: number
+  ) => {
     try {
-        // await vacationService.deleteVacation(vacationUuid);
-        // notificationService.success('Vacation has been deleted!');
-        // const remainingVacation = vacations.filter(
-        //   (vacation) => vacation.vacationUuid !== vacationUuid
-        // );
-        // setVacations(remainingVacation);
+      await vacationService.followVacation(vacationId, isFollowing);
+      setFollowing(!following);
+      // notificationService.success('Vacation has been deleted!');
+      // const remainingVacation = vacations.filter(
+      //   (vacation) => vacation.vacationUuid !== vacationUuid
+      // );
+      // setVacations(remainingVacation);
     } catch (err: any) {
       notificationService.error(err.message);
     }
