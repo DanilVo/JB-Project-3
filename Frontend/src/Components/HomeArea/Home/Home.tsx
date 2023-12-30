@@ -5,10 +5,12 @@ import vacationService from '../../../Services/VacationsService';
 import MediaCard from '../MediaCard/MediaCard';
 import './Home.css';
 import { Pagination } from '@mui/material';
+import { vacationStore } from '../../../Redux/VacationState';
 
 function Home(): JSX.Element {
-  const [vacations, setVacations] = useState<VacationModel[]>([]);  
-  
+  const [vacations, setVacations] = useState<VacationModel[]>([]);
+  // console.log(vacations);
+
   const [currentPage, setCurrentPAge] = useState<number>(1);
   const [postsPerPage, setPostsPerPage] = useState<number>(9);
 
@@ -31,9 +33,9 @@ function Home(): JSX.Element {
 
   const deleteVacation = async (vacationUuid: string) => {
     try {
-      if (confirm("Are you sure?")) {
+      if (confirm('Are you sure?')) {
         await vacationService.deleteVacation(vacationUuid);
-        notificationService.success("Vacation has been deleted!");
+        notificationService.success('Vacation has been deleted!');
         const remainingVacation = vacations.filter(
           (vacation) => vacation.vacationUuid !== vacationUuid
         );
@@ -43,10 +45,25 @@ function Home(): JSX.Element {
       notificationService.error(err.message);
     }
   };
+
+  const handleFollowVacation = async () => {
+    try {
+        // await vacationService.deleteVacation(vacationUuid);
+        // notificationService.success('Vacation has been deleted!');
+        // const remainingVacation = vacations.filter(
+        //   (vacation) => vacation.vacationUuid !== vacationUuid
+        // );
+        // setVacations(remainingVacation);
+    } catch (err: any) {
+      notificationService.error(err.message);
+    }
+  };
+
   const bottomRef = useRef(null);
   const scrollToBottom = () => {
     bottomRef.current.scrollIntoView();
   };
+
   return (
     <div className="mainHome">
       <div ref={bottomRef}></div>
@@ -56,6 +73,7 @@ function Home(): JSX.Element {
           key={vacation.destination}
           duration={(duration + 2) * 0.1}
           delete={deleteVacation}
+          follow={handleFollowVacation}
         />
       ))}
       <div className="pagination">

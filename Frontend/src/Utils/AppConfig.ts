@@ -1,7 +1,7 @@
 class AppConfig {
   public readonly baseUrl: string = "http://localhost:4000/";
 
-  public readonly allVacationsUrl: string = `${this.baseUrl}api/vacations`;
+  public readonly allVacationsUrl: string = `${this.baseUrl}api/vacations/subscriptions/`;
 
   public readonly loginUserUrl: string = `${this.baseUrl}api/auth/login`;
 

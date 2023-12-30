@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 function LandingPage(): JSX.Element {
   return (
-    <body id="landingPageBody">
+    <div id="landingPageBody">
       <div className="bgImg">
         <header>
           <div className="smallNav">
@@ -117,7 +117,7 @@ function LandingPage(): JSX.Element {
           </motion.div>
         </footer>
       </div>
-    </body>
+    </div>
   );
 }
 

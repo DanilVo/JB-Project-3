@@ -1,19 +1,19 @@
-import { OkPacket } from "mysql";
-import { fileSaver } from "uploaded-file-saver";
-import appConfig from "../2-utils/app-config";
-import dal from "../2-utils/dal";
-import { ResourceNotFoundError } from "../3-models/error-models";
-import VacationModel from "../3-models/vacation-model";
-import cyber from "../2-utils/cyber";
+import { OkPacket } from 'mysql';
+import { fileSaver } from 'uploaded-file-saver';
+import appConfig from '../2-utils/app-config';
+import dal from '../2-utils/dal';
+import { ResourceNotFoundError } from '../3-models/error-models';
+import VacationModel from '../3-models/vacation-model';
+import cyber from '../2-utils/cyber';
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
+    'SELECT vacationImageUrl FROM vacations WHERE vacationId = ?';
   private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl
                                                FROM vacations 
                                                ORDER BY vacationStartDate ASC`;
   private readonly SELECT_ONE_vacation_SQL =
-    "SELECT * FROM vacations WHERE vacationId = ?";
+    'SELECT * FROM vacations WHERE vacationId = ?';
   private readonly INSERT_vacation_SQL = `
     INSERT INTO vacations(destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
     VALUES(?,?,?,?,?,?,?)`;
@@ -22,22 +22,26 @@ class VacationService {
     SET vacationUuid=?, destination=?, description=?, vacationStartDate=?, vacationEndDate=?, price=?, vacationImageUrl=?
     WHERE vacationId = ?`;
   private readonly DELETE_vacation_SQL =
-    "DELETE FROM vacations WHERE vacationId = ?";
+    'DELETE FROM vacations WHERE vacationId = ?';
   private readonly GET_following_vacations = `
         SELECT DISTINCT
-        V.*,
+        V.*,CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl,
         EXISTS(SELECT * FROM followers WHERE vacationId = F.vacationId AND userId = ?) AS isFollowing,
         COUNT(F.userId) AS followersCount
         FROM vacations as V LEFT JOIN followers as F
         ON V.vacationId = F.vacationId
         GROUP BY vacationId
-        ORDER BY startDate`;
+        ORDER BY vacationStartDate`;
+  private readonly FOLLOW_VACATION =
+    'INSERT INTO followers (userId, vacationId) VALUES (?, ?)';
+  private readonly UNFOLLOW_VACATION =
+    'DELETE FROM followers WHERE followers.userId = ? AND followers.vacationId = ?';
 
   private async getExistingImageName(id: number): Promise<string> {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return "";
+    if (!vacation) return '';
     return vacation.vacationImageUrl;
   }
 
@@ -85,7 +89,7 @@ class VacationService {
   }
 
   // Update vacation
-  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {    
+  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.validation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
@@ -102,7 +106,7 @@ class VacationService {
       String(vacation.vacationEndDate),
       vacation.price,
       imageName,
-      vacation.vacationId,
+      +vacation.vacationId,
     ]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
     delete vacation.image;
@@ -115,6 +119,16 @@ class VacationService {
     const sql = this.DELETE_vacation_SQL;
     const info: OkPacket = await dal.execute(sql, [id]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
+  }
+
+  public async followVacation(): Promise<void> {
+    const sql = this.FOLLOW_VACATION;
+    await dal.execute(sql, ['userId,vacationId']); //
+  }
+
+  public async unFollowVacation(): Promise<void> {
+    const sql = this.UNFOLLOW_VACATION;
+    await dal.execute(sql, ['userId,vacationId']); //
   }
 }
 

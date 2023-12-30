@@ -7,14 +7,17 @@ import {
 import appConfig from '../Utils/AppConfig';
 import VacationModel from '../Models/VacationModel';
 import notificationService from './NotificationService';
+import { authStore } from '../Redux/AuthState';
 
 class VacationService {
   public async getAllVacations(): Promise<VacationModel[]> {
+    
     try {
       let vacations = vacationStore.getState().vacations;
-
-      if (vacations.length === 0) {
-        const response = await axios.get(appConfig.allVacationsUrl);
+      
+      if (vacations.length === 0) {        
+        const userId = authStore.getState().user.userId
+        const response = await axios.get(appConfig.allVacationsUrl + userId);
 
         vacations = response.data;
 
@@ -50,11 +53,16 @@ class VacationService {
       const options = {
         headers: { "Content-Type": "multipart/form-data" },
       };
+
       const response = await axios.put(
         appConfig.updateVacationUrl + vacationId,
         vacation,
         options
       );
+      
+      response.data.followersCount = vacation.followersCount
+      response.data.isFollowing = vacation.isFollowing
+      
       const action: VacationAction = {
         type: VacationActionTypes.UpdateVacation,
         payload: response.data,

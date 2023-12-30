@@ -1,3 +1,4 @@
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkTwoToneIcon from '@mui/icons-material/BookmarkTwoTone';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
@@ -24,10 +25,11 @@ interface MediaCardProps {
   vacation: VacationModel;
   duration: number;
   delete: (vacationUuid: string) => Promise<void>;
+  follow: () => Promise<void>;
 }
 
-function MediaCard(props: MediaCardProps): JSX.Element {  
-  const roleValidation = authStore.getState().user;    
+function MediaCard(props: MediaCardProps): JSX.Element {
+  const roleValidation = authStore.getState().user;
 
   const startVacation = new Date(
     props.vacation.vacationStartDate
@@ -46,6 +48,8 @@ function MediaCard(props: MediaCardProps): JSX.Element {
     vacationStore.dispatch(action);
   };
 
+  const handleFollowVacation = () => {};
+
   const action =
     roleValidation.roleId === 1 ? (
       <ButtonGroup>
@@ -59,11 +63,17 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         </NavLink>
       </ButtonGroup>
     ) : (
-      <Button>
-        <BookmarkTwoToneIcon />
-        {/* Change to filled when subscribed (import BookmarkIcon from '@mui/icons-material/Bookmark')*/}
-        Follow
-      </Button>
+      <ButtonGroup>
+        <Button onClick={handleFollowVacation}>
+          {props.vacation.isFollowing === 1 ? (
+            <BookmarkIcon />
+          ) : (
+            <BookmarkTwoToneIcon />
+          )}
+          {/* Change to filled when subscribed (import BookmarkIcon from '@mui/icons-material/Bookmark')*/}
+          Follow {props.vacation.followersCount}
+        </Button>
+      </ButtonGroup>
     );
 
   return (
