@@ -11,6 +11,7 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import VacationModel from '../../../Models/VacationModel';
 import { authStore } from '../../../Redux/AuthState';
@@ -30,6 +31,11 @@ interface MediaCardProps {
 
 function MediaCard(props: MediaCardProps): JSX.Element {
   const roleValidation = authStore.getState().user;
+  const storeVacations = vacationStore.getState().vacations;
+
+  const [followersCount, setFollowersCount] = useState<number>(
+    props.vacation.followersCount
+  );
 
   const startVacation = new Date(
     props.vacation.vacationStartDate
@@ -50,6 +56,30 @@ function MediaCard(props: MediaCardProps): JSX.Element {
 
   const handleFollowVacation = async () => {
     await props.follow(props.vacation.vacationId, props.vacation.isFollowing);
+
+    // Find vacation that will be modified
+    const indexOfVacationToUpdate = storeVacations.findIndex(
+      (v) => v.vacationId === props.vacation.vacationId
+    );
+
+    let vacationToUpdate = storeVacations[indexOfVacationToUpdate];
+
+    // Update values for vacationStore
+    if (vacationToUpdate.isFollowing === 1) {
+      vacationToUpdate.isFollowing -= 1;
+      vacationToUpdate.followersCount -= 1;
+      setFollowersCount(followersCount - 1);
+    } else {
+      vacationToUpdate.isFollowing += 1;
+      vacationToUpdate.followersCount += 1;
+      setFollowersCount(followersCount + 1);
+    }
+
+    const action: VacationAction = {
+      type: VacationActionTypes.UpdateVacation,
+      payload: vacationToUpdate,
+    };
+    vacationStore.dispatch(action);
   };
 
   const action =
@@ -72,8 +102,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
           ) : (
             <BookmarkTwoToneIcon />
           )}
-          {/* Change to filled when subscribed (import BookmarkIcon from '@mui/icons-material/Bookmark')*/}
-          Follow {props.vacation.followersCount}
+          {followersCount}
         </Button>
       </ButtonGroup>
     );

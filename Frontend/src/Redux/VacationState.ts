@@ -30,7 +30,7 @@ function vacationsReducer(
 
     case VacationActionTypes.UpdateVacation:
       const vacationToUpdate = newState.vacations.findIndex(
-        (v) => v.description === action.payload.description
+        (v) => v.vacationId === action.payload.vacationId
       );
       newState.vacations[vacationToUpdate] = action.payload;
       break;

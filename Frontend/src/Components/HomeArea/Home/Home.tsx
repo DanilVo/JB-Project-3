@@ -1,18 +1,13 @@
+import { Pagination } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import VacationModel from '../../../Models/VacationModel';
 import notificationService from '../../../Services/NotificationService';
 import vacationService from '../../../Services/VacationsService';
 import MediaCard from '../MediaCard/MediaCard';
 import './Home.css';
-import { Pagination } from '@mui/material';
-import { vacationStore } from '../../../Redux/VacationState';
 
 function Home(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
-  console.log(vacations);
-  
-
-  const [following, setFollowing] = useState<boolean>(true);  
 
   const [currentPage, setCurrentPAge] = useState<number>(1);
   const [postsPerPage, setPostsPerPage] = useState<number>(9);
@@ -32,7 +27,7 @@ function Home(): JSX.Element {
         setVacations(data);
       })
       .catch((err: any) => notificationService.error(err));
-  }, [following]);
+  }, []);
 
   const deleteVacation = async (vacationId: number) => {
     try {
@@ -55,12 +50,7 @@ function Home(): JSX.Element {
   ) => {
     try {
       await vacationService.followVacation(vacationId, isFollowing);
-      setFollowing(!following);
-      // notificationService.success('Vacation has been deleted!');
-      // const remainingVacation = vacations.filter(
-      //   (vacation) => vacation.vacationUuid !== vacationUuid
-      // );
-      // setVacations(remainingVacation);
+      notificationService.success('Vacation has been added!');
     } catch (err: any) {
       notificationService.error(err.message);
     }
