@@ -8,7 +8,7 @@ import notificationService from '../../../Services/NotificationService';
 import './Login.css';
 
 interface Props {
-  setChild: Function;
+  setUserInSystem: Function;
 }
 
 function Login(props: Props): JSX.Element {
@@ -20,7 +20,7 @@ function Login(props: Props): JSX.Element {
   async function login(credentials: CredentialsModel) {
     try {
       await authService.logIn(credentials);
-      props.setChild(true)
+      props.setUserInSystem(true)
       notificationService.success('You have been logged-in successfully');
       navigate('/home');
     } catch (err: any) {

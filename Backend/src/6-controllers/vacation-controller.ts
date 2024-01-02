@@ -38,7 +38,7 @@ router.get(
 
 // Add vacation
 router.post(
-  '/vacations',
+  '/add-vacation',
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {

@@ -10,7 +10,6 @@ import userService from '../../../Services/UserService';
 import './EditUser.css';
 
 function EditUser(): JSX.Element {
-  const { userId } = useParams();
   const userFromState = userStore.getState().user;
 
   const { register, handleSubmit, setValue } = useForm<UserModel>();

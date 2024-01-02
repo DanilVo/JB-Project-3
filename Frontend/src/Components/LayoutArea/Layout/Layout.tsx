@@ -42,7 +42,7 @@ function Layout(): JSX.Element {
           </main>
         </div>
       ) : (
-        <NotAuthorizedRouting setChild={setUserInSystem} />
+        <NotAuthorizedRouting setUserInSystem={setUserInSystem} />
       )}
     </div>
   );

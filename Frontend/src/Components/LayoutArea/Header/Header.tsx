@@ -18,7 +18,7 @@ interface Parent {
 }
 
 function Header(props: Parent): JSX.Element {
-  const user: UserModel = userStore.getState().user;  
+  const user: UserModel = userStore.getState().user;
   if (user.firstName === undefined) {
     const action: UserAction = {
       type: UserActionTypes.SetUser,

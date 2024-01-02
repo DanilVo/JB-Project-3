@@ -2,29 +2,20 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Button, TextField, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import VacationModel from '../../../Models/VacationModel';
-import { vacationStore } from '../../../Redux/VacationState';
 import notificationService from '../../../Services/NotificationService';
 import vacationService from '../../../Services/VacationsService';
-import './EditVacation.css';
+import './AddVacation.css';
 
-function EditVacation(): JSX.Element {
-  const { vacationUuid } = useParams();
-
-  const vacationsFromStore = vacationStore.getState().vacations;
-
-  const currentVacation = vacationsFromStore.find(
-    (v) => v.vacationUuid === vacationUuid
-  );
-
+function AddVacation(): JSX.Element {
   const navigate = useNavigate();
 
   const [previewImage, setPreviewImage] = useState<any>();
   const [imageToUpload, setImageToUpload] = useState<any>();
-  const { register, handleSubmit, setValue } = useForm<VacationModel>();
+  const { register, handleSubmit } = useForm<VacationModel>();
 
   const VisuallyHiddenInput = styled('input')({
     clip: 'rect(0 0 0 0)',
@@ -48,36 +39,13 @@ function EditVacation(): JSX.Element {
     }${day}`;
   };
 
-  useEffect(() => {
-    setPreviewImage(currentVacation.vacationImageUrl);
-    setImageToUpload(currentVacation.vacationImageUrl);
-    setValue('destination', currentVacation.destination);
-    setValue('description', currentVacation.description);
-    setValue('price', currentVacation.price);
-    setValue(
-      'vacationStartDate',
-      dateParser(currentVacation.vacationStartDate)
-    );
-    setValue('vacationEndDate', dateParser(currentVacation.vacationEndDate));
-    setValue('vacationImageUrl', currentVacation.vacationImageUrl);
-  }, []);
-
-  async function editVacation(vacation: VacationModel) {
+  async function addVacation(vacation: VacationModel) {
     try {
-      vacation.vacationUuid = vacationUuid;
-      vacation.followersCount = currentVacation.followersCount;
-      vacation.isFollowing = currentVacation.isFollowing;
-      vacation.vacationId = +currentVacation.vacationId;
       vacation.image = (imageToUpload as unknown as FileList)[0];
-
-      await vacationService.updateVacation(
-        vacation,
-        currentVacation.vacationId
-      );
-
-      // const action: VacationAction = {type:VacationActionTypes.UpdateVacation}
-
-      notificationService.success('Vacation has been successfully updated');
+      vacation.vacationStartDate = dateParser(vacation.vacationStartDate);
+      vacation.vacationEndDate = dateParser(vacation.vacationEndDate);
+      await vacationService.addVacation(vacation);
+      notificationService.success('Vacation has been successfully added');
       navigate(-1);
     } catch (err: any) {
       notificationService.error('Failed to edit vacation: ' + err.message);
@@ -101,7 +69,7 @@ function EditVacation(): JSX.Element {
         <Typography variant="h4" color="Highlight" align="center">
           Edit:
         </Typography>
-        <form onSubmit={handleSubmit(editVacation)}>
+        <form onSubmit={handleSubmit(addVacation)}>
           <TextField
             id="outlined-basic"
             type="text"
@@ -163,4 +131,4 @@ function EditVacation(): JSX.Element {
   );
 }
 
-export default EditVacation;
+export default AddVacation;

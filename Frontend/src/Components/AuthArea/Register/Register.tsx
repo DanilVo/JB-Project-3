@@ -8,7 +8,7 @@ import './Register.css';
 import notificationService from '../../../Services/NotificationService';
 
 interface Props {
-  setChild: Function;
+  setUserInSystem: Function;
 }
 
 function Register(props: Props): JSX.Element {
@@ -19,7 +19,7 @@ function Register(props: Props): JSX.Element {
     try {
       await authService.register(credentials);
       notificationService.success('User has been successfully created');
-      props.setChild(true);
+      props.setUserInSystem(true);
       navigate('/home');
     } catch (err: any) {
       notificationService.error(err.message);

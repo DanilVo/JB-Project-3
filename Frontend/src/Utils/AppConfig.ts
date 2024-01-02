@@ -11,6 +11,8 @@ class AppConfig {
 
   public readonly updateVacationUrl: string = `${this.baseUrl}api/vacations/`;
 
+  public readonly addVacationUrl: string = `${this.baseUrl}api/add-vacation/`;
+
   public readonly updateUserUrl: string = `${this.baseUrl}api/user/`;
 
   public readonly followVacationUrl: string = `${this.baseUrl}api/follow`;

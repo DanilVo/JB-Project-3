@@ -56,22 +56,24 @@ function MediaCard(props: MediaCardProps): JSX.Element {
 
   const handleFollowVacation = async () => {
     await props.follow(props.vacation.vacationId, props.vacation.isFollowing);
+    updateVacationInRedux();
+  };
 
+  const updateVacationInRedux = () => {
     // Find vacation that will be modified
     const indexOfVacationToUpdate = storeVacations.findIndex(
       (v) => v.vacationId === props.vacation.vacationId
     );
 
     let vacationToUpdate = storeVacations[indexOfVacationToUpdate];
-
     // Update values for vacationStore
-    if (vacationToUpdate.isFollowing === 1) {
-      vacationToUpdate.isFollowing -= 1;
-      vacationToUpdate.followersCount -= 1;
+    if (vacationToUpdate.isFollowing) {
+      vacationToUpdate.isFollowing--;
+      vacationToUpdate.followersCount--;
       setFollowersCount(followersCount - 1);
     } else {
-      vacationToUpdate.isFollowing += 1;
-      vacationToUpdate.followersCount += 1;
+      vacationToUpdate.isFollowing++;
+      vacationToUpdate.followersCount++;
       setFollowersCount(followersCount + 1);
     }
 

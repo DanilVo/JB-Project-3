@@ -1,16 +1,20 @@
 import axios from 'axios';
+import VacationModel from '../Models/VacationModel';
+import { authStore } from '../Redux/AuthState';
+import { userStore } from '../Redux/UserState';
 import {
   VacationAction,
   VacationActionTypes,
   vacationStore,
 } from '../Redux/VacationState';
 import appConfig from '../Utils/AppConfig';
-import VacationModel from '../Models/VacationModel';
 import notificationService from './NotificationService';
-import { authStore } from '../Redux/AuthState';
-import { userStore } from '../Redux/UserState';
 
 class VacationService {
+  private options = {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  };
+
   public async getAllVacations(): Promise<VacationModel[]> {
     try {
       let vacations = vacationStore.getState().vacations;
@@ -39,6 +43,7 @@ class VacationService {
       await axios.delete(appConfig.deleteVacationUrl + vacationId);
       const action: VacationAction = {
         type: VacationActionTypes.DeleteVacation,
+        payload: vacationId,
       };
       vacationStore.dispatch(action);
     } catch (err: any) {
@@ -51,14 +56,10 @@ class VacationService {
     vacationId: number
   ): Promise<void> {
     try {
-      const options = {
-        headers: { 'Content-Type': 'multipart/form-data' },
-      };
-
       const response = await axios.put(
         appConfig.updateVacationUrl + vacationId,
         vacation,
-        options
+        this.options
       );
 
       response.data.followersCount = vacation.followersCount;
@@ -68,11 +69,29 @@ class VacationService {
         type: VacationActionTypes.UpdateVacation,
         payload: response.data,
       };
-      console.log(response.data);
 
       vacationStore.dispatch(action);
     } catch (err: any) {
       notificationService.error(`Couldn't update vacation: ${err.message}`);
+    }
+  }
+
+  public async addVacation(vacation: VacationModel): Promise<VacationModel> {
+    try {
+      const response = await axios.post(
+        appConfig.addVacationUrl,
+        vacation,
+        this.options
+      );
+
+      const action: VacationAction = {
+        type: VacationActionTypes.AddVacation,
+        payload: response.data,
+      };
+      vacationStore.dispatch(action);
+      return vacation;
+    } catch (err: any) {
+      notificationService.error(`Couldn't add vacation: ${err.message}`);
     }
   }
 
@@ -92,7 +111,7 @@ class VacationService {
         : axios.post(appConfig.followVacationUrl, vacationInfo);
     } catch (err: any) {
       notificationService.error(`You are not allowed to this: ${err.message}`);
-    } 
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import EditVacation from '../../DataArea/EditVacation/EditVacation';
 import EditUser from '../../DataArea/EditUser/EditUser';
 import Home from '../../HomeArea/Home/Home';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import AddVacation from '../../DataArea/Add/AddVacation';
 
 function Routing(): JSX.Element {
   return (
@@ -19,6 +20,9 @@ function Routing(): JSX.Element {
 
         {/* Update User */}
         <Route path="edit/user/:userUuid" element={<EditUser />} />
+        
+        {/* Add vacation */}
+        <Route path="/add-vacation" element={<AddVacation />} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

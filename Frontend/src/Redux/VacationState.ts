@@ -28,18 +28,23 @@ function vacationsReducer(
       newState.vacations = action.payload;
       break;
 
+    case VacationActionTypes.AddVacation:
+      newState.vacations.push(action.payload);
+      break;
+
     case VacationActionTypes.UpdateVacation:
       const vacationToUpdate = newState.vacations.findIndex(
-        (v) => v.vacationId === action.payload.vacationId
+        (v) => v.vacationId === +action.payload.vacationId
       );
       newState.vacations[vacationToUpdate] = action.payload;
       break;
 
     case VacationActionTypes.DeleteVacation:
       const vacationToDelete = newState.vacations.findIndex(
-        (v) => v.vacationUuid === action.payload.vacationUuid
+        (v) => v.vacationId === action.payload
       );
       newState.vacations.splice(vacationToDelete, 1);
+      break;
   }
 
   return newState;

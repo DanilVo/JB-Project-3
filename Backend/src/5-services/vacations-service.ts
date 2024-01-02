@@ -20,7 +20,7 @@ class VacationService {
   private readonly SELECT_ONE_vacation_SQL =
     'SELECT * FROM vacations WHERE vacationId = ?';
   private readonly INSERT_vacation_SQL = `
-    INSERT INTO vacations(destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
+    INSERT INTO vacations(vacationUuid,destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
     VALUES(?,?,?,?,?,?,?)`;
   private readonly UPDATE_vacation_SQL = `
     UPDATE vacations
@@ -87,7 +87,7 @@ class VacationService {
       vacation.price,
       imageName,
     ]);
-    vacation.vacationId = info.insertId;
+    vacation.vacationId = +info.insertId;
     delete vacation.image;
     vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/image/${imageName}`;
     return vacation;

@@ -4,7 +4,7 @@ import Register from '../../AuthArea/Register/Register';
 import LandingPage from '../../LandingPageArea/LandingPage/LandingPage';
 
 interface Parent {
-  setChild: Function;
+  setUserInSystem: Function;
 }
 
 function NotAuthorizedRouting(prop: Parent): JSX.Element {
@@ -17,13 +17,13 @@ function NotAuthorizedRouting(prop: Parent): JSX.Element {
         {/* Register Route */}
         <Route
           path="/auth/register"
-          element={<Register setChild={prop.setChild} />}
+          element={<Register setUserInSystem={prop.setUserInSystem} />}
         />
 
         {/* Login Route */}
         <Route
           path="/auth/logIn"
-          element={<Login setChild={prop.setChild} />}
+          element={<Login setUserInSystem={prop.setUserInSystem} />}
         />
 
         {/* Default Route */}
