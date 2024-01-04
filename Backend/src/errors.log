@@ -375,3 +375,22 @@ Tue, 02 Jan 2024 17:49:32 GMT
 Tue, 02 Jan 2024 17:51:06 GMT
 "vacationEndDate" must be greater than "ref:vacationStartDate"
 ----------------------------------------------------------------------------------------------------
+Wed, 03 Jan 2024 11:17:11 GMT
+"password" with value "ADMINB1234" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Thu, 04 Jan 2024 15:37:48 GMT
+ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\dummy.txt'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\dummy.txt'
+----------------------------------------------------------------------------------------------------
+Thu, 04 Jan 2024 15:38:03 GMT
+ENOENT: no such file or directory, stat 'C:\dummy.txt'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\dummy.txt'
+----------------------------------------------------------------------------------------------------
+Thu, 04 Jan 2024 15:38:10 GMT
+ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\dummy.txt'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\dummy.txt'
+----------------------------------------------------------------------------------------------------
+Thu, 04 Jan 2024 15:40:49 GMT
+ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\.src\6-controllers\dummy.txt'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\.src\6-controllers\dummy.txt'
+----------------------------------------------------------------------------------------------------
