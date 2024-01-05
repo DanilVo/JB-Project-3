@@ -1,17 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import EditVacation from "../../DataArea/EditVacation/EditVacation";
-import EditUser from "../../DataArea/EditUser/EditUser";
-import Home from "../../HomeArea/Home/Home";
-import PageNotFound from "../PageNotFound/PageNotFound";
 import AddVacation from "../../DataArea/Add/AddVacation";
+import EditUser from "../../DataArea/EditUser/EditUser";
+import EditVacation from "../../DataArea/EditVacation/EditVacation";
+import Home from "../../HomeArea/Home/Home";
 import AllReports from "../../ReportsArea/AllReports/AllReports";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
-function Routing(): JSX.Element {
+function Routing({filterVacations}:{filterVacations:string}): JSX.Element {
   return (
     <div className="Routing">
       <Routes>
         {/* Home Route */}
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home filterVacations={filterVacations}/>} />
 
         {/* Default Route */}
         <Route path="/" element={<Home />} />

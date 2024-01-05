@@ -1,18 +1,23 @@
-import { OkPacket } from "mysql";
-import dal from "../2-utils/dal";
-import UserModel from "../3-models/user-model";
-import { ResourceNotFoundError } from "../3-models/error-models";
-import path from "path";
+import { OkPacket } from 'mysql';
+import path from 'path';
+import dal from '../2-utils/dal';
+import {
+  ResourceNotFoundError,
+  ValidationError,
+} from '../3-models/error-models';
+import UserModel from '../3-models/user-model';
+import vacationService from './vacations-service';
+import VacationModel from '../3-models/vacation-model';
 
 class UserService {
   // private readonly SELECT_EXISTING_IMAGE_NAME =
   //   "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
   private readonly SELECT_ONE_user_SQL =
-    "SELECT * FROM users WHERE userUuid = ?";
+    'SELECT * FROM users WHERE userId = ?';
   private readonly UPDATE_user_SQL = `
     UPDATE users
     SET firstName=?, lastName=?, email=?
-    WHERE userUuid = ?`;
+    WHERE userId = ?`;
 
   // One user
   public async getOneUser(id: number): Promise<UserModel> {
@@ -35,7 +40,7 @@ class UserService {
       user.firstName,
       user.lastName,
       user.email,
-      user.userUuid,
+      user.userId,
     ]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
     // delete vacation.image;
@@ -51,28 +56,26 @@ class UserService {
   //   return vacation.vacationImageUrl;
   // }
 
-  public generateReport() {
-    const createCsvWriter = require("csv-writer").createObjectCsvWriter;
+  public async generateReport(userId: number) {
+    const vacations: VacationModel[] = await vacationService.getVacations(userId);
+
+    const createCsvWriter = require('csv-writer').createObjectCsvWriter;
     const csvWriter = createCsvWriter({
-      path: path.join(__dirname, "../1-assets", "/reports/reports.csv"),
+      path: path.join(__dirname, '../1-assets', `/reports/reports.csv`),
       header: [
-        { id: "name", title: "NAME" },
-        { id: "lang", title: "LANGUAGE" },
+        { id: 'dest', title: 'Destination' },
+        { id: 'follow', title: 'Followers' },
       ],
     });
 
-    const records = [
-      { name: "Bob", lang: "French, English" },
-      { name: "Mary", lang: "English" },
-      { name: "Mary", lang: "English" },
-    ];
+    const records = vacations.map((v) => ({
+      dest: v.destination,
+      follow: v.followersCount,
+    }));
 
-    csvWriter
-      .writeRecords(records) // returns a promise
-      .then(() => {
-        console.log("...Done");
-      });
-    // return path.join(__dirname,'../1-assets','/reports')
+    await csvWriter.writeRecords(records).then(() => {console.log('created csv')});
+    
+    return true;
   }
 }
 

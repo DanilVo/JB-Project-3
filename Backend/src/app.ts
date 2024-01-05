@@ -30,7 +30,6 @@ if (appConfig.isDevelopment) {
   server.use(cors({ origin: 'http://www.our-website.com' }));
 }
 
-
 fileSaver.config(path.join(__dirname, '1-assets', 'vacationImages'));
 
 server.use(express.json());

@@ -6,14 +6,11 @@ import notificationService from './NotificationService';
 
 class UserService {
   public async updateUser(user: UserModel): Promise<UserModel> {
-    console.log(user);
-    
     try {
       const { data } = await axios.post(
-        appConfig.updateUserUrl + user.userUuid,
+        appConfig.updateUserUrl + user.userId,
         user
       );
-      
       const action: UserAction = {
         type: UserActionTypes.UpdateUser,
         payload: data,
@@ -22,6 +19,23 @@ class UserService {
       return data;
     } catch (err: any) {
       notificationService.error(`Couldn't update user: ${err.message}`);
+    }
+  }
+
+  public async getReports(): Promise<void> {
+    try {
+      const response = await axios.get(appConfig.reportsUrl + 32, {
+        responseType: 'blob',
+      });
+      const blob = new Blob([response.data], {
+        type: response.headers['content-type'],
+      });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = 'reports.csv';
+      link.click();
+    } catch (err: any) {
+      notificationService.error(`Error downloading file: ${err.message}`);
     }
   }
 }

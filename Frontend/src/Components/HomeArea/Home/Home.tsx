@@ -6,8 +6,53 @@ import vacationService from '../../../Services/VacationsService';
 import MediaCard from '../MediaCard/MediaCard';
 import './Home.css';
 
-function Home(): JSX.Element {
+enum FilterActionTypes {
+  myVacations = 'My Vacations',
+  yetToStart = 'Yet to start',
+  activeNow = 'Active now',
+  allVacations = 'All Vacations',
+}
+
+function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
+  const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
+
+  useEffect(() => {
+    switch (filterVacations) {
+      case FilterActionTypes.myVacations:
+        const filteredByFollow = initialVacations.filter(
+          (v) => v.isFollowing === 1
+        );
+        setVacations(filteredByFollow);
+        break;
+      case FilterActionTypes.allVacations:
+        setVacations(initialVacations);
+        break;
+
+      case FilterActionTypes.activeNow:
+        const filteredByActiveVacations = initialVacations.filter((v) => {
+          const startDate = new Date(v.vacationStartDate);
+          const endDate = new Date(v.vacationEndDate);
+          const nowDate = new Date();
+          return nowDate > startDate && nowDate < endDate;
+        });
+        setVacations(filteredByActiveVacations);
+        break;
+
+      case FilterActionTypes.yetToStart:
+        const filteredByStartSoon = initialVacations.filter((v) => {
+          const startDate = new Date(v.vacationStartDate);
+          const nowDate = new Date();
+          return nowDate < startDate;
+        });
+        setVacations(filteredByStartSoon);
+        break;
+
+      default:
+        setVacations(initialVacations);
+        break;
+    }
+  }, [filterVacations]);
 
   const [currentPage, setCurrentPAge] = useState<number>(1);
   const [postsPerPage, setPostsPerPage] = useState<number>(9);
@@ -24,7 +69,7 @@ function Home(): JSX.Element {
     vacationService
       .getAllVacations()
       .then((data) => {
-        setVacations(data);
+        setInitialVacations(data);
       })
       .catch((err: any) => notificationService.error(err));
   }, []);

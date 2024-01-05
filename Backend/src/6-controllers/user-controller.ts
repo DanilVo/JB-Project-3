@@ -1,6 +1,10 @@
 import express, { NextFunction, Request, Response } from 'express';
 import userService from '../5-services/user-service';
 import path from 'path';
+import verifyAdmin from '../4-middleware/verify-admin';
+import fs from 'fs';
+import { ResourceNotFoundError } from '../3-models/error-models';
+import verifyToken from '../4-middleware/verify-token';
 
 const router = express.Router();
 
@@ -21,6 +25,7 @@ router.get(
 // Update user
 router.post(
   '/user/:userUuid',
+  verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const user = await userService.updateUser(request.body);
@@ -31,20 +36,22 @@ router.post(
   }
 );
 
-// Update user
+// Download report
 router.get(
-  '/vacation-reports',
+  '/vacation-reports/:id([0-9]+)',
+  verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-
-      
-
-      const file = userService.generateReport()
-      // response.download(path.resolve('src/6-controllers/dummy.txt')) 
-      // response.send()
-      // const file = await userService.getReports();
-      // response.download(file);
-      response.send(file)
+      const id = +request.params.id;
+      const file = await userService.generateReport(id); 
+      const filePath = `C:\\Users\\PC\\Desktop\\JB Project 3\\Backend\\src\\1-assets\\reports\\reports.csv`;
+      if (file) {
+        // response.header( 
+        //   'Content-Disposition',
+        //   'attachment; filename=reports.csv'
+        // );
+        response.download(filePath, 'reports.csv');
+      }
     } catch (err: any) {
       next(err);
     }

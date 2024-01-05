@@ -15,7 +15,7 @@
     "@mui/icons-material": "^5.14.19",
     "@mui/material": "^5.14.20",
     "@mui/styled-engine-sc": "^6.0.0-alpha.7",
-    "@mui/x-charts": "^6.18.4",
+    "@mui/x-charts": "^7.0.0-alpha.5",
     "axios": "^1.6.2",
     "framer-motion": "^10.16.16",
     "jwt-decode": "^4.0.0",

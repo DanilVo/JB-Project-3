@@ -10,6 +10,8 @@ export default class VacationModel {
   public vacationStartDate: Date;
   public vacationEndDate: Date;
   public price: number;
+  public followersCount: number;
+  public isFollowing: number;
   public vacationImageUrl: string;
   public image: UploadedFile;
 
@@ -21,6 +23,8 @@ export default class VacationModel {
     this.vacationStartDate = vacation.vacationStartDate;
     this.vacationEndDate = vacation.vacationEndDate;
     this.price = vacation.price;
+    this.followersCount = vacation.followersCount;
+    this.isFollowing = vacation.isFollowing;
     this.vacationImageUrl = vacation.vacationImageUrl;
     this.image = vacation.image;
   }
@@ -33,8 +37,10 @@ export default class VacationModel {
     vacationStartDate: Joi.date().required(),
     vacationEndDate: Joi.date()
       .required()
-      .greater(Joi.ref("vacationStartDate")),
+      .greater(Joi.ref('vacationStartDate')),
     price: Joi.number().required().min(0).max(10000).positive(),
+    followersCount: Joi.number().optional().min(0),
+    isFollowing: Joi.number().optional().min(0),
     vacationImageUrl: Joi.string().optional(),
     image: Joi.object().optional(),
   });
@@ -43,6 +49,6 @@ export default class VacationModel {
     const result = VacationModel.validationSchema.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
     if (this.image && this.image.size > 100000)
-      throw new ValidationError("Image to large");
+      throw new ValidationError('Image to large');
   }
 }
