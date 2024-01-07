@@ -1,8 +1,8 @@
-import { Button, MenuItem } from '@mui/material';
-import Menu from '@mui/material/Menu';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Menu.css';
+import { Button, MenuItem } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Menu.css";
 
 interface Props {
   userRole: number;
@@ -11,9 +11,15 @@ interface Props {
 
 function navMenu(props: Props): JSX.Element {
   const adminMenu = [
-    <NavLink to="/home">Home</NavLink>,
-    <NavLink to="/reports">Reports</NavLink>,
-    <NavLink to="/add-vacation">Add</NavLink>,
+    <MenuItem>
+      <NavLink to="/home">Home</NavLink>
+    </MenuItem>,
+    <MenuItem>
+      <NavLink to="/reports">Reports</NavLink>
+    </MenuItem>,
+    <MenuItem>
+      <NavLink to="/add-vacation">Add</NavLink>
+    </MenuItem>,
   ];
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -33,17 +39,17 @@ function navMenu(props: Props): JSX.Element {
   ];
   return (
     <div className="Menu">
-      <Button>About us</Button>
-      <Button>Contact Us</Button>
       <Button
         id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
+        aria-controls={open ? "demo-positioned-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        {props.userRole === 1 ? 'Actions' : 'Filters'}
+        {props.userRole === 1 ? "Actions" : "Filters"}
       </Button>
+      <Button>About us</Button>
+      <Button>Contact Us</Button>
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
@@ -51,12 +57,12 @@ function navMenu(props: Props): JSX.Element {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "left",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "left",
         }}
       >
         {props.userRole === 1 ? adminMenu : userMenu}

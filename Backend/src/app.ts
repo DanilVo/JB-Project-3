@@ -28,7 +28,7 @@ if (appConfig.isDevelopment) {
   server.use(cors());
 } else {
   server.use(cors({ origin: 'http://www.our-website.com' }));
-}
+} 
 
 fileSaver.config(path.join(__dirname, '1-assets', 'vacationImages'));
 

@@ -11,10 +11,13 @@ function Routing({filterVacations}:{filterVacations:string}): JSX.Element {
     <div className="Routing">
       <Routes>
         {/* Home Route */}
-        <Route path="/home" element={<Home filterVacations={filterVacations}/>} />
+        <Route
+          path="/home"
+          element={<Home filterVacations={filterVacations} />}
+        />
 
         {/* Default Route */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home filterVacations={filterVacations} />} />
 
         {/* Update Vacation */}
         <Route path="/edit/:vacationUuid" element={<EditVacation />} />

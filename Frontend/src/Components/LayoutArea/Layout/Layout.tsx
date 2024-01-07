@@ -16,7 +16,8 @@ interface decodedToken {
 function Layout(): JSX.Element {
   const [userInSystem, setUserInSystem] = useState<boolean>(false);
 
-  const [filterVacations, setFilterVacations] = useState<string>('');
+  const [filterVacations, setFilterVacations] =
+    useState<string>("All Vacations");
   
 
   const [userRole, setUserRole] = useState<number>();

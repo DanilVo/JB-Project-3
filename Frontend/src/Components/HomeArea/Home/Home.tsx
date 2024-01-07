@@ -1,16 +1,17 @@
-import { Pagination } from '@mui/material';
-import { useEffect, useRef, useState } from 'react';
-import VacationModel from '../../../Models/VacationModel';
-import notificationService from '../../../Services/NotificationService';
-import vacationService from '../../../Services/VacationsService';
-import MediaCard from '../MediaCard/MediaCard';
-import './Home.css';
+import { Pagination } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
+import VacationModel from "../../../Models/VacationModel";
+import notificationService from "../../../Services/NotificationService";
+import vacationService from "../../../Services/VacationsService";
+import MediaCard from "../MediaCard/MediaCard";
+import "./Home.css";
+import { vacationStore } from "../../../Redux/VacationState";
 
 enum FilterActionTypes {
-  myVacations = 'My Vacations',
-  yetToStart = 'Yet to start',
-  activeNow = 'Active now',
-  allVacations = 'All Vacations',
+  myVacations = "My Vacations",
+  yetToStart = "Yet to start",
+  activeNow = "Active now",
+  allVacations = "All Vacations",
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
@@ -49,7 +50,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
         break;
 
       default:
-        setVacations(initialVacations);
+        setVacations(vacationStore.getState().vacations);
         break;
     }
   }, [filterVacations]);
@@ -72,13 +73,13 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
         setInitialVacations(data);
       })
       .catch((err: any) => notificationService.error(err));
-  }, []);
+  }, [vacations]);
 
   const deleteVacation = async (vacationId: number) => {
     try {
-      if (confirm('Are you sure?')) {
+      if (confirm("Are you sure?")) {
         await vacationService.deleteVacation(vacationId);
-        notificationService.success('Vacation has been deleted!');
+        notificationService.success("Vacation has been deleted!");
         const remainingVacation = vacations.filter(
           (vacation) => vacation.vacationId !== vacationId
         );
@@ -95,7 +96,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
   ) => {
     try {
       await vacationService.followVacation(vacationId, isFollowing);
-      notificationService.success('Vacation has been added!');
+      notificationService.success("Vacation has been added!");
     } catch (err: any) {
       notificationService.error(err.message);
     }

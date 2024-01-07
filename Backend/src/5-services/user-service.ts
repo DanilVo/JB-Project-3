@@ -61,7 +61,7 @@ class UserService {
 
     const createCsvWriter = require('csv-writer').createObjectCsvWriter;
     const csvWriter = createCsvWriter({
-      path: path.join(__dirname, '../1-assets', `/reports/reports.csv`),
+      path: '1-assets/reports/reports.csv',
       header: [
         { id: 'dest', title: 'Destination' },
         { id: 'follow', title: 'Followers' },
