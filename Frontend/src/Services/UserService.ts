@@ -1,7 +1,7 @@
 import axios from 'axios';
 import UserModel from '../Models/UserModel';
+import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
 import appConfig from '../Utils/AppConfig';
-import { UserAction, UserActionTypes, userStore } from '../Redux/UserState';
 import notificationService from './NotificationService';
 
 class UserService {
@@ -11,11 +11,11 @@ class UserService {
         appConfig.updateUserUrl + user.userId,
         user
       );
-      const action: UserAction = {
-        type: UserActionTypes.UpdateUser,
+      const action: AuthAction = {
+        type: AuthActionTypes.Register,
         payload: data,
       };
-      userStore.dispatch(action);
+      authStore.dispatch(action);
       return data;
     } catch (err: any) {
       notificationService.error(`Couldn't update user: ${err.message}`);

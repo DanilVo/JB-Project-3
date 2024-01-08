@@ -8,6 +8,7 @@ import {
 import UserModel from '../3-models/user-model';
 import vacationService from './vacations-service';
 import VacationModel from '../3-models/vacation-model';
+import cyber from '../2-utils/cyber';
 
 class UserService {
   // private readonly SELECT_EXISTING_IMAGE_NAME =
@@ -27,7 +28,7 @@ class UserService {
   }
 
   // UpdateUser
-  public async updateUser(user: UserModel): Promise<UserModel> {
+  public async updateUser(user: UserModel): Promise<string> {
     // user.validationUpdate();
     // const existingImageName = await this.getExistingImageName(
     //   vacation.vacationId
@@ -43,9 +44,10 @@ class UserService {
       user.userId,
     ]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
+    const token = cyber.getNewToken(user)
     // delete vacation.image;
     // vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/${imageName}`;
-    return user;
+    return token;
   }
 
   // private async getExistingImageName(id: number): Promise<string> {

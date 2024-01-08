@@ -3,29 +3,17 @@ import { Avatar, CardHeader, IconButton, Menu, MenuItem } from '@mui/material';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import UserModel from '../../../Models/UserModel';
-import {
-  UserAction,
-  UserActionTypes,
-  userStore,
-} from '../../../Redux/UserState';
+import { authStore } from '../../../Redux/AuthState';
 import authService from '../../../Services/AuthService';
 import logo from '../../../assets/logo/logo-main-no-background.svg';
 import './Header.css';
-import { authStore } from '../../../Redux/AuthState';
 
 interface Parent {
   setToken: Function;
 }
 
 function Header(props: Parent): JSX.Element {
-  const user: UserModel = userStore.getState().user;
-  if (user.firstName === undefined) {
-    const action: UserAction = {
-      type: UserActionTypes.SetUser,
-      payload: authStore.getState().user,
-    };
-    userStore.dispatch(action);
-  }
+  const user: UserModel = authStore.getState().user;
 
   const navigate = useNavigate();
 
