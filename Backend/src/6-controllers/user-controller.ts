@@ -44,12 +44,8 @@ router.get(
     try {
       const id = +request.params.id;
       const file = await userService.generateReport(id); 
-      const filePath = `C:\\Users\\PC\\Desktop\\JB Project 3\\Backend\\src\\1-assets\\reports\\reports.csv`;
+      const filePath = path.join(__dirname, '../1-assets', `/reports/reports.csv`);
       if (file) {
-        // response.header( 
-        //   'Content-Disposition',
-        //   'attachment; filename=reports.csv'
-        // );
         response.download(filePath, 'reports.csv');
       }
     } catch (err: any) {

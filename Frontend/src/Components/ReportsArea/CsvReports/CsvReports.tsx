@@ -1,10 +1,13 @@
 import { Button } from '@mui/material';
 import './CsvReports.css';
 import userService from '../../../Services/UserService';
+import UserModel from '../../../Models/UserModel';
+import { authStore } from '../../../Redux/AuthState';
 
 function CsvReports(): JSX.Element {
   async function handleReportDownload(): Promise<any> {
-    await userService.getReports();
+    const user:UserModel = authStore.getState().user
+    await userService.getReports(user.userId);
   }
 
   return (

@@ -394,3 +394,46 @@ Thu, 04 Jan 2024 15:40:49 GMT
 ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\.src\6-controllers\dummy.txt'
 Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\.src\6-controllers\dummy.txt'
 ----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:35:14 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:38:00 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:40:04 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:40:43 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:41:02 GMT
+EISDIR: illegal operation on a directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend'
+Stack: Error: EISDIR: illegal operation on a directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:41:25 GMT
+EISDIR: illegal operation on a directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend'
+Stack: Error: EISDIR: illegal operation on a directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:42:56 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:44:12 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 13:46:43 GMT
+ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 14:17:09 GMT
+ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 14:17:19 GMT
+ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------

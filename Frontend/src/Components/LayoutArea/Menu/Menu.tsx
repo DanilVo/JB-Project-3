@@ -3,6 +3,7 @@ import Menu from '@mui/material/Menu';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Menu.css';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 interface Props {
   userRole: number;
@@ -55,6 +56,7 @@ function NavMenu(props: Props): JSX.Element {
         onClick={handleClick}
       >
         {props.userRole === 1 ? 'Actions' : 'Filters'}
+        <ArrowDropDownIcon />
       </Button>
       <NavLink to="/home">
         <Button>Home</Button>

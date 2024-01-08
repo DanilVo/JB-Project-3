@@ -22,9 +22,9 @@ class UserService {
     }
   }
 
-  public async getReports(): Promise<void> {
+  public async getReports(userId: number): Promise<void> {
     try {
-      const response = await axios.get(appConfig.reportsUrl + 32, {
+      const response = await axios.get(appConfig.reportsUrl + userId, {
         responseType: 'blob',
       });
       const blob = new Blob([response.data], {

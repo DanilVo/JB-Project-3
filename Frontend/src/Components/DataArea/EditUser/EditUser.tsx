@@ -4,11 +4,10 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import UserModel from '../../../Models/UserModel';
-import { userStore } from '../../../Redux/UserState';
+import { authStore } from '../../../Redux/AuthState';
 import notificationService from '../../../Services/NotificationService';
 import userService from '../../../Services/UserService';
 import './EditUser.css';
-import { authStore } from '../../../Redux/AuthState';
 
 function EditUser(): JSX.Element {
   const userFromState: UserModel = authStore.getState().user;
@@ -18,6 +17,7 @@ function EditUser(): JSX.Element {
 
   async function editUser(user: UserModel) {
     try {
+      user.roleId = userFromState.roleId
       user.userId = userFromState.userId;
       await userService.updateUser(user);
       notificationService.success('User has been successfully updated');
