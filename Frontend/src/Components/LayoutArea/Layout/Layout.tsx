@@ -1,11 +1,11 @@
+import { jwtDecode } from 'jwt-decode';
 import { useEffect, useState } from 'react';
+import UserModel from '../../../Models/UserModel';
 import Header from '../Header/Header';
-import Menu from '../Menu/Menu';
+import NavMenu from '../Menu/Menu';
 import NotAuthorizedRouting from '../Router/NotAuthorizedRoute';
 import Routing from '../Router/Routing';
 import './Layout.css';
-import { jwtDecode } from 'jwt-decode';
-import UserModel from '../../../Models/UserModel';
 
 interface decodedToken {
   user: UserModel;
@@ -17,7 +17,7 @@ function Layout(): JSX.Element {
   const [userInSystem, setUserInSystem] = useState<boolean>(false);
 
   const [filterVacations, setFilterVacations] =
-    useState<string>("All Vacations");
+    useState<string>("");
   
 
   const [userRole, setUserRole] = useState<number>();
@@ -49,7 +49,7 @@ function Layout(): JSX.Element {
             <Header setToken={setIsToken} />
           </header>
           <nav className="nav">
-            <Menu userRole={userRole} setFilterVacations={setFilterVacations}/>
+            <NavMenu userRole={userRole} setFilterVacations={setFilterVacations}/>
           </nav>
           <main>
             <Routing filterVacations={filterVacations}/>

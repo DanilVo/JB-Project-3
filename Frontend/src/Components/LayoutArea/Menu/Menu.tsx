@@ -1,23 +1,23 @@
-import { Button, MenuItem } from "@mui/material";
-import Menu from "@mui/material/Menu";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./Menu.css";
+import { Button, MenuItem } from '@mui/material';
+import Menu from '@mui/material/Menu';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import './Menu.css';
 
 interface Props {
   userRole: number;
   setFilterVacations: (filter: string) => void;
 }
 
-function navMenu(props: Props): JSX.Element {
+function NavMenu(props: Props): JSX.Element {
   const adminMenu = [
-    <MenuItem>
+    <MenuItem key="1">
       <NavLink to="/home">Home</NavLink>
     </MenuItem>,
-    <MenuItem>
+    <MenuItem key="2">
       <NavLink to="/reports">Reports</NavLink>
     </MenuItem>,
-    <MenuItem>
+    <MenuItem key="3">
       <NavLink to="/add-vacation">Add</NavLink>
     </MenuItem>,
   ];
@@ -32,22 +32,33 @@ function navMenu(props: Props): JSX.Element {
     setAnchorEl(null);
   };
   const userMenu = [
-    <MenuItem onClick={handleClose}>My Vacations</MenuItem>,
-    <MenuItem onClick={handleClose}>Yet to start</MenuItem>,
-    <MenuItem onClick={handleClose}>Active now</MenuItem>,
-    <MenuItem onClick={handleClose}>All vacations</MenuItem>,
+    <MenuItem key="4" onClick={handleClose}>
+      My Vacations
+    </MenuItem>,
+    <MenuItem key="5" onClick={handleClose}>
+      Yet to start
+    </MenuItem>,
+    <MenuItem key="6" onClick={handleClose}>
+      Active now
+    </MenuItem>,
+    <MenuItem key="7" onClick={handleClose}>
+      All vacations
+    </MenuItem>,
   ];
   return (
     <div className="Menu">
       <Button
         id="demo-positioned-button"
-        aria-controls={open ? "demo-positioned-menu" : undefined}
+        aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        {props.userRole === 1 ? "Actions" : "Filters"}
+        {props.userRole === 1 ? 'Actions' : 'Filters'}
       </Button>
+      <NavLink to="/home">
+        <Button>Home</Button>
+      </NavLink>
       <Button>About us</Button>
       <Button>Contact Us</Button>
       <Menu
@@ -57,12 +68,12 @@ function navMenu(props: Props): JSX.Element {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
         transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
       >
         {props.userRole === 1 ? adminMenu : userMenu}
@@ -70,4 +81,4 @@ function navMenu(props: Props): JSX.Element {
     </div>
   );
 }
-export default navMenu;
+export default NavMenu;
