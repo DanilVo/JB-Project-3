@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import VacationModel from "../../../Models/VacationModel";
-import { vacationStore } from "../../../Redux/VacationState";
 import notificationService from "../../../Services/NotificationService";
 import vacationService from "../../../Services/VacationsService";
 import "./EditVacation.css";
@@ -14,11 +13,8 @@ import "./EditVacation.css";
 function EditVacation(): JSX.Element {
   const { vacationUuid } = useParams();
 
-  // const vacationsFromStore = vacationStore.getState().vacations;
   const [currentVacation, setVacations] = useState<VacationModel>();
   const [isData, setIsData] = useState<boolean>(true);
-  // console.log(vacations);
-  // console.log(vacationsFromStore);
 
   useEffect(() => {
     vacationService
@@ -29,10 +25,6 @@ function EditVacation(): JSX.Element {
       })
       .catch((err: any) => notificationService.error(err));
   }, []);
-
-  // const currentVacation = vacations.find(
-  //   (v) => v.vacationUuid === vacationUuid
-  // );
 
   const navigate = useNavigate();
 
