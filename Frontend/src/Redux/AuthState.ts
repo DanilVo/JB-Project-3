@@ -1,7 +1,6 @@
+import { jwtDecode } from 'jwt-decode';
 import { legacy_createStore as createStore } from 'redux';
 import UserModel from '../Models/UserModel';
-import { jwtDecode } from 'jwt-decode';
-import { UserAction, UserActionTypes, userStore } from './UserState';
 
 class AuthState {
   public user: UserModel = null;
@@ -38,12 +37,7 @@ function authReducer(
       newState.user = jwtDecode<{ user: UserModel }>(action.payload).user;
       newState.token = action.payload;
       localStorage.setItem('token', newState.token);
-      // Initial user:
-      const userAction: UserAction = {
-        type: UserActionTypes.SetUser,
-        payload: newState.user,
-      };
-      userStore.dispatch(userAction);
+
       break;
     case AuthActionTypes.Logout:
       newState.token = null;

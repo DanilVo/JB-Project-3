@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Menu.css';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { RoleModel } from '../../../Models/RoleModel';
 
 interface Props {
   userRole: number;
@@ -47,19 +48,18 @@ function NavMenu(props: Props): JSX.Element {
     <div className="Menu">
       <Button
         id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
+        aria-controls={open ? "demo-positioned-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        {props.userRole === 1 ? 'Actions' : 'Filters'}
+        {props.userRole === RoleModel.Admin ? "Actions" : "Filters"}
         <ArrowDropDownIcon />
       </Button>
       <NavLink to="/home">
         <Button>Home</Button>
       </NavLink>
       <Button>About us</Button>
-      <Button>Contact Us</Button>
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
@@ -67,15 +67,15 @@ function NavMenu(props: Props): JSX.Element {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "left",
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+          vertical: "top",
+          horizontal: "left",
         }}
       >
-        {props.userRole === 1 ? adminMenu : userMenu}
+        {props.userRole === RoleModel.Admin ? adminMenu : userMenu}
       </Menu>
     </div>
   );

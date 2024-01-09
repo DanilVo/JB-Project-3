@@ -5,8 +5,14 @@ import EditVacation from "../../DataArea/EditVacation/EditVacation";
 import Home from "../../HomeArea/Home/Home";
 import AllReports from "../../ReportsArea/AllReports/AllReports";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import { authStore } from "../../../Redux/AuthState";
+import { RoleModel } from "../../../Models/RoleModel";
 
-function Routing({filterVacations}:{filterVacations:string}): JSX.Element {
+function Routing({
+  filterVacations,
+}: {
+  filterVacations: string;
+}): JSX.Element {
   return (
     <div className="Routing">
       <Routes>
@@ -29,7 +35,16 @@ function Routing({filterVacations}:{filterVacations:string}): JSX.Element {
         <Route path="/add-vacation" element={<AddVacation />} />
 
         {/* Reports */}
-        <Route path="/reports" element={<AllReports />} />
+        <Route
+          path="/reports"
+          element={
+            authStore.getState().user.roleId === RoleModel.Admin ? (
+              <AllReports />
+            ) : (
+              <PageNotFound />
+            )
+          }
+        />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

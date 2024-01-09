@@ -1,27 +1,31 @@
-import axios from 'axios';
-import VacationModel from '../Models/VacationModel';
-import { authStore } from '../Redux/AuthState';
-import { userStore } from '../Redux/UserState';
+import axios from "axios";
+import UserModel from "../Models/UserModel";
+import VacationModel from "../Models/VacationModel";
+import { authStore } from "../Redux/AuthState";
 import {
   VacationAction,
   VacationActionTypes,
   vacationStore,
-} from '../Redux/VacationState';
-import appConfig from '../Utils/AppConfig';
-import notificationService from './NotificationService';
+} from "../Redux/VacationState";
+import appConfig from "../Utils/AppConfig";
+import notificationService from "./NotificationService";
+import { RoleModel } from "../Models/RoleModel";
 
 class VacationService {
   private options = {
-    headers: { 'Content-Type': 'multipart/form-data' },
+    headers: { "Content-Type": "multipart/form-data" },
   };
+
+  private user: UserModel = authStore.getState().user;
 
   public async getAllVacations(): Promise<VacationModel[]> {
     try {
       let vacations = vacationStore.getState().vacations;
-
+       
       if (vacations.length === 0) {
-        const userId = authStore.getState().user.userId;
-        const response = await axios.get(appConfig.allVacationsUrl + userId);
+        const response = await axios.get(
+          appConfig.allVacationsUrl + this.user.userId
+        );
 
         vacations = response.data;
 
@@ -63,7 +67,7 @@ class VacationService {
       );
 
       response.data.followersCount = vacation.followersCount;
-      response.data.isFollowing = vacation.isFollowing;
+      response.data.isFollowing = vacation.isFollowing;        
 
       const action: VacationAction = {
         type: VacationActionTypes.UpdateVacation,
@@ -99,13 +103,12 @@ class VacationService {
     vacationId: number,
     isFollowing: number
   ): Promise<void> {
-    const user = userStore.getState().user;
     const vacationInfo = {
-      userId: user.userId,
+      userId: this.user.userId,
       vacationId: vacationId,
     };
     try {
-      if (user.roleId === 1) return;
+      if (this.user.roleId === RoleModel.Admin) return;
       isFollowing === 1
         ? axios.delete(appConfig.followVacationUrl, { data: vacationInfo })
         : axios.post(appConfig.followVacationUrl, vacationInfo);

@@ -1,37 +1,38 @@
-import { Pagination } from '@mui/material';
-import { useEffect, useRef, useState } from 'react';
-import VacationModel from '../../../Models/VacationModel';
-import notificationService from '../../../Services/NotificationService';
-import vacationService from '../../../Services/VacationsService';
-import MediaCard from '../MediaCard/MediaCard';
-import './Home.css';
-import { vacationStore } from '../../../Redux/VacationState';
+import { Pagination } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
+import VacationModel from "../../../Models/VacationModel";
+import { vacationStore } from "../../../Redux/VacationState";
+import notificationService from "../../../Services/NotificationService";
+import vacationService from "../../../Services/VacationsService";
+import MediaCard from "../MediaCard/MediaCard";
+import "./Home.css";
 
 enum FilterActionTypes {
-  myVacations = 'My Vacations',
-  yetToStart = 'Yet to start',
-  activeNow = 'Active now',
-  allVacations = 'All Vacations',
+  myVacations = "My Vacations",
+  yetToStart = "Yet to start",
+  activeNow = "Active now",
+  allVacations = "All Vacations",
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
   const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
 
+  const [paginationPagesCount, setPaginationPagesCount] = useState<number>(1);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const postsPerPage = 9;
-  const paginationItemCount = 2;
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = vacations.slice(firstPostIndex, lastPostIndex);
-  
+
   useEffect(() => {
     vacationService
       .getAllVacations()
       .then((data) => {
         setInitialVacations(data);
         setVacations(data);
+        setPaginationPagesCount(Math.ceil(data.length / postsPerPage));
       })
       .catch((err: any) => notificationService.error(err));
   }, []);
@@ -75,9 +76,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
 
   const deleteVacation = async (vacationId: number) => {
     try {
-      if (confirm('Are you sure?')) {
+      if (confirm("Are you sure?")) {
         await vacationService.deleteVacation(vacationId);
-        notificationService.success('Vacation has been deleted!');
+        notificationService.success("Vacation has been deleted!");
         const remainingVacation = vacations.filter(
           (vacation) => vacation.vacationId !== vacationId
         );
@@ -94,7 +95,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
   ) => {
     try {
       await vacationService.followVacation(vacationId, isFollowing);
-      notificationService.success('Vacation has been added!');
+      notificationService.success("Vacation has been added!");
     } catch (err: any) {
       notificationService.error(err.message);
     }
@@ -124,7 +125,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
       ))}
       <div className="pagination">
         <Pagination
-          count={paginationItemCount}
+          count={paginationPagesCount}
           color="primary"
           onChange={handleChange}
           onClick={scrollToBottom}

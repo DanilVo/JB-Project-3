@@ -1,15 +1,15 @@
-import { legacy_createStore as createStore } from 'redux';
-import VacationModel from '../Models/VacationModel';
+import { legacy_createStore as createStore } from "redux";
+import VacationModel from "../Models/VacationModel";
 
 export class VacationState {
   vacations: VacationModel[] = [];
 }
 
 export enum VacationActionTypes {
-  SetVacations = 'SetVacations',
-  AddVacation = 'AddVacation',
-  UpdateVacation = 'UpdateVacation',
-  DeleteVacation = 'DeleteVacation',
+  SetVacations = "SetVacations",
+  AddVacation = "AddVacation",
+  UpdateVacation = "UpdateVacation",
+  DeleteVacation = "DeleteVacation",
 }
 
 export interface VacationAction {
@@ -34,7 +34,7 @@ function vacationsReducer(
 
     case VacationActionTypes.UpdateVacation:
       const vacationToUpdate = newState.vacations.findIndex(
-        (v) => v.vacationId === +action.payload.vacationId
+        (v) => v.vacationId === action.payload.vacationId
       );
       newState.vacations[vacationToUpdate] = action.payload;
       break;

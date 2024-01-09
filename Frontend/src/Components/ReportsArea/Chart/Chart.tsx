@@ -1,14 +1,12 @@
 import { Box } from '@mui/material';
 import { BarChart } from '@mui/x-charts/BarChart';
-import { vacationStore } from '../../../Redux/VacationState';
-import './Chart.css';
 import { useEffect, useState } from 'react';
-import vacationService from '../../../Services/VacationsService';
-import notificationService from '../../../Services/NotificationService';
 import VacationModel from '../../../Models/VacationModel';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import './Chart.css';
 
 function Chart(): JSX.Element {
-  // const vacations = vacationStore.getState().vacations;
   const [vacations, setVacations] = useState<VacationModel[]>([]);
   useEffect(() => {
     vacationService
@@ -18,8 +16,6 @@ function Chart(): JSX.Element {
       })
       .catch((err: any) => notificationService.error(err));
   }, []);
-
-  console.log(vacations);
 
   return (
     <Box className="Chart" sx={{ width: '100%' }}>

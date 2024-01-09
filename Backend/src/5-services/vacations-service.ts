@@ -1,10 +1,10 @@
-import { OkPacket } from 'mysql';
-import { fileSaver } from 'uploaded-file-saver';
-import appConfig from '../2-utils/app-config';
-import dal from '../2-utils/dal';
-import { ResourceNotFoundError } from '../3-models/error-models';
-import VacationModel from '../3-models/vacation-model';
-import cyber from '../2-utils/cyber';
+import { OkPacket } from "mysql";
+import { fileSaver } from "uploaded-file-saver";
+import appConfig from "../2-utils/app-config";
+import dal from "../2-utils/dal";
+import { ResourceNotFoundError } from "../3-models/error-models";
+import VacationModel from "../3-models/vacation-model";
+import cyber from "../2-utils/cyber";
 
 interface VacationInfo {
   userId: number;
@@ -13,12 +13,12 @@ interface VacationInfo {
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    'SELECT vacationImageUrl FROM vacations WHERE vacationId = ?';
+    "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
   private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl
                                                FROM vacations 
                                                ORDER BY vacationStartDate ASC`;
   private readonly SELECT_ONE_vacation_SQL =
-    'SELECT * FROM vacations WHERE vacationId = ?';
+    "SELECT * FROM vacations WHERE vacationId = ?";
   private readonly INSERT_vacation_SQL = `
     INSERT INTO vacations(vacationUuid,destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
     VALUES(?,?,?,?,?,?,?)`;
@@ -27,7 +27,7 @@ class VacationService {
     SET vacationUuid=?, destination=?, description=?, vacationStartDate=?, vacationEndDate=?, price=?, vacationImageUrl=?
     WHERE vacationId = ?`;
   private readonly DELETE_vacation_SQL =
-    'DELETE FROM vacations WHERE vacationId = ?';
+    "DELETE FROM vacations WHERE vacationId = ?";
   private readonly GET_following_vacations = `
         SELECT DISTINCT
         V.*,CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl,
@@ -38,15 +38,15 @@ class VacationService {
         GROUP BY vacationId
         ORDER BY vacationStartDate`;
   private readonly FOLLOW_VACATION =
-    'INSERT INTO followers (userId, vacationId) VALUES (?, ?)';
+    "INSERT INTO followers (userId, vacationId) VALUES (?, ?)";
   private readonly UNFOLLOW_VACATION =
-    'DELETE FROM followers WHERE followers.userId = ? AND followers.vacationId = ?';
+    "DELETE FROM followers WHERE followers.userId = ? AND followers.vacationId = ?";
 
   private async getExistingImageName(id: number): Promise<string> {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return '';
+    if (!vacation) return "";
     return vacation.vacationImageUrl;
   }
 
@@ -115,6 +115,7 @@ class VacationService {
     ]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
     delete vacation.image;
+    vacation.vacationId = +vacation.vacationId;
     vacation.vacationImageUrl = `${appConfig.appHost}/api/vacations/image/${imageName}`;
     return vacation;
   }

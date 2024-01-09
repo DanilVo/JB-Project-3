@@ -443,3 +443,111 @@ Access denied
 Mon, 08 Jan 2024 20:33:45 GMT
 Access denied
 ----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:07:04 GMT
+read ECONNRESET
+Stack: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:217:20)
+    --------------------
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:199:23)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:136:15)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:4:12)
+    at VacationService.unFollowVacation (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:144:16)
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:07:11 GMT
+
+Stack: AggregateError
+    at internalConnectMultiple (node:net:1114:18)
+    at afterConnectMultiple (node:net:1667:5)
+    --------------------
+    at Protocol._enqueue (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:202:8)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:56:33)
+    at Generator.next (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:07:18 GMT
+
+Stack: AggregateError
+    at internalConnectMultiple (node:net:1114:18)
+    at afterConnectMultiple (node:net:1667:5)
+    --------------------
+    at Protocol._enqueue (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:202:8)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:56:33)
+    at Generator.next (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:07:27 GMT
+
+Stack: AggregateError
+    at internalConnectMultiple (node:net:1114:18)
+    at afterConnectMultiple (node:net:1667:5)
+    --------------------
+    at Protocol._enqueue (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:202:8)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:56:33)
+    at Generator.next (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:07:29 GMT
+
+Stack: AggregateError
+    at internalConnectMultiple (node:net:1114:18)
+    at afterConnectMultiple (node:net:1667:5)
+    --------------------
+    at Protocol._enqueue (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\mysql\lib\Pool.js:202:8)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:13:20
+    at new Promise (<anonymous>)
+    at Object.execute (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\2-utils\dal.ts:12:12)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:56:33)
+    at Generator.next (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:34:58 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:36:13 GMT
+Image to large
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:43:09 GMT
+Image to large
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:43:28 GMT
+Image to large
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:47:59 GMT
+Image to large
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:49:29 GMT
+Image to large
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 13:53:24 GMT
+Image to large
+----------------------------------------------------------------------------------------------------
+Tue, 09 Jan 2024 14:17:12 GMT
+Route /favicon.ico not exist
+----------------------------------------------------------------------------------------------------

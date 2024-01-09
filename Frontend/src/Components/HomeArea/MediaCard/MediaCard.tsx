@@ -21,6 +21,7 @@ import {
   vacationStore,
 } from '../../../Redux/VacationState';
 import './MediaCard.css';
+import { RoleModel } from '../../../Models/RoleModel';
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -85,7 +86,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   };
 
   const action =
-    roleValidation.roleId === 1 ? (
+    roleValidation.roleId === RoleModel.Admin ? (
       <ButtonGroup>
         <Button onClick={deleteVacation}>
           <DeleteForeverIcon titleAccess="Delete" />
