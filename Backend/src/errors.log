@@ -437,3 +437,9 @@ Mon, 08 Jan 2024 14:17:19 GMT
 ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
 Stack: Error: ENOENT: no such file or directory, stat 'C:\Users\PC\Desktop\JB Project 3\Backend\Backend\src\1-assets\reports\reports.csv'
 ----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 20:33:05 GMT
+Access denied
+----------------------------------------------------------------------------------------------------
+Mon, 08 Jan 2024 20:33:45 GMT
+Access denied
+----------------------------------------------------------------------------------------------------

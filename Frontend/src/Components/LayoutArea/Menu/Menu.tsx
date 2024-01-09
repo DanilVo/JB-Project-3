@@ -12,13 +12,10 @@ interface Props {
 
 function NavMenu(props: Props): JSX.Element {
   const adminMenu = [
-    <MenuItem key="1">
-      <NavLink to="/home">Home</NavLink>
-    </MenuItem>,
-    <MenuItem key="2">
+    <MenuItem key="reports">
       <NavLink to="/reports">Reports</NavLink>
     </MenuItem>,
-    <MenuItem key="3">
+    <MenuItem key="add-vacation">
       <NavLink to="/add-vacation">Add</NavLink>
     </MenuItem>,
   ];
@@ -33,16 +30,16 @@ function NavMenu(props: Props): JSX.Element {
     setAnchorEl(null);
   };
   const userMenu = [
-    <MenuItem key="4" onClick={handleClose}>
+    <MenuItem key="My-Vacations" onClick={handleClose}>
       My Vacations
     </MenuItem>,
-    <MenuItem key="5" onClick={handleClose}>
+    <MenuItem key="Yet-to-start" onClick={handleClose}>
       Yet to start
     </MenuItem>,
-    <MenuItem key="6" onClick={handleClose}>
+    <MenuItem key="Active-now" onClick={handleClose}>
       Active now
     </MenuItem>,
-    <MenuItem key="7" onClick={handleClose}>
+    <MenuItem key="All-vacations" onClick={handleClose}>
       All vacations
     </MenuItem>,
   ];

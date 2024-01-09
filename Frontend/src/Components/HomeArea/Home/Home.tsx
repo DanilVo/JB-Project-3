@@ -18,6 +18,24 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
   const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
 
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const postsPerPage = 9;
+  const paginationItemCount = 2;
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = vacations.slice(firstPostIndex, lastPostIndex);
+  
+  useEffect(() => {
+    vacationService
+      .getAllVacations()
+      .then((data) => {
+        setInitialVacations(data);
+        setVacations(data);
+      })
+      .catch((err: any) => notificationService.error(err));
+  }, []);
+
   useEffect(() => {
     switch (filterVacations) {
       case FilterActionTypes.myVacations:
@@ -55,27 +73,6 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
     }
   }, [filterVacations]);
 
-  const [currentPage, setCurrentPAge] = useState<number>(1);
-  const [postsPerPage, setPostsPerPage] = useState<number>(9);
-
-  const lastPostIndex = currentPage * postsPerPage;
-  const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = vacations.slice(firstPostIndex, lastPostIndex);
-
-  const handleChange = (_e: any, p: number) => {
-    setCurrentPAge(p);
-  };
-
-  useEffect(() => {
-    vacationService
-      .getAllVacations()
-      .then((data) => {
-        setInitialVacations(data);
-        setVacations(data);
-      })
-      .catch((err: any) => notificationService.error(err));
-  }, []);
-
   const deleteVacation = async (vacationId: number) => {
     try {
       if (confirm('Are you sure?')) {
@@ -103,9 +100,14 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
     }
   };
 
-  const bottomRef = useRef(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
   const scrollToBottom = () => {
     bottomRef.current.scrollIntoView();
+  };
+
+  const handleChange = (_e: React.ChangeEvent<unknown>, p: number) => {
+    setCurrentPage(p);
   };
 
   return (
@@ -122,7 +124,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
       ))}
       <div className="pagination">
         <Pagination
-          count={2}
+          count={paginationItemCount}
           color="primary"
           onChange={handleChange}
           onClick={scrollToBottom}
