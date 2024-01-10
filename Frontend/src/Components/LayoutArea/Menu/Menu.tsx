@@ -20,7 +20,7 @@ function NavMenu(props: Props): JSX.Element {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+  const handleDropdownMenuClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     const { myValue } = e.currentTarget.dataset;
     props.setFilterVacations(myValue);    
     setAnchorEl(null);
@@ -40,24 +40,24 @@ function NavMenu(props: Props): JSX.Element {
       key="My-Vacations"
       value="data"
       data-my-value="My-Vacations"
-      onClick={handleClose}
+      onClick={handleDropdownMenuClick}
     >
       My Vacations
     </MenuItem>,
     <MenuItem
       key="Yet-to-start"
       data-my-value="Yet-to-start"
-      onClick={handleClose}
+      onClick={handleDropdownMenuClick}
     >
       Yet to start
     </MenuItem>,
-    <MenuItem key="Active-now" data-my-value="Active-now" onClick={handleClose}>
+    <MenuItem key="Active-now" data-my-value="Active-now" onClick={handleDropdownMenuClick}>
       Active now
     </MenuItem>,
     <MenuItem
       key="All-vacations"
       data-my-value="All-vacations"
-      onClick={handleClose}
+      onClick={handleDropdownMenuClick}
     >
       All vacations
     </MenuItem>,
@@ -84,7 +84,7 @@ function NavMenu(props: Props): JSX.Element {
         aria-labelledby="demo-positioned-button"
         anchorEl={anchorEl}
         open={open}
-        onClose={handleClose}
+        onClose={handleDropdownMenuClick}
         anchorOrigin={{
           vertical: "top",
           horizontal: "left",

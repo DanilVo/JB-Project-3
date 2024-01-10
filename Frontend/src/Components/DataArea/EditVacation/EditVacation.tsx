@@ -14,7 +14,7 @@ function EditVacation(): JSX.Element {
   const { vacationUuid } = useParams();
 
   const [vacation, setVacation] = useState<VacationModel>();
-  const [isData, setIsData] = useState<boolean>(true);
+  const [isData, setIsData] = useState<boolean>(false);
 
   useEffect(() => {
     vacationService
@@ -84,9 +84,9 @@ function EditVacation(): JSX.Element {
     }
   }
 
-  const imageExtract = (e: any) => {
-    setImageToUpload(e.target.files);
-    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+  const imageExtract = (e: React.FormEvent<HTMLInputElement>) => {
+    setImageToUpload(e.currentTarget.files);
+    setPreviewImage(URL.createObjectURL(e.currentTarget.files[0]));
   };
 
   return (

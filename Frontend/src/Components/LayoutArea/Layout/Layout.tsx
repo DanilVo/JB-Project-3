@@ -31,7 +31,7 @@ function Layout(): JSX.Element {
     setUserRole(decoded.user.roleId);
     if (
       token.length > 0 &&
-      token != "null" &&
+      // token != "null" &&
       Date.now() <= decoded.exp * 1000
     ) {
       setIsToken(true);

@@ -22,7 +22,7 @@ function Header(props: Parent): JSX.Element {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleLogout = () => {
     authService.logout();
     props.setToken(false);
     navigate('/auth/login');
@@ -68,7 +68,7 @@ function Header(props: Parent): JSX.Element {
           <NavLink to={`edit/user/${user.uuid}`}>
             <MenuItem>Settings</MenuItem>
           </NavLink>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+          <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>
       </div>
     </div>

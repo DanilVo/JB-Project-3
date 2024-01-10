@@ -15,6 +15,7 @@ enum FilterActionTypes {
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
+
   const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
 
@@ -129,11 +130,11 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
   return (
     <div className="mainHome">
       <div ref={bottomRef}></div>
-      {currentPosts.map((vacation: VacationModel, duration: number) => (
+      {currentPosts.map((vacation: VacationModel, index: number) => (
         <MediaCard
           vacation={vacation}
           key={vacation.destination}
-          duration={(duration + 2) * 0.1}
+          duration={(index + 2) * 0.1}
           delete={deleteVacation}
           follow={handleFollowVacation}
         />

@@ -31,7 +31,7 @@ interface MediaCardProps {
 }
 
 function MediaCard(props: MediaCardProps): JSX.Element {
-  const roleValidation = authStore.getState().user;
+  const user = authStore.getState().user;
   const storeVacations = vacationStore.getState().vacations;
 
   const [followersCount, setFollowersCount] = useState<number>(
@@ -57,10 +57,10 @@ function MediaCard(props: MediaCardProps): JSX.Element {
 
   const handleFollowVacation = async () => {
     await props.follow(props.vacation.vacationId, props.vacation.isFollowing);
-    updateVacationInRedux();
+    updateVacationInStore();
   };
 
-  const updateVacationInRedux = () => {
+  const updateVacationInStore = () => {
     const indexOfVacationToUpdate = storeVacations.findIndex(
       (v) => v.vacationId === props.vacation.vacationId
     );
@@ -85,7 +85,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   };
 
   const action =
-    roleValidation.roleId === RoleModel.Admin ? (
+    user.roleId === RoleModel.Admin ? (
       <ButtonGroup>
         <Button onClick={deleteVacation}>
           <DeleteForeverIcon titleAccess="Delete" />
