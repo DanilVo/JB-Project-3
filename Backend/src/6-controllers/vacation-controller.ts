@@ -1,16 +1,17 @@
-import express, { NextFunction, Request, Response } from 'express';
-import { fileSaver } from 'uploaded-file-saver';
-import StatusCode from '../3-models/status-codes';
-import VacationModel from '../3-models/vacation-model';
-import verifyAdmin from '../4-middleware/verify-admin';
-import verifyToken from '../4-middleware/verify-token';
-import vacationService from '../5-services/vacations-service';
+import express, { NextFunction, Request, Response } from "express";
+import { fileSaver } from "uploaded-file-saver";
+import StatusCode from "../3-models/status-codes";
+import VacationModel from "../3-models/vacation-model";
+import verifyAdmin from "../4-middleware/verify-admin";
+import verifyToken from "../4-middleware/verify-token";
+import vacationService from "../5-services/vacations-service";
+import path from "path";
 
 const router = express.Router();
 
 // Get All vacation
 router.get(
-  '/vacations',
+  "/vacations",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -24,7 +25,7 @@ router.get(
 
 // Get One vacation
 router.get(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const id = +request.params.id;
@@ -38,7 +39,7 @@ router.get(
 
 // Add vacation
 router.post(
-  '/add-vacation',
+  "/add-vacation",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -54,15 +55,15 @@ router.post(
 
 // Update vacation
 router.put(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       request.body.id = +request.params.id;
       request.body.image = request.files?.image;
       const vacation = new VacationModel(request.body);
-      const addedVacation = await vacationService.updateVacation(vacation);
-      response.json(addedVacation);
+      const updatedVacation = await vacationService.updateVacation(vacation);
+      response.json(updatedVacation);
     } catch (err: any) {
       next(err);
     }
@@ -71,7 +72,7 @@ router.put(
 
 // Delete vacation
 router.delete(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -84,12 +85,17 @@ router.delete(
   }
 );
 
+// Get image
 router.get(
-  '/vacations/image/:imageName',
+  "/vacations/image/:imageName",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const imageName = request.params.imageName;
-      const absolutePath = fileSaver.getFilePath(imageName);
+      const absolutePath = fileSaver.getFilePath(
+        imageName,
+        true,
+        path.join(__dirname, "..", "1-assets", "vacationImages")
+      );
       response.sendFile(absolutePath);
     } catch (err: any) {
       next(err);
@@ -98,7 +104,7 @@ router.get(
 );
 
 router.get(
-  '/vacations/subscriptions/:id([0-9]+)',
+  "/vacations/subscriptions/:id([0-9]+)",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -112,7 +118,7 @@ router.get(
 );
 
 router.post(
-  '/follow',
+  "/follow",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -125,7 +131,7 @@ router.post(
 );
 
 router.delete(
-  '/follow',
+  "/follow",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {

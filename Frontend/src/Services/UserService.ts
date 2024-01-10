@@ -7,7 +7,7 @@ import notificationService from './NotificationService';
 class UserService {
   public async updateUser(user: UserModel): Promise<UserModel> {
     try {
-      const { data } = await axios.post(
+      const { data } = await axios.put(
         appConfig.updateUserUrl + user.userId,
         user
       );

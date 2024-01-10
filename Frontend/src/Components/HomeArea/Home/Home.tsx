@@ -8,10 +8,10 @@ import MediaCard from "../MediaCard/MediaCard";
 import "./Home.css";
 
 enum FilterActionTypes {
-  myVacations = "My Vacations",
-  yetToStart = "Yet to start",
-  activeNow = "Active now",
-  allVacations = "All Vacations",
+  myVacations = "My-Vacations",
+  yetToStart = "Yet-to-start",
+  activeNow = "Active-now",
+  allVacations = "All-vacations",
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
@@ -43,9 +43,16 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
         const filteredByFollow = initialVacations.filter(
           (v) => v.isFollowing === 1
         );
+        setPaginationPagesCount(
+          Math.ceil(filteredByFollow.length / postsPerPage)
+        );
         setVacations(filteredByFollow);
         break;
+
       case FilterActionTypes.allVacations:
+        setPaginationPagesCount(
+          Math.ceil(initialVacations.length / postsPerPage)
+        );
         setVacations(initialVacations);
         break;
 
@@ -56,6 +63,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
           const nowDate = new Date();
           return nowDate > startDate && nowDate < endDate;
         });
+        setPaginationPagesCount(
+          Math.ceil(filteredByActiveVacations.length / postsPerPage)
+        );
         setVacations(filteredByActiveVacations);
         break;
 
@@ -65,6 +75,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
           const nowDate = new Date();
           return nowDate < startDate;
         });
+        setPaginationPagesCount(
+          Math.ceil(filteredByStartSoon.length / postsPerPage)
+        );
         setVacations(filteredByStartSoon);
         break;
 
@@ -95,7 +108,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
   ) => {
     try {
       await vacationService.followVacation(vacationId, isFollowing);
-      notificationService.success("Vacation has been added!");
+      notificationService.success(
+        !isFollowing ? "Vacation has been added!" : "Vacation has been removed!"
+      );
     } catch (err: any) {
       notificationService.error(err.message);
     }

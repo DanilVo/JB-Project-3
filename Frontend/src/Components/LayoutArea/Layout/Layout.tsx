@@ -1,11 +1,11 @@
-import { jwtDecode } from 'jwt-decode';
-import { useEffect, useState } from 'react';
-import UserModel from '../../../Models/UserModel';
-import Header from '../Header/Header';
-import NavMenu from '../Menu/Menu';
-import NotAuthorizedRouting from '../Router/NotAuthorizedRoute';
-import Routing from '../Router/Routing';
-import './Layout.css';
+import { jwtDecode } from "jwt-decode";
+import { useEffect, useState } from "react";
+import UserModel from "../../../Models/UserModel";
+import Header from "../Header/Header";
+import NavMenu from "../Menu/Menu";
+import NotAuthorizedRouting from "../Router/NotAuthorizedRoute";
+import Routing from "../Router/Routing";
+import "./Layout.css";
 
 interface decodedToken {
   user: UserModel;
@@ -16,15 +16,13 @@ interface decodedToken {
 function Layout(): JSX.Element {
   const [userInSystem, setUserInSystem] = useState<boolean>(false);
 
-  const [filterVacations, setFilterVacations] =
-    useState<string>("");
-  
+  const [filterVacations, setFilterVacations] = useState<string>("");
 
   const [userRole, setUserRole] = useState<number>();
 
   const [isToken, setIsToken] = useState<boolean>(false);
 
-  const localStorageToken = localStorage.getItem('token');
+  const localStorageToken = localStorage.getItem("token");
 
   useEffect(() => {
     if (!localStorageToken) return;
@@ -33,7 +31,7 @@ function Layout(): JSX.Element {
     setUserRole(decoded.user.roleId);
     if (
       token.length > 0 &&
-      token != 'null' &&
+      token != "null" &&
       Date.now() <= decoded.exp * 1000
     ) {
       setIsToken(true);
@@ -49,10 +47,13 @@ function Layout(): JSX.Element {
             <Header setToken={setIsToken} />
           </header>
           <nav className="nav">
-            <NavMenu userRole={userRole} setFilterVacations={setFilterVacations}/>
+            <NavMenu
+              userRole={userRole}
+              setFilterVacations={setFilterVacations}
+            />
           </nav>
           <main>
-            <Routing filterVacations={filterVacations}/>
+            <Routing filterVacations={filterVacations} />
           </main>
         </div>
       ) : (

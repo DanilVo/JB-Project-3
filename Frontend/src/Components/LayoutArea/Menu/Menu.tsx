@@ -1,10 +1,10 @@
-import { Button, MenuItem } from '@mui/material';
-import Menu from '@mui/material/Menu';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Menu.css';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { RoleModel } from '../../../Models/RoleModel';
+import { Button, MenuItem } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Menu.css";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { RoleModel } from "../../../Models/RoleModel";
 
 interface Props {
   userRole: number;
@@ -12,6 +12,20 @@ interface Props {
 }
 
 function NavMenu(props: Props): JSX.Element {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    const { myValue } = e.currentTarget.dataset;
+    props.setFilterVacations(myValue);    
+    setAnchorEl(null);
+  };
+
   const adminMenu = [
     <MenuItem key="reports">
       <NavLink to="/reports">Reports</NavLink>
@@ -21,29 +35,34 @@ function NavMenu(props: Props): JSX.Element {
     </MenuItem>,
   ];
 
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = (e: any) => {
-    props.setFilterVacations(e.target.outerText);
-    setAnchorEl(null);
-  };
   const userMenu = [
-    <MenuItem key="My-Vacations" onClick={handleClose}>
+    <MenuItem
+      key="My-Vacations"
+      value="data"
+      data-my-value="My-Vacations"
+      onClick={handleClose}
+    >
       My Vacations
     </MenuItem>,
-    <MenuItem key="Yet-to-start" onClick={handleClose}>
+    <MenuItem
+      key="Yet-to-start"
+      data-my-value="Yet-to-start"
+      onClick={handleClose}
+    >
       Yet to start
     </MenuItem>,
-    <MenuItem key="Active-now" onClick={handleClose}>
+    <MenuItem key="Active-now" data-my-value="Active-now" onClick={handleClose}>
       Active now
     </MenuItem>,
-    <MenuItem key="All-vacations" onClick={handleClose}>
+    <MenuItem
+      key="All-vacations"
+      data-my-value="All-vacations"
+      onClick={handleClose}
+    >
       All vacations
     </MenuItem>,
   ];
+
   return (
     <div className="Menu">
       <Button

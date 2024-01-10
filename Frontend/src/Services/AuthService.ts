@@ -1,10 +1,13 @@
-import axios from 'axios';
-import CredentialsModel from '../Models/CredentialsModel';
-import UserModel from '../Models/UserModel';
-import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
-import appConfig from '../Utils/AppConfig';
+import axios from "axios";
+import CredentialsModel from "../Models/CredentialsModel";
+import UserModel from "../Models/UserModel";
+import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
+import appConfig from "../Utils/AppConfig";
 
 class AuthService {
+  private options = {
+    headers: { "Content-Type": "multipart/form-data" },
+  };
   public async logIn(credentials: CredentialsModel): Promise<void> {
     const response = await axios.post(appConfig.loginUserUrl, credentials);
 
@@ -18,7 +21,11 @@ class AuthService {
   }
 
   public async register(credentials: UserModel): Promise<void> {
-    const response = await axios.post(appConfig.registerUserUrl, credentials);
+    const response = await axios.post(
+      appConfig.registerUserUrl,
+      credentials,
+      this.options
+    );
 
     const token = response.data;
 

@@ -13,14 +13,14 @@ import "./EditVacation.css";
 function EditVacation(): JSX.Element {
   const { vacationUuid } = useParams();
 
-  const [currentVacation, setVacations] = useState<VacationModel>();
+  const [vacation, setVacation] = useState<VacationModel>();
   const [isData, setIsData] = useState<boolean>(true);
 
   useEffect(() => {
     vacationService
       .getAllVacations()
       .then((data) => {
-        setVacations(data.find((v) => v.vacationUuid === vacationUuid));
+        setVacation(data.find((v) => v.vacationUuid === vacationUuid));
         setIsData(!isData);
       })
       .catch((err: any) => notificationService.error(err));
@@ -55,30 +55,27 @@ function EditVacation(): JSX.Element {
   };
 
   useEffect(() => {
-    setPreviewImage(currentVacation?.vacationImageUrl);
-    setImageToUpload(currentVacation?.vacationImageUrl);
-    setValue("destination", currentVacation?.destination);
-    setValue("description", currentVacation?.description);
-    setValue("price", currentVacation?.price);
-    setValue(
-      "vacationStartDate",
-      dateParser(currentVacation?.vacationStartDate)
-    );
-    setValue("vacationEndDate", dateParser(currentVacation?.vacationEndDate));
-    setValue("vacationImageUrl", currentVacation?.vacationImageUrl);
+    setPreviewImage(vacation?.vacationImageUrl);
+    setImageToUpload(vacation?.vacationImageUrl);
+    setValue("destination", vacation?.destination);
+    setValue("description", vacation?.description);
+    setValue("price", vacation?.price);
+    setValue("vacationStartDate", dateParser(vacation?.vacationStartDate));
+    setValue("vacationEndDate", dateParser(vacation?.vacationEndDate));
+    setValue("vacationImageUrl", vacation?.vacationImageUrl);
   }, [isData]);
 
-  async function editVacation(vacation: VacationModel) {
+  async function editVacation(updatedVacation: VacationModel) {
     try {
-      vacation.vacationUuid = vacationUuid;
-      vacation.followersCount = currentVacation.followersCount;
-      vacation.isFollowing = currentVacation.isFollowing;
-      vacation.vacationId = +currentVacation.vacationId;
-      vacation.image = (imageToUpload as unknown as FileList)[0];
+      updatedVacation.vacationUuid = vacationUuid;
+      updatedVacation.followersCount = vacation.followersCount;
+      updatedVacation.isFollowing = vacation.isFollowing;
+      updatedVacation.vacationId = +vacation.vacationId;
+      updatedVacation.image = (imageToUpload as unknown as FileList)[0];
 
       await vacationService.updateVacation(
-        vacation,
-        currentVacation.vacationId
+        updatedVacation,
+        vacation.vacationId
       );
       notificationService.success("Vacation has been successfully updated");
       navigate(-1);

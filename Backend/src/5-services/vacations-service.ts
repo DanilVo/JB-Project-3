@@ -1,10 +1,11 @@
 import { OkPacket } from "mysql";
+import path from "path";
 import { fileSaver } from "uploaded-file-saver";
 import appConfig from "../2-utils/app-config";
+import cyber from "../2-utils/cyber";
 import dal from "../2-utils/dal";
 import { ResourceNotFoundError } from "../3-models/error-models";
 import VacationModel from "../3-models/vacation-model";
-import cyber from "../2-utils/cyber";
 
 interface VacationInfo {
   userId: number;
@@ -76,7 +77,10 @@ class VacationService {
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.vacationUuid = cyber.hashPassword(vacation.destination);
     vacation.validation();
-    const imageName = await fileSaver.add(vacation.image);
+    const imageName = await fileSaver.add(
+      vacation.image,
+      path.join(__dirname, "..", "1-assets", "vacationImages")
+    );
     const sql = this.INSERT_vacation_SQL;
     const info: OkPacket = await dal.execute(sql, [
       vacation.vacationUuid,
@@ -100,7 +104,11 @@ class VacationService {
       vacation.vacationId
     );
     const imageName = vacation.image
-      ? await fileSaver.update(existingImageName, vacation.image)
+      ? await fileSaver.update(
+          existingImageName,
+          vacation.image,
+          path.join(__dirname, "..", "1-assets", "vacationImages")
+        )
       : existingImageName;
     const sql = this.UPDATE_vacation_SQL;
     const info: OkPacket = await dal.execute(sql, [

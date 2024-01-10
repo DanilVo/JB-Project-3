@@ -1,26 +1,31 @@
 import { OkPacket } from "mysql";
+import { fileSaver } from "uploaded-file-saver";
 import cyber from "../2-utils/cyber";
 import dal from "../2-utils/dal";
 import CredentialModel from "../3-models/credentials-model";
 import { UnauthorizedError, ValidationError } from "../3-models/error-models";
-import UserModel from "../3-models/user-model";
 import RoleModel from "../3-models/role-model";
+import UserModel from "../3-models/user-model";
+import path from "path";
 
 class AuthService {
   private readonly INSERT_USER_SQL =
-    "INSERT INTO users VALUES(DEFAULT,?,?,?,?,?,?)";
+    "INSERT INTO users VALUES(DEFAULT,?,?,?,?,?,?,?)";
   private readonly SELECT_USER_SQL =
     "SELECT * FROM users WHERE email = ? AND password = ?";
   private readonly COUNT_EMAIL_SQL = "SELECT * FROM users WHERE email = ?";
 
   public async register(user: UserModel): Promise<string> {
-    user.userUuid = cyber.hashPassword(user.email)
-    user.userValidationAdd();
-
+    user.userUuid = cyber.hashPassword(user.email);
+    user.userValidation();
     if (await this.isEmailTaken(user.email))
       throw new ValidationError(
         `User with Email ${user.email} already exists.`
       );
+    const imageName = await fileSaver.add(
+      user.image,
+      path.join(__dirname, "..", "1-assets", "user-images")
+    );
     user.password = cyber.hashPassword(user.password);
     user.roleId = RoleModel.user;
     const sql = this.INSERT_USER_SQL;
@@ -31,10 +36,11 @@ class AuthService {
       user.email,
       user.password,
       user.roleId,
+      imageName
     ]);
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
-    
+
     return token;
   }
 

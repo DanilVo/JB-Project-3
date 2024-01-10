@@ -10,6 +10,7 @@ router.post(
   '/auth/register',
   async (request: Request, response: Response, next: NextFunction) => {
     try {
+      request.body.image = request.files?.image;
       const user = new UserModel(request.body);
       const token = await authService.register(user); 
       response.status(StatusCode.Created).json(token);
@@ -22,8 +23,6 @@ router.post(
 router.post(
   '/auth/login',
   async (request: Request, response: Response, next: NextFunction) => {
-    console.log(request.body);
-
     try {
       const credentials = new CredentialModel(request.body);
       const token = await authService.login(credentials);

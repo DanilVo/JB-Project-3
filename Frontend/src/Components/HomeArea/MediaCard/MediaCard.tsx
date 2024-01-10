@@ -61,7 +61,6 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   };
 
   const updateVacationInRedux = () => {
-    // Find vacation that will be modified
     const indexOfVacationToUpdate = storeVacations.findIndex(
       (v) => v.vacationId === props.vacation.vacationId
     );
