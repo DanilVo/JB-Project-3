@@ -20,25 +20,26 @@ function NavMenu(props: Props): JSX.Element {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleDropdownMenuClick = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+  const handleDropdownMenuClick = (
+    e: React.MouseEvent<HTMLLIElement, MouseEvent>
+  ) => {
     const { myValue } = e.currentTarget.dataset;
-    props.setFilterVacations(myValue);    
+    props.setFilterVacations(myValue);
     setAnchorEl(null);
   };
 
   const adminMenu = [
-    <MenuItem key="reports">
-      <NavLink to="/reports">Reports</NavLink>
-    </MenuItem>,
-    <MenuItem key="add-vacation">
-      <NavLink to="/add-vacation">Add</NavLink>
-    </MenuItem>,
+    <NavLink to="/reports">
+      <MenuItem key="reports">Reports</MenuItem>
+    </NavLink>,
+    <NavLink to="/add-vacation">
+      <MenuItem key="add-vacation">Add</MenuItem>
+    </NavLink>,
   ];
 
   const userMenu = [
     <MenuItem
       key="My-Vacations"
-      value="data"
       data-my-value="My-Vacations"
       onClick={handleDropdownMenuClick}
     >
@@ -51,7 +52,11 @@ function NavMenu(props: Props): JSX.Element {
     >
       Yet to start
     </MenuItem>,
-    <MenuItem key="Active-now" data-my-value="Active-now" onClick={handleDropdownMenuClick}>
+    <MenuItem
+      key="Active-now"
+      data-my-value="Active-now"
+      onClick={handleDropdownMenuClick}
+    >
       Active now
     </MenuItem>,
     <MenuItem

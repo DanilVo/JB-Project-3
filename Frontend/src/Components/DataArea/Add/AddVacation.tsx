@@ -108,6 +108,7 @@ function AddVacation(): JSX.Element {
             focused
             {...register('vacationEndDate', { valueAsDate: true })}
           />
+          
           <img src={previewImage} style={{ height: '200px' }} />
           <Button
             component="label"

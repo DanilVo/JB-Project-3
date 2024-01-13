@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import UserModel from "../../../Models/UserModel";
 import Header from "../Header/Header";
 import NavMenu from "../Menu/Menu";
-import NotAuthorizedRouting from "../Router/NotAuthorizedRoute";
-import Routing from "../Router/Routing";
+import NotAuthorizedRouting from "../Router/NotAuthorizedRoutes";
+import Routing from "../Router/Routes";
 import "./Layout.css";
 
 interface decodedToken {

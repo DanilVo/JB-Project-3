@@ -1,11 +1,14 @@
-import { Button, TextField, Typography } from '@mui/material';
-import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { NavLink, useNavigate } from 'react-router-dom';
-import UserModel from '../../../Models/UserModel';
-import authService from '../../../Services/AuthService';
-import './Register.css';
-import notificationService from '../../../Services/NotificationService';
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import { Button, TextField, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { NavLink, useNavigate } from "react-router-dom";
+import UserModel from "../../../Models/UserModel";
+import authService from "../../../Services/AuthService";
+import notificationService from "../../../Services/NotificationService";
+import "./Register.css";
+import { useState } from "react";
 
 interface Props {
   setUserInSystem: Function;
@@ -17,14 +20,37 @@ function Register(props: Props): JSX.Element {
 
   async function registerNewUser(credentials: UserModel) {
     try {
+      credentials.image = (imageToUpload as unknown as FileList)[0];
+      console.log(credentials);
+      
       await authService.register(credentials);
-      notificationService.success('User has been successfully created');
+      notificationService.success("User has been successfully created");
       props.setUserInSystem(true);
-      navigate('/home');
+      navigate("/home");
     } catch (err: any) {
       notificationService.error(err.message);
     }
   }
+
+  const [previewImage, setPreviewImage] = useState<any>();
+  const [imageToUpload, setImageToUpload] = useState<any>();
+
+  const VisuallyHiddenInput = styled("input")({
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
+    height: 1,
+    overflow: "hidden",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    whiteSpace: "nowrap",
+    width: 1,
+  });
+
+  const imageExtract = (e: any) => {
+    setImageToUpload(e.target.files);
+    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+  };
 
   return (
     <motion.div
@@ -32,7 +58,7 @@ function Register(props: Props): JSX.Element {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       animate={{ y: 100 }}
-      transition={{ ease: 'easeOut', duration: 1.5 }}
+      transition={{ ease: "easeOut", duration: 1.5 }}
     >
       <Typography variant="h4" color="Highlight" align="center">
         Register:
@@ -44,7 +70,7 @@ function Register(props: Props): JSX.Element {
           label="First Name:"
           variant="outlined"
           required
-          {...register('firstName')}
+          {...register("firstName")}
         />
         <TextField
           id="outlined-basic2"
@@ -52,7 +78,7 @@ function Register(props: Props): JSX.Element {
           label="Last Name:"
           variant="outlined"
           required
-          {...register('lastName')}
+          {...register("lastName")}
         />
         <TextField
           id="outlined-basic3"
@@ -60,7 +86,7 @@ function Register(props: Props): JSX.Element {
           label="Email:"
           variant="outlined"
           required
-          {...register('email')}
+          {...register("email")}
         />
         <TextField
           id="outlined-basic4"
@@ -69,8 +95,24 @@ function Register(props: Props): JSX.Element {
           variant="outlined"
           minLength="4"
           required
-          {...register('password')}
+          {...register("password")}
         />
+        <img src={previewImage} style={{ height: "200px" }} />
+
+        <Button
+          component="label"
+          variant="contained"
+          startIcon={<CloudUploadIcon />}
+        >
+          Upload image
+          <VisuallyHiddenInput
+            type="file"
+            accept="image/*"
+            onInput={imageExtract}
+            {...register("image")}
+          />
+        </Button>
+
         <Button variant="outlined" type="submit">
           Register
         </Button>

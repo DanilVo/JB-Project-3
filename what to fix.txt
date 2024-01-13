@@ -1,0 +1,15 @@
+home udefined slice on first login
+
+layout:  // token != "null" &&
+
+rename routing to route
+
+layout: userinsystem and is token is the same
+
+layout: rename filter vacations
+
+editUser: check comment ---> same in EditVacation in function editvacation
+
+navMenu:   const open = Boolean(anchorEl); ---> why????
+
+home: pass function handlefollowvacation as arrow func with arguments instead of calling this function in media card with args from props

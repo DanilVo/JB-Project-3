@@ -18,12 +18,14 @@ function EditUser(): JSX.Element {
   async function editUser(user: UserModel) {
     try {
       // log...
-      // user = {
+      // const user1 = {
       //   ...userFromState,
       //   ...user,
       // };
+      // console.log(user1);
+      
       user.roleId = userFromState.roleId;
-      user.userId = userFromState.userId;
+      user.userId = userFromState.userId;      
       await userService.updateUser(user);
       notificationService.success("User has been successfully updated");
       navigate(-1);
