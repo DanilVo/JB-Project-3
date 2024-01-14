@@ -48,7 +48,7 @@ function AddVacation(): JSX.Element {
       notificationService.success('Vacation has been successfully added');
       navigate(-1);
     } catch (err: any) {
-      notificationService.error('Failed to edit vacation: ' + err.message);
+      notificationService.error(`Couldn't add vacation: ${err.message}`);
     }
   }
 

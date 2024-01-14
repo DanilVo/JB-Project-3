@@ -14,7 +14,9 @@ function Chart(): JSX.Element {
       .then((data) => {
         setVacations(data);
       })
-      .catch((err: any) => notificationService.error(err));
+      .catch((err: any) =>
+        notificationService.error(`Couldn't get vacations: ${err.message}`)
+      );
   }, []);
 
   return (

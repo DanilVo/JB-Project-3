@@ -1,11 +1,11 @@
-import { jwtDecode } from "jwt-decode";
-import { useEffect, useState } from "react";
-import UserModel from "../../../Models/UserModel";
-import Header from "../Header/Header";
-import NavMenu from "../Menu/Menu";
-import NotAuthorizedRouting from "../Router/NotAuthorizedRoutes";
-import Routing from "../Router/Routes";
-import "./Layout.css";
+import { jwtDecode } from 'jwt-decode';
+import { useEffect, useState } from 'react';
+import UserModel from '../../../Models/UserModel';
+import Header from '../Header/Header';
+import NavMenu from '../Menu/Menu';
+import NotAuthorizedRouting from '../Router/NotAuthorizedRoutes';
+import Routing from '../Router/Routes';
+import './Layout.css';
 
 interface decodedToken {
   user: UserModel;
@@ -16,13 +16,13 @@ interface decodedToken {
 function Layout(): JSX.Element {
   const [userInSystem, setUserInSystem] = useState<boolean>(false);
 
-  const [filterVacations, setFilterVacations] = useState<string>("");
+  const [filterVacations, setFilterVacations] = useState<string>('');
 
   const [userRole, setUserRole] = useState<number>();
 
   const [isToken, setIsToken] = useState<boolean>(false);
 
-  const localStorageToken = localStorage.getItem("token");
+  const localStorageToken = localStorage.getItem('token');
 
   useEffect(() => {
     if (!localStorageToken) return;
@@ -31,7 +31,6 @@ function Layout(): JSX.Element {
     setUserRole(decoded.user.roleId);
     if (
       token.length > 0 &&
-      // token != "null" &&
       Date.now() <= decoded.exp * 1000
     ) {
       setIsToken(true);

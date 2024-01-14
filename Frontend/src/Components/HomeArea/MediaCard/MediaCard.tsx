@@ -2,7 +2,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkTwoToneIcon from '@mui/icons-material/BookmarkTwoTone';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
-import { ButtonGroup } from '@mui/material';
+import { ButtonGroup, Divider, IconButton } from '@mui/material';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -87,25 +87,25 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   const action =
     user.roleId === RoleModel.Admin ? (
       <ButtonGroup>
-        <Button onClick={deleteVacation}>
+        <IconButton size="large" color="secondary" onClick={deleteVacation}>
           <DeleteForeverIcon titleAccess="Delete" />
-        </Button>
+        </IconButton>
         <NavLink to={`/edit/${props.vacation.vacationUuid}`}>
-          <Button>
+          <IconButton color="primary" size="large">
             <EditIcon titleAccess="Edit" />
-          </Button>
+          </IconButton>
         </NavLink>
       </ButtonGroup>
     ) : (
       <ButtonGroup>
-        <Button onClick={handleFollowVacation}>
+        <IconButton onClick={handleFollowVacation}>
           {props.vacation.isFollowing === 1 ? (
             <BookmarkIcon />
           ) : (
             <BookmarkTwoToneIcon />
           )}
           {followersCount}
-        </Button>
+        </IconButton>
       </ButtonGroup>
     );
 
@@ -120,25 +120,40 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <Card sx={{ maxWidth: 345 }}>
-        <CardHeader
-          title={props.vacation.destination}
-          subheader={`${startVacation} - ${endVacation}`}
-          action={action}
-        />
+      <Card sx={{ maxWidth: 345, position: 'relative', height: 450 }}>
         <CardMedia
-          sx={{ height: 140 }}
+          sx={{ height: 250 }}
           image={props.vacation.vacationImageUrl}
           component="div"
           title={props.vacation.destination}
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="h4">{props.vacation.destination}</Typography>
+          <Divider />
+          <Typography variant="body1" color="text.secondary">
             {props.vacation.description}
           </Typography>
+
+          <Typography variant="body2" fontWeight="bold">
+            {props.vacation.price}$
+          </Typography>
         </CardContent>
-        <CardActions>
-          <Typography variant="body2">Price:{props.vacation.price}</Typography>
+        <CardActions
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            width: '100%',
+            padding: 0,
+            background: '#FDF7E4',
+            display: 'flex',
+            justifyContent: 'space-around',
+          }}
+        >
+          {action}
+          <Divider orientation="vertical" variant="middle" flexItem />
+          <Typography variant="body2" color="text.secondary">
+            {`${startVacation} - ${endVacation}`}
+          </Typography>
         </CardActions>
       </Card>
     </motion.div>

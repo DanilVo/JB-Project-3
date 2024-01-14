@@ -6,6 +6,9 @@
   justify-content: center;
 }
 
+.Menu > li {
+  text-decoration: none;
+}
 .Menu > .active {
   color: black;
   font-weight: bold;
