@@ -1,129 +1,135 @@
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { Button, TextField, Typography } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import { motion } from "framer-motion";
-import { useForm } from "react-hook-form";
-import { NavLink, useNavigate } from "react-router-dom";
-import UserModel from "../../../Models/UserModel";
-import authService from "../../../Services/AuthService";
-import notificationService from "../../../Services/NotificationService";
-import "./Register.css";
-import { useState } from "react";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import { useForm } from 'react-hook-form';
+import { NavLink, useNavigate } from 'react-router-dom';
+import UserModel from '../../../Models/UserModel';
+import authService from '../../../Services/AuthService';
+import notificationService from '../../../Services/NotificationService';
 
 interface Props {
   setUserInSystem: Function;
 }
 
-function Register(props: Props): JSX.Element {
+export default function Register(props: Props): JSX.Element {
   const { register, handleSubmit } = useForm<UserModel>();
   const navigate = useNavigate();
 
   async function registerNewUser(credentials: UserModel) {
     try {
-      credentials.image = (imageToUpload as unknown as FileList)[0];
       console.log(credentials);
-      
+
       await authService.register(credentials);
-      notificationService.success("User has been successfully created");
+      notificationService.success('User has been successfully created');
       props.setUserInSystem(true);
-      navigate("/home");
+      navigate('/home');
     } catch (err: any) {
       notificationService.error(err.message);
     }
   }
 
-  const [previewImage, setPreviewImage] = useState<any>();
-  const [imageToUpload, setImageToUpload] = useState<any>();
-
-  const VisuallyHiddenInput = styled("input")({
-    clip: "rect(0 0 0 0)",
-    clipPath: "inset(50%)",
-    height: 1,
-    overflow: "hidden",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    whiteSpace: "nowrap",
-    width: 1,
-  });
-
-  const imageExtract = (e: any) => {
-    setImageToUpload(e.target.files);
-    setPreviewImage(URL.createObjectURL(e.target.files[0]));
-  };
-
   return (
-    <motion.div
-      className="Login"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      animate={{ y: 100 }}
-      transition={{ ease: "easeOut", duration: 1.5 }}
-    >
-      <Typography variant="h4" color="Highlight" align="center">
-        Register:
-      </Typography>
-      <form onSubmit={handleSubmit(registerNewUser)}>
-        <TextField
-          id="outlined-basic1"
-          type="text"
-          label="First Name:"
-          variant="outlined"
-          required
-          {...register("firstName")}
-        />
-        <TextField
-          id="outlined-basic2"
-          type="text"
-          label="Last Name:"
-          variant="outlined"
-          required
-          {...register("lastName")}
-        />
-        <TextField
-          id="outlined-basic3"
-          type="email"
-          label="Email:"
-          variant="outlined"
-          required
-          {...register("email")}
-        />
-        <TextField
-          id="outlined-basic4"
-          label="Password:"
-          type="password"
-          variant="outlined"
-          minLength="4"
-          required
-          {...register("password")}
-        />
-        <img src={previewImage} style={{ height: "200px" }} />
-
-        <Button
-          component="label"
-          variant="contained"
-          startIcon={<CloudUploadIcon />}
+    <Container component="main" maxWidth="xs">
+      <CssBaseline />
+      <Box
+        sx={{
+          marginTop: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <LockOutlinedIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign up
+        </Typography>
+        <Box
+          component="form"
+          noValidate
+          onSubmit={handleSubmit(registerNewUser)}
+          sx={{ mt: 3 }}
         >
-          Upload image
-          <VisuallyHiddenInput
-            type="file"
-            accept="image/*"
-            onInput={imageExtract}
-            {...register("image")}
-          />
-        </Button>
-
-        <Button variant="outlined" type="submit">
-          Register
-        </Button>
-        <NavLink to="/auth/login">
-          <Button variant="text" size="small">
-            Login
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                autoComplete="given-name"
+                name="firstName"
+                required
+                fullWidth
+                id="firstName"
+                label="First Name"
+                autoFocus
+                {...register('firstName')}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                required
+                fullWidth
+                id="lastName"
+                label="Last Name"
+                name="lastName"
+                autoComplete="family-name"
+                {...register('lastName')}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+                {...register('email')}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="new-password"
+                {...register('password')}
+              />
+            </Grid>
+          </Grid>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Sign Up
           </Button>
-        </NavLink>
-      </form>
-    </motion.div>
+          <Grid container justifyContent="flex-end">
+            <Grid item>
+              <NavLink to="/auth/login">
+                Already have an account? Sign in
+              </NavLink>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+      <Typography
+        variant="body2"
+        color="text.secondary"
+        align="center"
+        sx={{ mt: 2 }}
+      >
+        {`Copyright © Trip Blitz ${new Date().getFullYear()}.`}
+      </Typography>
+    </Container>
   );
 }
-
-export default Register;

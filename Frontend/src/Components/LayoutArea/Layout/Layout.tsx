@@ -20,8 +20,6 @@ function Layout(): JSX.Element {
 
   const [userRole, setUserRole] = useState<number>();
 
-  const [isToken, setIsToken] = useState<boolean>(false);
-
   const localStorageToken = localStorage.getItem('token');
 
   useEffect(() => {
@@ -29,21 +27,17 @@ function Layout(): JSX.Element {
     const token = JSON.stringify(localStorageToken);
     const decoded: decodedToken = jwtDecode(localStorageToken);
     setUserRole(decoded.user.roleId);
-    if (
-      token.length > 0 &&
-      Date.now() <= decoded.exp * 1000
-    ) {
-      setIsToken(true);
+    if (token.length > 0 && Date.now() <= decoded.exp * 1000) {
+      setUserInSystem(true);
     }
-    setUserInSystem(false);
   }, [userInSystem]);
 
   return (
     <div className="Layout">
-      {isToken ? (
+      {userInSystem ? (
         <div className="Home">
           <header>
-            <Header setToken={setIsToken} />
+            <Header setUserInSystem={setUserInSystem} />
           </header>
           <nav className="nav">
             <NavMenu

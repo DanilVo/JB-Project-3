@@ -7,17 +7,15 @@ class AppConfig {
 
   public readonly registerUserUrl: string = `${this.baseUrl}api/auth/register`;
 
-  public readonly deleteVacationUrl: string = `${this.baseUrl}api/vacations/`;
-
-  public readonly updateVacationUrl: string = `${this.baseUrl}api/vacations/`;
+  public readonly vacationActionsUrl: string = `${this.baseUrl}api/vacations/`;
 
   public readonly addVacationUrl: string = `${this.baseUrl}api/add-vacation/`;
 
   public readonly updateUserUrl: string = `${this.baseUrl}api/user/`;
 
-  public readonly followVacationUrl: string = `${this.baseUrl}api/follow`;
+  public readonly followActionsVacationUrl: string = `${this.baseUrl}api/follow`;
 
-  public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`;
+  public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`; 
 }
 
 // Singleton

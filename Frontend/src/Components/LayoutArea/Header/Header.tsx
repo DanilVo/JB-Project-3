@@ -9,7 +9,7 @@ import logo from '../../../assets/logo/logo-main-no-background.svg';
 import './Header.css';
 
 interface Parent {
-  setToken: Function;
+  setUserInSystem: Function;
 }
 
 function Header(props: Parent): JSX.Element {
@@ -24,7 +24,7 @@ function Header(props: Parent): JSX.Element {
   };
   const handleLogout = () => {
     authService.logout();
-    props.setToken(false);
+    props.setUserInSystem(false);
     navigate('/auth/login');
   };
 

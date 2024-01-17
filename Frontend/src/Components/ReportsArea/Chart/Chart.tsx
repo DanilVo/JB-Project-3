@@ -20,7 +20,15 @@ function Chart(): JSX.Element {
   }, []);
 
   return (
-    <Box className="Chart" sx={{ width: '100%' }}>
+    <Box
+      className="Chart"
+      sx={{
+        width: '90%',
+        margin: 'auto',
+        border: 1,
+        borderRadius: 2,
+      }}
+    >
       {vacations?.length && (
         <BarChart
           xAxis={[
@@ -28,7 +36,6 @@ function Chart(): JSX.Element {
               id: 'barCategories',
               data: vacations.map((v) => v.destination),
               scaleType: 'band',
-              dataKey: 'subs',
             },
           ]}
           series={[

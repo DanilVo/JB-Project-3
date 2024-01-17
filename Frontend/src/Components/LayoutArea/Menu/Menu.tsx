@@ -29,11 +29,11 @@ function NavMenu(props: Props): JSX.Element {
   };
 
   const adminMenu = [
-    <NavLink to="/reports">
-      <MenuItem key="reports">Reports</MenuItem>
+    <NavLink to="/reports" key="reports">
+      <MenuItem >Reports</MenuItem>
     </NavLink>,
-    <NavLink to="/add-vacation">
-      <MenuItem key="add-vacation">Add</MenuItem>
+    <NavLink to="/add-vacation" key="add-vacation">
+      <MenuItem>Add</MenuItem>
     </NavLink>,
   ];
 

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { RoleModel } from '../Models/RoleModel';
 import UserModel from '../Models/UserModel';
 import VacationModel from '../Models/VacationModel';
 import { authStore } from '../Redux/AuthState';
@@ -8,38 +9,29 @@ import {
   vacationStore,
 } from '../Redux/VacationState';
 import appConfig from '../Utils/AppConfig';
-import notificationService from './NotificationService';
-import { RoleModel } from '../Models/RoleModel';
 
 class VacationService {
   private options = {
     headers: { 'Content-Type': 'multipart/form-data' },
   };
 
-  private user: UserModel = authStore.getState().user;
-
   public async getAllVacations(): Promise<VacationModel[]> {
-    let vacations = vacationStore.getState().vacations;
-
+    const user: UserModel = authStore.getState().user;
+    const vacations = vacationStore.getState().vacations;
     if (vacations.length === 0) {
-      const response = await axios.get(
-        appConfig.allVacationsUrl + this.user.userId
-      );
-
-      vacations = response.data;
-
+      const { data } = await axios.get(appConfig.allVacationsUrl + user.userId);
       const action: VacationAction = {
         type: VacationActionTypes.SetVacations,
-        payload: vacations,
+        payload: data,
       };
-
       vacationStore.dispatch(action);
+      return data;
     }
     return vacations;
   }
 
   public async deleteVacation(vacationId: number): Promise<void> {
-    await axios.delete(appConfig.deleteVacationUrl + vacationId);
+    await axios.delete(appConfig.vacationActionsUrl + vacationId);
     const action: VacationAction = {
       type: VacationActionTypes.DeleteVacation,
       payload: vacationId,
@@ -52,7 +44,7 @@ class VacationService {
     vacationId: number
   ): Promise<void> {
     const response = await axios.put(
-      appConfig.updateVacationUrl + vacationId,
+      appConfig.vacationActionsUrl + vacationId,
       vacation,
       this.options
     );
@@ -87,14 +79,16 @@ class VacationService {
     vacationId: number,
     isFollowing: number
   ): Promise<void> {
+    const user: UserModel = authStore.getState().user;
+
     const vacationInfo = {
-      userId: this.user.userId,
+      userId: user.userId,
       vacationId: vacationId,
     };
-    if (this.user.roleId === RoleModel.Admin) return;
+    if (user.roleId === RoleModel.Admin) return;
     isFollowing === 1
-      ? axios.delete(appConfig.followVacationUrl, { data: vacationInfo })
-      : axios.post(appConfig.followVacationUrl, vacationInfo);
+      ? axios.delete(appConfig.followActionsVacationUrl, { data: vacationInfo })
+      : axios.post(appConfig.followActionsVacationUrl, vacationInfo);
   }
 }
 

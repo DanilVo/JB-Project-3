@@ -33,7 +33,6 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
       .then((data) => {
         setInitialVacations(data);
         setVacations(data);
-        console.log(data);
         
         setPaginationPagesCount(Math.ceil(data.length / postsPerPage));
       })

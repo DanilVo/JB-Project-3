@@ -10,7 +10,6 @@ router.post(
   '/auth/register',
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      request.body.image = request.files?.image;
       const user = new UserModel(request.body);
       const token = await authService.register(user); 
       response.status(StatusCode.Created).json(token);

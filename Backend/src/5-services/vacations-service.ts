@@ -51,18 +51,10 @@ class VacationService {
     return vacation.vacationImageUrl;
   }
 
+  // Get all vacations
   public async getVacations(userId: number): Promise<VacationModel[]> {
     const sql = this.GET_following_vacations;
-
     const vacations = await dal.execute(sql, [userId]);
-
-    return vacations;
-  }
-
-  // All vacations
-  public async getAllVacations(): Promise<VacationModel[]> {
-    const sql = this.SELECT_ALL_vacationS_SQL;
-    const vacations = await dal.execute(sql);
     return vacations;
   }
 

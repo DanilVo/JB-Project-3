@@ -1,9 +1,10 @@
-import { Button } from '@mui/material';
-import './CsvReports.css';
-import userService from '../../../Services/UserService';
+import { Box, Button } from '@mui/material';
 import UserModel from '../../../Models/UserModel';
 import { authStore } from '../../../Redux/AuthState';
 import notificationService from '../../../Services/NotificationService';
+import userService from '../../../Services/UserService';
+import './CsvReports.css';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 
 function CsvReports(): JSX.Element {
   async function handleReportDownload(): Promise<any> {
@@ -16,9 +17,17 @@ function CsvReports(): JSX.Element {
   }
 
   return (
-    <div className="CsvReports">
-      <Button onClick={handleReportDownload}>Download report</Button>
-    </div>
+    <Box
+      className="CsvReports"
+      sx={{ display: 'flex', justifyContent: 'end', marginRight: 6 }}
+    >
+      <Button
+        endIcon={<AssessmentOutlinedIcon />}
+        onClick={handleReportDownload}
+      >
+        Download report
+      </Button>
+    </Box>
   );
 }
 
