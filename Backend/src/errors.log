@@ -886,3 +886,15 @@ Stack: Error: newUploadedFile can't be empty.
     at fulfilled (C:\Users\PC\Desktop\JB Project 3\Backend\src\5-services\auth-service.ts:5:58)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
 ----------------------------------------------------------------------------------------------------
+Thu, 18 Jan 2024 12:12:58 GMT
+Route /user/image/Admin not exist
+----------------------------------------------------------------------------------------------------
+Thu, 18 Jan 2024 12:13:23 GMT
+Route /user/image/avatar-1.jpg not exist
+----------------------------------------------------------------------------------------------------
+Thu, 18 Jan 2024 12:13:23 GMT
+Route /favicon.ico not exist
+----------------------------------------------------------------------------------------------------
+Thu, 18 Jan 2024 12:13:55 GMT
+Route /users/36 not exist
+----------------------------------------------------------------------------------------------------

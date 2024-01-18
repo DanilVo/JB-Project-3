@@ -130,7 +130,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
 
   return (
     <div className="mainHome">
-      <div ref={bottomRef}></div>
+      <span ref={bottomRef}></span>
       {currentPosts.map((vacation: VacationModel, index: number) => (
         <MediaCard
           vacation={vacation}

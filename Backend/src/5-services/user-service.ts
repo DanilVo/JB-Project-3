@@ -13,7 +13,7 @@ import vacationService from "./vacations-service";
 
 class UserService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    "SELECT vacationImageUrl FROM vacations WHERE userId = ?";
+    "SELECT userImageUrl FROM users WHERE userId = ?";
   private readonly SELECT_ONE_user_SQL = "SELECT * FROM users WHERE userId = ?";
   private readonly UPDATE_user_SQL = `
     UPDATE users

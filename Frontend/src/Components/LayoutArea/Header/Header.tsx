@@ -1,24 +1,22 @@
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import {
   AppBar,
   Avatar,
   Box,
-  CardHeader,
   Container,
   IconButton,
   Menu,
   MenuItem,
+  Paper,
   Toolbar,
   Typography,
-} from '@mui/material';
-import { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import UserModel from '../../../Models/UserModel';
-import { authStore } from '../../../Redux/AuthState';
-import authService from '../../../Services/AuthService';
-import logo from '../../../assets/logo/logo-main-no-background.svg';
-import './Header.css';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
+} from "@mui/material";
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import UserModel from "../../../Models/UserModel";
+import { authStore } from "../../../Redux/AuthState";
+import authService from "../../../Services/AuthService";
+import logo from "../../../assets/logo/logo-main-no-background.svg";
+import "./Header.css";
 
 interface Parent {
   setUserInSystem: Function;
@@ -38,7 +36,7 @@ function Header(props: Parent): JSX.Element {
   const handleLogout = () => {
     authService.logout();
     props.setUserInSystem(false);
-    navigate('/auth/login');
+    navigate("/auth/login");
   };
 
   const handleCloseWindow = () => {
@@ -49,13 +47,43 @@ function Header(props: Parent): JSX.Element {
     <AppBar position="static">
       <Container
         maxWidth="xl"
-        sx={{ display: 'flex', justifyContent: 'space-between' }}
+        sx={{ display: "flex", justifyContent: "space-between" }}
       >
         <Box component="img" src={logo} alt="logo" sx={{ height: 80 }} />
         <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 0 }}>
+          <Box
+            sx={{
+              flexGrow: 0,
+              maxWidth: 320,
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <Paper
+              elevation={8}
+              sx={{
+                mr: 2,
+                borderRadius: 5,
+                padding: 1,
+                backgroundColor: "rgb(137, 207, 240)",
+              }}
+            >
+              <Typography variant="body1" color="black" ml={1}>
+                <b>Welcome:</b> {user.firstName} {user.lastName}.
+              </Typography>
+              <Typography variant="body2" color="black" ml={0.5}>
+                {user.email}
+              </Typography>
+            </Paper>
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar sx={{ bgcolor: 'red' }}>R</Avatar>
+              <Avatar
+                sx={{ bgcolor: "grey", boxShadow: "1px 1px 10px black" }}
+                src={
+                  user.userImageUrl
+                    ? `http://localhost:4000/api/user/image/${user.userImageUrl}`
+                    : user.firstName.slice(0, 1)
+                }
+              ></Avatar>
             </IconButton>
             <Menu
               id="user-menu"
