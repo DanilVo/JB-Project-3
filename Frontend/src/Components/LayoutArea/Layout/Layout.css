@@ -1,4 +1,4 @@
-.Home {
+/* .Home {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -22,4 +22,4 @@
 .Home main {
   overflow: auto;
   grid-area: 3 / 1 / 5 / 6;
-}
+} */

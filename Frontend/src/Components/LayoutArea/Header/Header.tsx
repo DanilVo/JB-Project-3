@@ -1,5 +1,16 @@
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { Avatar, CardHeader, IconButton, Menu, MenuItem } from '@mui/material';
+import {
+  AppBar,
+  Avatar,
+  Box,
+  CardHeader,
+  Container,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import UserModel from '../../../Models/UserModel';
@@ -7,6 +18,7 @@ import { authStore } from '../../../Redux/AuthState';
 import authService from '../../../Services/AuthService';
 import logo from '../../../assets/logo/logo-main-no-background.svg';
 import './Header.css';
+import CameraIcon from '@mui/icons-material/PhotoCamera';
 
 interface Parent {
   setUserInSystem: Function;
@@ -19,7 +31,8 @@ function Header(props: Parent): JSX.Element {
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleLogout = () => {
@@ -33,45 +46,32 @@ function Header(props: Parent): JSX.Element {
   };
 
   return (
-    <div className="Header">
-      <img src={logo} alt="logo" className="logo" />
-      <div className="userName">
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
-              R
-            </Avatar>
-          }
-          action={
-            <IconButton
-              aria-label="settings"
-              aria-controls={open ? 'basic-menu' : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
-              onClick={handleClick}
-            >
-              <MoreVertIcon />
+    <AppBar position="static">
+      <Container
+        maxWidth="xl"
+        sx={{ display: 'flex', justifyContent: 'space-between' }}
+      >
+        <Box component="img" src={logo} alt="logo" sx={{ height: 80 }} />
+        <Toolbar disableGutters>
+          <Box sx={{ flexGrow: 0 }}>
+            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <Avatar sx={{ bgcolor: 'red' }}>R</Avatar>
             </IconButton>
-          }
-          title={`Hello ${user?.firstName} ${user?.lastName}`}
-          subheader={user?.email}
-        />
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleCloseWindow}
-          MenuListProps={{
-            'aria-labelledby': 'basic-button',
-          }}
-        >
-          <NavLink to={`edit/user/${user.uuid}`}>
-            <MenuItem>Settings</MenuItem>
-          </NavLink>
-          <MenuItem onClick={handleLogout}>Logout</MenuItem>
-        </Menu>
-      </div>
-    </div>
+            <Menu
+              id="user-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleCloseWindow}
+            >
+              <NavLink to={`edit/user/${user.uuid}`}>
+                <MenuItem>Settings</MenuItem>
+              </NavLink>
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
 

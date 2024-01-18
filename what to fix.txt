@@ -17,3 +17,5 @@ home: pass function handlefollowvacation as arrow func with arguments instead of
 vacation-controller: remove getAllVacations function
 
 add if no vacations than default text
+
+user settings: add option to add user image
