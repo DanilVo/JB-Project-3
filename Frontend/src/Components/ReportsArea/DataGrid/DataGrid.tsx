@@ -15,7 +15,7 @@ function DataGrid(): JSX.Element {
       { field: "vacationId", headerName: "Id", width: 50 },
       {
         field: "icon",
-        headerName: "Flag",
+        headerName: "Flag", 
         width: 60,
         sortable: false,
         filterable: false,
