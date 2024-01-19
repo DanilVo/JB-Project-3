@@ -19,7 +19,7 @@ function CsvReports(): JSX.Element {
   return (
     <Box
       className="CsvReports"
-      sx={{ display: 'flex', justifyContent: 'end', marginRight: 6 }}
+      sx={{ display: 'flex', justifyContent: 'end' }}
     >
       <Button
         endIcon={<AssessmentOutlinedIcon />}

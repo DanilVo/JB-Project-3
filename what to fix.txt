@@ -19,3 +19,5 @@ vacation-controller: remove getAllVacations function
 add if no vacations than default text
 
 user settings: add option to add user image
+
+reports: add pie chart to display ratio finished this year to future vacations this year
