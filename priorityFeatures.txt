@@ -1,0 +1,4 @@
+1. Edit user: add image handle ------------------- DONE
+2. Edit user: change password 
+2. login: forgot your password functionality
+3. oAuth2 Google

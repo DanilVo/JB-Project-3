@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import UserModel from '../../../Models/UserModel';
 import { authStore } from '../../../Redux/AuthState';
 import notificationService from '../../../Services/NotificationService';
@@ -19,8 +19,18 @@ function CsvReports(): JSX.Element {
   return (
     <Box
       className="CsvReports"
-      sx={{ display: 'flex', justifyContent: 'end', marginRight: 6 }}
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        borderRadius: 1,
+        boxShadow: '11px 11px 22px #acacac,-11px -11px 22px #ffffff;',
+        bgcolor: 'white',
+        mb: 3,
+      }}
     >
+      <Typography variant="h6" color="primary" padding={1}>
+        Dashboard:
+      </Typography>
       <Button
         endIcon={<AssessmentOutlinedIcon />}
         onClick={handleReportDownload}

@@ -1,5 +1,5 @@
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { Button, TextField, Typography } from '@mui/material';
+import { Box, Button, Container, TextField, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -41,9 +41,12 @@ function AddVacation(): JSX.Element {
 
   async function addVacation(vacation: VacationModel) {
     try {
-      vacation.image = (imageToUpload as unknown as FileList)[0];
-      vacation.vacationStartDate = dateParser(vacation.vacationStartDate);
-      vacation.vacationEndDate = dateParser(vacation.vacationEndDate);
+      vacation = {
+        ...vacation,
+        image: (imageToUpload as unknown as FileList)[0],
+        vacationStartDate: dateParser(vacation.vacationStartDate),
+        vacationEndDate: dateParser(vacation.vacationEndDate),
+      };
       await vacationService.addVacation(vacation);
       notificationService.success('Vacation has been successfully added');
       navigate(-1);
@@ -58,27 +61,36 @@ function AddVacation(): JSX.Element {
   };
 
   return (
-    <div className="Edit">
+    <Container className="Edit">
       <motion.div
         className="Login"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        animate={{ y: 100 }}
-        transition={{ ease: 'easeOut', duration: 1.5 }}
+        transition={{ ease: 'easeOut', duration: 2 }}
       >
         <Typography variant="h4" color="Highlight" align="center">
-          Edit:
+          Add vacation:
         </Typography>
-        <form onSubmit={handleSubmit(addVacation)}>
+        <Box
+          component="form"
+          onSubmit={handleSubmit(addVacation)}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '50%',
+            maxWidth: '80%',
+            m: 'auto',
+          }}
+        >
           <TextField
-            id="outlined-basic"
+            sx={{ mt: 2 }}
             type="text"
             label="Destination:"
             variant="outlined"
             {...register('destination')}
           />
           <TextField
-            id="outlined-basic"
+            sx={{ mt: 2 }}
             type="text"
             label="Description:"
             variant="outlined"
@@ -86,14 +98,14 @@ function AddVacation(): JSX.Element {
             {...register('description')}
           />
           <TextField
-            id="outlined-basic"
+            sx={{ mt: 2 }}
             type="number"
             label="Price:"
             variant="outlined"
             {...register('price')}
           />
           <TextField
-            id="outlined-basic"
+            sx={{ mt: 2 }}
             label="Start Date:"
             type="date"
             variant="outlined"
@@ -101,14 +113,14 @@ function AddVacation(): JSX.Element {
             {...register('vacationStartDate', { valueAsDate: true })}
           />
           <TextField
-            id="outlined-basic"
+            sx={{ mt: 2 }}
             label="End Date:"
             type="date"
             variant="outlined"
             focused
             {...register('vacationEndDate', { valueAsDate: true })}
           />
-          
+
           <img src={previewImage} style={{ height: '200px' }} />
           <Button
             component="label"
@@ -126,9 +138,9 @@ function AddVacation(): JSX.Element {
           <Button variant="outlined" type="submit">
             Save Changes
           </Button>
-        </form>
+        </Box>
       </motion.div>
-    </div>
+    </Container>
   );
 }
 

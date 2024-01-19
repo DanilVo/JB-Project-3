@@ -47,7 +47,7 @@ class VacationService {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return "";
+    if (!vacation) return "";    
     return vacation.vacationImageUrl;
   }
 
@@ -95,6 +95,8 @@ class VacationService {
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
     );
+    console.log(existingImageName);
+    
     const imageName = vacation.image
       ? await fileSaver.update(
           existingImageName,

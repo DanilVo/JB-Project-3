@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import AddVacation from "../../DataArea/Add/AddVacation";
+import AddVacation from "../../DataArea/AddVacation/AddVacation";
 import EditUser from "../../DataArea/EditUser/EditUser";
 import EditVacation from "../../DataArea/EditVacation/EditVacation";
 import Home from "../../HomeArea/Home/Home";

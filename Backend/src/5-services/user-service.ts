@@ -1,20 +1,18 @@
-import { OkPacket } from "mysql";
-import path from "path";
-import { fileSaver } from "uploaded-file-saver";
-import appConfig from "../2-utils/app-config";
-import cyber from "../2-utils/cyber";
-import dal from "../2-utils/dal";
-import {
-  ResourceNotFoundError
-} from "../3-models/error-models";
-import UserModel from "../3-models/user-model";
-import VacationModel from "../3-models/vacation-model";
-import vacationService from "./vacations-service";
+import { OkPacket } from 'mysql';
+import path from 'path';
+import { fileSaver } from 'uploaded-file-saver';
+import appConfig from '../2-utils/app-config';
+import cyber from '../2-utils/cyber';
+import dal from '../2-utils/dal';
+import { ResourceNotFoundError } from '../3-models/error-models';
+import UserModel from '../3-models/user-model';
+import VacationModel from '../3-models/vacation-model';
+import vacationService from './vacations-service';
 
 class UserService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    "SELECT userImageUrl FROM users WHERE userId = ?";
-  private readonly SELECT_ONE_user_SQL = "SELECT * FROM users WHERE userId = ?";
+    'SELECT userImageUrl FROM users WHERE userId = ?';
+  private readonly SELECT_ONE_user_SQL = 'SELECT * FROM users WHERE userId = ?';
   private readonly UPDATE_user_SQL = `
     UPDATE users
     SET firstName=?, lastName=?, email=?, userImageUrl = ?
@@ -35,9 +33,10 @@ class UserService {
       ? await fileSaver.update(
           existingImageName,
           user.image,
-          path.join(__dirname, "..", "1-assets", "user-images")
+          path.join(__dirname, '..', '1-assets', 'user-images')
         )
       : existingImageName;
+    user.userImageUrl = imageName;
     const sql = this.UPDATE_user_SQL;
     const info: OkPacket = await dal.execute(sql, [
       user.firstName,
@@ -47,9 +46,10 @@ class UserService {
       user.userId,
     ]);
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
-    const token = cyber.getNewToken(user);
+
     delete user.image;
-    user.userImageUrl = `${appConfig.appHost}/api/vacations/${imageName}`;
+    user.roleId = +user.roleId;   
+    const token = cyber.getNewToken(user);
     return token;
   }
 
@@ -57,8 +57,8 @@ class UserService {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return "";
-    return vacation.vacationImageUrl;
+    if (!vacation) return '';
+    return vacation.userImageUrl;
   }
 
   public async generateReport(userId: number) {
@@ -66,12 +66,12 @@ class UserService {
       userId
     );
 
-    const createCsvWriter = require("csv-writer").createObjectCsvWriter;
+    const createCsvWriter = require('csv-writer').createObjectCsvWriter;
     const csvWriter = createCsvWriter({
-      path: path.join(__dirname, "../1-assets", `/reports/reports.csv`),
+      path: path.join(__dirname, '../1-assets', `/reports/reports.csv`),
       header: [
-        { id: "dest", title: "Destination" },
-        { id: "follow", title: "Followers" },
+        { id: 'dest', title: 'Destination' },
+        { id: 'follow', title: 'Followers' },
       ],
     });
 
@@ -81,7 +81,7 @@ class UserService {
     }));
 
     await csvWriter.writeRecords(records).then(() => {
-      console.log("created csv");
+      console.log('created csv');
     });
 
     return true;

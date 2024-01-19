@@ -13,9 +13,11 @@ class AppConfig {
 
   public readonly updateUserUrl: string = `${this.baseUrl}api/user/`;
 
+  public readonly userImageUrl: string = `${this.baseUrl}api/user/image/`;
+
   public readonly followActionsVacationUrl: string = `${this.baseUrl}api/follow`;
 
-  public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`; 
+  public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`;
 }
 
 // Singleton

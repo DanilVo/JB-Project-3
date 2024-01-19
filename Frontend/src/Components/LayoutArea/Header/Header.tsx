@@ -66,7 +66,8 @@ function Header(props: Parent): JSX.Element {
                 borderRadius: 3,
                 padding: 1,
                 background: '#1976d2',
-                boxShadow: 'inset -5px 5px 10px #1561ac, inset 5px -5px 10px #1e8bf8',
+                boxShadow:
+                  'inset -5px 5px 10px #1561ac, inset 5px -5px 10px #1e8bf8',
               }}
             >
               <Typography variant="body1" color="black" ml={1}>

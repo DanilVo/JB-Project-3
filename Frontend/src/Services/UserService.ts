@@ -4,11 +4,18 @@ import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
 import appConfig from '../Utils/AppConfig';
 
 class UserService {
+  private options = {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  };
   public async updateUser(user: UserModel): Promise<UserModel> {
+    console.log(user);
+    
     const { data } = await axios.put(
       appConfig.updateUserUrl + user.userId,
-      user
+      user,
+      this.options
     );
+    
     const action: AuthAction = {
       type: AuthActionTypes.Register,
       payload: data,

@@ -43,18 +43,18 @@ class VacationService {
     vacation: VacationModel,
     vacationId: number
   ): Promise<void> {
-    const response = await axios.put(
+    const { data } = await axios.put(
       appConfig.vacationActionsUrl + vacationId,
       vacation,
       this.options
     );
 
-    response.data.followersCount = vacation.followersCount;
-    response.data.isFollowing = vacation.isFollowing;
+    data.followersCount = vacation.followersCount;
+    data.isFollowing = vacation.isFollowing;
 
     const action: VacationAction = {
       type: VacationActionTypes.UpdateVacation,
-      payload: response.data,
+      payload: data,
     };
 
     vacationStore.dispatch(action);

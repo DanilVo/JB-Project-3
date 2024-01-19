@@ -1,21 +1,20 @@
-import { Pagination } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import VacationModel from "../../../Models/VacationModel";
-import { vacationStore } from "../../../Redux/VacationState";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import MediaCard from "../MediaCard/MediaCard";
-import "./Home.css";
+import { Box, Container, Pagination, Typography } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
+import VacationModel from '../../../Models/VacationModel';
+import { vacationStore } from '../../../Redux/VacationState';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import MediaCard from '../MediaCard/MediaCard';
+import './Home.css';
 
 enum FilterActionTypes {
-  myVacations = "My-Vacations",
-  yetToStart = "Yet-to-start",
-  activeNow = "Active-now",
-  allVacations = "All-vacations",
+  myVacations = 'My-Vacations',
+  yetToStart = 'Yet-to-start',
+  activeNow = 'Active-now',
+  allVacations = 'All-vacations',
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
-
   const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
 
@@ -33,7 +32,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
       .then((data) => {
         setInitialVacations(data);
         setVacations(data);
-        
+
         setPaginationPagesCount(Math.ceil(data.length / postsPerPage));
       })
       .catch((err: any) => notificationService.error(err));
@@ -91,9 +90,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
 
   const deleteVacation = async (vacationId: number) => {
     try {
-      if (confirm("Are you sure?")) {
+      if (confirm('Are you sure?')) {
         await vacationService.deleteVacation(vacationId);
-        notificationService.success("Vacation has been deleted!");
+        notificationService.success('Vacation has been deleted!');
         const remainingVacation = vacations.filter(
           (vacation) => vacation.vacationId !== vacationId
         );
@@ -111,7 +110,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
     try {
       await vacationService.followVacation(vacationId, isFollowing);
       notificationService.success(
-        !isFollowing ? "Vacation has been added!" : "Vacation has been removed!"
+        !isFollowing ? 'Vacation has been added!' : 'Vacation has been removed!'
       );
     } catch (err: any) {
       notificationService.error(err.message);
@@ -128,27 +127,47 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
     setCurrentPage(p);
   };
 
+  const noVacations = (
+    <Container>
+      <Typography variant="h4" color="primary">
+        NO MATCHES FOUND
+      </Typography>
+      <Typography variant="body1" color="text.secondary">
+        Please try another search.
+      </Typography>
+    </Container>
+  );
+
   return (
-    <div className="mainHome">
-      <span ref={bottomRef}></span>
-      {currentPosts.map((vacation: VacationModel, index: number) => (
-        <MediaCard
-          vacation={vacation}
-          key={vacation.destination}
-          duration={(index + 2) * 0.1}
-          delete={deleteVacation}
-          follow={handleFollowVacation}
-        />
-      ))}
-      <div className="pagination">
-        <Pagination
-          count={paginationPagesCount}
-          color="primary"
-          onChange={handleChange}
-          onClick={scrollToBottom}
-        />
-      </div>
-    </div>
+    <Container className="mainHome">
+      {vacations.length ? (
+        <>
+          <span ref={bottomRef}></span>
+          <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+            {currentPosts.map((vacation: VacationModel, index: number) => (
+              <MediaCard
+                vacation={vacation}
+                key={vacation.destination}
+                duration={(index + 2) * 0.1}
+                delete={deleteVacation}
+                follow={handleFollowVacation}
+              />
+            ))}
+          </Box>
+          <Box>
+            <Pagination
+              sx={{ width: 'fit-content', m: 'auto', mb: 1, mt: 1 }}
+              count={paginationPagesCount}
+              color="primary"
+              onChange={handleChange}
+              onClick={scrollToBottom}
+            />
+          </Box>
+        </>
+      ) : (
+        noVacations
+      )}
+    </Container>
   );
 }
 

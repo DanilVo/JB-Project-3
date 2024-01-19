@@ -1,11 +1,10 @@
 .MediaCard {
   display: flex;
-  margin-right: 5px;
   justify-content: center;
   flex: 25%;
 }
 
 .MediaCard > .MuiPaper-root {
-  margin: 10px;
+  margin: 10px 0;
   width: 50vw;
 }

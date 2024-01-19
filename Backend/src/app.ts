@@ -23,7 +23,7 @@ server.use(
     message: 'To many requests, please try again later!',
   })
 );
-
+ 
 if (appConfig.isDevelopment) {
   server.use(cors());
 } else {

@@ -68,7 +68,7 @@ router.get(
   "/user/image/:imageName",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      const imageName = request.params.imageName;
+      const imageName = request.params.imageName;      
       const absolutePath = fileSaver.getFilePath(
         imageName,
         true,

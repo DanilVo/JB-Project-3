@@ -8,7 +8,7 @@ import UserModel from '../3-models/user-model';
 
 class AuthService {
   private readonly INSERT_USER_SQL =
-    'INSERT INTO users VALUES(DEFAULT,?,?,?,?,?,?)';
+    'INSERT INTO users(uuid,firstName,lastName,email,password,roleId) VALUES(?,?,?,?,?,?)';
   private readonly SELECT_USER_SQL =
     'SELECT * FROM users WHERE email = ? AND password = ?';
   private readonly COUNT_EMAIL_SQL = 'SELECT * FROM users WHERE email = ?';
@@ -34,7 +34,7 @@ class AuthService {
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
 
-    return token;
+    return token; 
   }
 
   public async login(credentials: CredentialModel): Promise<string> {

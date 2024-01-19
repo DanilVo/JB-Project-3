@@ -3,16 +3,15 @@ import BookmarkTwoToneIcon from '@mui/icons-material/BookmarkTwoTone';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import EditIcon from '@mui/icons-material/Edit';
 import { ButtonGroup, Divider, IconButton } from '@mui/material';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { RoleModel } from '../../../Models/RoleModel';
 import VacationModel from '../../../Models/VacationModel';
 import { authStore } from '../../../Redux/AuthState';
 import {
@@ -21,7 +20,6 @@ import {
   vacationStore,
 } from '../../../Redux/VacationState';
 import './MediaCard.css';
-import { RoleModel } from '../../../Models/RoleModel';
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -99,7 +97,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
     ) : (
       <ButtonGroup>
         <IconButton onClick={handleFollowVacation}>
-          {props.vacation.isFollowing === 1 ? (
+          {props.vacation.isFollowing ? (
             <BookmarkIcon />
           ) : (
             <BookmarkTwoToneIcon />

@@ -1,29 +1,24 @@
-import { Avatar, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { DataGrid as Datagrid, GridColDef } from "@mui/x-data-grid";
+import moment from "moment";
 import { useMemo } from "react";
 import VacationModel from "../../../Models/VacationModel";
-import { vacationStore } from "../../../Redux/VacationState";
 import "./DataGrid.css";
-import moment from "moment";
 
-function DataGrid(): JSX.Element {
-  const vacations: VacationModel[] = vacationStore.getState().vacations;
-  console.log(vacations);
+function DataGrid({ vacations }: { vacations: VacationModel[] }): JSX.Element {
 
   const columns: GridColDef[] = useMemo(
     () => [
-      { field: "vacationId", headerName: "Id", width: 50 },
-      {
-        field: "icon",
-        headerName: "Flag", 
-        width: 60,
-        sortable: false,
-        filterable: false,
-        // renderCell: (flags=> <Avatar src={flagIcon}/>)
-      },
-      { field: "destination", headerName: "Destination", width: 150 },
+      { field: "vacationId", headerName: "Id", width: 80 },
+
+      { field: "destination", headerName: "Destination", width: 140 },
       { field: "followersCount", headerName: "Followers", width: 80 },
-      { field: "price", headerName: "Price", width: 60 },
+      {
+        field: "price",
+        headerName: "Price",
+        width: 60,
+        renderCell: (params) => params.row.price + "$",
+      },
       {
         field: "vacationStartDate",
         headerName: "Start Date",
@@ -43,12 +38,24 @@ function DataGrid(): JSX.Element {
   );
 
   return (
-    <Box sx={{height: ''}}>
-      {vacations.length && (
+    <Box
+      sx={{
+        height: "300px",
+        borderRadius: 1,
+        boxShadow: " 11px 11px 22px #acacac,-11px -11px 22px #ffffff;",
+        bgcolor: "white",
+      }}
+    >
+      {vacations?.length && (
         <Datagrid
           rows={vacations}
           columns={columns}
           getRowId={(row) => row.vacationUuid}
+          rowSelection={false}
+          initialState={{
+            pagination: { paginationModel: { pageSize: 5 } },
+          }}
+          pageSizeOptions={[5, 10, vacations.length]}
         />
       )}
     </Box>
