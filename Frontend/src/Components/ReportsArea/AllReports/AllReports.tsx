@@ -1,13 +1,13 @@
-import { Box, Grid } from '@mui/material';
-import Chart from '../Chart/Chart';
-import CsvReports from '../CsvReports/CsvReports';
-import './AllReports.css';
-import DataGrid from '../DataGrid/DataGrid';
-import BasicData from '../BasicData/BasicData';
-import { useEffect, useState } from 'react';
-import VacationModel from '../../../Models/VacationModel';
-import vacationService from '../../../Services/VacationsService';
-import notificationService from '../../../Services/NotificationService';
+import { Box, Grid } from "@mui/material";
+import Chart from "../Chart/Chart";
+import CsvReports from "../CsvReports/CsvReports";
+import "./AllReports.css";
+import DataGrid from "../DataGrid/DataGrid";
+import BasicData from "../BasicData/BasicData";
+import { useEffect, useState } from "react";
+import VacationModel from "../../../Models/VacationModel";
+import vacationService from "../../../Services/VacationsService";
+import notificationService from "../../../Services/NotificationService";
 
 function AllReports(): JSX.Element {
   const [vacations, setVacations] = useState<VacationModel[]>([]);
@@ -23,9 +23,8 @@ function AllReports(): JSX.Element {
   }, []);
 
   return (
-    <Box className="AllReports" sx={{ ml: 5, mr: 5, mb: 5 }}>
+    <Box className="AllReports" maxWidth="lg" sx={{ m: "auto" }}>
       <CsvReports />
-      <Chart vacations={vacations} />
       <Grid container spacing={2}>
         <Grid item xs={12} sm={8}>
           <DataGrid vacations={vacations} />
@@ -34,6 +33,7 @@ function AllReports(): JSX.Element {
           <BasicData vacations={vacations} />
         </Grid>
       </Grid>
+      <Chart vacations={vacations} />
     </Box>
   );
 }

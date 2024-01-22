@@ -8,7 +8,7 @@ function Chart({ vacations }: { vacations: VacationModel[] }): JSX.Element {
     <Box
       className="Chart"
       sx={{
-        mb: 3,
+        mt: 3,
         borderRadius: 1,
         boxShadow: " 5px 5px 22px #acacac,-5px -5px 22px #ffffff;",
         bgcolor: "white",
