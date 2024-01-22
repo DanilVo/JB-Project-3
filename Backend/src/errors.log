@@ -954,3 +954,77 @@ Stack: AggregateError
 Sun, 21 Jan 2024 11:22:19 GMT
 Image to large
 ----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:32:30 GMT
+"price" must be less than or equal to 10000
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:33:00 GMT
+"price" must be less than or equal to 10000
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:33:11 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:34:01 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:34:17 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:73:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:35:38 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:73:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:36:21 GMT
+"description" length must be at least 5 characters long
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:36:42 GMT
+"description" length must be at least 5 characters long
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:37:05 GMT
+"description" length must be at least 5 characters long
+----------------------------------------------------------------------------------------------------
+Mon, 22 Jan 2024 12:37:53 GMT
+"vacationEndDate" must be greater than "ref:vacationStartDate"
+----------------------------------------------------------------------------------------------------

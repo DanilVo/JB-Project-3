@@ -1,25 +1,25 @@
-import BookmarkIcon from '@mui/icons-material/Bookmark';
-import BookmarkTwoToneIcon from '@mui/icons-material/BookmarkTwoTone';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import EditIcon from '@mui/icons-material/Edit';
-import { ButtonGroup, Divider, IconButton } from '@mui/material';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { RoleModel } from '../../../Models/RoleModel';
-import VacationModel from '../../../Models/VacationModel';
-import { authStore } from '../../../Redux/AuthState';
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import BookmarkTwoToneIcon from "@mui/icons-material/BookmarkTwoTone";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import EditIcon from "@mui/icons-material/Edit";
+import { ButtonGroup, Divider, IconButton } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { RoleModel } from "../../../Models/RoleModel";
+import VacationModel from "../../../Models/VacationModel";
+import { authStore } from "../../../Redux/AuthState";
 import {
   VacationAction,
   VacationActionTypes,
   vacationStore,
-} from '../../../Redux/VacationState';
-import './MediaCard.css';
+} from "../../../Redux/VacationState";
+import "./MediaCard.css";
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -38,10 +38,10 @@ function MediaCard(props: MediaCardProps): JSX.Element {
 
   const startVacation = new Date(
     props.vacation.vacationStartDate
-  ).toLocaleDateString('en-GB');
+  ).toLocaleDateString("en-GB");
   const endVacation = new Date(
     props.vacation.vacationEndDate
-  ).toLocaleDateString('en-GB');
+  ).toLocaleDateString("en-GB");
 
   const deleteVacation = async () => {
     await props.delete(props.vacation.vacationId);
@@ -85,11 +85,11 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   const action =
     user.roleId === RoleModel.Admin ? (
       <ButtonGroup>
-        <IconButton size="large" color="secondary" onClick={deleteVacation}>
+        <IconButton size="large" color="error" onClick={deleteVacation}>
           <DeleteForeverIcon titleAccess="Delete" />
         </IconButton>
         <NavLink to={`/edit/${props.vacation.vacationUuid}`}>
-          <IconButton color="primary" size="large">
+          <IconButton color="success" size="large">
             <EditIcon titleAccess="Edit" />
           </IconButton>
         </NavLink>
@@ -118,7 +118,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <Card sx={{ maxWidth: 345, position: 'relative', height: 450 }}>
+      <Card sx={{ maxWidth: 345, position: "relative", height: 450 }}>
         <CardMedia
           sx={{ height: 250 }}
           image={props.vacation.vacationImageUrl}
@@ -138,13 +138,13 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         </CardContent>
         <CardActions
           style={{
-            position: 'absolute',
+            position: "absolute",
             bottom: 0,
-            width: '100%',
+            width: "100%",
             padding: 0,
-            background: '#FDF7E4',
-            display: 'flex',
-            justifyContent: 'space-around',
+            background: "#FBF9F1",
+            display: "flex",
+            justifyContent: "space-around",
           }}
         >
           {action}

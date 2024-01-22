@@ -1,13 +1,12 @@
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import {
   Box,
   Button,
   Container,
+  Divider,
   Grid,
   TextField,
   Typography,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -17,6 +16,7 @@ import { authStore } from "../../../Redux/AuthState";
 import notificationService from "../../../Services/NotificationService";
 import userService from "../../../Services/UserService";
 import appConfig from "../../../Utils/AppConfig";
+import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
 import "./EditUser.css";
 
 function EditUser(): JSX.Element {
@@ -29,22 +29,10 @@ function EditUser(): JSX.Element {
   const [imageToUpload, setImageToUpload] = useState<any>();
   const [newImage, setNewImage] = useState<boolean>(false);
 
-  const VisuallyHiddenInput = styled("input")({
-    clip: "rect(0 0 0 0)",
-    clipPath: "inset(50%)",
-    height: 1,
-    overflow: "hidden",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    whiteSpace: "nowrap",
-    width: 1,
-  });
-
-  const imageExtract = (e: any) => {
+  const imageExtract = (file: File) => {
     setNewImage(true);
-    setImageToUpload(e.target.files);
-    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+    setImageToUpload(file);
+    setPreviewImage(URL.createObjectURL(file));
   };
 
   async function editUser(user: UserModel) {
@@ -55,7 +43,7 @@ function EditUser(): JSX.Element {
         userId: userFromState.userId,
       };
       if (newImage) {
-        user.image = (imageToUpload as unknown as FileList)[0];
+        user.image = imageToUpload;
       }
       await userService.updateUser(user);
       notificationService.success("User has been successfully updated");
@@ -83,7 +71,12 @@ function EditUser(): JSX.Element {
         whileInView={{ opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
       >
-        <Typography variant="h4" color="Highlight" align="center">
+        <Typography
+          variant="h4"
+          color="Highlight"
+          align="center"
+          marginBottom={3}
+        >
           Edit:
         </Typography>
         <Box
@@ -123,38 +116,44 @@ function EditUser(): JSX.Element {
                 />
               </Box>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <Box
-                  component="img"
-                  src={previewImage}
-                  style={{
-                    marginTop: "10px",
-                    height: "200px",
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                />
-                <Button
-                  component="label"
-                  variant="contained"
-                  startIcon={<CloudUploadIcon />}
-                >
-                  Upload image
-                  <VisuallyHiddenInput
-                    type="file"
-                    accept="image/*"
-                    onInput={imageExtract}
-                    {...register("image")}
+            <Divider orientation="vertical" variant="middle" flexItem />
+            <Grid item xs={12} sm={5}>
+              {imageToUpload ? (
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Button
+                    variant="outlined"
+                    sx={{ width: "fit-content", m: "auto" }}
+                    color="error"
+                    onClick={() => {
+                      setImageToUpload(false);
+                      setPreviewImage(false);
+                    }}
+                  >
+                    Change Image
+                  </Button>
+                  <Box
+                    component="img"
+                    src={previewImage}
+                    style={{
+                      display: "flex",
+                      margin: "auto",
+                      paddingTop: "15px",
+                      height: "300px",
+                      width: "380px",
+                    }}
                   />
-                </Button>
-              </Box>
+                </Box>
+              ) : (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    mt: { sm: 5 },
+                  }}
+                >
+                  <DragDropFileUpload onFileUpload={imageExtract} />
+                </Box>
+              )}
             </Grid>
             <Grid
               item

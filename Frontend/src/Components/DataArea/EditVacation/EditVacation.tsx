@@ -1,20 +1,33 @@
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useNavigate, useParams } from 'react-router-dom';
-import VacationModel from '../../../Models/VacationModel';
-import notificationService from '../../../Services/NotificationService';
-import vacationService from '../../../Services/VacationsService';
-import './EditVacation.css';
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { motion } from "framer-motion";
+import moment from "moment";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate, useParams } from "react-router-dom";
+import VacationModel from "../../../Models/VacationModel";
+import notificationService from "../../../Services/NotificationService";
+import vacationService from "../../../Services/VacationsService";
+import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
+import "./EditVacation.css";
 
 function EditVacation(): JSX.Element {
   const { vacationUuid } = useParams();
+  const navigate = useNavigate();
 
   const [vacation, setVacation] = useState<VacationModel>();
   const [isData, setIsData] = useState<boolean>(false);
+
+  const [previewImage, setPreviewImage] = useState<any>();
+  const [imageToUpload, setImageToUpload] = useState<any>();
+  const { register, handleSubmit, setValue } = useForm<VacationModel>();
 
   useEffect(() => {
     vacationService
@@ -26,43 +39,21 @@ function EditVacation(): JSX.Element {
       .catch((err: any) => notificationService.error(err));
   }, []);
 
-  const navigate = useNavigate();
-
-  const [previewImage, setPreviewImage] = useState<any>();
-  const [imageToUpload, setImageToUpload] = useState<any>();
-  const { register, handleSubmit, setValue } = useForm<VacationModel>();
-
-  const VisuallyHiddenInput = styled('input')({
-    clip: 'rect(0 0 0 0)',
-    clipPath: 'inset(50%)',
-    height: 1,
-    overflow: 'hidden',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    whiteSpace: 'nowrap',
-    width: 1,
-  });
-
-  const dateParser = (date: Date | string): string => {
-    const initialDate = new Date(date);
-    const day = initialDate.getDate();
-    const month = initialDate.getMonth() + 1;
-    const year = initialDate.getFullYear();
-    return `${year}-${month < 9 ? '0' : ''}${month}-${
-      day < 9 ? '0' : ''
-    }${day}`;
-  };
-
   useEffect(() => {
     setPreviewImage(vacation?.vacationImageUrl);
     setImageToUpload(vacation?.vacationImageUrl);
-    setValue('destination', vacation?.destination);
-    setValue('description', vacation?.description);
-    setValue('price', vacation?.price);
-    setValue('vacationStartDate', dateParser(vacation?.vacationStartDate));
-    setValue('vacationEndDate', dateParser(vacation?.vacationEndDate));
-    setValue('vacationImageUrl', vacation?.vacationImageUrl);
+    setValue("destination", vacation?.destination);
+    setValue("description", vacation?.description);
+    setValue("price", vacation?.price);
+    setValue(
+      "vacationStartDate",
+      moment(vacation?.vacationStartDate).format("YYYY-MM-DD")
+    );
+    setValue(
+      "vacationEndDate",
+      moment(vacation?.vacationEndDate).format("YYYY-MM-DD")
+    );
+    setValue("vacationImageUrl", vacation?.vacationImageUrl);
   }, [isData]);
 
   async function editVacation(updatedVacation: VacationModel) {
@@ -73,23 +64,23 @@ function EditVacation(): JSX.Element {
         followersCount: vacation.followersCount,
         isFollowing: vacation.isFollowing,
         vacationId: +vacation.vacationId,
-        image: (imageToUpload as unknown as FileList)[0],
+        image: imageToUpload,
       };
 
       await vacationService.updateVacation(
         updatedVacation,
         vacation.vacationId
       );
-      notificationService.success('Vacation has been successfully updated');
-      navigate(-1);
+      notificationService.success("Vacation has been successfully updated");
+      navigate("/home");
     } catch (err: any) {
-      notificationService.error('Failed to edit vacation: ' + err.message);
+      notificationService.error("Failed to edit vacation: " + err.message);
     }
   }
 
-  const imageExtract = (e: React.FormEvent<HTMLInputElement>) => {
-    setImageToUpload(e.currentTarget.files);
-    setPreviewImage(URL.createObjectURL(e.currentTarget.files[0]));
+  const imageExtract = (file: File) => {
+    setImageToUpload(file);
+    setPreviewImage(URL.createObjectURL(file));
   };
 
   return (
@@ -100,8 +91,13 @@ function EditVacation(): JSX.Element {
         transition={{ ease: "easeOut", duration: 2 }}
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <Typography variant="h4" color="Highlight" align="center">
-          Edit:
+        <Typography
+          variant="h4"
+          color="Highlight"
+          align="center"
+          marginBottom={3}
+        >
+          Edit vacation:
         </Typography>
         <Box
           component="form"
@@ -165,39 +161,44 @@ function EditVacation(): JSX.Element {
                 />
               </Box>
             </Grid>
-
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <Box
-                  component="img"
-                  src={previewImage}
-                  style={{
-                    marginTop: "10px",
-                    height: "200px",
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                />
-                <Button
-                  component="label"
-                  variant="contained"
-                  startIcon={<CloudUploadIcon />}
-                >
-                  Upload image
-                  <VisuallyHiddenInput
-                    type="file"
-                    accept="image/*"
-                    onInput={imageExtract}
-                    {...register("image")}
+            <Divider orientation="vertical" variant="middle" flexItem />
+            <Grid item xs={12} sm={5}>
+              {imageToUpload ? (
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Button
+                    variant="outlined"
+                    sx={{ width: "fit-content", m: "auto" }}
+                    color="error"
+                    onClick={() => {
+                      setImageToUpload(false);
+                      setPreviewImage(false);
+                    }}
+                  >
+                    Change Image
+                  </Button>
+                  <Box
+                    component="img"
+                    src={previewImage}
+                    style={{
+                      display: "flex",
+                      margin: "auto",
+                      paddingTop: "15px",
+                      height: "300px",
+                      width: "380px",
+                    }}
                   />
-                </Button>
-              </Box>
+                </Box>
+              ) : (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    mt: { sm: 10 },
+                  }}
+                >
+                  <DragDropFileUpload onFileUpload={imageExtract} />
+                </Box>
+              )}
             </Grid>
             <Grid
               item

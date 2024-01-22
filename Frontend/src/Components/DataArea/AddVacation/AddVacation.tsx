@@ -1,20 +1,21 @@
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import {
   Box,
   Button,
   Container,
+  Divider,
   Grid,
   TextField,
   Typography,
 } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import { motion } from "framer-motion";
+import moment from "moment";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import VacationModel from "../../../Models/VacationModel";
 import notificationService from "../../../Services/NotificationService";
 import vacationService from "../../../Services/VacationsService";
+import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
 import "./AddVacation.css";
 
 function AddVacation(): JSX.Element {
@@ -24,47 +25,28 @@ function AddVacation(): JSX.Element {
   const [imageToUpload, setImageToUpload] = useState<any>();
   const { register, handleSubmit } = useForm<VacationModel>();
 
-  const VisuallyHiddenInput = styled("input")({
-    clip: "rect(0 0 0 0)",
-    clipPath: "inset(50%)",
-    height: 1,
-    overflow: "hidden",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    whiteSpace: "nowrap",
-    width: 1,
-  });
-
-  const dateParser = (date: Date | string): string => {
-    const initialDate = new Date(date);
-    const day = initialDate.getDate();
-    const month = initialDate.getMonth() + 1;
-    const year = initialDate.getFullYear();
-    return `${year}-${month < 9 ? "0" : ""}${month}-${
-      day < 9 ? "0" : ""
-    }${day}`;
-  };
-
   async function addVacation(vacation: VacationModel) {
     try {
       vacation = {
         ...vacation,
-        image: (imageToUpload as unknown as FileList)[0],
-        vacationStartDate: dateParser(vacation.vacationStartDate),
-        vacationEndDate: dateParser(vacation.vacationEndDate),
+        image: imageToUpload,
+        vacationStartDate: moment(vacation?.vacationStartDate).format(
+          "YYYY-MM-DD"
+        ),
+        vacationEndDate: moment(vacation?.vacationEndDate).format("YYYY-MM-DD"),
       };
+
       await vacationService.addVacation(vacation);
       notificationService.success("Vacation has been successfully added");
-      navigate(-1);
+      navigate("/home");
     } catch (err: any) {
       notificationService.error(`Couldn't add vacation: ${err.message}`);
     }
   }
 
-  const imageExtract = (e: any) => {
-    setImageToUpload(e.target.files);
-    setPreviewImage(URL.createObjectURL(e.target.files[0]));
+  const imageExtract = (file: any) => {
+    setImageToUpload(file);
+    setPreviewImage(URL.createObjectURL(file));
   };
 
   return (
@@ -75,7 +57,12 @@ function AddVacation(): JSX.Element {
         whileInView={{ opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
       >
-        <Typography variant="h4" color="Highlight" align="center">
+        <Typography
+          variant="h4"
+          color="Highlight"
+          align="center"
+          marginBottom={3}
+        >
           Add vacation:
         </Typography>
         <Box
@@ -92,7 +79,7 @@ function AddVacation(): JSX.Element {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width:'100%'
+                  width: "100%",
                 }}
               >
                 <TextField
@@ -105,7 +92,7 @@ function AddVacation(): JSX.Element {
                 />
                 <TextField
                   required
-                  sx={{ mt: 2,maxWidth:'67%' }}
+                  sx={{ mt: 2, maxWidth: "67%" }}
                   type="text"
                   label="Description:"
                   variant="outlined"
@@ -140,39 +127,44 @@ function AddVacation(): JSX.Element {
                 />
               </Box>
             </Grid>
-
-            <Grid item xs={12} sm={6}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <Box
-                  component="img"
-                  src={previewImage}
-                  style={{
-                    marginTop: "10px",
-                    height: "200px",
-                    borderRadius: 10,
-                    marginBottom: 10,
-                  }}
-                />
-                <Button
-                  component="label"
-                  variant="contained"
-                  startIcon={<CloudUploadIcon />}
-                >
-                  Upload image
-                  <VisuallyHiddenInput
-                    type="file"
-                    accept="image/*"
-                    onInput={imageExtract}
-                    {...register("image")}
+            <Divider orientation="vertical" variant="middle" flexItem />
+            <Grid item xs={12} sm={5}>
+              {imageToUpload ? (
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Button
+                    variant="outlined"
+                    sx={{ width: "fit-content", m: "auto" }}
+                    color="error"
+                    onClick={() => {
+                      setImageToUpload(false);
+                      setPreviewImage(false);
+                    }}
+                  >
+                    Change Image
+                  </Button>
+                  <Box
+                    component="img"
+                    src={previewImage}
+                    style={{
+                      display: "flex",
+                      margin: "auto",
+                      paddingTop: "15px",
+                      height: "300px",
+                      width: "380px",
+                    }}
                   />
-                </Button>
-              </Box>
+                </Box>
+              ) : (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    mt: { sm: 10 },
+                  }}
+                >
+                  <DragDropFileUpload onFileUpload={imageExtract} />
+                </Box>
+              )}
             </Grid>
             <Grid
               item
@@ -184,7 +176,7 @@ function AddVacation(): JSX.Element {
               }}
             >
               <Button variant="outlined" type="submit">
-                Save Changes
+                Save Vacation
               </Button>
             </Grid>
           </Grid>

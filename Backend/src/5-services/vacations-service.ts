@@ -67,6 +67,7 @@ class VacationService {
 
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
+    console.log(vacation);
     vacation.vacationUuid = cyber.hashPassword(vacation.destination);
     vacation.validation();
     const imageName = await fileSaver.add(
@@ -74,6 +75,7 @@ class VacationService {
       path.join(__dirname, "..", "1-assets", "vacationImages")
     );
     const sql = this.INSERT_vacation_SQL;
+    
     const info: OkPacket = await dal.execute(sql, [
       vacation.vacationUuid,
       vacation.destination,

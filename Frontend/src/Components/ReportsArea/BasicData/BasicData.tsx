@@ -28,7 +28,7 @@ function BasicData({ vacations }: { vacations: VacationModel[] }): JSX.Element {
         bgcolor: "white",
         height: "100%",
         borderRadius: 1,
-        boxShadow: " 11px 11px 22px #acacac,-11px -11px 22px #ffffff;",
+        boxShadow: "11px 11px 22px #acacac,-11px -11px 22px #ffffff;",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-evenly",
