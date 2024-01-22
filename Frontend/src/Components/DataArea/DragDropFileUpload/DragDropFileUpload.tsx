@@ -32,14 +32,8 @@ export default function DragDropFileUpload({ onFileUpload }: any) {
   return (
     <Paper
       variant="outlined"
-      onDragOver={(e) => {
-        console.log(e);
-        handleDragOver;
-      }}
-      onDragLeave={(e) => {
-        console.log(e);
-        handleDragLeave;
-      }}
+      onDragOver={handleDragOver}
+      onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       style={{
         border: dragOver ? "2px dashed #000" : "2px dashed #aaa",
@@ -55,10 +49,7 @@ export default function DragDropFileUpload({ onFileUpload }: any) {
         id="raised-button-file"
         multiple
         type="file"
-        onChange={(e) => {
-          console.log(e);
-          handleChange;
-        }}
+        onChange={handleChange}
       />
       <label htmlFor="raised-button-file">
         <Box display="flex" flexDirection="column" alignItems="center">

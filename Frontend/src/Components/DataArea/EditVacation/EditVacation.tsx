@@ -112,8 +112,8 @@ function EditVacation(): JSX.Element {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
-                  width: "100%",
+                  alignItems: "left",
+                  width: "80%",
                 }}
               >
                 <TextField
@@ -126,7 +126,7 @@ function EditVacation(): JSX.Element {
                 />
                 <TextField
                   required
-                  sx={{ mt: 2, maxWidth: "67%" }}
+                  sx={{ mt: 2, maxWidth: "100%" }}
                   type="text"
                   label="Description:"
                   variant="outlined"
