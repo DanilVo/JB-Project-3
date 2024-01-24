@@ -1,8 +1,8 @@
-import axios from 'axios';
-import CredentialsModel from '../Models/CredentialsModel';
-import UserModel from '../Models/UserModel';
-import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
-import appConfig from '../Utils/AppConfig';
+import axios from "axios";
+import CredentialsModel from "../Models/CredentialsModel";
+import UserModel from "../Models/UserModel";
+import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
+import appConfig from "../Utils/AppConfig";
 
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
@@ -32,6 +32,11 @@ class AuthService {
   public logout(): void {
     const action: AuthAction = { type: AuthActionTypes.Logout };
     authStore.dispatch(action);
+  }
+
+  public async passwordRecovery(email: string): Promise<void> {
+    const response = await axios.get(appConfig.passwordRecoveryUrl + email);
+    console.log(response);
   }
 }
 

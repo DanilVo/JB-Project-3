@@ -1,17 +1,17 @@
-import { OkPacket } from 'mysql';
-import cyber from '../2-utils/cyber';
-import dal from '../2-utils/dal';
-import CredentialModel from '../3-models/credentials-model';
-import { UnauthorizedError, ValidationError } from '../3-models/error-models';
-import RoleModel from '../3-models/role-model';
-import UserModel from '../3-models/user-model';
+import { OkPacket } from "mysql";
+import cyber from "../2-utils/cyber";
+import dal from "../2-utils/dal";
+import CredentialModel from "../3-models/credentials-model";
+import { UnauthorizedError, ValidationError } from "../3-models/error-models";
+import RoleModel from "../3-models/role-model";
+import UserModel from "../3-models/user-model";
 
 class AuthService {
   private readonly INSERT_USER_SQL =
-    'INSERT INTO users(uuid,firstName,lastName,email,password,roleId) VALUES(?,?,?,?,?,?)';
+    "INSERT INTO users(uuid,firstName,lastName,email,password,roleId) VALUES(?,?,?,?,?,?)";
   private readonly SELECT_USER_SQL =
-    'SELECT * FROM users WHERE email = ? AND password = ?';
-  private readonly COUNT_EMAIL_SQL = 'SELECT * FROM users WHERE email = ?';
+    "SELECT * FROM users WHERE email = ? AND password = ?";
+  private readonly COUNT_EMAIL_SQL = "SELECT * FROM users WHERE email = ?";
 
   public async register(user: UserModel): Promise<string> {
     user.userUuid = cyber.hashPassword(user.email);
@@ -34,7 +34,7 @@ class AuthService {
     user.userId = info.insertId;
     const token = cyber.getNewToken(user);
 
-    return token; 
+    return token;
   }
 
   public async login(credentials: CredentialModel): Promise<string> {
@@ -47,7 +47,7 @@ class AuthService {
       credentials.password,
     ]);
     if (users.length === 0)
-      throw new UnauthorizedError('Incorrect Email or Password');
+      throw new UnauthorizedError("Incorrect Email or Password");
     const user = users[0];
     const token = cyber.getNewToken(user);
     return token;

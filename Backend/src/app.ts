@@ -11,7 +11,8 @@ import catchAll from './4-middleware/catch-all';
 import routeNotFound from './4-middleware/route-not-found';
 import sanitize from './4-middleware/sanitize';
 import authController from './6-controllers/auth-controller';
-import vacationController from './6-controllers/vacation-controller';
+import vacationController from "./6-controllers/vacation-controller";
+import mailController from "./6-controllers/mail-controller";
 import userController from './6-controllers/user-controller';
 
 const server = express();
@@ -37,7 +38,7 @@ server.use(helmet({ crossOriginResourcePolicy: { policy: 'same-site' } }));
 server.use(expressFileUpload());
 server.use(activities);
 server.use(sanitize);
-server.use('/api', vacationController, authController, userController);
+server.use('/api', vacationController, authController, userController,mailController);
 server.use('*', routeNotFound);
 server.use(catchAll);
 

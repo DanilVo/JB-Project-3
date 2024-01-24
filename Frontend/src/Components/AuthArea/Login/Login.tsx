@@ -12,6 +12,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import CredentialsModel from "../../../Models/CredentialsModel";
 import authService from "../../../Services/AuthService";
 import notificationService from "../../../Services/NotificationService";
+import DialogButton from "../../DialogButton/DialogButton";
 
 interface Props {
   setUserInSystem: Function;
@@ -48,15 +49,7 @@ export default function Login(props: Props) {
           backgroundPosition: "center",
         }}
       />
-      <Grid
-        item
-        xs={12}
-        sm={8}
-        md={5}
-        component={Paper}
-        elevation={6}
-        square
-      >
+      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <Box
           sx={{
             my: 8,
@@ -104,11 +97,12 @@ export default function Login(props: Props) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <NavLink to="/auth/register">Forgot password?</NavLink>
+                {/* <NavLink to="/passwordRecovery">Forgot password?</NavLink> */}
+                <DialogButton />
               </Grid>
               <Grid item>
                 <NavLink to="/auth/register">
-                  Don't have an account? Sign Up
+                  <Button>Don't have an account? Sign Up</Button>
                 </NavLink>
               </Grid>
             </Grid>

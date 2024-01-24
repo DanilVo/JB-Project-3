@@ -1,0 +1,96 @@
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/4c16da08-6915-4dd0-b88d-51ad9bc805db.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/new_york.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/tokyo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/rome.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/cairo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/rio.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/barcelona.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/auckland.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 14:40:54 GMT
+
+Method: GET
+Route: /api/vacations/image/bangkok.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 15:11:17 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 15:11:35 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 15:13:53 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 15:14:49 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 24 Jan 2024 15:15:48 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------

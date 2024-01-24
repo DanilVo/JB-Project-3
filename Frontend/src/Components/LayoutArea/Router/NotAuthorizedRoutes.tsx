@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Login from '../../AuthArea/Login/Login';
 import Register from '../../AuthArea/Register/Register';
 import LandingPage from '../../LandingPageArea/LandingPage/LandingPage';
+import PasswordRecovery from '../../AuthArea/PasswordRecovery/PasswordRecovery';
 
 interface Parent {
   setUserInSystem: Function;
@@ -24,6 +25,12 @@ function NotAuthorizedRouting(prop: Parent): JSX.Element {
         <Route
           path="/auth/logIn"
           element={<Login setUserInSystem={prop.setUserInSystem} />}
+        />
+
+        {/* Password Recovery */}
+        <Route
+          path="/passwordRecovery"
+          element={<PasswordRecovery />}
         />
 
         {/* Default Route */}

@@ -1,5 +1,5 @@
 class AppConfig {
-  public readonly baseUrl: string = 'http://localhost:4000/';
+  public readonly baseUrl: string = "http://localhost:4000/";
 
   public readonly allVacationsUrl: string = `${this.baseUrl}api/vacations/subscriptions/`;
 
@@ -18,6 +18,8 @@ class AppConfig {
   public readonly followActionsVacationUrl: string = `${this.baseUrl}api/follow`;
 
   public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`;
+
+  public readonly passwordRecoveryUrl: string = `${this.baseUrl}api/password-recovery/`;
 }
 
 // Singleton
