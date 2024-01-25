@@ -19,7 +19,11 @@ class AppConfig {
 
   public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`;
 
-  public readonly passwordRecoveryUrl: string = `${this.baseUrl}api/password-recovery/`;
+  public readonly sendVerificationEmailUrl: string = `${this.baseUrl}api/password-recovery/`;
+
+  public readonly verifyCodeUrl: string = `${this.baseUrl}api/verify-code/`;
+
+  public readonly setNewPasswordUrl: string = `${this.baseUrl}api/update-password/`;
 }
 
 // Singleton

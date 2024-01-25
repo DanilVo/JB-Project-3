@@ -5,6 +5,7 @@ import CredentialModel from "../3-models/credentials-model";
 import { UnauthorizedError, ValidationError } from "../3-models/error-models";
 import RoleModel from "../3-models/role-model";
 import UserModel from "../3-models/user-model";
+import PasswordRecoveryModel from "../3-models/PasswordRecoveryModel";
 
 class AuthService {
   private readonly INSERT_USER_SQL =
@@ -12,6 +13,8 @@ class AuthService {
   private readonly SELECT_USER_SQL =
     "SELECT * FROM users WHERE email = ? AND password = ?";
   private readonly COUNT_EMAIL_SQL = "SELECT * FROM users WHERE email = ?";
+  private readonly UPDATE_USER_PASSWORD =
+    "UPDATE users SET password = ? WHERE email = ?";
 
   public async register(user: UserModel): Promise<string> {
     user.userUuid = cyber.hashPassword(user.email);
@@ -57,6 +60,17 @@ class AuthService {
     const sql = this.COUNT_EMAIL_SQL;
     const count = await dal.execute(sql, [email]);
     return count.length > 0;
+  }
+
+  public async setNewPassword(
+    userToUpdate: PasswordRecoveryModel
+  ): Promise<void> {
+    userToUpdate.passwordValidation()
+    if (userToUpdate.password === userToUpdate.verifyPassword) {
+      userToUpdate.password = cyber.hashPassword(userToUpdate.password);
+      const sql = this.UPDATE_USER_PASSWORD;
+      await dal.execute(sql, [userToUpdate.password, userToUpdate.email]);
+    }
   }
 }
 

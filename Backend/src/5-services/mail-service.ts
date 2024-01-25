@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import dal from "../2-utils/dal";
 import { ValidationError } from "../3-models/error-models";
 import logger from "../2-utils/logger";
+import VerificationUserModel from "../3-models/verificationUser-model";
 dotenv.config();
 
 class MailService {
@@ -62,9 +63,12 @@ class MailService {
     });
   }
 
-  public verificationCodeCheck(verificationCode:number): void {
-    const user = logger.readVerificationUser();
-    
+  public async verificationCodeCheck(
+    verificationCode: number
+  ): Promise<string> {
+    const user: VerificationUserModel = await logger.readVerificationUser();
+    if (user && user.verificationCode === verificationCode) return user.email;
+    return;
   }
 
   public async isUserExists(email: string): Promise<boolean> {

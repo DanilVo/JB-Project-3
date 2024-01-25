@@ -11,15 +11,24 @@ import { useForm } from "react-hook-form";
 import { NavLink, useNavigate } from "react-router-dom";
 import PasswordRecoveryModel from "../../../Models/PasswordRecoveryModel";
 import notificationService from "../../../Services/NotificationService";
+import authService from "../../../Services/AuthService";
 
 export default function PasswordRecovery(): JSX.Element {
-  const { register, handleSubmit } = useForm<PasswordRecoveryModel>();
   const navigate = useNavigate();
+  const { register, handleSubmit, watch } = useForm<PasswordRecoveryModel>();
 
   async function setNewPassword(credentials: PasswordRecoveryModel) {
     try {
-      // await authService.register(credentials);
-      notificationService.success("Password has been successfully changed");
+      if (watch("password") !== watch("verifyPassword")) {
+        notificationService.error("Passwords doesn`t match!");
+        return;
+      }
+      credentials = {
+        ...credentials,
+        email: atob(localStorage.getItem("verifyUser")),
+      };
+      await authService.setNewPassword(credentials);
+      notificationService.success("Password has been successfully updated");
       navigate("/auth/login");
     } catch (err: any) {
       notificationService.error(err.message);
@@ -58,7 +67,6 @@ export default function PasswordRecovery(): JSX.Element {
                 label="New password"
                 name="password"
                 type="password"
-                autoComplete="password"
                 {...register("password")}
               />
             </Grid>
@@ -70,7 +78,6 @@ export default function PasswordRecovery(): JSX.Element {
                 label="Verify password"
                 type="password"
                 id="verifyPassword"
-                autoComplete="verifyPassword"
                 {...register("verifyPassword")}
               />
             </Grid>
@@ -81,7 +88,7 @@ export default function PasswordRecovery(): JSX.Element {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Sign Up
+            Update Password
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>

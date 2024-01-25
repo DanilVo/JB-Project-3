@@ -1,6 +1,6 @@
 import path from "path";
 import fs from "fs";
-import { VerificationUserModel } from "../3-models/verificationUser-model";
+import VerificationUserModel from "../3-models/verificationUser-model";
 
 // Errors log file:
 const errorsLogFile = path.resolve(__dirname, "../1-assets/logs/errors.log");
@@ -47,21 +47,27 @@ function logVerificationUser(verificationUser: VerificationUserModel): void {
 }
 
 // Read Verification User:
-function readVerificationUser() {
-  fs.readFile(
-    verificationUserFile,
-    "utf-8",
-    (err, data): VerificationUserModel => {
-      if (err) {
-        console.error("Error reading from file:", err);
-        return;
+async function readVerificationUser(): Promise<VerificationUserModel> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(
+      verificationUserFile,
+      "utf-8",
+      (err: any, data: string): void => {
+        if (err) {
+          console.error("Error reading from file:", err);
+          reject(err);
+          return;
+        }
+        const parsedData: VerificationUserModel = JSON.parse(data);
+        resolve(parsedData);
       }
-      const parsedData: VerificationUserModel = JSON.parse(data);
-      return parsedData;
-    }
-  );
-  fs.unlink(verificationUserFile, (err) =>
-    logError("Error deleting file", err.message)
+    );
+  });
+}
+
+function deleteVerifyFile(): void {
+  fs.unlink(verificationUserFile, (err: any) =>
+    logError("Failed deleting file", err)
   );
 }
 
@@ -70,4 +76,5 @@ export default {
   logActivity,
   logVerificationUser,
   readVerificationUser,
+  deleteVerifyFile,
 };

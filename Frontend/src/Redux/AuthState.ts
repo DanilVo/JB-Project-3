@@ -36,9 +36,7 @@ function authReducer(
     case AuthActionTypes.Register:
       newState.user = jwtDecode<{ user: UserModel }>(action.payload).user;
       newState.token = action.payload;
-      localStorage.setItem('token', newState.token);
-      // console.log(newState.user);
-      
+      localStorage.setItem('token', newState.token);      
       break;
     case AuthActionTypes.Logout:
       newState.token = null;

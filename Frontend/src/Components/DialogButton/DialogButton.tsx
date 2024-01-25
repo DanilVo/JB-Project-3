@@ -12,36 +12,39 @@ import { useState } from "react";
 import "./DialogButton.css";
 import authService from "../../Services/AuthService";
 import notificationService from "../../Services/NotificationService";
+import { useNavigate } from "react-router-dom";
 
 function DialogButton(): JSX.Element {
-  const [openDialog, setOpenDialog] = useState<boolean>(false);
-  const [emailSended, setEmailSended] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [code, setCode] = useState<number>(null);
+  const navigate = useNavigate();
 
+  const [openDialog, setOpenDialog] = useState<boolean>(false);
   const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
 
-  const sendVerificationEmail = async (email: string) => {
+  const [emailSended, setEmailSended] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState<string>("");
+
+  const verificationEmail = async (email: string) => {
     try {
       setOpenBackdrop(true);
       if (!email.length) return;
-      await authService.passwordRecovery(email);
-      setEmail("");
+      await authService.sendVerificationEmail(inputValue);
+      setInputValue("");
       setEmailSended(true);
     } catch (err: any) {
-      notificationService.error(err.message);
+      notificationService.error("Try again later");
     } finally {
       setOpenBackdrop(false);
     }
   };
 
-  const verifyCode = async (code: number) => {
+  const verifyCode = async (code: string) => {
     try {
       setOpenBackdrop(true);
-      // await
-      setCode(null);
+      const status: number = await authService.verifyCode(+code);
+      if (status === 200) navigate("/passwordRecovery");
+      setInputValue("");
     } catch (err: any) {
-      notificationService.error(err.message);
+      notificationService.error("Verification code is not valid");
     } finally {
       setOpenBackdrop(false);
     }
@@ -80,15 +83,19 @@ function DialogButton(): JSX.Element {
             margin="normal"
             name="email"
             autoComplete="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={inputValue}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setInputValue(e.target.value)
+            }
           />
         </DialogContent>
         <DialogActions>
           {emailSended ? (
-            <Button onClick={() => verifyCode(code)}>Update password</Button>
+            <Button onClick={() => verifyCode(inputValue)}>
+              Update password
+            </Button>
           ) : (
-            <Button onClick={() => sendVerificationEmail(email)}>
+            <Button onClick={() => verificationEmail(inputValue)}>
               Send email
             </Button>
           )}

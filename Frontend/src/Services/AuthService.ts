@@ -1,5 +1,6 @@
 import axios from "axios";
 import CredentialsModel from "../Models/CredentialsModel";
+import PasswordRecoveryModel from "../Models/PasswordRecoveryModel";
 import UserModel from "../Models/UserModel";
 import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
 import appConfig from "../Utils/AppConfig";
@@ -34,9 +35,21 @@ class AuthService {
     authStore.dispatch(action);
   }
 
-  public async passwordRecovery(email: string): Promise<void> {
-    const response = await axios.get(appConfig.passwordRecoveryUrl + email);
-    console.log(response);
+  public async sendVerificationEmail(email: string): Promise<void> {
+    await axios.get(appConfig.sendVerificationEmailUrl + email);
+  }
+
+  public async verifyCode(code: number): Promise<number> {
+    const { data, status } = await axios.get(appConfig.verifyCodeUrl + code);
+    localStorage.setItem("verifyUser", btoa(data));
+    return status;
+  }
+
+  public async setNewPassword(
+    passwordCredentials: PasswordRecoveryModel
+  ): Promise<void> {
+    await axios.post(appConfig.setNewPasswordUrl, passwordCredentials);
+    localStorage.removeItem("verifyUser");
   }
 }
 

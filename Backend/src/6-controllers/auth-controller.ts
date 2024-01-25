@@ -32,4 +32,17 @@ router.post(
   }
 );
 
+
+router.post(
+  "/update-password",
+  async (request: Request, response: Response, next: NextFunction) => {
+    try {
+      await authService.setNewPassword(request.body);
+      response.sendStatus(StatusCode.Created);
+    } catch (err: any) {
+      next(err);
+    }
+  }
+);
+
 export default router;

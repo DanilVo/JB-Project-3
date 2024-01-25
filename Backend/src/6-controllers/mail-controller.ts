@@ -8,7 +8,7 @@ router.get(
   "/password-recovery/:email",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      const email = request.params.email;      
+      const email = request.params.email;
       await mailService.passwordRecovery(email);
       response.sendStatus(StatusCode.Created);
     } catch (err: any) {
@@ -16,5 +16,19 @@ router.get(
     }
   }
 );
+
+router.get(
+  "/verify-code/:code",
+  async (request: Request, response: Response, next: NextFunction) => {
+    try {
+      const code = +request.params.code;
+      const userEmail = await mailService.verificationCodeCheck(code);
+      response.json(userEmail);
+    } catch (err: any) {
+      next(err);
+    }
+  }
+);
+
 
 export default router;
