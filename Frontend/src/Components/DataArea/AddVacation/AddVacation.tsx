@@ -23,7 +23,7 @@ function AddVacation(): JSX.Element {
 
   const [previewImage, setPreviewImage] = useState<any>();
   const [imageToUpload, setImageToUpload] = useState<any>();
-  const { register, handleSubmit } = useForm<VacationModel>();
+  const { register, handleSubmit, watch } = useForm<VacationModel>();
 
   async function addVacation(vacation: VacationModel) {
     try {
@@ -35,7 +35,10 @@ function AddVacation(): JSX.Element {
         ),
         vacationEndDate: moment(vacation?.vacationEndDate).format("YYYY-MM-DD"),
       };
-
+      if (!watch("image")) {
+        notificationService.error("Image field can`t be empty!");
+        return;
+      }
       await vacationService.addVacation(vacation);
       notificationService.success("Vacation has been successfully added");
       navigate("/home");

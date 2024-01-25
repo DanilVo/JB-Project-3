@@ -43,7 +43,8 @@ export default function DragDropFileUpload({ onFileUpload }: any) {
         background: dragOver ? "#eee" : "#fafafa",
       }}
     >
-      <input
+      <Box
+        component="input"
         accept="image/*"
         style={{ display: "none" }}
         id="raised-button-file"
@@ -51,7 +52,7 @@ export default function DragDropFileUpload({ onFileUpload }: any) {
         type="file"
         onChange={handleChange}
       />
-      <label htmlFor="raised-button-file">
+      <Box component="label" htmlFor="raised-button-file">
         <Box display="flex" flexDirection="column" alignItems="center">
           <IconButton
             color="primary"
@@ -64,7 +65,7 @@ export default function DragDropFileUpload({ onFileUpload }: any) {
             Drag and drop files here or click to select files
           </Typography>
         </Box>
-      </label>
+      </Box>
     </Paper>
   );
 }

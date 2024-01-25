@@ -41,8 +41,8 @@ function DialogButton(): JSX.Element {
     try {
       setOpenBackdrop(true);
       const status: number = await authService.verifyCode(+code);
-      if (status === 200) navigate("/passwordRecovery");
       setInputValue("");
+      if (status === 200) navigate("/passwordRecovery");
     } catch (err: any) {
       notificationService.error("Verification code is not valid");
     } finally {

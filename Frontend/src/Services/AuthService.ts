@@ -8,9 +8,7 @@ import appConfig from "../Utils/AppConfig";
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
     const response = await axios.post(appConfig.loginUserUrl, credentials);
-
     const token = response.data;
-
     const authAction: AuthAction = {
       type: AuthActionTypes.Login,
       payload: token,
@@ -37,11 +35,11 @@ class AuthService {
 
   public async sendVerificationEmail(email: string): Promise<void> {
     await axios.get(appConfig.sendVerificationEmailUrl + email);
+    localStorage.setItem("verifyUser", btoa(email));
   }
 
   public async verifyCode(code: number): Promise<number> {
-    const { data, status } = await axios.get(appConfig.verifyCodeUrl + code);
-    localStorage.setItem("verifyUser", btoa(data));
+    const { status } = await axios.get(appConfig.verifyCodeUrl + code);
     return status;
   }
 

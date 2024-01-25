@@ -1,9 +1,9 @@
-import { google } from "googleapis";
-import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+import { Auth, google } from "googleapis";
+import nodemailer from "nodemailer";
 import dal from "../2-utils/dal";
-import { ValidationError } from "../3-models/error-models";
 import logger from "../2-utils/logger";
+import { ValidationError } from "../3-models/error-models";
 import VerificationUserModel from "../3-models/verificationUser-model";
 dotenv.config();
 

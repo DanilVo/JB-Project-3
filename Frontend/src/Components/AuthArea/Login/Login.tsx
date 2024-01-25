@@ -24,10 +24,12 @@ export default function Login(props: Props) {
   const navigate = useNavigate();
 
   async function login(credentials: CredentialsModel) {
+    if (localStorage.getItem("verifyUser"))
+      localStorage.removeItem("verifyUser");
     try {
       await authService.logIn(credentials);
       props.setUserInSystem(true);
-      notificationService.success("You have been logged-in successfully");
+      notificationService.success("You have successfully logged-in");
       navigate("/home");
     } catch (err: any) {
       notificationService.error("Email or Password are incorrect!");
