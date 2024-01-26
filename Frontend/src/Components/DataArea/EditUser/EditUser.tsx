@@ -6,21 +6,22 @@ import {
   Grid,
   TextField,
   Typography,
-} from "@mui/material";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import UserModel from "../../../Models/UserModel";
-import { authStore } from "../../../Redux/AuthState";
-import notificationService from "../../../Services/NotificationService";
-import userService from "../../../Services/UserService";
-import appConfig from "../../../Utils/AppConfig";
-import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
-import "./EditUser.css";
+} from '@mui/material';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import UserModel from '../../../Models/UserModel';
+import { authStore } from '../../../Redux/AuthState';
+import notificationService from '../../../Services/NotificationService';
+import userService from '../../../Services/UserService';
+import appConfig from '../../../Utils/AppConfig';
+import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
+import './EditUser.css';
 
 function EditUser(): JSX.Element {
   const userFromState: UserModel = authStore.getState().user;
+  console.log(userFromState);
 
   const { register, handleSubmit, setValue } = useForm<UserModel>();
   const navigate = useNavigate();
@@ -46,22 +47,20 @@ function EditUser(): JSX.Element {
         user.image = imageToUpload;
       }
       await userService.updateUser(user);
-      notificationService.success("User has been successfully updated");
-      navigate("/home");
+      notificationService.success('User has been successfully updated');
+      navigate('/home');
     } catch (err: any) {
-      notificationService.error("Failed to edit user: " + err.message);
+      notificationService.error('Failed to edit user: ' + err.message);
     }
   }
 
   useEffect(() => {
     setPreviewImage(`${appConfig.userImageUrl}${userFromState.userImageUrl}`);
     setImageToUpload(`${appConfig.userImageUrl}${userFromState.userImageUrl}`);
-    setValue("firstName", userFromState.firstName);
-    setValue("lastName", userFromState.lastName);
-    setValue("email", userFromState.email);
-    setValue("userImageUrl", userFromState.userImageUrl);
-    // setValue(); add password edit
-    // setValue();
+    setValue('firstName', userFromState.firstName);
+    setValue('lastName', userFromState.lastName);
+    setValue('email', userFromState.email);
+    setValue('userImageUrl', userFromState.userImageUrl);
   }, []);
 
   return (
@@ -69,7 +68,7 @@ function EditUser(): JSX.Element {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
+        transition={{ ease: 'easeOut', duration: 2 }}
       >
         <Typography
           variant="h4"
@@ -77,20 +76,20 @@ function EditUser(): JSX.Element {
           align="center"
           marginBottom={3}
         >
-          Edit:
+          Edit User:
         </Typography>
         <Box
           component="form"
           onSubmit={handleSubmit(editUser)}
-          sx={{ m: "auto" }}
+          sx={{ m: 'auto' }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <Box
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
                 }}
               >
                 <TextField
@@ -98,31 +97,39 @@ function EditUser(): JSX.Element {
                   type="text"
                   label="First Name:"
                   variant="outlined"
-                  {...register("firstName")}
+                  {...register('firstName')}
                 />
                 <TextField
                   sx={{ mt: 2 }}
                   type="text"
                   label="Last Name:"
                   variant="outlined"
-                  {...register("lastName")}
+                  {...register('lastName')}
                 />
                 <TextField
                   sx={{ mt: 2, mb: 2 }}
                   type="email"
                   label="Email:"
                   variant="outlined"
-                  {...register("email")}
+                  {...register('email')}
                 />
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ m: '5px 50px' }}
+                >
+                  "To change your password logout and press forgot your
+                  password."
+                </Typography>
               </Box>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Grid item xs={12} sm={5}>
               {imageToUpload ? (
-                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Button
                     variant="outlined"
-                    sx={{ width: "fit-content", m: "auto" }}
+                    sx={{ width: 'fit-content', m: 'auto' }}
                     color="error"
                     onClick={() => {
                       setImageToUpload(false);
@@ -135,19 +142,19 @@ function EditUser(): JSX.Element {
                     component="img"
                     src={previewImage}
                     style={{
-                      display: "flex",
-                      margin: "auto",
-                      paddingTop: "15px",
-                      height: "300px",
-                      width: "380px",
+                      display: 'flex',
+                      margin: 'auto',
+                      paddingTop: '15px',
+                      height: '300px',
+                      width: '380px',
                     }}
                   />
                 </Box>
               ) : (
                 <Box
                   sx={{
-                    display: "flex",
-                    justifyContent: "center",
+                    display: 'flex',
+                    justifyContent: 'center',
                     mt: { sm: 5 },
                   }}
                 >
@@ -159,12 +166,12 @@ function EditUser(): JSX.Element {
               item
               xs={12}
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
               }}
             >
-              <Button variant="outlined" type="submit" sx={{}}>
+              <Button variant="outlined" type="submit">
                 Save Changes
               </Button>
             </Grid>

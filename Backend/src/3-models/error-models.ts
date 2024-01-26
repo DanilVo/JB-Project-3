@@ -1,4 +1,4 @@
-import StatusCode from "./status-codes";
+import StatusCode from './status-codes';
 
 export class ClientError {
   public constructor(
@@ -20,8 +20,8 @@ export class ResourceNotFoundError extends ClientError {
 }
 
 export class ValidationError extends ClientError {
-  public constructor(message: string) {
-    super(message, StatusCode.UnprocessableEntity);
+  public constructor(message: string, statusCode?: StatusCode) {
+    super(message, statusCode | StatusCode.UnprocessableEntity);
   }
 }
 

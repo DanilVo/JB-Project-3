@@ -1,8 +1,8 @@
-import { Route, Routes } from "react-router-dom";
-import Login from "../../AuthArea/Login/Login";
-import Register from "../../AuthArea/Register/Register";
-import LandingPage from "../../LandingPageArea/LandingPage/LandingPage";
-import PasswordRecovery from "../../AuthArea/PasswordRecovery/PasswordRecovery";
+import { Route, Routes } from 'react-router-dom';
+import Login from '../../AuthArea/Login/Login';
+import Register from '../../AuthArea/Register/Register';
+import LandingPage from '../../LandingPageArea/LandingPage/LandingPage';
+import PasswordRecovery from '../../AuthArea/PasswordRecovery/PasswordRecovery';
 
 interface Parent {
   setUserInSystem: Function;
@@ -31,7 +31,8 @@ function NotAuthorizedRouting(prop: Parent): JSX.Element {
         <Route
           path="/passwordRecovery"
           element={
-            localStorage.getItem("verifyUser") ? (
+            localStorage.getItem('verifyUser') &&
+            localStorage.getItem('verifyUser').length ? (
               <PasswordRecovery />
             ) : (
               <Login setUserInSystem={prop.setUserInSystem} />

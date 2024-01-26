@@ -23,8 +23,6 @@ export default function Register(props: Props): JSX.Element {
 
   async function registerNewUser(credentials: UserModel) {
     try {
-      console.log(credentials);
-
       await authService.register(credentials);
       notificationService.success("User has been successfully created");
       props.setUserInSystem(true);

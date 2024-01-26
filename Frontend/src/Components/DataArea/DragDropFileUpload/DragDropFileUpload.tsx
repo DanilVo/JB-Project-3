@@ -1,8 +1,14 @@
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import { Box, IconButton, Paper, Typography } from "@mui/material";
-import { useState } from "react";
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+import { Box, IconButton, Paper, Typography } from '@mui/material';
+import { useState } from 'react';
 
-export default function DragDropFileUpload({ onFileUpload }: any) {
+export default function DragDropFileUpload({
+  onFileUpload,
+  fileType,
+}: {
+  onFileUpload: any;
+  fileType: string;
+}) {
   const [dragOver, setDragOver] = useState(false);
 
   const handleDragOver = (event: any) => {
@@ -36,17 +42,17 @@ export default function DragDropFileUpload({ onFileUpload }: any) {
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       style={{
-        border: dragOver ? "2px dashed #000" : "2px dashed #aaa",
+        border: dragOver ? '2px dashed #000' : '2px dashed #aaa',
         padding: 20,
-        textAlign: "center",
-        cursor: "pointer",
-        background: dragOver ? "#eee" : "#fafafa",
+        textAlign: 'center',
+        cursor: 'pointer',
+        background: dragOver ? '#eee' : '#fafafa',
       }}
     >
       <Box
         component="input"
-        accept="image/*"
-        style={{ display: "none" }}
+        accept={fileType}
+        style={{ display: 'none' }}
         id="raised-button-file"
         multiple
         type="file"

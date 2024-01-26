@@ -1,9 +1,9 @@
-import axios from "axios";
-import CredentialsModel from "../Models/CredentialsModel";
-import PasswordRecoveryModel from "../Models/PasswordRecoveryModel";
-import UserModel from "../Models/UserModel";
-import { AuthAction, AuthActionTypes, authStore } from "../Redux/AuthState";
-import appConfig from "../Utils/AppConfig";
+import axios from 'axios';
+import CredentialsModel from '../Models/CredentialsModel';
+import PasswordRecoveryModel from '../Models/PasswordRecoveryModel';
+import UserModel from '../Models/UserModel';
+import { AuthAction, AuthActionTypes, authStore } from '../Redux/AuthState';
+import appConfig from '../Utils/AppConfig';
 
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
@@ -35,19 +35,18 @@ class AuthService {
 
   public async sendVerificationEmail(email: string): Promise<void> {
     await axios.get(appConfig.sendVerificationEmailUrl + email);
-    localStorage.setItem("verifyUser", btoa(email));
+    localStorage.setItem('verifyUser', btoa(email));
   }
 
-  public async verifyCode(code: number): Promise<number> {
-    const { status } = await axios.get(appConfig.verifyCodeUrl + code);
-    return status;
+  public async verifyCode(code: number): Promise<void> {
+    await axios.get(appConfig.verifyCodeUrl + code);
   }
 
   public async setNewPassword(
     passwordCredentials: PasswordRecoveryModel
   ): Promise<void> {
     await axios.post(appConfig.setNewPasswordUrl, passwordCredentials);
-    localStorage.removeItem("verifyUser");
+    localStorage.removeItem('verifyUser');
   }
 }
 

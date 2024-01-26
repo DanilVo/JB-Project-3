@@ -10,7 +10,7 @@ router.get(
     try {
       const email = request.params.email;
       await mailService.passwordRecovery(email);
-      response.sendStatus(StatusCode.Created);
+      response.sendStatus(StatusCode.Accepted);
     } catch (err: any) {
       next(err);
     }
@@ -22,8 +22,8 @@ router.get(
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const code = +request.params.code;
-      const userEmail = await mailService.verificationCodeCheck(code);
-      response.json(userEmail);
+      await mailService.verificationCodeCheck(code);
+      response.sendStatus(StatusCode.Accepted);
     } catch (err: any) {
       next(err);
     }

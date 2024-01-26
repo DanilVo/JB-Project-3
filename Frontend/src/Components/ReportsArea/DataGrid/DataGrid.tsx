@@ -1,37 +1,36 @@
-import { Box } from "@mui/material";
-import { DataGrid as Datagrid, GridColDef } from "@mui/x-data-grid";
-import moment from "moment";
-import { useMemo } from "react";
-import VacationModel from "../../../Models/VacationModel";
-import "./DataGrid.css";
+import { Box } from '@mui/material';
+import { DataGrid as Datagrid, GridColDef } from '@mui/x-data-grid';
+import moment from 'moment';
+import { useMemo } from 'react';
+import VacationModel from '../../../Models/VacationModel';
+import './DataGrid.css';
 
 function DataGrid({ vacations }: { vacations: VacationModel[] }): JSX.Element {
-
   const columns: GridColDef[] = useMemo(
     () => [
-      { field: "vacationId", headerName: "Id", width: 80 },
+      { field: 'vacationId', headerName: 'Id', width: 80 },
 
-      { field: "destination", headerName: "Destination", width: 140 },
-      { field: "followersCount", headerName: "Followers", width: 80 },
+      { field: 'destination', headerName: 'Destination', width: 140 },
+      { field: 'followersCount', headerName: 'Followers', width: 80 },
       {
-        field: "price",
-        headerName: "Price",
+        field: 'price',
+        headerName: 'Price',
         width: 60,
-        renderCell: (params) => params.row.price + "$",
+        renderCell: (params) => params.row.price + '$',
       },
       {
-        field: "vacationStartDate",
-        headerName: "Start Date",
+        field: 'vacationStartDate',
+        headerName: 'Start Date',
         width: 120,
         renderCell: (params) =>
-          moment(params.row.vacationStartDate).format("YYYY-MM-DD"),
+          moment(params.row.vacationStartDate).format('YYYY-MM-DD'),
       },
       {
-        field: "vacationEndDate",
-        headerName: "End Date",
+        field: 'vacationEndDate',
+        headerName: 'End Date',
         width: 120,
         renderCell: (params) =>
-          moment(params.row.vacationStartDate).format("YYYY-MM-DD"),
+          moment(params.row.vacationStartDate).format('YYYY-MM-DD'),
       },
     ],
     []
@@ -40,17 +39,17 @@ function DataGrid({ vacations }: { vacations: VacationModel[] }): JSX.Element {
   return (
     <Box
       sx={{
-        height: "300px",
+        height: '300px',
         borderRadius: 1,
-        boxShadow: " 11px 11px 22px #acacac,-11px -11px 22px #ffffff;",
-        bgcolor: "white",
+        boxShadow: ' 11px 11px 22px #acacac,-11px -11px 22px #ffffff;',
+        bgcolor: 'white',
       }}
     >
       {vacations?.length && (
         <Datagrid
           rows={vacations}
           columns={columns}
-          getRowId={(row) => row.vacationUuid}
+          getRowId={(row) => row.destination}
           rowSelection={false}
           initialState={{
             pagination: { paginationModel: { pageSize: 5 } },
