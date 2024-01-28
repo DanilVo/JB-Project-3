@@ -27,7 +27,7 @@ function AllReports(): JSX.Element {
       <CsvReports />
       <Grid container spacing={2}>
         <Grid item xs={12} sm={8}>
-          <DataGrid vacations={vacations} />
+          <DataGrid vacations={vacations} isNewVacations={false} />
         </Grid>
         <Grid item xs={12} sm={4}>
           <BasicData vacations={vacations} />

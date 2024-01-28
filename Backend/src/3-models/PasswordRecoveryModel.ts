@@ -12,7 +12,7 @@ export default class PasswordRecoveryModel {
     this.verifyPassword = userObject.verifyPassword;
   }
 
-  private static validateSchema = Joi.object({
+  private static validationSchema = Joi.object({
     password: Joi.string()
       .required()
       .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/),
@@ -23,7 +23,7 @@ export default class PasswordRecoveryModel {
   });
 
   public passwordValidation(): void {
-    const result = PasswordRecoveryModel.validateSchema.validate(this);
+    const result = PasswordRecoveryModel.validationSchema.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
   }
 }

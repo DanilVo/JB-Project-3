@@ -67,7 +67,6 @@ class VacationService {
 
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
-    console.log(vacation);
     vacation.vacationUuid = cyber.hashPassword(vacation.destination);
     vacation.validation();
     const imageName = await fileSaver.add(

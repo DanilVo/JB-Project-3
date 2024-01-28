@@ -79,6 +79,11 @@ function EditVacation(): JSX.Element {
   }
 
   const imageExtract = (file: File) => {
+    const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
+    if (!validImageTypes.includes(file.type)) {
+      notificationService.error("Not valid file type");
+      return;
+    }
     setImageToUpload(file);
     setPreviewImage(URL.createObjectURL(file));
   };
@@ -196,7 +201,7 @@ function EditVacation(): JSX.Element {
                     mt: { sm: 10 },
                   }}
                 >
-                  <DragDropFileUpload onFileUpload={imageExtract} />
+                  <DragDropFileUpload onFileUpload={imageExtract} fileType="image/*"/>
                 </Box>
               )}
             </Grid>
