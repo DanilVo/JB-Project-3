@@ -4,6 +4,7 @@ import {
   Container,
   Divider,
   Grid,
+  Paper,
   TextField,
   Typography,
 } from '@mui/material';
@@ -16,9 +17,8 @@ import VacationModel from '../../../Models/VacationModel';
 import notificationService from '../../../Services/NotificationService';
 import vacationService from '../../../Services/VacationsService';
 import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
-import './AddVacation.css';
-import DataGrid from '../../ReportsArea/DataGrid/DataGrid';
 import AddMultipleVacations from '../addMultipleVacations/addMultipleVacations';
+import './AddVacation.css';
 
 function AddVacation(): JSX.Element {
   const navigate = useNavigate();
@@ -201,17 +201,65 @@ function AddVacation(): JSX.Element {
                 sx={{ mt: 5 }}
               />
             </Grid>
-            <Box>
-              <Typography variant="h4" color="Highlight" align="left">
+
+            <Box
+              sx={{
+                width: '100%',
+              }}
+            >
+              <Typography
+                variant="h4"
+                color="Highlight"
+                align="left"
+                sx={{ mb: 3 }}
+              >
                 Add multiple vacations at once:
               </Typography>
-              <Grid container>
+
+              <Grid container sx={{ mb: 3 }}>
                 <Grid item xs={12} sm={6}>
-                  <Box>
-                    <Typography>Instruction</Typography>
-                  </Box>
+                  <Paper
+                    elevation={3}
+                    sx={{
+                      bgcolor: '#f5f5f5',
+                      width: '80%',
+                      p: 3,
+                      m: 'auto',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: 1,
+                    }}
+                  >
+                    <Typography color="text.secondary" variant="body2">
+                      Download template or insert existing excel file
+                    </Typography>
+                    <Typography color="text.secondary" variant="body2">
+                      Fill rows according to columns names
+                    </Typography>
+                    <Typography color="text.secondary" variant="body2">
+                      To upload image:
+                    </Typography>
+                    <Box
+                      sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}
+                    >
+                      <Typography color="text.secondary" variant="body2">
+                        I. Press "Insert"
+                      </Typography>
+                      <Typography color="text.secondary" variant="body2">
+                        II. "Image"
+                      </Typography>
+                      <Typography color="text.secondary" variant="body2">
+                        III. "Insert into cell"
+                      </Typography>
+                    </Box>
+                    <Typography color="text.secondary" variant="body2">
+                      Upload file with extension ".xlsx"
+                    </Typography>
+                  </Paper>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Divider orientation="vertical" variant="middle" flexItem />
+
+                <Grid item xs={12} sm={5} sx={{ m: 'auto', ml: 2 }}>
                   <AddMultipleVacations />
                 </Grid>
               </Grid>
