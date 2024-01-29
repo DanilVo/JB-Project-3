@@ -28,17 +28,7 @@ function NotAuthorizedRouting(prop: Parent): JSX.Element {
         />
 
         {/* Password Recovery */}
-        <Route
-          path="/passwordRecovery"
-          element={
-            localStorage.getItem('verifyUser') &&
-            localStorage.getItem('verifyUser').length ? (
-              <PasswordRecovery />
-            ) : (
-              <Login setUserInSystem={prop.setUserInSystem} />
-            )
-          }
-        />
+        <Route path="/auth/passwordRecovery" element={<PasswordRecovery />} />
 
         {/* Default Route */}
         <Route path="/" element={<LandingPage />} />

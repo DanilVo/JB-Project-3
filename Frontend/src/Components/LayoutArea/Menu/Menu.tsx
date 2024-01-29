@@ -1,10 +1,10 @@
-import { Button, MenuItem } from "@mui/material";
-import Menu from "@mui/material/Menu";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./Menu.css";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import { RoleModel } from "../../../Models/RoleModel";
+import { Button, MenuItem } from '@mui/material';
+import Menu from '@mui/material/Menu';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import './Menu.css';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { RoleModel } from '../../../Models/RoleModel';
 
 interface Props {
   userRole: number;
@@ -23,17 +23,17 @@ function NavMenu(props: Props): JSX.Element {
   const handleDropdownMenuClick = (
     e: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
+    setAnchorEl(null);
     const { myValue } = e.currentTarget.dataset;
     props.setFilterVacations(myValue);
-    setAnchorEl(null);
   };
 
   const adminMenu = [
     <NavLink to="/reports" key="reports">
-      <MenuItem >Reports</MenuItem>
+      <MenuItem onClick={handleDropdownMenuClick}>Reports</MenuItem>
     </NavLink>,
     <NavLink to="/add-vacation" key="add-vacation">
-      <MenuItem>Add</MenuItem>
+      <MenuItem onClick={handleDropdownMenuClick}>Add</MenuItem>
     </NavLink>,
   ];
 
@@ -72,12 +72,12 @@ function NavMenu(props: Props): JSX.Element {
     <div className="Menu">
       <Button
         id="demo-positioned-button"
-        aria-controls={open ? "demo-positioned-menu" : undefined}
+        aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        {props.userRole === RoleModel.Admin ? "Actions" : "Filters"}
+        {props.userRole === RoleModel.Admin ? 'Actions' : 'Filters'}
         <ArrowDropDownIcon />
       </Button>
       <NavLink to="/home">
@@ -91,12 +91,12 @@ function NavMenu(props: Props): JSX.Element {
         open={open}
         onClose={handleDropdownMenuClick}
         anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
         transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
+          vertical: 'top',
+          horizontal: 'left',
         }}
       >
         {props.userRole === RoleModel.Admin ? adminMenu : userMenu}

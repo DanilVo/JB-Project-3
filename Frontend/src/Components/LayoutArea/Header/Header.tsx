@@ -9,20 +9,20 @@ import {
   Paper,
   Toolbar,
   Typography,
-} from "@mui/material";
-import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import UserModel from "../../../Models/UserModel";
-import { authStore } from "../../../Redux/AuthState";
-import authService from "../../../Services/AuthService";
-import logo from "../../../assets/logo/logo-main-no-background.svg";
-import "./Header.css";
+} from '@mui/material';
+import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import UserModel from '../../../Models/UserModel';
+import { authStore } from '../../../Redux/AuthState';
+import authService from '../../../Services/AuthService';
+import logo from '../../../assets/logo/logo-main-no-background.svg';
+import './Header.css';
 
-interface Parent {
+interface Props {
   setUserInSystem: Function;
 }
 
-function Header(props: Parent): JSX.Element {
+function Header(props: Props): JSX.Element {
   const user: UserModel = authStore.getState().user;
 
   const navigate = useNavigate();
@@ -36,33 +36,29 @@ function Header(props: Parent): JSX.Element {
   const handleLogout = () => {
     authService.logout();
     props.setUserInSystem(false);
-    navigate("/auth/login");
-  };
-
-  const handleCloseWindow = () => {
-    setAnchorEl(null);
+    navigate('/auth/login');
   };
 
   return (
     <AppBar position="static">
       <Container
         maxWidth="xl"
-        sx={{ display: "flex", justifyContent: "space-between" }}
+        sx={{ display: 'flex', justifyContent: 'space-between' }}
       >
         <Box
           component="img"
           src={logo}
           alt="logo"
           sx={{ height: 80 }}
-          onClick={() => navigate("/home")}
+          onClick={() => navigate('/home')}
         />
         <Toolbar disableGutters>
           <Box
             sx={{
               flexGrow: 0,
               maxWidth: 320,
-              display: "flex",
-              justifyContent: "space-around",
+              display: 'flex',
+              justifyContent: 'space-around',
             }}
           >
             <Paper
@@ -71,9 +67,9 @@ function Header(props: Parent): JSX.Element {
                 mr: 2,
                 borderRadius: 3,
                 padding: 1,
-                background: "#1976d2",
+                background: '#1976d2',
                 boxShadow:
-                  "inset -5px 5px 10px #1561ac, inset 5px -5px 10px #1e8bf8",
+                  'inset -5px 5px 10px #1561ac, inset 5px -5px 10px #1e8bf8',
               }}
             >
               <Typography variant="body1" color="black" ml={1}>
@@ -85,11 +81,11 @@ function Header(props: Parent): JSX.Element {
             </Paper>
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <Avatar
-                sx={{ bgcolor: "grey", boxShadow: "1px 1px 10px black" }}
+                sx={{ bgcolor: 'grey', boxShadow: '1px 1px 10px black' }}
                 src={
                   user.userImageUrl
                     ? `http://localhost:4000/api/user/image/${user.userImageUrl}`
-                    : user.firstName.slice(0, 1)
+                    : `${user.firstName.slice(0, 1)}${user.lastName.slice(0, 1)}`
                 }
               ></Avatar>
             </IconButton>
@@ -97,10 +93,10 @@ function Header(props: Parent): JSX.Element {
               id="user-menu"
               anchorEl={anchorEl}
               open={open}
-              onClose={handleCloseWindow}
+              onClose={() => setAnchorEl(null)}
             >
               <NavLink to={`edit/user/${user.uuid}`}>
-                <MenuItem>Settings</MenuItem>
+                <MenuItem onClick={() => setAnchorEl(null)}>Settings</MenuItem>
               </NavLink>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>

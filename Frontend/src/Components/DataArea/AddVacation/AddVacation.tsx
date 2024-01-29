@@ -6,19 +6,19 @@ import {
   Grid,
   TextField,
   Typography,
-} from "@mui/material";
-import { motion } from "framer-motion";
-import moment from "moment";
-import Papa from "papaparse";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import VacationModel from "../../../Models/VacationModel";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
-import "./AddVacation.css";
-import DataGrid from "../../ReportsArea/DataGrid/DataGrid";
+} from '@mui/material';
+import { motion } from 'framer-motion';
+import moment from 'moment';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import VacationModel from '../../../Models/VacationModel';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
+import './AddVacation.css';
+import DataGrid from '../../ReportsArea/DataGrid/DataGrid';
+import AddMultipleVacations from '../addMultipleVacations/addMultipleVacations';
 
 function AddVacation(): JSX.Element {
   const navigate = useNavigate();
@@ -35,40 +35,30 @@ function AddVacation(): JSX.Element {
         ...vacation,
         image: imageToUpload,
         vacationStartDate: moment(vacation?.vacationStartDate).format(
-          "YYYY-MM-DD"
+          'YYYY-MM-DD'
         ),
-        vacationEndDate: moment(vacation?.vacationEndDate).format("YYYY-MM-DD"),
+        vacationEndDate: moment(vacation?.vacationEndDate).format('YYYY-MM-DD'),
       };
       if (!vacation.image) {
-        notificationService.error("Image field can`t be empty!");
+        notificationService.error('Image field can`t be empty!');
         return;
       }
       await vacationService.addVacation(vacation);
-      notificationService.success("Vacation has been successfully added");
-      navigate("/home");
+      notificationService.success('Vacation has been successfully added');
+      navigate('/home');
     } catch (err: any) {
       notificationService.error(`Couldn't add vacation: ${err.message}`);
     }
   }
 
   const imageExtract = (file: File) => {
-    const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
+    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
     if (!validImageTypes.includes(file.type)) {
-      notificationService.error("Not valid file type");
+      notificationService.error('Not valid file type');
       return;
     }
     setImageToUpload(file);
     setPreviewImage(URL.createObjectURL(file));
-  };
-
-  const csvFileImport = (csv: any) => {
-    Papa.parse(csv, {
-      header: true,
-      skipEmptyLines: true,
-      complete: function (results: any) {
-        setMultipleVacations(results.data);
-      },
-    });
   };
 
   return (
@@ -77,7 +67,7 @@ function AddVacation(): JSX.Element {
         className="Login"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
+        transition={{ ease: 'easeOut', duration: 2 }}
       >
         <Typography
           variant="h4"
@@ -91,17 +81,17 @@ function AddVacation(): JSX.Element {
           component="form"
           onSubmit={handleSubmit(addVacation)}
           sx={{
-            m: "auto",
+            m: 'auto',
           }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <Box
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "left",
-                  width: "80%",
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'left',
+                  width: '80%',
                 }}
               >
                 <TextField
@@ -110,16 +100,16 @@ function AddVacation(): JSX.Element {
                   type="text"
                   label="Destination:"
                   variant="outlined"
-                  {...register("destination")}
+                  {...register('destination')}
                 />
                 <TextField
                   required
-                  sx={{ mt: 2, maxWidth: "100%" }}
+                  sx={{ mt: 2, maxWidth: '100%' }}
                   type="text"
                   label="Description:"
                   variant="outlined"
                   multiline
-                  {...register("description")}
+                  {...register('description')}
                 />
                 <TextField
                   required
@@ -127,7 +117,7 @@ function AddVacation(): JSX.Element {
                   type="number"
                   label="Price:"
                   variant="outlined"
-                  {...register("price")}
+                  {...register('price')}
                 />
                 <TextField
                   required
@@ -136,7 +126,7 @@ function AddVacation(): JSX.Element {
                   type="date"
                   variant="outlined"
                   focused
-                  {...register("vacationStartDate", { valueAsDate: true })}
+                  {...register('vacationStartDate', { valueAsDate: true })}
                 />
                 <TextField
                   required
@@ -145,17 +135,17 @@ function AddVacation(): JSX.Element {
                   type="date"
                   variant="outlined"
                   focused
-                  {...register("vacationEndDate", { valueAsDate: true })}
+                  {...register('vacationEndDate', { valueAsDate: true })}
                 />
               </Box>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Grid item xs={12} sm={5}>
               {imageToUpload ? (
-                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Button
                     variant="outlined"
-                    sx={{ width: "fit-content", m: "auto" }}
+                    sx={{ width: 'fit-content', m: 'auto' }}
                     color="error"
                     onClick={() => {
                       setImageToUpload(false);
@@ -168,19 +158,19 @@ function AddVacation(): JSX.Element {
                     component="img"
                     src={previewImage}
                     style={{
-                      display: "flex",
-                      margin: "auto",
-                      paddingTop: "15px",
-                      height: "300px",
-                      width: "380px",
+                      display: 'flex',
+                      margin: 'auto',
+                      paddingTop: '15px',
+                      height: '300px',
+                      width: '380px',
                     }}
                   />
                 </Box>
               ) : (
                 <Box
                   sx={{
-                    display: "flex",
-                    justifyContent: "center",
+                    display: 'flex',
+                    justifyContent: 'center',
                     mt: { sm: 10 },
                   }}
                 >
@@ -195,9 +185,9 @@ function AddVacation(): JSX.Element {
               item
               xs={12}
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
                 mb: 5,
               }}
             >
@@ -211,18 +201,20 @@ function AddVacation(): JSX.Element {
                 sx={{ mt: 5 }}
               />
             </Grid>
-            <Typography variant="h4" color="Highlight" align="left">
-              Add multiple vacation at once:
-            </Typography>
             <Box>
-              {multipleVacations && multipleVacations.length ? (
-                <DataGrid vacations={multipleVacations} isNewVacations={true} />
-              ) : (
-                <DragDropFileUpload
-                  onFileUpload={csvFileImport}
-                  fileType=".csv"
-                />
-              )}
+              <Typography variant="h4" color="Highlight" align="left">
+                Add multiple vacations at once:
+              </Typography>
+              <Grid container>
+                <Grid item xs={12} sm={6}>
+                  <Box>
+                    <Typography>Instruction</Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <AddMultipleVacations />
+                </Grid>
+              </Grid>
             </Box>
           </Grid>
         </Box>

@@ -1,35 +1,38 @@
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import { useForm } from "react-hook-form";
-import { NavLink, useNavigate } from "react-router-dom";
-import PasswordRecoveryModel from "../../../Models/PasswordRecoveryModel";
-import notificationService from "../../../Services/NotificationService";
-import authService from "../../../Services/AuthService";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import { useForm } from 'react-hook-form';
+import { NavLink, useNavigate } from 'react-router-dom';
+import PasswordRecoveryModel from '../../../Models/PasswordRecoveryModel';
+import notificationService from '../../../Services/NotificationService';
+import authService from '../../../Services/AuthService';
 
 export default function PasswordRecovery(): JSX.Element {
   const navigate = useNavigate();
+
   const { register, handleSubmit, watch } = useForm<PasswordRecoveryModel>();
 
   async function setNewPassword(credentials: PasswordRecoveryModel) {
     try {
-      if (watch("password") !== watch("verifyPassword")) {
-        notificationService.error("Passwords doesn`t match!");
+      if (watch('password') !== watch('verifyPassword')) {
+        notificationService.error('Passwords doesn`t match!');
         return;
       }
       credentials = {
         ...credentials,
-        email: atob(localStorage.getItem("verifyUser")),
+        email: atob(localStorage.getItem('verifyUser')),
       };
-      await authService.setNewPassword(credentials);
-      notificationService.success("Password has been successfully updated");
-      navigate("/auth/login");
+      const response = await authService.setNewPassword(credentials);
+      console.log(response);
+
+      notificationService.success('Password has been successfully updated');
+      navigate('/auth/login');
     } catch (err: any) {
       notificationService.error(err.message);
     }
@@ -41,12 +44,12 @@ export default function PasswordRecovery(): JSX.Element {
       <Box
         sx={{
           marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
@@ -67,7 +70,7 @@ export default function PasswordRecovery(): JSX.Element {
                 label="New password"
                 name="password"
                 type="password"
-                {...register("password")}
+                {...register('password')}
               />
             </Grid>
             <Grid item xs={12}>
@@ -78,7 +81,7 @@ export default function PasswordRecovery(): JSX.Element {
                 label="Verify password"
                 type="password"
                 id="verifyPassword"
-                {...register("verifyPassword")}
+                {...register('verifyPassword')}
               />
             </Grid>
           </Grid>

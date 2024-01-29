@@ -7,12 +7,12 @@ import {
   DialogContent,
   DialogTitle,
   TextField,
-} from "@mui/material";
-import { useState } from "react";
-import "./DialogButton.css";
-import authService from "../../Services/AuthService";
-import notificationService from "../../Services/NotificationService";
-import { useNavigate } from "react-router-dom";
+} from '@mui/material';
+import { useState } from 'react';
+import './DialogButton.css';
+import authService from '../../Services/AuthService';
+import notificationService from '../../Services/NotificationService';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function DialogButton(): JSX.Element {
   const navigate = useNavigate();
@@ -21,17 +21,17 @@ function DialogButton(): JSX.Element {
   const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
 
   const [emailSended, setEmailSended] = useState<boolean>(false);
-  const [inputValue, setInputValue] = useState<string>("");
+  const [inputValue, setInputValue] = useState<string>('');
 
   const verificationEmail = async (email: string) => {
     try {
       setOpenBackdrop(true);
       if (!email.length) return;
       await authService.sendVerificationEmail(inputValue);
-      setInputValue("");
+      setInputValue('');
       setEmailSended(true);
     } catch (err: any) {
-      notificationService.error("Try again later");
+      notificationService.error('Try again later');
     } finally {
       setOpenBackdrop(false);
     }
@@ -42,12 +42,11 @@ function DialogButton(): JSX.Element {
     try {
       await authService.verifyCode(+code);
       setOpenDialog(false);
-      setInputValue("");
+      setInputValue('');
     } catch (err: any) {
-      notificationService.error("Verification code is not valid");
+      notificationService.error('Verification code is not valid');
     } finally {
       setOpenBackdrop(false);
-      navigate("/passwordRecovery");
     }
   };
 
@@ -66,24 +65,24 @@ function DialogButton(): JSX.Element {
         aria-describedby="alert-dialog-description"
       >
         <Backdrop
-          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
           open={openBackdrop}
         >
           <CircularProgress color="inherit" />
         </Backdrop>
         <DialogTitle id="alert-dialog-title">
           {emailSended
-            ? "Enter verification code from your Email:"
-            : "Verification code will be sent to your Email:"}
+            ? 'Enter verification code from your Email:'
+            : 'Verification code will be sent to your Email:'}
         </DialogTitle>
         <DialogContent>
           <TextField
             required
-            label={emailSended ? "Verification code:" : "Enter your Email:"}
+            label={emailSended ? 'Verification code:' : 'Enter your Email:'}
             fullWidth
             margin="normal"
             name="email"
-            autoComplete={emailSended ? "" : "email"}
+            autoComplete={emailSended ? '' : 'email'}
             value={inputValue}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setInputValue(e.target.value)
@@ -92,9 +91,11 @@ function DialogButton(): JSX.Element {
         </DialogContent>
         <DialogActions>
           {emailSended ? (
-            <Button onClick={() => verifyCode(inputValue)}>
-              Update password
-            </Button>
+            <NavLink to="/auth/passwordRecovery">
+              <Button onClick={() => verifyCode(inputValue)}>
+                Update password
+              </Button>
+            </NavLink>
           ) : (
             <Button onClick={() => verificationEmail(inputValue)}>
               Send email
