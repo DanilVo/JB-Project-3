@@ -353,3 +353,17 @@ Route /api/auth/login not exist
 Mon, 29 Jan 2024 12:36:37 GMT
 Incorrect Email or Password
 ----------------------------------------------------------------------------------------------------
+Wed, 31 Jan 2024 12:53:06 GMT
+Unexpected token o in JSON at position 1
+Stack: SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vacation-controller.ts:33:24
+    at Generator.next (<anonymous>)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vacation-controller.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vacation-controller.ts:4:12)
+    at C:\Users\PC\Desktop\JB Project 3\Backend\src\6-controllers\vacation-controller.ts:31:70
+    at Layer.handle [as handle_request] (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\express\lib\router\route.js:144:13)
+    at verifyAdmin (C:\Users\PC\Desktop\JB Project 3\Backend\src\4-middleware\verify-admin.ts:12:3)
+----------------------------------------------------------------------------------------------------

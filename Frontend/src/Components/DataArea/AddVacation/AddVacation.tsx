@@ -231,10 +231,10 @@ function AddVacation(): JSX.Element {
                     }}
                   >
                     <Typography color="text.secondary" variant="body2">
-                      Download template or insert existing excel file
+                      Download template or insert existing excel file.
                     </Typography>
                     <Typography color="text.secondary" variant="body2">
-                      Fill rows according to columns names
+                      Fill rows according to columns names.
                     </Typography>
                     <Typography color="text.secondary" variant="body2">
                       To upload image:
@@ -253,7 +253,7 @@ function AddVacation(): JSX.Element {
                       </Typography>
                     </Box>
                     <Typography color="text.secondary" variant="body2">
-                      Upload file with extension ".xlsx"
+                      Upload file with extension ".xlsx".
                     </Typography>
                   </Paper>
                 </Grid>

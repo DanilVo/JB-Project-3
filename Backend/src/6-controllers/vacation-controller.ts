@@ -30,10 +30,14 @@ router.post(
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
+      console.log(request.body);
+      
+      if (Array.isArray(request.body)) console.log('its an array');
+
       request.body.image = request.files?.image;
       const vacation = new VacationModel(request.body);
-      const addedVacation = await vacationService.addVacation(vacation);
-      response.status(StatusCode.Created).json(addedVacation);
+      // const addedVacation = await vacationService.addVacation(vacation);
+      // response.status(StatusCode.Created).json(addedVacation);
     } catch (err: any) {
       next(err);
     }

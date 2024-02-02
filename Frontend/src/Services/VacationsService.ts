@@ -12,7 +12,7 @@ import appConfig from '../Utils/AppConfig';
 
 class VacationService {
   private options = {
-    headers: { 'Content-Type': 'multipart/form-data' },
+    headers: { 'Content-Type': 'application/json' },
   };
 
   public async getAllVacations(): Promise<VacationModel[]> {
@@ -60,7 +60,9 @@ class VacationService {
     vacationStore.dispatch(action);
   }
 
-  public async addVacation(vacation: VacationModel): Promise<VacationModel> {
+  public async addVacation(
+    vacation: VacationModel | string
+  ): Promise<VacationModel | string> {
     const response = await axios.post(
       appConfig.addVacationUrl,
       vacation,

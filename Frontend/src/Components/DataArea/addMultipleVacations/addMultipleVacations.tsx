@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import notificationService from '../../../Services/NotificationService';
 import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
 import './addMultipleVacations.css';
 import ExcelJs from 'exceljs';
+import { Typography } from '@mui/material';
+import vacationService from '../../../Services/VacationsService';
 
-export type Vacation = {
+type Vacation = {
   destination: string;
   description: string;
   price: number;
@@ -12,17 +15,21 @@ export type Vacation = {
   image: File;
 };
 
-export type VacationDate = {
+type VacationDate = {
   formula: string;
   result: string;
 };
 
 function AddMultipleVacations(): JSX.Element {
+  const [vacationsToUpload, setVacationsToUpload] = useState<number>(0);
+
   const excelFileImport = async (csv: any) => {
     try {
       const workbook = await loadWorkbook(csv);
       const data: Vacation[] = parseWorkbook(workbook);
-      console.log(data);
+      setVacationsToUpload(data.length);
+      // console.log(data);
+      // await vacationService.addVacation(JSON.stringify(data));
     } catch (err: any) {
       notificationService.error('Error loading workbook');
     }
@@ -72,6 +79,7 @@ function AddMultipleVacations(): JSX.Element {
         data.push(rowObject);
       }
     });
+    console.log(data);
 
     return data;
   };
@@ -84,7 +92,11 @@ function AddMultipleVacations(): JSX.Element {
 
   return (
     <>
-      <DragDropFileUpload onFileUpload={excelFileImport} fileType="*.xlsx" />
+      {vacationsToUpload > 0 ? (
+        <Typography>Uploaded {vacationsToUpload} new vacations.</Typography>
+      ) : (
+        <DragDropFileUpload onFileUpload={excelFileImport} fileType="*.xlsx" />
+      )}
     </>
   );
 }
