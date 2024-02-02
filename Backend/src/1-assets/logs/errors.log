@@ -367,3 +367,155 @@ Stack: SyntaxError: Unexpected token o in JSON at position 1
     at next (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\express\lib\router\route.js:144:13)
     at verifyAdmin (C:\Users\PC\Desktop\JB Project 3\Backend\src\4-middleware\verify-admin.ts:12:3)
 ----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 12:59:05 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:01:39 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:02:40 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:06:07 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:06:41 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:07:38 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:08:06 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:12:04 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:12:51 GMT
+newUploadedFile can't be empty.
+Stack: Error: newUploadedFile can't be empty.
+    at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:4:12)
+    at FileSaver.add (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:32:16)
+    at VacationService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:72:39)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:18:22 GMT
+"vacationEndDate" must be greater than "ref:vacationStartDate"
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:19:45 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:26:36 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:26:56 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:29:40 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:30:51 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:32:01 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:32:29 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:36:28 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:36:36 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:36:55 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:38:48 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:44:19 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:50:58 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:52:45 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 13:55:59 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:01:08 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:03:11 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:03:54 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:04:19 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:04:50 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:30:17 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:32:04 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:33:08 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:33:42 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:34:44 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------
+Fri, 02 Feb 2024 14:36:11 GMT
+"destination" is required
+----------------------------------------------------------------------------------------------------

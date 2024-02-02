@@ -1,17 +1,17 @@
-import express, { NextFunction, Request, Response } from 'express';
-import { fileSaver } from 'uploaded-file-saver';
-import StatusCode from '../3-models/status-codes';
-import VacationModel from '../3-models/vacation-model';
-import verifyAdmin from '../4-middleware/verify-admin';
-import verifyToken from '../4-middleware/verify-token';
-import vacationService from '../5-services/vacations-service';
-import path from 'path';
+import express, { NextFunction, Request, Response } from "express";
+import { fileSaver } from "uploaded-file-saver";
+import StatusCode from "../3-models/status-codes";
+import VacationModel from "../3-models/vacation-model";
+import verifyAdmin from "../4-middleware/verify-admin";
+import verifyToken from "../4-middleware/verify-token";
+import vacationService from "../5-services/vacations-service";
+import path from "path";
 
 const router = express.Router();
 
 // Get One vacation
 router.get(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -26,16 +26,23 @@ router.get(
 
 // Add vacation
 router.post(
-  '/add-vacation',
+  "/add-vacation",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      console.log(request.body);
+      console.log(request.body); 
+      // console.log(request.files);
       
-      if (Array.isArray(request.body)) console.log('its an array');
-
+      // const resultArray = Object.keys(request.files).reduce((acc, key) => {
+      //   const [index, field] = key.match(/\d+|\w+/g);
+      //   acc[index] = acc[index] || {};
+      //   acc[index][field] = request.files[key];
+      //   return acc;
+      // }, []);
+      // console.log(resultArray);
+      
       request.body.image = request.files?.image;
-      const vacation = new VacationModel(request.body);
+      // const vacation = new VacationModel(request.body);
       // const addedVacation = await vacationService.addVacation(vacation);
       // response.status(StatusCode.Created).json(addedVacation);
     } catch (err: any) {
@@ -46,7 +53,7 @@ router.post(
 
 // Update vacation
 router.put(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -63,7 +70,7 @@ router.put(
 
 // Delete vacation
 router.delete(
-  '/vacations/:id([0-9]+)',
+  "/vacations/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -78,14 +85,14 @@ router.delete(
 
 // Get image
 router.get(
-  '/vacations/image/:imageName',
+  "/vacations/image/:imageName",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const imageName = request.params.imageName;
       const absolutePath = fileSaver.getFilePath(
         imageName,
         true,
-        path.join(__dirname, '..', '1-assets', 'vacationImages')
+        path.join(__dirname, "..", "1-assets", "vacationImages")
       );
       response.sendFile(absolutePath);
     } catch (err: any) {
@@ -96,7 +103,7 @@ router.get(
 
 // Get all Vacations
 router.get(
-  '/vacations/subscriptions/:id([0-9]+)',
+  "/vacations/subscriptions/:id([0-9]+)",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -110,7 +117,7 @@ router.get(
 );
 
 router.post(
-  '/follow',
+  "/follow",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -123,7 +130,7 @@ router.post(
 );
 
 router.delete(
-  '/follow',
+  "/follow",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {

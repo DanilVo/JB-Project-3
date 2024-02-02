@@ -147,7 +147,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
             {currentPosts.map((vacation: VacationModel, index: number) => (
               <MediaCard
                 vacation={vacation}
-                key={vacation.destination}
+                key={vacation.vacationUuid}
                 duration={(index + 2) * 0.1}
                 delete={deleteVacation}
                 follow={handleFollowVacation}

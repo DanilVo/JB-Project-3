@@ -1,20 +1,25 @@
-import axios from 'axios';
-import { RoleModel } from '../Models/RoleModel';
-import UserModel from '../Models/UserModel';
-import VacationModel from '../Models/VacationModel';
-import { authStore } from '../Redux/AuthState';
+import axios from "axios";
+import { RoleModel } from "../Models/RoleModel";
+import UserModel from "../Models/UserModel";
+import VacationModel from "../Models/VacationModel";
+import { authStore } from "../Redux/AuthState";
 import {
   VacationAction,
   VacationActionTypes,
   vacationStore,
-} from '../Redux/VacationState';
-import appConfig from '../Utils/AppConfig';
+} from "../Redux/VacationState";
+import appConfig from "../Utils/AppConfig";
+import MultipleVacationsModel from "../Models/MultipleVacationsModel";
 
 class VacationService {
-  private options = {
-    headers: { 'Content-Type': 'application/json' },
+  private singleFileOptions = {
+    headers: { "Content-Type": "multipart/form-data" },
   };
-
+  private multipleFileOptions = {
+    headers: { "Content-Type": "application/json" },
+  };
+  // multipart/form-data
+  // application/json
   public async getAllVacations(): Promise<VacationModel[]> {
     const user: UserModel = authStore.getState().user;
     const vacations = vacationStore.getState().vacations;
@@ -46,7 +51,7 @@ class VacationService {
     const { data } = await axios.put(
       appConfig.vacationActionsUrl + vacationId,
       vacation,
-      this.options
+      this.singleFileOptions
     );
 
     data.followersCount = vacation.followersCount;
@@ -60,13 +65,13 @@ class VacationService {
     vacationStore.dispatch(action);
   }
 
-  public async addVacation(
-    vacation: VacationModel | string
-  ): Promise<VacationModel | string> {
+  public async addVacation(vacation: VacationModel): Promise<VacationModel> {
+    console.log(vacation);
+
     const response = await axios.post(
       appConfig.addVacationUrl,
       vacation,
-      this.options
+      this.singleFileOptions
     );
 
     const action: VacationAction = {
@@ -75,6 +80,25 @@ class VacationService {
     };
     vacationStore.dispatch(action);
     return vacation;
+  }
+
+  public async addMultipleVacations(
+    vacations: MultipleVacationsModel[]
+  ): Promise<MultipleVacationsModel[]> {
+    console.log(vacations);
+
+    const response = await axios.post(
+      appConfig.addVacationUrl,
+      vacations,
+      this.multipleFileOptions
+    );
+
+    // const action: VacationAction = {
+    //   type: VacationActionTypes.AddVacation,
+    //   payload: response.data,
+    // };
+    // vacationStore.dispatch(action);
+    return vacations;
   }
 
   public async followVacation(

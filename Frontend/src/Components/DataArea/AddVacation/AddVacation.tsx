@@ -27,8 +27,6 @@ function AddVacation(): JSX.Element {
   const [previewImage, setPreviewImage] = useState<any>();
   const [imageToUpload, setImageToUpload] = useState<any>();
 
-  const [multipleVacations, setMultipleVacations] = useState<VacationModel[]>();
-
   async function addVacation(vacation: VacationModel) {
     try {
       vacation = {
@@ -42,7 +40,7 @@ function AddVacation(): JSX.Element {
       if (!vacation.image) {
         notificationService.error('Image field can`t be empty!');
         return;
-      }
+      }      
       await vacationService.addVacation(vacation);
       notificationService.success('Vacation has been successfully added');
       navigate('/home');

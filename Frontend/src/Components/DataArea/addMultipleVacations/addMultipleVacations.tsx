@@ -1,24 +1,25 @@
-import { useState } from 'react';
-import notificationService from '../../../Services/NotificationService';
-import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
-import './addMultipleVacations.css';
-import ExcelJs from 'exceljs';
-import { Typography } from '@mui/material';
-import vacationService from '../../../Services/VacationsService';
+import { useState } from "react";
+import notificationService from "../../../Services/NotificationService";
+import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
+import "./addMultipleVacations.css";
+import ExcelJs from "exceljs";
+import { Typography } from "@mui/material";
+import vacationService from "../../../Services/VacationsService";
+import MultipleVacationsModel from "../../../Models/MultipleVacationsModel";
 
-type Vacation = {
-  destination: string;
-  description: string;
-  price: number;
-  vacationStartDate: VacationDate;
-  vacationEndDate: VacationDate;
-  image: File;
-};
+// type Vacation = {
+//   destination: string;
+//   description: string;
+//   price: number;
+//   vacationStartDate: VacationDate;
+//   vacationEndDate: VacationDate;
+//   image: File;
+// };
 
-type VacationDate = {
-  formula: string;
-  result: string;
-};
+// type VacationDate = {
+//   formula: string;
+//   result: string;
+// };
 
 function AddMultipleVacations(): JSX.Element {
   const [vacationsToUpload, setVacationsToUpload] = useState<number>(0);
@@ -26,12 +27,11 @@ function AddMultipleVacations(): JSX.Element {
   const excelFileImport = async (csv: any) => {
     try {
       const workbook = await loadWorkbook(csv);
-      const data: Vacation[] = parseWorkbook(workbook);
+      const data: MultipleVacationsModel[] = parseWorkbook(workbook);
       setVacationsToUpload(data.length);
-      // console.log(data);
-      // await vacationService.addVacation(JSON.stringify(data));
+      await vacationService.addMultipleVacations(data);
     } catch (err: any) {
-      notificationService.error('Error loading workbook');
+      notificationService.error("Error loading workbook");
     }
   };
 
@@ -42,52 +42,67 @@ function AddMultipleVacations(): JSX.Element {
   };
 
   const parseWorkbook = (workbook: ExcelJs.Workbook) => {
-    const data: Vacation[] = [];
+    try {
+      const data: MultipleVacationsModel[] = [];
 
-    workbook.eachSheet((sheet) => {
-      if (sheet.columnCount !== 6) {
-        notificationService.error('Error loading workbook, stick to template');
-        return;
-      }
-      // Indexation of rows starts with 1, first row are the keys,
-      // row 2 and further are actual data,
-      // image indexation starts with 0
-      const keys = sheet.getRow(1).values as string[];
+      workbook.eachSheet((sheet) => {
+        if (sheet.columnCount !== 6) {
+          notificationService.error(
+            "Error loading workbook, stick to template"
+          );
+          return;
+        }
+        // Indexation of rows starts with 1, first row are the keys,
+        // row 2 and further are actual data,
+        // image indexation starts with 0
 
-      for (let rowIndex = 2; rowIndex <= sheet.rowCount; rowIndex++) {
-        const values = sheet.getRow(rowIndex).values as any[];
-        const image = createImageFile(workbook, rowIndex - 2);
-        values.push(image);
+        const keys = sheet.getRow(1).values as string[];
 
-        const rowObject: Vacation = {
-          destination: '',
-          description: '',
-          price: 0,
-          vacationStartDate: undefined,
-          vacationEndDate: undefined,
-          image: undefined,
-        };
+        for (let rowIndex = 2; rowIndex <= sheet.rowCount; rowIndex++) {
+          if (!sheet.getRow(rowIndex).values.length) return data;
 
-        keys.forEach((el, index) => {
-          if (values[index]?.result) {
-            (rowObject as any)[el] = new Date(values[index].result);
-          } else {
-            (rowObject as any)[el] = values[index];
-          }
-        });
+          const values = sheet.getRow(rowIndex).values as any[];
+          const image = createImageFile(workbook, rowIndex - 2);
+          const reader = new FileReader();
+          reader.readAsDataURL(image);
+          reader.onload = () => {
+            const a = reader.result;
+            console.log(a);
+          };
 
-        data.push(rowObject);
-      }
-    });
-    console.log(data);
+          // values.push(image);
 
-    return data;
+          const rowObject: MultipleVacationsModel = {
+            destination: "",
+            description: "",
+            price: 0,
+            vacationStartDate: undefined,
+            vacationEndDate: undefined,
+            image: undefined,
+          };
+
+          keys.forEach((el, index) => {
+            if (values[index]?.result) {
+              (rowObject as any)[el] = new Date(values[index].result);
+            } else {
+              (rowObject as any)[el] = values[index];
+            }
+          });
+
+          data.push(rowObject);
+        }
+      });
+
+      return data;
+    } catch (err: any) {
+      console.log(err.message);
+    }
   };
 
   const createImageFile = (workbook: ExcelJs.Workbook, index: number) => {
     const image = workbook.getImage(index);
-    const blob = new Blob([image.buffer], { type: 'image/*' });
-    return new File([blob], 'test.png', { type: 'image/*' });
+    const blob = new Blob([image.buffer], { type: "image/*" });
+    return new File([blob], "test.png", { type: "image/*" });
   };
 
   return (
