@@ -45,12 +45,6 @@ function MediaCard(props: MediaCardProps): JSX.Element {
 
   const deleteVacation = async () => {
     await props.delete(props.vacation.vacationId);
-
-    const action: VacationAction = {
-      type: VacationActionTypes.DeleteVacation,
-      payload: props.vacation.vacationId,
-    };
-    vacationStore.dispatch(action);
   };
 
   const handleFollowVacation = async () => {

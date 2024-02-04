@@ -71,7 +71,6 @@ function NavMenu(props: Props): JSX.Element {
   return (
     <div className="Menu">
       <Button
-        id="demo-positioned-button"
         aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
@@ -85,7 +84,6 @@ function NavMenu(props: Props): JSX.Element {
       </NavLink>
       <Button>About us</Button>
       <Menu
-        id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
         anchorEl={anchorEl}
         open={open}

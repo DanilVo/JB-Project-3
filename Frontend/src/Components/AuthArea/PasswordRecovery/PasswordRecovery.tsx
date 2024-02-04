@@ -66,7 +66,6 @@ export default function PasswordRecovery(): JSX.Element {
               <TextField
                 required
                 fullWidth
-                id="password"
                 label="New password"
                 name="password"
                 type="password"
@@ -80,7 +79,6 @@ export default function PasswordRecovery(): JSX.Element {
                 name="verifyPassword"
                 label="Verify password"
                 type="password"
-                id="verifyPassword"
                 {...register('verifyPassword')}
               />
             </Grid>

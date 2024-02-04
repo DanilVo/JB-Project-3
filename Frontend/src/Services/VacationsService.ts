@@ -12,14 +12,10 @@ import appConfig from "../Utils/AppConfig";
 import MultipleVacationsModel from "../Models/MultipleVacationsModel";
 
 class VacationService {
-  private singleFileOptions = {
+  private options = {
     headers: { "Content-Type": "multipart/form-data" },
   };
-  private multipleFileOptions = {
-    headers: { "Content-Type": "application/json" },
-  };
-  // multipart/form-data
-  // application/json
+
   public async getAllVacations(): Promise<VacationModel[]> {
     const user: UserModel = authStore.getState().user;
     const vacations = vacationStore.getState().vacations;
@@ -29,10 +25,10 @@ class VacationService {
         type: VacationActionTypes.SetVacations,
         payload: data,
       };
-      vacationStore.dispatch(action);
+      vacationStore.dispatch(action);      
       return data;
     }
-    return vacations;
+      return vacations;
   }
 
   public async deleteVacation(vacationId: number): Promise<void> {
@@ -51,7 +47,7 @@ class VacationService {
     const { data } = await axios.put(
       appConfig.vacationActionsUrl + vacationId,
       vacation,
-      this.singleFileOptions
+      this.options
     );
 
     data.followersCount = vacation.followersCount;
@@ -65,13 +61,11 @@ class VacationService {
     vacationStore.dispatch(action);
   }
 
-  public async addVacation(vacation: VacationModel): Promise<VacationModel> {
-    console.log(vacation);
-
+  public async addVacation(vacation: VacationModel): Promise<void> {
     const response = await axios.post(
       appConfig.addVacationUrl,
       vacation,
-      this.singleFileOptions
+      this.options
     );
 
     const action: VacationAction = {
@@ -79,26 +73,22 @@ class VacationService {
       payload: response.data,
     };
     vacationStore.dispatch(action);
-    return vacation;
   }
 
   public async addMultipleVacations(
     vacations: MultipleVacationsModel[]
-  ): Promise<MultipleVacationsModel[]> {
-    console.log(vacations);
-
+  ): Promise<void> {
     const response = await axios.post(
-      appConfig.addVacationUrl,
+      appConfig.addMultipleVacationUrl,
       vacations,
-      this.multipleFileOptions
+      this.options
     );
 
-    // const action: VacationAction = {
-    //   type: VacationActionTypes.AddVacation,
-    //   payload: response.data,
-    // };
-    // vacationStore.dispatch(action);
-    return vacations;
+    const action: VacationAction = {
+      type: VacationActionTypes.AddVacation,
+      payload: response.data,
+    };
+    vacationStore.dispatch(action);
   }
 
   public async followVacation(

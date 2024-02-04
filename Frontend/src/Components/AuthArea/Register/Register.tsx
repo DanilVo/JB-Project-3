@@ -62,7 +62,6 @@ export default function Register(props: Props): JSX.Element {
                 name="firstName"
                 required
                 fullWidth
-                id="firstName"
                 label="First Name"
                 autoFocus
                 {...register("firstName")}
@@ -72,7 +71,6 @@ export default function Register(props: Props): JSX.Element {
               <TextField
                 required
                 fullWidth
-                id="lastName"
                 label="Last Name"
                 name="lastName"
                 autoComplete="family-name"
@@ -83,7 +81,6 @@ export default function Register(props: Props): JSX.Element {
               <TextField
                 required
                 fullWidth
-                id="email"
                 label="Email Address"
                 name="email"
                 autoComplete="email"
@@ -97,7 +94,6 @@ export default function Register(props: Props): JSX.Element {
                 name="password"
                 label="Password"
                 type="password"
-                id="password"
                 autoComplete="new-password"
                 {...register("password")}
               />

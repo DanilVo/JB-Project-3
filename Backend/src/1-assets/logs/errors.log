@@ -519,3 +519,111 @@ Fri, 02 Feb 2024 14:34:44 GMT
 Fri, 02 Feb 2024 14:36:11 GMT
 "destination" is required
 ----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 11:32:20 GMT
+Route /api/add-vacation/ not exist
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 11:32:20 GMT
+Route /favicon.ico not exist
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 11:36:37 GMT
+Route /api/add-vacation/ not exist
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 11:37:22 GMT
+Route /api/add-vacation/ not exist
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 11:39:18 GMT
+Route /api/add-vacation/ not exist
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 12:17:30 GMT
+Route /api/add-vacation/ not exist
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 14:43:15 GMT
+Cannot convert undefined or null to object
+Stack: TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at parsedArray (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:34:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:42:30
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:4:12)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:31:70
+    at Layer.handle [as handle_request] (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\route.js:144:13)
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 15:02:37 GMT
+"description" length must be at least 5 characters long
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 15:35:40 GMT
+"vacationEndDate" must be greater than "ref:vacationStartDate"
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 15:52:11 GMT
+Cannot read properties of undefined (reading 'lastIndexOf')
+Stack: TypeError: Cannot read properties of undefined (reading 'lastIndexOf')
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:63:44
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:4:12)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:46:70
+    at Layer.handle [as handle_request] (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\route.js:144:13)
+    at verifyAdmin (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\4-middleware\verify-admin.ts:12:3)
+    at Layer.handle [as handle_request] (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\layer.js:95:5)
+----------------------------------------------------------------------------------------------------
+Sat, 03 Feb 2024 16:09:25 GMT
+Resource not found
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 11:39:19 GMT
+Resource not found
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 11:39:21 GMT
+Resource not found
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 11:55:28 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 11:59:06 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:03:26 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:04:33 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:05:39 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:08:39 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:14:59 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:16:18 GMT
+"price" is required
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:28:10 GMT
+v.validation is not a function
+Stack: TypeError: v.validation is not a function
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:51:18
+    at Array.every (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:50:43
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:4:12)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\vacation-controller.ts:33:70
+    at Layer.handle [as handle_request] (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\express\lib\router\route.js:144:13)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:49:55 GMT
+Resource not found
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:51:11 GMT
+Resource not found
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 12:51:15 GMT
+Resource not found
+----------------------------------------------------------------------------------------------------

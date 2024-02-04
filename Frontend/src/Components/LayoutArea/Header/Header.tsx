@@ -90,7 +90,6 @@ function Header(props: Props): JSX.Element {
               ></Avatar>
             </IconButton>
             <Menu
-              id="user-menu"
               anchorEl={anchorEl}
               open={open}
               onClose={() => setAnchorEl(null)}

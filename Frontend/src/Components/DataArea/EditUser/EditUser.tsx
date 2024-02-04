@@ -21,7 +21,6 @@ import "./EditUser.css";
 
 function EditUser(): JSX.Element {
   const userFromState: UserModel = authStore.getState().user;
-  console.log(userFromState);
 
   const { register, handleSubmit, setValue } = useForm<UserModel>();
   const navigate = useNavigate();
@@ -31,11 +30,11 @@ function EditUser(): JSX.Element {
   const [newImage, setNewImage] = useState<boolean>(false);
 
   const imageExtract = (file: File) => {
-        const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
-        if (!validImageTypes.includes(file.type)) {
-          notificationService.error("Not valid file type");
-          return;
-        }
+    const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
+    if (!validImageTypes.includes(file.type)) {
+      notificationService.error("Not valid file type");
+      return;
+    }
     setNewImage(true);
     setImageToUpload(file);
     setPreviewImage(URL.createObjectURL(file));

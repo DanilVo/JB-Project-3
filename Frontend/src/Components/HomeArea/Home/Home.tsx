@@ -24,15 +24,14 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
-  const currentPosts = vacations.slice(firstPostIndex, lastPostIndex);
+  const currentPosts = vacations.slice(firstPostIndex, lastPostIndex);  
 
   useEffect(() => {
     vacationService
       .getAllVacations()
       .then((data) => {
         setInitialVacations(data);
-        setVacations(data);
-
+        setVacations(data);        
         setPaginationPagesCount(Math.ceil(data.length / postsPerPage));
       })
       .catch((err: any) => notificationService.error(err));
@@ -97,6 +96,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
           (vacation) => vacation.vacationId !== vacationId
         );
         setVacations(remainingVacation);
+        setPaginationPagesCount(
+          Math.ceil(vacations.length / postsPerPage)
+        );
       }
     } catch (err: any) {
       notificationService.error(err.message);

@@ -29,7 +29,11 @@ function vacationsReducer(
       break;
 
     case VacationActionTypes.AddVacation:
-      newState.vacations.push(action.payload);
+      if (Array.isArray(action.payload)) {
+        newState.vacations = newState.vacations.concat(action.payload);
+      } else {
+        newState.vacations.push(action.payload);
+      }
       break;
 
     case VacationActionTypes.UpdateVacation:

@@ -10,7 +10,6 @@ interface Props {
 }
 
 function DataGrid(props: Props): JSX.Element {
-  console.log(props.vacations);
   
   const existingVacation: GridColDef[] = [
     { field: "vacationId", headerName: "Id", width: 80 },

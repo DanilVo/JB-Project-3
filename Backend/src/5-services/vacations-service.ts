@@ -15,9 +15,6 @@ interface VacationInfo {
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
     "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
-  private readonly SELECT_ALL_vacationS_SQL = `SELECT *, CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl
-                                               FROM vacations 
-                                               ORDER BY vacationStartDate ASC`;
   private readonly SELECT_ONE_vacation_SQL =
     "SELECT * FROM vacations WHERE vacationId = ?";
   private readonly INSERT_vacation_SQL = `
@@ -47,7 +44,7 @@ class VacationService {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return "";    
+    if (!vacation) return "";
     return vacation.vacationImageUrl;
   }
 
@@ -58,23 +55,18 @@ class VacationService {
     return vacations;
   }
 
-  // One vacation
-  public async getOneVacation(id: number): Promise<VacationModel> {
-    const sql = this.SELECT_ONE_vacation_SQL;
-    const vacation = await dal.execute(sql, [id]);
-    return vacation;
-  }
-
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.vacationUuid = cyber.hashPassword(vacation.destination);
+    vacation.vacationUuid = cyber.hashPassword(
+      vacation.description + vacation.destination
+    );
     vacation.validation();
     const imageName = await fileSaver.add(
       vacation.image,
       path.join(__dirname, "..", "1-assets", "vacationImages")
     );
     const sql = this.INSERT_vacation_SQL;
-    
+
     const info: OkPacket = await dal.execute(sql, [
       vacation.vacationUuid,
       vacation.destination,
@@ -96,8 +88,7 @@ class VacationService {
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
     );
-    console.log(existingImageName);
-    
+
     const imageName = vacation.image
       ? await fileSaver.update(
           existingImageName,
@@ -126,7 +117,14 @@ class VacationService {
   // Delete vacation
   public async deleteVacation(id: number): Promise<void> {
     const sql = this.DELETE_vacation_SQL;
+    const imageToDelete = await this.getExistingImageName(id)
+    await fileSaver.delete(
+      imageToDelete,
+      path.join(__dirname, "..", "1-assets", "vacationImages")
+    );
     const info: OkPacket = await dal.execute(sql, [id]);
+    
+    // await fileSaver.delete(imageToDelete)
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
   }
 

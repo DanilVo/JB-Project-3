@@ -72,7 +72,6 @@ export default function Login(props: Props) {
               margin="normal"
               required
               fullWidth
-              id="email"
               label="Email Address"
               name="email"
               autoComplete="email"
@@ -86,7 +85,6 @@ export default function Login(props: Props) {
               name="password"
               label="Password"
               type="password"
-              id="password"
               {...register("password")}
             />
             <Button

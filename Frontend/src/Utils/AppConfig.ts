@@ -11,6 +11,8 @@ class AppConfig {
 
   public readonly addVacationUrl: string = `${this.baseUrl}api/add-vacation/`;
 
+  public readonly addMultipleVacationUrl: string = `${this.baseUrl}api/add-multiple-vacation/`;
+
   public readonly updateUserUrl: string = `${this.baseUrl}api/user/`;
 
   public readonly userImageUrl: string = `${this.baseUrl}api/user/image/`;

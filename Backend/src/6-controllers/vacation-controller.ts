@@ -1,28 +1,13 @@
 import express, { NextFunction, Request, Response } from "express";
+import path from "path";
 import { fileSaver } from "uploaded-file-saver";
 import StatusCode from "../3-models/status-codes";
 import VacationModel from "../3-models/vacation-model";
 import verifyAdmin from "../4-middleware/verify-admin";
 import verifyToken from "../4-middleware/verify-token";
 import vacationService from "../5-services/vacations-service";
-import path from "path";
 
 const router = express.Router();
-
-// Get One vacation
-router.get(
-  "/vacations/:id([0-9]+)",
-  verifyToken,
-  async (request: Request, response: Response, next: NextFunction) => {
-    try {
-      const id = +request.params.id;
-      const vacations = await vacationService.getOneVacation(id);
-      response.json(vacations);
-    } catch (err: any) {
-      next(err);
-    }
-  }
-);
 
 // Add vacation
 router.post(
@@ -30,21 +15,46 @@ router.post(
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      console.log(request.body); 
-      // console.log(request.files);
-      
-      // const resultArray = Object.keys(request.files).reduce((acc, key) => {
-      //   const [index, field] = key.match(/\d+|\w+/g);
-      //   acc[index] = acc[index] || {};
-      //   acc[index][field] = request.files[key];
-      //   return acc;
-      // }, []);
-      // console.log(resultArray);
-      
       request.body.image = request.files?.image;
-      // const vacation = new VacationModel(request.body);
-      // const addedVacation = await vacationService.addVacation(vacation);
-      // response.status(StatusCode.Created).json(addedVacation);
+      const vacation = new VacationModel(request.body);
+      const addedVacation = await vacationService.addVacation(vacation);
+      response.status(StatusCode.Created).json(addedVacation);
+    } catch (err: any) {
+      next(err);
+    }
+  }
+);
+
+// Add multiple vacations
+router.post(
+  "/add-multiple-vacation",
+  verifyAdmin,
+  async (request: Request, response: Response, next: NextFunction) => {
+    try {
+      const parseFlattenedArray = (array: VacationModel | any) =>
+        Object.keys(array).reduce((acc, key) => {
+          const [index, field] = key.match(/\d+|\w+/g);
+          acc[index] = acc[index] || {};
+          acc[index][field] = array[key];
+          return acc;
+        }, []);
+
+      const vacations = parseFlattenedArray(request.body);
+      const vacationImages = parseFlattenedArray(request.files);
+
+      const mergedData = vacations.map((v: VacationModel, i) => {
+        return { ...v, image: vacationImages[i].image };
+      });
+
+      const vacArr = await Promise.all(
+        mergedData.map(async (v: VacationModel) => {
+          const vacation = new VacationModel(v);
+          const addedVacation = await vacationService.addVacation(vacation);
+          return addedVacation;
+        })
+      );
+
+      response.status(StatusCode.Created).json(vacArr);
     } catch (err: any) {
       next(err);
     }

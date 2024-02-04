@@ -4,5 +4,5 @@ export default class MultipleVacationsModel {
   public vacationStartDate: Date | string;
   public vacationEndDate: Date | string;
   public price: number;
-  public image: string;
+  public image: File;
 }
