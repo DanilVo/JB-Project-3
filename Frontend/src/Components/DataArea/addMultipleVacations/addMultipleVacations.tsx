@@ -48,6 +48,8 @@ function AddMultipleVacations(): JSX.Element {
 
   const excelFileImport = async (csv: any) => {
     try {
+      if (!csv.name.includes(".xlsx"))
+        return notificationService.error("File format is not valid");
       setLoading(true);
       const workbook = await loadWorkbook(csv);
       const data: MultipleVacationsModel[] = parseWorkbook(workbook);

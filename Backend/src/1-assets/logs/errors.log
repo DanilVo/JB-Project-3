@@ -627,3 +627,176 @@ Resource not found
 Sun, 04 Feb 2024 12:51:15 GMT
 Resource not found
 ----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:10:05 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:10:11 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:11:35 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:19:55 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:21:13 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:21:20 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:21:50 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:21:54 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:22:34 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:27:03 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:30:19 GMT
+invalid_grant
+Stack: Error: invalid_grant
+    at Gaxios._request (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\gaxios\src\gaxios.ts:172:15)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async OAuth2Client.refreshTokenNoCache (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:175:19)
+    at async OAuth2Client.refreshAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:209:19)
+    at async OAuth2Client.getAccessTokenAsync (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\google-auth-library\build\src\auth\oauth2client.js:238:23)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:34:37 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:34:46 GMT
+Failed to send email to dani736@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:35:02 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:38:40 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:39:05 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:39:37 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:40:30 GMT
+Failed to send email to dani736@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:40:54 GMT
+Failed to send email to dani736@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:41:00 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:41:41 GMT
+Failed to send email to soloduha10@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:45:33 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:48:11 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:50:15 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:51:19 GMT
+Failed to send email to volobuyev.stock@gmail.com.
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 15:54:58 GMT
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s8-20020a05600c45c800b0040f02114906sm6034044wmo.16 - gsmtp
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 17:02:41 GMT
+userToUpdate.passwordValidation is not a function
+Stack: TypeError: userToUpdate.passwordValidation is not a function
+    at AuthService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:71:18)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:4:12)
+    at AuthService.setNewPassword (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:74:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\auth-controller.ts:40:25
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\auth-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------
+Sun, 04 Feb 2024 17:03:37 GMT
+userToUpdate.passwordValidation is not a function
+Stack: TypeError: userToUpdate.passwordValidation is not a function
+    at AuthService.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:71:18)
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:4:12)
+    at AuthService.setNewPassword (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\auth-service.ts:74:16)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\auth-controller.ts:40:25
+    at Generator.next (<anonymous>)
+    at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\auth-controller.ts:8:71
+    at new Promise (<anonymous>)
+----------------------------------------------------------------------------------------------------

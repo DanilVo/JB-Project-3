@@ -66,7 +66,8 @@ class AuthService {
   public async setNewPassword(
     userToUpdate: PasswordRecoveryModel
   ): Promise<void> {
-    // userToUpdate.passwordValidation()
+    const credentials = new PasswordRecoveryModel(userToUpdate);
+    credentials.passwordValidation();
     if (userToUpdate.password === userToUpdate.verifyPassword) {
       userToUpdate.password = cyber.hashPassword(userToUpdate.password);
       const sql = this.UPDATE_USER_PASSWORD;

@@ -81,7 +81,7 @@ function EditVacation(): JSX.Element {
   const imageExtract = (file: File) => {
     const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
     if (!validImageTypes.includes(file.type)) {
-      notificationService.error("Not valid file type");
+      notificationService.error("File format is not valid");
       return;
     }
     setImageToUpload(file);
