@@ -9,18 +9,10 @@ import UserModel from '../3-models/user-model';
 class UserService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
     'SELECT userImageUrl FROM users WHERE userId = ?';
-  private readonly SELECT_ONE_user_SQL = 'SELECT * FROM users WHERE userId = ?';
   private readonly UPDATE_user_SQL = `
     UPDATE users
     SET firstName=?, lastName=?, email=?, userImageUrl = ?
     WHERE userId = ?`;
-
-  // One user
-  public async getOneUser(id: number): Promise<UserModel> {
-    const sql = this.SELECT_ONE_user_SQL;
-    const user = await dal.execute(sql, [id]);
-    return user;
-  }
 
   // UpdateUser
   public async updateUser(user: UserModel): Promise<string> {

@@ -6,6 +6,7 @@ import notificationService from "../../../Services/NotificationService";
 import vacationService from "../../../Services/VacationsService";
 import MediaCard from "../MediaCard/MediaCard";
 import "./Home.css";
+import useTitle from "../../../Utils/useTitle";
 
 enum FilterActionTypes {
   myVacations = "My-Vacations",
@@ -15,6 +16,8 @@ enum FilterActionTypes {
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
+  useTitle('Home')
+
   const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
 

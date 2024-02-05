@@ -18,8 +18,10 @@ import userService from "../../../Services/UserService";
 import appConfig from "../../../Utils/AppConfig";
 import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
 import "./EditUser.css";
+import useTitle from "../../../Utils/useTitle";
 
 function EditUser(): JSX.Element {
+  useTitle('Edit user')
   const userFromState: UserModel = authStore.getState().user;
 
   const { register, handleSubmit, setValue } = useForm<UserModel>();
@@ -57,6 +59,7 @@ function EditUser(): JSX.Element {
       notificationService.error("Failed to edit user: " + err.message);
     }
   }
+console.log(userFromState);
 
   useEffect(() => {
     setPreviewImage(`${appConfig.userImageUrl}${userFromState.userImageUrl}`);

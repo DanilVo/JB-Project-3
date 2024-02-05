@@ -5,8 +5,10 @@ import HeroCarousel from '../HeroCarousel/HeroCarousel';
 import './LandingPage.css';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import useTitle from '../../../Utils/useTitle';
 
 function LandingPage(): JSX.Element {
+  useTitle('Welcome');
   return (
     <div id="landingPageBody">
       <div className="bgImg">

@@ -29,8 +29,8 @@ function NavMenu(props: Props): JSX.Element {
   };
 
   const adminMenu = [
-    <NavLink to="/reports" key="reports">
-      <MenuItem onClick={handleDropdownMenuClick}>Reports</MenuItem>
+    <NavLink to="/reports" key="dashboard">
+      <MenuItem onClick={handleDropdownMenuClick}>Dashboard</MenuItem>
     </NavLink>,
     <NavLink to="/add-vacation" key="add-vacation">
       <MenuItem onClick={handleDropdownMenuClick}>Add</MenuItem>

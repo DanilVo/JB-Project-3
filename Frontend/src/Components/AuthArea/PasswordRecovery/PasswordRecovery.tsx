@@ -12,8 +12,10 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import PasswordRecoveryModel from '../../../Models/PasswordRecoveryModel';
 import notificationService from '../../../Services/NotificationService';
 import authService from '../../../Services/AuthService';
+import useTitle from '../../../Utils/useTitle';
 
 export default function PasswordRecovery(): JSX.Element {
+  useTitle('Recover password')
   const navigate = useNavigate();
 
   const { register, handleSubmit, watch } = useForm<PasswordRecoveryModel>();

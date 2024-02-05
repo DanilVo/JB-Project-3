@@ -12,12 +12,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import UserModel from "../../../Models/UserModel";
 import authService from "../../../Services/AuthService";
 import notificationService from "../../../Services/NotificationService";
+import useTitle from "../../../Utils/useTitle";
 
 interface Props {
   setUserInSystem: Function;
 }
 
 export default function Register(props: Props): JSX.Element {
+  useTitle("Register")
   const { register, handleSubmit } = useForm<UserModel>();
   const navigate = useNavigate();
 

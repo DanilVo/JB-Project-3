@@ -18,8 +18,10 @@ import vacationService from '../../../Services/VacationsService';
 import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
 import AddMultipleVacations from '../addMultipleVacations/addMultipleVacations';
 import './AddVacation.css';
+import useTitle from '../../../Utils/useTitle';
 
 function AddVacation(): JSX.Element {
+  useTitle("Add vacation")
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm<VacationModel>();
 

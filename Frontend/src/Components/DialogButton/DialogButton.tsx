@@ -9,10 +9,10 @@ import {
   TextField,
 } from '@mui/material';
 import { useState } from 'react';
-import './DialogButton.css';
+import { NavLink, useNavigate } from 'react-router-dom';
 import authService from '../../Services/AuthService';
 import notificationService from '../../Services/NotificationService';
-import { NavLink, useNavigate } from 'react-router-dom';
+import './DialogButton.css';
 
 function DialogButton(): JSX.Element {
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ function DialogButton(): JSX.Element {
             fullWidth
             margin="normal"
             name="email"
-            autoComplete={emailSended ? '' : 'email'}
+            autoComplete={emailSended ? 'email' : ''}
             value={inputValue}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               setInputValue(e.target.value)

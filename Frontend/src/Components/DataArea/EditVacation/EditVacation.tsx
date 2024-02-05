@@ -17,8 +17,11 @@ import notificationService from "../../../Services/NotificationService";
 import vacationService from "../../../Services/VacationsService";
 import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
 import "./EditVacation.css";
+import useTitle from "../../../Utils/useTitle";
 
 function EditVacation(): JSX.Element {
+  useTitle('Edit vacation')
+
   const { vacationUuid } = useParams();
   const navigate = useNavigate();
 

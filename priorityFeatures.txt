@@ -1,6 +1,0 @@
-1. Edit user: add image handle ------------------- DONE
-2. Edit user: change password 
-$: Make separate components for Upload Image and component for edit vacation/add vacation/edit user
-%: In edit vacation/add vacation change dateParser function to moment function from moment
-2. login: forgot your password functionality
-3. oAuth2 Google
