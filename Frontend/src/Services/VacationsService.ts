@@ -62,6 +62,7 @@ class VacationService {
   }
 
   public async addVacation(vacation: VacationModel): Promise<void> {
+    
     const response = await axios.post(
       appConfig.addVacationUrl,
       vacation,

@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express';
 import path from 'path';
 import { fileSaver } from 'uploaded-file-saver';
+import logger from '../2-utils/logger';
 import UserModel from '../3-models/user-model';
 import verifyAdmin from '../4-middleware/verify-admin';
 import verifyToken from '../4-middleware/verify-token';
@@ -44,17 +45,14 @@ router.get(
   '/vacation-reports/:id([0-9]+)',
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
+    const reportFilePath = path.resolve(__dirname, '../1-assets/reports/reports.csv');
     try {
       const id = +request.params.id;
-      const file = await userService.generateReport(id);
-      const filePath = path.join(
-        __dirname,
-        '../1-assets',
-        `/reports/reports.csv`
-      );
+      const file = await logger.generateReport(id,reportFilePath);
       if (file) {
-        response.download(filePath, 'reports.csv');
+        response.download(reportFilePath, 'reports.csv');
       }
+      setTimeout(() => logger.deleteReport(reportFilePath), 5000);
     } catch (err: any) {
       next(err);
     }

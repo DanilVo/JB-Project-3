@@ -122,7 +122,7 @@ function EditUser(): JSX.Element {
                   color="text.secondary"
                   sx={{ m: "5px 50px" }}
                 >
-                  "To change your password logout and press forgot your
+                  " To change your password logout and press forgot your
                   password."
                 </Typography>
               </Box>

@@ -800,3 +800,20 @@ Stack: TypeError: userToUpdate.passwordValidation is not a function
     at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\6-controllers\auth-controller.ts:8:71
     at new Promise (<anonymous>)
 ----------------------------------------------------------------------------------------------------
+Mon, 05 Feb 2024 11:45:03 GMT
+Failed deleting report
+----------------------------------------------------------------------------------------------------
+Mon, 05 Feb 2024 11:45:03 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 05 Feb 2024 11:49:42 GMT
+Failed deleting report
+----------------------------------------------------------------------------------------------------
+Mon, 05 Feb 2024 11:49:42 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\reports\reports.csv'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\reports\reports.csv'
+----------------------------------------------------------------------------------------------------
+Mon, 05 Feb 2024 12:13:15 GMT
+Failed deleting report
+----------------------------------------------------------------------------------------------------

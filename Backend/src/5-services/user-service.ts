@@ -5,8 +5,6 @@ import cyber from '../2-utils/cyber';
 import dal from '../2-utils/dal';
 import { ResourceNotFoundError } from '../3-models/error-models';
 import UserModel from '../3-models/user-model';
-import VacationModel from '../3-models/vacation-model';
-import vacationService from './vacations-service';
 
 class UserService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
@@ -58,32 +56,6 @@ class UserService {
     const vacation = vacations[0];
     if (!vacation) return '';
     return vacation.userImageUrl;
-  }
-
-  public async generateReport(userId: number) {
-    const vacations: VacationModel[] = await vacationService.getVacations(
-      userId
-    );
-
-    const createCsvWriter = require('csv-writer').createObjectCsvWriter;
-    const csvWriter = createCsvWriter({
-      path: path.join(__dirname, '../1-assets', `/reports/reports.csv`),
-      header: [
-        { id: 'dest', title: 'Destination' },
-        { id: 'follow', title: 'Followers' },
-      ],
-    });
-
-    const records = vacations.map((v) => ({
-      dest: v.destination,
-      follow: v.followersCount,
-    }));
-
-    await csvWriter.writeRecords(records).then(() => {
-      console.log('created csv');
-    });
-
-    return true;
   }
 }
 

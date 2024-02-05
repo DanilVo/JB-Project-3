@@ -6,17 +6,17 @@ import {
   Grid,
   Paper,
   Typography,
-} from "@mui/material";
-import CircularProgress from "@mui/material/CircularProgress";
-import ExcelJs, { Image } from "exceljs";
-import moment from "moment";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import MultipleVacationsModel from "../../../Models/MultipleVacationsModel";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
-import "./addMultipleVacations.css";
+} from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
+import ExcelJs, { Image } from 'exceljs';
+import moment from 'moment';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import MultipleVacationsModel from '../../../Models/MultipleVacationsModel';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
+import './addMultipleVacations.css';
 
 interface ExtendedImage extends Image {
   name?: string;
@@ -34,11 +34,9 @@ function AddMultipleVacations(): JSX.Element {
     try {
       setLoading(true);
       await vacationService.addMultipleVacations(vacationsToUpload);
-      navigate("/home");
+      navigate('/home');
     } catch (err: any) {
-      console.log(err);
-
-      notificationService.error("Error uploading vacations");
+      notificationService.error('Error uploading vacations');
       setVacationsCount(0);
       setVacationsToUpload([]);
     } finally {
@@ -48,8 +46,8 @@ function AddMultipleVacations(): JSX.Element {
 
   const excelFileImport = async (csv: any) => {
     try {
-      if (!csv.name.includes(".xlsx"))
-        return notificationService.error("File format is not valid");
+      if (!csv.name.includes('.xlsx'))
+        return notificationService.error('File format is not valid');
       setLoading(true);
       const workbook = await loadWorkbook(csv);
       const data: MultipleVacationsModel[] = parseWorkbook(workbook);
@@ -74,7 +72,7 @@ function AddMultipleVacations(): JSX.Element {
 
     workbook.eachSheet((sheet) => {
       if (sheet.columnCount !== 6) {
-        notificationService.error("Error loading workbook, stick to template");
+        notificationService.error('Error loading workbook, stick to template');
         return;
       }
       // Indexation of rows starts with 1, first row are the keys,
@@ -91,8 +89,8 @@ function AddMultipleVacations(): JSX.Element {
         values.push(image);
 
         const rowObject: MultipleVacationsModel = {
-          destination: "",
-          description: "",
+          destination: '',
+          description: '',
           price: 0,
           vacationStartDate: undefined,
           vacationEndDate: undefined,
@@ -101,11 +99,11 @@ function AddMultipleVacations(): JSX.Element {
 
         keys.forEach((el, index) => {
           if (!values[index]) {
-            throw new Error("Missing fields");
+            throw new Error('Missing fields');
           } else if (values[index]?.result) {
             (rowObject as any)[el] = moment(
               new Date(values[index].result)
-            ).format("YYYY-MM-DD");
+            ).format('YYYY-MM-DD');
           } else {
             (rowObject as any)[el] = values[index];
           }
@@ -129,7 +127,7 @@ function AddMultipleVacations(): JSX.Element {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: '100%',
       }}
     >
       <Typography
@@ -146,17 +144,26 @@ function AddMultipleVacations(): JSX.Element {
           <Paper
             elevation={3}
             sx={{
-              bgcolor: "#f5f5f5",
-              width: "80%",
+              bgcolor: '#f5f5f5',
+              width: '80%',
               p: 3,
-              m: "auto",
-              display: "flex",
-              flexDirection: "column",
+              m: 'auto',
+              display: 'flex',
+              flexDirection: 'column',
               gap: 1,
             }}
           >
             <Typography color="text.secondary" variant="body2">
-              Download template or insert existing excel file.
+              Download{' '}
+              <Link
+                to={`${import.meta.env.BASE_URL}excel-template/template.xlsx`}
+                download="template.xlsx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                template
+              </Link>{' '}
+              or insert existing excel file.
             </Typography>
             <Typography color="text.secondary" variant="body2">
               Fill rows according to columns names.
@@ -164,7 +171,7 @@ function AddMultipleVacations(): JSX.Element {
             <Typography color="text.secondary" variant="body2">
               To upload image:
             </Typography>
-            <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
               <Typography color="text.secondary" variant="body2">
                 I. Press "Insert"
               </Typography>
@@ -182,7 +189,7 @@ function AddMultipleVacations(): JSX.Element {
         </Grid>
         <Divider orientation="vertical" variant="middle" flexItem />
 
-        <Grid item xs={12} sm={5} sx={{ m: "auto", ml: 2 }}>
+        <Grid item xs={12} sm={5} sx={{ m: 'auto', ml: 2, p: 1 }}>
           {vacationsCount > 0 ? (
             <>
               {loading && <CircularProgress />}
