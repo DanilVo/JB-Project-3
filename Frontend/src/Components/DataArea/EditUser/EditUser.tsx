@@ -59,7 +59,6 @@ function EditUser(): JSX.Element {
       notificationService.error("Failed to edit user: " + err.message);
     }
   }
-console.log(userFromState);
 
   useEffect(() => {
     setPreviewImage(`${appConfig.userImageUrl}${userFromState.userImageUrl}`);

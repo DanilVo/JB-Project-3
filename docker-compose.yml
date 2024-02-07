@@ -1,0 +1,77 @@
+version: "1.1"
+
+# Container
+services:
+  # MySQL service:
+  mysql-service:
+    # Image Name:
+    image: trip-blitz-mysql
+
+    # Build image:
+    build: ./Database
+
+    # Container name:
+    container_name: trip-blitz-mysql
+
+    # Restart:
+    restart: unless-stopped
+
+    # Enviroment variables:
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_USER: root
+      MYSQL_DATABASE: trip-blitz
+      MYSQL_PASSWORD:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+
+    volumes:
+      - trip-blitz:/var/lib/mysql
+
+  #---------------------------------------------------------------------------------------------
+
+  # Rest api service:
+  api-service:
+    # Services we depend on:
+    depends_on:
+      - mysql-service
+
+    # image name:
+    image: trip-blitz-api
+
+    #Build image:
+    build: ./Backend
+
+    container_name: trip-blitz-api
+
+    ports:
+      - 4000:4000
+
+    restart: unless-stopped
+
+    environment:
+      MYSQL_HOST: mysql-service
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+
+  #---------------------------------------------------------------------------------------------
+
+  react-service:
+    depends_on:
+      - api-service
+
+    image: trip-blitz-react
+
+    build: ./Frontend
+
+    container_name: trip-blitz-react
+
+    ports:
+      - 5173:5173
+
+    restart: unless-stopped
+
+  #---------------------------------------------------------------------------------------------
+
+volumes:
+  trip-blitz:

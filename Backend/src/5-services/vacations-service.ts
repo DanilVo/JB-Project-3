@@ -49,7 +49,7 @@ class VacationService {
   }
 
   // Get all vacations
-  public async getVacations(userId: number): Promise<VacationModel[]> {
+  public async getVacations(userId: number): Promise<VacationModel[]> {    
     const sql = this.GET_following_vacations;
     const vacations = await dal.execute(sql, [userId]);
     return vacations;
@@ -83,7 +83,7 @@ class VacationService {
   }
 
   // Update vacation
-  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
+  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {    
     vacation.validation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId

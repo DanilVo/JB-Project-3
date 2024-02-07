@@ -69,7 +69,7 @@ function EditVacation(): JSX.Element {
         vacationId: +vacation.vacationId,
         image: imageToUpload,
       };
-
+      
       await vacationService.updateVacation(
         updatedVacation,
         vacation.vacationId

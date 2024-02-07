@@ -100,7 +100,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         </IconButton>
       </ButtonGroup>
     );
-
+    
   return (
     <motion.div
       className="MediaCard"
