@@ -1,3 +1,0 @@
-2. add docker
-3. add unit testing
-4. add dashboard features
