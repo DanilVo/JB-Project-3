@@ -23923,3 +23923,99 @@ Method: PUT
 Route: /api/vacations/1
 Body: {"destination":"Paris1","description":"Explore the romantic city of Paris","price":"1000","vacationStartDate":"2023-01-16T00:00:00.000Z","vacationEndDate":"2023-01-21T00:00:00.000Z","vacationImageUrl":"http://localhost:4000/api/vacations/image/5d96245e-7d02-4461-8503-4f9370bfbc00.jpg","vacationUuid":"5acf0240f8f0d9ecdb0b3b2937b7e7e2136c403f3790c3032b1296f69e5e1d78229498d3bf272b9722fac3bdfb74531a6e240d12d0e7ce53be824a870cee419b","followersCount":"1","isFollowing":"0","vacationId":"1","image":"http://localhost:4000/api/vacations/image/5d96245e-7d02-4461-8503-4f9370bfbc00.jpg"}
 ----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:07 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/36
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/5d96245e-7d02-4461-8503-4f9370bfbc00.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/new_york.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/tokyo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/barcelona.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/rome.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/cairo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/rio.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/auckland.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:08 GMT
+
+Method: GET
+Route: /api/vacations/image/bangkok.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:10 GMT
+
+Method: GET
+Route: /api/vacations/image/marrakech.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:10 GMT
+
+Method: GET
+Route: /api/vacations/image/dubai.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:10 GMT
+
+Method: GET
+Route: /api/vacations/image/venice.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:10 GMT
+
+Method: GET
+Route: /api/vacations/image/cape_town.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Wed, 07 Feb 2024 20:42:10 GMT
+
+Method: GET
+Route: /api/vacations/image/seoul.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
