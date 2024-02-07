@@ -8,7 +8,7 @@ import UserModel from "../3-models/user-model";
 import PasswordRecoveryModel from "../3-models/PasswordRecoveryModel";
 
 class AuthService {
-  private readonly INSERT_USER_SQL =
+  private readonly REGISTER_USER_SQL =
     "INSERT INTO users(uuid,firstName,lastName,email,password,roleId,userImageUrl) VALUES(?,?,?,?,?,?,?)";
   private readonly SELECT_USER_SQL =
     "SELECT * FROM users WHERE email = ? AND password = ?";
@@ -17,16 +17,16 @@ class AuthService {
     "UPDATE users SET password = ? WHERE email = ?";
 
   public async register(user: UserModel): Promise<string> {
-    user.userUuid = cyber.hashPassword(user.email);
+    user.userUuid = cyber.hashData(user.email);
     user.userImageUrl = "default-user-img.png";
     user.userValidation();
     if (await this.isEmailTaken(user.email))
       throw new ValidationError(
         `User with Email ${user.email} already exists.`
       );
-    user.password = cyber.hashPassword(user.password);
+    user.password = cyber.hashData(user.password);
     user.roleId = RoleModel.user;
-    const sql = this.INSERT_USER_SQL;
+    const sql = this.REGISTER_USER_SQL;
     const info: OkPacket = await dal.execute(sql, [
       user.userUuid,
       user.firstName,
@@ -44,7 +44,7 @@ class AuthService {
   public async login(credentials: CredentialModel): Promise<string> {
     credentials.validation();
 
-    credentials.password = cyber.hashPassword(credentials.password);
+    credentials.password = cyber.hashData(credentials.password);
     const sql = this.SELECT_USER_SQL;
     const users = await dal.execute(sql, [
       credentials.email,
@@ -69,7 +69,7 @@ class AuthService {
     const credentials = new PasswordRecoveryModel(userToUpdate);
     credentials.passwordValidation();
     if (userToUpdate.password === userToUpdate.verifyPassword) {
-      userToUpdate.password = cyber.hashPassword(userToUpdate.password);
+      userToUpdate.password = cyber.hashData(userToUpdate.password);
       const sql = this.UPDATE_USER_PASSWORD;
       await dal.execute(sql, [userToUpdate.password, userToUpdate.email]);
     }

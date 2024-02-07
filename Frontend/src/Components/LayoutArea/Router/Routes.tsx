@@ -36,7 +36,7 @@ function Routing({
 
         {/* Reports */}
         <Route
-          path="/reports"
+          path="/dashboard"
           element={
             authStore.getState().user.roleId === RoleModel.Admin ? (
               <AllReports />

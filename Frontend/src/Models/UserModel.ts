@@ -1,4 +1,4 @@
-class UserModel {
+export default class UserModel {
   public userId: number;
   public uuid: string;
   public firstName: string;
@@ -9,5 +9,3 @@ class UserModel {
   public userImageUrl: string;
   public image: File;
 }
-
-export default UserModel;

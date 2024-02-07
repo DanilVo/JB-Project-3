@@ -28,7 +28,6 @@ class AppConfig {
   public readonly setNewPasswordUrl: string = `${this.baseUrl}api/update-password/`;
 }
 
-// Singleton
 const appConfig = new AppConfig();
 
 export default appConfig;

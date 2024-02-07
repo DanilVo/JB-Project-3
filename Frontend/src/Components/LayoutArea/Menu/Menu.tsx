@@ -1,11 +1,13 @@
-import { Button, MenuItem } from '@mui/material';
-import Menu from '@mui/material/Menu';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Menu.css';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { RoleModel } from '../../../Models/RoleModel';
-
+import { Box, Button, ButtonGroup, MenuItem } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Menu.css";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { RoleModel } from "../../../Models/RoleModel";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import ListIcon from "@mui/icons-material/List";
 interface Props {
   userRole: number;
   setFilterVacations: (filter: string) => void;
@@ -29,7 +31,7 @@ function NavMenu(props: Props): JSX.Element {
   };
 
   const adminMenu = [
-    <NavLink to="/reports" key="dashboard">
+    <NavLink to="/dashboard" key="dashboard">
       <MenuItem onClick={handleDropdownMenuClick}>Dashboard</MenuItem>
     </NavLink>,
     <NavLink to="/add-vacation" key="add-vacation">
@@ -69,37 +71,50 @@ function NavMenu(props: Props): JSX.Element {
   ];
 
   return (
-    <div className="Menu">
-      <Button
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        {props.userRole === RoleModel.Admin ? 'Actions' : 'Filters'}
-        <ArrowDropDownIcon />
-      </Button>
-      <NavLink to="/home">
-        <Button>Home</Button>
-      </NavLink>
-      <Button>About us</Button>
-      <Menu
-        aria-labelledby="demo-positioned-button"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleDropdownMenuClick}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <Box
+        component="div"
+        sx={{
+          m: 1,
+          p: "0 20px",
+          border: "1px solid blue",
+          borderRadius: 25,
+          bgcolor: "#f9f9f9",
+          boxShadow: "-5px -5px 10px #d0d0d0,5px 5px 10px #ffffff",
         }}
       >
-        {props.userRole === RoleModel.Admin ? adminMenu : userMenu}
-      </Menu>
-    </div>
+        <ButtonGroup variant="text">
+          <Button onClick={handleClick} startIcon={<ListIcon />}>
+            {props.userRole === RoleModel.Admin ? "Actions" : "Filters"}
+            <ArrowDropDownIcon />
+          </Button>
+          <NavLink to="/home">
+            <Button startIcon={<HomeIcon />}>Home</Button>
+          </NavLink>
+          <Button startIcon={<InfoOutlinedIcon />}>About us</Button>
+        </ButtonGroup>
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleDropdownMenuClick}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
+          {props.userRole === RoleModel.Admin ? adminMenu : userMenu}
+        </Menu>
+      </Box>
+    </Box>
   );
 }
 export default NavMenu;

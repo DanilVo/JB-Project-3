@@ -57,7 +57,7 @@ class VacationService {
 
   // Add vacation
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.vacationUuid = cyber.hashPassword(
+    vacation.vacationUuid = cyber.hashData(
       vacation.description + vacation.destination
     );
     vacation.validation();
