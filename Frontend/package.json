@@ -21,7 +21,6 @@
     "axios": "^1.6.2",
     "exceljs": "^4.4.0",
     "framer-motion": "^10.16.16",
-    "iso-3166-1-alpha-2": "^1.0.1",
     "jwt-decode": "^4.0.0",
     "moment": "^2.30.1",
     "papaparse": "^5.4.1",
@@ -35,7 +34,6 @@
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
-    "@types/iso-3166-1-alpha-2": "^1.0.2",
     "@types/papaparse": "^5.3.14",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
