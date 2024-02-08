@@ -19,7 +19,7 @@ services:
     # Enviroment variables:
     environment:
       MYSQL_HOST: localhost
-      MYSQL_USER: root
+      # MYSQL_USER: root
       MYSQL_DATABASE: trip-blitz
       MYSQL_PASSWORD:
       MYSQL_ROOT_PASSWORD:
@@ -51,7 +51,7 @@ services:
 
     environment:
       MYSQL_HOST: mysql-service
-      MYSQL_USER: root
+      # MYSQL_USER: root
       MYSQL_PASSWORD:
 
   #---------------------------------------------------------------------------------------------

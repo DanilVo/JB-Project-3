@@ -10,4 +10,4 @@ COPY . /app
 
 EXPOSE 5173
 
-ENTRYPOINT npm run dev-exposed
+ENTRYPOINT npm run dev

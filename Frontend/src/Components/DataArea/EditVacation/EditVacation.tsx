@@ -6,21 +6,21 @@ import {
   Grid,
   TextField,
   Typography,
-} from "@mui/material";
-import { motion } from "framer-motion";
-import moment from "moment";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate, useParams } from "react-router-dom";
-import VacationModel from "../../../Models/VacationModel";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
-import "./EditVacation.css";
-import useTitle from "../../../Utils/useTitle";
+} from '@mui/material';
+import { motion } from 'framer-motion';
+import moment from 'moment';
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate, useParams } from 'react-router-dom';
+import VacationModel from '../../../Models/VacationModel';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
+import './EditVacation.css';
+import useTitle from '../../../Utils/useTitle';
 
 function EditVacation(): JSX.Element {
-  useTitle('Edit vacation')
+  useTitle('Edit vacation');
 
   const { vacationUuid } = useParams();
   const navigate = useNavigate();
@@ -45,46 +45,52 @@ function EditVacation(): JSX.Element {
   useEffect(() => {
     setPreviewImage(vacation?.vacationImageUrl);
     setImageToUpload(vacation?.vacationImageUrl);
-    setValue("destination", vacation?.destination);
-    setValue("description", vacation?.description);
-    setValue("price", vacation?.price);
+    setValue('destination', vacation?.destination);
+    setValue('description', vacation?.description);
+    setValue('price', vacation?.price);
     setValue(
-      "vacationStartDate",
-      moment(vacation?.vacationStartDate).format("YYYY-MM-DD")
+      'vacationStartDate',
+      moment(vacation?.vacationStartDate).format('YYYY-MM-DD')
     );
     setValue(
-      "vacationEndDate",
-      moment(vacation?.vacationEndDate).format("YYYY-MM-DD")
+      'vacationEndDate',
+      moment(vacation?.vacationEndDate).format('YYYY-MM-DD')
     );
-    setValue("vacationImageUrl", vacation?.vacationImageUrl);
+    setValue('vacationImageUrl', vacation?.vacationImageUrl);
   }, [isData]);
 
   async function editVacation(updatedVacation: VacationModel) {
     try {
       updatedVacation = {
         ...updatedVacation,
+        vacationStartDate: moment(updatedVacation.vacationStartDate).format(
+          'YYYY-MM-DD'
+        ),
+        vacationEndDate: moment(updatedVacation.vacationEndDate).format(
+          'YYYY-MM-DD'
+        ),
         vacationUuid: vacationUuid,
         followersCount: vacation.followersCount,
         isFollowing: vacation.isFollowing,
         vacationId: +vacation.vacationId,
         image: imageToUpload,
       };
-      
+
       await vacationService.updateVacation(
         updatedVacation,
         vacation.vacationId
       );
-      notificationService.success("Vacation has been successfully updated");
-      navigate("/home");
+      notificationService.success('Vacation has been successfully updated');
+      navigate('/home');
     } catch (err: any) {
-      notificationService.error("Failed to edit vacation: " + err.message);
+      notificationService.error('Failed to edit vacation: ' + err.message);
     }
   }
 
   const imageExtract = (file: File) => {
-    const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
+    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
     if (!validImageTypes.includes(file.type)) {
-      notificationService.error("File format is not valid");
+      notificationService.error('File format is not valid');
       return;
     }
     setImageToUpload(file);
@@ -96,8 +102,8 @@ function EditVacation(): JSX.Element {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
-        style={{ display: "flex", flexDirection: "column" }}
+        transition={{ ease: 'easeOut', duration: 2 }}
+        style={{ display: 'flex', flexDirection: 'column' }}
       >
         <Typography
           variant="h4"
@@ -111,17 +117,17 @@ function EditVacation(): JSX.Element {
           component="form"
           onSubmit={handleSubmit(editVacation)}
           sx={{
-            m: "auto",
+            m: 'auto',
           }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <Box
                 sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "left",
-                  width: "80%",
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'left',
+                  width: '80%',
                 }}
               >
                 <TextField
@@ -130,16 +136,16 @@ function EditVacation(): JSX.Element {
                   type="text"
                   label="Destination:"
                   variant="outlined"
-                  {...register("destination")}
+                  {...register('destination')}
                 />
                 <TextField
                   required
-                  sx={{ mt: 2, maxWidth: "100%" }}
+                  sx={{ mt: 2, maxWidth: '100%' }}
                   type="text"
                   label="Description:"
                   variant="outlined"
                   multiline
-                  {...register("description")}
+                  {...register('description')}
                 />
                 <TextField
                   required
@@ -147,7 +153,7 @@ function EditVacation(): JSX.Element {
                   type="number"
                   label="Price:"
                   variant="outlined"
-                  {...register("price")}
+                  {...register('price')}
                 />
                 <TextField
                   required
@@ -156,7 +162,7 @@ function EditVacation(): JSX.Element {
                   type="date"
                   variant="outlined"
                   focused
-                  {...register("vacationStartDate", { valueAsDate: true })}
+                  {...register('vacationStartDate', { valueAsDate: true })}
                 />
                 <TextField
                   required
@@ -165,17 +171,17 @@ function EditVacation(): JSX.Element {
                   type="date"
                   variant="outlined"
                   focused
-                  {...register("vacationEndDate", { valueAsDate: true })}
+                  {...register('vacationEndDate', { valueAsDate: true })}
                 />
               </Box>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Grid item xs={12} sm={5}>
               {imageToUpload ? (
-                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   <Button
                     variant="outlined"
-                    sx={{ width: "fit-content", m: "auto" }}
+                    sx={{ width: 'fit-content', m: 'auto' }}
                     color="error"
                     onClick={() => {
                       setImageToUpload(false);
@@ -188,23 +194,26 @@ function EditVacation(): JSX.Element {
                     component="img"
                     src={previewImage}
                     style={{
-                      display: "flex",
-                      margin: "auto",
-                      paddingTop: "15px",
-                      height: "300px",
-                      width: "380px",
+                      display: 'flex',
+                      margin: 'auto',
+                      paddingTop: '15px',
+                      height: '300px',
+                      width: '380px',
                     }}
                   />
                 </Box>
               ) : (
                 <Box
                   sx={{
-                    display: "flex",
-                    justifyContent: "center",
+                    display: 'flex',
+                    justifyContent: 'center',
                     mt: { sm: 10 },
                   }}
                 >
-                  <DragDropFileUpload onFileUpload={imageExtract} fileType="image/*"/>
+                  <DragDropFileUpload
+                    onFileUpload={imageExtract}
+                    fileType="image/*"
+                  />
                 </Box>
               )}
             </Grid>
@@ -212,9 +221,9 @@ function EditVacation(): JSX.Element {
               item
               xs={12}
               sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
               }}
             >
               <Button variant="outlined" type="submit">
