@@ -4,9 +4,9 @@ import VacationModel from "../../../Models/VacationModel";
 import { vacationStore } from "../../../Redux/VacationState";
 import notificationService from "../../../Services/NotificationService";
 import vacationService from "../../../Services/VacationsService";
+import useTitle from "../../../Utils/useTitle";
 import MediaCard from "../MediaCard/MediaCard";
 import "./Home.css";
-import useTitle from "../../../Utils/useTitle";
 
 enum FilterActionTypes {
   myVacations = "My-Vacations",

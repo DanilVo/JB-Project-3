@@ -7,6 +7,8 @@ import AllReports from "../../ReportsArea/AllReports/AllReports";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import { authStore } from "../../../Redux/AuthState";
 import { RoleModel } from "../../../Models/RoleModel";
+import AboutTripBlitz from "../../AboutTripBlitz/AboutTripBlitz";
+import CardDialog from "../../HomeArea/CardDialog/CardDialog";
 
 function Routing({
   filterVacations,
@@ -34,6 +36,9 @@ function Routing({
         {/* Add vacation */}
         <Route path="/add-vacation" element={<AddVacation />} />
 
+        {/* About Trip Blitz */}
+        <Route path="/about-us" element={<AboutTripBlitz />} />
+
         {/* Reports */}
         <Route
           path="/dashboard"
@@ -45,6 +50,8 @@ function Routing({
             )
           }
         />
+
+        <Route path="vacation-card/:vacationUuid" element={<CardDialog/>} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

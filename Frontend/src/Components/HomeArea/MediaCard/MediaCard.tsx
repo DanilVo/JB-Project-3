@@ -2,7 +2,15 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import BookmarkTwoToneIcon from "@mui/icons-material/BookmarkTwoTone";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import EditIcon from "@mui/icons-material/Edit";
-import { ButtonGroup, Divider, IconButton } from "@mui/material";
+import {
+  Box,
+  ButtonGroup,
+  Divider,
+  IconButton,
+  Menu,
+  MenuItem,
+  Tooltip,
+} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,7 +18,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { RoleModel } from "../../../Models/RoleModel";
 import VacationModel from "../../../Models/VacationModel";
 import { authStore } from "../../../Redux/AuthState";
@@ -20,6 +28,15 @@ import {
   vacationStore,
 } from "../../../Redux/VacationState";
 import "./MediaCard.css";
+import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
+import Badge from "@mui/material/Badge";
+import CardDialog from "../CardDialog/CardDialog";
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -76,6 +93,28 @@ function MediaCard(props: MediaCardProps): JSX.Element {
     vacationStore.dispatch(action);
   };
 
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const url = "https://github.com";
+  const shareSocialMenu = [
+    <Box sx={{ display: "flex", flexDirection: "row" }} key="socials">
+      <MenuItem onClick={() => setAnchorEl(null)}>
+        <FacebookShareButton url={url} title="hello world" hashtag="#hello">
+          <FacebookIcon size={28} round />
+        </FacebookShareButton>
+      </MenuItem>
+      <MenuItem onClick={() => setAnchorEl(null)}>
+        <WhatsappShareButton url={url}>
+          <WhatsappIcon size={28} round />
+        </WhatsappShareButton>
+      </MenuItem>
+    </Box>,
+  ];
+
   const action =
     user.roleId === RoleModel.Admin ? (
       <ButtonGroup>
@@ -92,15 +131,42 @@ function MediaCard(props: MediaCardProps): JSX.Element {
       <ButtonGroup>
         <IconButton onClick={handleFollowVacation}>
           {props.vacation.isFollowing ? (
-            <BookmarkIcon />
+            <Badge badgeContent={followersCount} color="info">
+              <Tooltip title="Remove from favorite">
+                <BookmarkIcon />
+              </Tooltip>
+            </Badge>
           ) : (
-            <BookmarkTwoToneIcon />
+            <Tooltip title="Add to favorite">
+              <Badge badgeContent={followersCount} color="info">
+                <BookmarkTwoToneIcon />
+              </Badge>
+            </Tooltip>
           )}
-          {followersCount}
         </IconButton>
+        <IconButton onClick={handleClick}>
+          <Tooltip title="Share to social">
+            <ShareRoundedIcon />
+          </Tooltip>
+        </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={() => setAnchorEl(null)}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
+          {shareSocialMenu}
+        </Menu>
       </ButtonGroup>
     );
-    
+
   return (
     <motion.div
       className="MediaCard"
@@ -113,12 +179,14 @@ function MediaCard(props: MediaCardProps): JSX.Element {
       }}
     >
       <Card sx={{ maxWidth: 345, position: "relative", height: 450 }}>
-        <CardMedia
-          sx={{ height: 250 }}
-          image={props.vacation.vacationImageUrl}
-          component="div"
-          title={props.vacation.destination}
-        />
+        <Link to={`/vacation-card/${props.vacation.vacationUuid}`}>
+          <CardMedia
+            sx={{ height: 250 }}
+            image={props.vacation.vacationImageUrl}
+            component="div"
+            title={props.vacation.destination}
+          />
+        </Link>
         <CardContent>
           <Typography variant="h4">{props.vacation.destination}</Typography>
           <Divider />
@@ -136,6 +204,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
             bottom: 0,
             width: "100%",
             padding: 0,
+            paddingTop: 5,
             background: "#FBF9F1",
             display: "flex",
             justifyContent: "space-around",

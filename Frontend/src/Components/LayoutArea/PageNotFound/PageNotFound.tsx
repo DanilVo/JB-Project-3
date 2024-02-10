@@ -1,14 +1,14 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
-import './PageNotFound.css';
-import notFoundImage from '../../../assets/images/bg-404.png';
+import { Box, Container, Grid, Typography } from "@mui/material";
+import "./PageNotFound.css";
+import notFoundImage from "../../../assets/images/images_near_texts/bg-404.png";
 function PageNotFound(): JSX.Element {
   return (
     <Container>
       <Grid
         container
         sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column-reverse', sm: 'row' },
+          display: "flex",
+          flexDirection: { xs: "column-reverse", sm: "row" },
         }}
       >
         <Grid item xs={12} sm={6}>

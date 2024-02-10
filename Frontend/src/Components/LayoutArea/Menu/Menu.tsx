@@ -96,7 +96,9 @@ function NavMenu(props: Props): JSX.Element {
           <NavLink to="/home">
             <Button startIcon={<HomeIcon />}>Home</Button>
           </NavLink>
-          <Button startIcon={<InfoOutlinedIcon />}>About us</Button>
+          <NavLink to="/about-us">
+            <Button startIcon={<InfoOutlinedIcon />}>About us</Button>
+          </NavLink>
         </ButtonGroup>
         <Menu
           anchorEl={anchorEl}
