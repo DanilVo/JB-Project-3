@@ -51,7 +51,10 @@ function Routing({
           }
         />
 
-        <Route path="vacation-card/:vacationUuid" element={<CardDialog/>} />
+        <Route
+          path="/home/vacation-card/:vacationUuid"
+          element={<Home filterVacations={filterVacations} />}
+        />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

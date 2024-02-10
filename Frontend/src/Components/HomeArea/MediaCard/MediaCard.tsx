@@ -17,7 +17,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { RoleModel } from "../../../Models/RoleModel";
 import VacationModel from "../../../Models/VacationModel";
@@ -99,16 +99,20 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const url = "https://github.com";
+
   const shareSocialMenu = [
     <Box sx={{ display: "flex", flexDirection: "row" }} key="socials">
       <MenuItem onClick={() => setAnchorEl(null)}>
-        <FacebookShareButton url={url} title="hello world" hashtag="#hello">
+        <FacebookShareButton
+          url={window.location.href}
+          title="hello world"
+          hashtag="#hello"
+        >
           <FacebookIcon size={28} round />
         </FacebookShareButton>
       </MenuItem>
       <MenuItem onClick={() => setAnchorEl(null)}>
-        <WhatsappShareButton url={url}>
+        <WhatsappShareButton url={window.location.href}>
           <WhatsappIcon size={28} round />
         </WhatsappShareButton>
       </MenuItem>
@@ -179,25 +183,28 @@ function MediaCard(props: MediaCardProps): JSX.Element {
       }}
     >
       <Card sx={{ maxWidth: 345, position: "relative", height: 450 }}>
-        <Link to={`/vacation-card/${props.vacation.vacationUuid}`}>
+        <CardDialog
+          vacationUuid={props.vacation.vacationUuid}
+          vacation={props.vacation}
+        >
           <CardMedia
             sx={{ height: 250 }}
             image={props.vacation.vacationImageUrl}
             component="div"
             title={props.vacation.destination}
           />
-        </Link>
-        <CardContent>
-          <Typography variant="h4">{props.vacation.destination}</Typography>
-          <Divider />
-          <Typography variant="body1" color="text.secondary">
-            {props.vacation.description}
-          </Typography>
+          <CardContent>
+            <Typography variant="h4">{props.vacation.destination}</Typography>
+            <Divider />
+            <Typography variant="body1" color="text.secondary">
+              {props.vacation.description}
+            </Typography>
 
-          <Typography variant="body2" fontWeight="bold">
-            {props.vacation.price}$
-          </Typography>
-        </CardContent>
+            <Typography variant="body2" fontWeight="bold">
+              {props.vacation.price}$
+            </Typography>
+          </CardContent>
+        </CardDialog>
         <CardActions
           style={{
             position: "absolute",

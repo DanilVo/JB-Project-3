@@ -7,6 +7,7 @@ import vacationService from "../../../Services/VacationsService";
 import useTitle from "../../../Utils/useTitle";
 import MediaCard from "../MediaCard/MediaCard";
 import "./Home.css";
+import CardDialog from "../CardDialog/CardDialog";
 
 enum FilterActionTypes {
   myVacations = "My-Vacations",
@@ -146,11 +147,18 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
       {vacations.length ? (
         <>
           <span ref={bottomRef}></span>
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: 2,
+            }}
+          >
             {currentPosts.map((vacation: VacationModel, index: number) => (
               <MediaCard
-                vacation={vacation}
                 key={vacation.vacationUuid}
+                vacation={vacation}
                 duration={(index + 2) * 0.1}
                 delete={deleteVacation}
                 follow={handleFollowVacation}
