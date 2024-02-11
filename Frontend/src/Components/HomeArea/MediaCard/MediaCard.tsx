@@ -1,7 +1,8 @@
-import BookmarkIcon from "@mui/icons-material/Bookmark";
-import BookmarkTwoToneIcon from "@mui/icons-material/BookmarkTwoTone";
-import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import EditIcon from "@mui/icons-material/Edit";
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import BookmarkTwoToneIcon from '@mui/icons-material/BookmarkTwoTone';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import EditIcon from '@mui/icons-material/Edit';
+import ShareRoundedIcon from '@mui/icons-material/ShareRounded';
 import {
   Box,
   ButtonGroup,
@@ -10,33 +11,32 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-} from "@mui/material";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { RoleModel } from "../../../Models/RoleModel";
-import VacationModel from "../../../Models/VacationModel";
-import { authStore } from "../../../Redux/AuthState";
-import {
-  VacationAction,
-  VacationActionTypes,
-  vacationStore,
-} from "../../../Redux/VacationState";
-import "./MediaCard.css";
-import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
+} from '@mui/material';
+import Badge from '@mui/material/Badge';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   FacebookIcon,
   FacebookShareButton,
   WhatsappIcon,
   WhatsappShareButton,
-} from "react-share";
-import Badge from "@mui/material/Badge";
-import CardDialog from "../CardDialog/CardDialog";
+} from 'react-share';
+import { RoleModel } from '../../../Models/RoleModel';
+import VacationModel from '../../../Models/VacationModel';
+import { authStore } from '../../../Redux/AuthState';
+import {
+  VacationAction,
+  VacationActionTypes,
+  vacationStore,
+} from '../../../Redux/VacationState';
+import CardDialog from '../CardDialog/CardDialog';
+import './MediaCard.css';
 
 interface MediaCardProps {
   vacation: VacationModel;
@@ -55,10 +55,10 @@ function MediaCard(props: MediaCardProps): JSX.Element {
 
   const startVacation = new Date(
     props.vacation.vacationStartDate
-  ).toLocaleDateString("en-GB");
+  ).toLocaleDateString('en-GB');
   const endVacation = new Date(
     props.vacation.vacationEndDate
-  ).toLocaleDateString("en-GB");
+  ).toLocaleDateString('en-GB');
 
   const deleteVacation = async () => {
     await props.delete(props.vacation.vacationId);
@@ -101,7 +101,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
   };
 
   const shareSocialMenu = [
-    <Box sx={{ display: "flex", flexDirection: "row" }} key="socials">
+    <Box sx={{ display: 'flex', flexDirection: 'row' }} key="socials">
       <MenuItem onClick={() => setAnchorEl(null)}>
         <FacebookShareButton
           url={window.location.href}
@@ -158,12 +158,12 @@ function MediaCard(props: MediaCardProps): JSX.Element {
           open={open}
           onClose={() => setAnchorEl(null)}
           anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "center",
+            vertical: 'bottom',
+            horizontal: 'center',
           }}
           transformOrigin={{
-            vertical: "top",
-            horizontal: "center",
+            vertical: 'top',
+            horizontal: 'center',
           }}
         >
           {shareSocialMenu}
@@ -182,7 +182,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <Card sx={{ maxWidth: 345, position: "relative", height: 450 }}>
+      <Card sx={{ maxWidth: 345, position: 'relative', height: 450 }}>
         <CardDialog
           vacationUuid={props.vacation.vacationUuid}
           vacation={props.vacation}
@@ -207,14 +207,14 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         </CardDialog>
         <CardActions
           style={{
-            position: "absolute",
+            position: 'absolute',
             bottom: 0,
-            width: "100%",
+            width: '100%',
             padding: 0,
             paddingTop: 5,
-            background: "#FBF9F1",
-            display: "flex",
-            justifyContent: "space-around",
+            background: '#FBF9F1',
+            display: 'flex',
+            justifyContent: 'space-around',
           }}
         >
           {action}

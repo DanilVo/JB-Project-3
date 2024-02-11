@@ -26,6 +26,9 @@ class AppConfig {
   public readonly verifyCodeUrl: string = `${this.baseUrl}api/verify-code/`;
 
   public readonly setNewPasswordUrl: string = `${this.baseUrl}api/update-password/`;
+
+  public readonly askGpt: string = `${this.baseUrl}api/ask-gpt/`;
+
 }
 
 const appConfig = new AppConfig();

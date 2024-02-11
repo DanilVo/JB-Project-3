@@ -9,13 +9,12 @@ import {
   TextField,
 } from '@mui/material';
 import { useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import authService from '../../Services/AuthService';
 import notificationService from '../../Services/NotificationService';
 import './DialogButton.css';
 
 function DialogButton(): JSX.Element {
-  const navigate = useNavigate();
 
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
