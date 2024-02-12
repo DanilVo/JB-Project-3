@@ -37,7 +37,7 @@ services:
       - mysql-service
 
     # image name:
-    image: danilvo/trip-blitz-api:1.0.2
+    image: danilvo/trip-blitz-api:1.1.0
 
     #Build image:
     build: ./Backend
@@ -60,7 +60,7 @@ services:
     depends_on:
       - api-service
 
-    image: danilvo/trip-blitz-react:1.1
+    image: danilvo/trip-blitz-react:1.2.0
 
     build: ./Frontend
 

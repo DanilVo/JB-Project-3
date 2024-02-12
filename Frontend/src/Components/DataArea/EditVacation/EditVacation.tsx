@@ -39,7 +39,7 @@ function EditVacation(): JSX.Element {
         setVacation(data.find((v) => v.vacationUuid === vacationUuid));
         setIsData(!isData);
       })
-      .catch((err: any) => notificationService.error(err));
+      .catch((err: any) => notificationService.error(err.message));
   }, []);
 
   useEffect(() => {

@@ -38,7 +38,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
         setVacations(data);
         setPaginationPagesCount(Math.ceil(data.length / postsPerPage));
       })
-      .catch((err: any) => notificationService.error(err));
+      .catch((err: any) => notificationService.error(err.message));
   }, []);
 
   useEffect(() => {

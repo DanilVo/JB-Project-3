@@ -1125,3 +1125,9 @@ Stack: Error: You exceeded your current quota, please check your plan and billin
     at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
     at processTicksAndRejections (node:internal/process/task_queues:95:5)
 ----------------------------------------------------------------------------------------------------
+Sun, 11 Feb 2024 21:02:35 GMT
+Failed deleting file
+----------------------------------------------------------------------------------------------------
+Sun, 11 Feb 2024 21:03:17 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------

@@ -62,11 +62,6 @@ function CardDialog(props: Props): JSX.Element {
   const splitText = (text: string) => {
     const lines = text.split('\n').filter((line) => line.trim() !== '');
     setAnswer(lines);
-    // return lines.forEach((line, index) => {
-    //   <Typography>
-    //     (`${index + 1}. ${line}`)
-    //   </Typography>;
-    // });
   };
 
   return (
@@ -113,7 +108,14 @@ function CardDialog(props: Props): JSX.Element {
               </Typography>
               <Typography>Price: {props.vacation.price}$</Typography>
             </DialogContentText>
-            <Box sx={{ border: '1px solid blue', height: 'fit-content', p: 1 }}>
+            <Box
+              sx={{
+                border: '1px solid blue',
+                borderRadius: 5,
+                height: 'fit-content',
+                p: 1,
+              }}
+            >
               <Container>
                 <Typography variant="h4" color="blue">
                   Try out BlitzGpt:
@@ -148,7 +150,13 @@ function CardDialog(props: Props): JSX.Element {
                   </Button>
                 </ButtonGroup>
                 <Paper
-                  sx={{ minHeight: '150px',maxHeight:'300px', mt: 1, p: 1, overflowX: 'hidden' }}
+                  sx={{
+                    minHeight: '150px',
+                    maxHeight: '300px',
+                    mt: 1,
+                    p: 1,
+                    overflowX: 'hidden',
+                  }}
                 >
                   {progress ? (
                     <CircularProgress
