@@ -1,14 +1,14 @@
-import { Route, Routes } from "react-router-dom";
-import AddVacation from "../../DataArea/AddVacation/AddVacation";
-import EditUser from "../../DataArea/EditUser/EditUser";
-import EditVacation from "../../DataArea/EditVacation/EditVacation";
-import Home from "../../HomeArea/Home/Home";
-import AllReports from "../../ReportsArea/AllReports/AllReports";
-import PageNotFound from "../PageNotFound/PageNotFound";
-import { authStore } from "../../../Redux/AuthState";
-import { RoleModel } from "../../../Models/RoleModel";
-import AboutTripBlitz from "../../AboutTripBlitz/AboutTripBlitz";
-import CardDialog from "../../HomeArea/CardDialog/CardDialog";
+import { Route, Routes } from 'react-router-dom';
+import AddVacation from '../../DataArea/AddVacation/AddVacation';
+import EditUser from '../../DataArea/EditUser/EditUser';
+import EditVacation from '../../DataArea/EditVacation/EditVacation';
+import Home from '../../HomeArea/Home/Home';
+import AllReports from '../../ReportsArea/AllReports/AllReports';
+import PageNotFound from '../PageNotFound/PageNotFound';
+import { authStore } from '../../../Redux/AuthState';
+import { RoleModel } from '../../../Models/RoleModel';
+import AboutTripBlitz from '../../AboutTripBlitz/AboutTripBlitz';
+import PasswordRecovery from '../../AuthArea/PasswordRecovery/PasswordRecovery';
 
 function Routing({
   filterVacations,
@@ -55,6 +55,9 @@ function Routing({
           path="/home/vacation-card/:vacationUuid"
           element={<Home filterVacations={filterVacations} />}
         />
+
+        {/* Password Recovery */}
+        <Route path="/auth/passwordRecovery" element={<PasswordRecovery />} />
 
         {/* Page not found Route*/}
         <Route path="*" element={<PageNotFound />} />

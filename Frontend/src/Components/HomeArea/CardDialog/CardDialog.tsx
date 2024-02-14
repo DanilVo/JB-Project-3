@@ -31,7 +31,7 @@ interface Props {
 function CardDialog(props: Props): JSX.Element {
   const navigate = useNavigate();
   const [openCard, setOpenCard] = useState<boolean>(false);
-  const [answer, setAnswer] = useState<string[]>([]);
+  const [answer, setAnswer] = useState<string[]>(['Select from above🌴']);
   const [progress, setProgress] = useState<boolean>(false);
 
   const theme = useTheme();
@@ -102,11 +102,9 @@ function CardDialog(props: Props): JSX.Element {
           />
           <Container>
             <DialogContentText id="alert-dialog-description">
-              <Typography>{props.vacation.description}</Typography>
-              <Typography>
-                Vacation dates: {vacationStartDate} - {vacationEndDate}
-              </Typography>
-              <Typography>Price: {props.vacation.price}$</Typography>
+              {props.vacation.description} <br />
+              Vacation dates: {vacationStartDate} - {vacationEndDate} <br />
+              Price: {props.vacation.price}$
             </DialogContentText>
             <Box
               sx={{

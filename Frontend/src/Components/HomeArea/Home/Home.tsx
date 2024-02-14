@@ -1,23 +1,22 @@
-import { Box, Container, Pagination, Typography } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import VacationModel from "../../../Models/VacationModel";
-import { vacationStore } from "../../../Redux/VacationState";
-import notificationService from "../../../Services/NotificationService";
-import vacationService from "../../../Services/VacationsService";
-import useTitle from "../../../Utils/useTitle";
-import MediaCard from "../MediaCard/MediaCard";
-import "./Home.css";
-import CardDialog from "../CardDialog/CardDialog";
+import { Box, Container, Pagination, Typography } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
+import VacationModel from '../../../Models/VacationModel';
+import { vacationStore } from '../../../Redux/VacationState';
+import notificationService from '../../../Services/NotificationService';
+import vacationService from '../../../Services/VacationsService';
+import useTitle from '../../../Utils/useTitle';
+import MediaCard from '../MediaCard/MediaCard';
+import './Home.css';
 
 enum FilterActionTypes {
-  myVacations = "My-Vacations",
-  yetToStart = "Yet-to-start",
-  activeNow = "Active-now",
-  allVacations = "All-vacations",
+  myVacations = 'My-Vacations',
+  yetToStart = 'Yet-to-start',
+  activeNow = 'Active-now',
+  allVacations = 'All-vacations',
 }
 
 function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
-  useTitle("Home");
+  useTitle('Home');
 
   const [initialVacations, setInitialVacations] = useState<VacationModel[]>([]);
   const [vacations, setVacations] = useState<VacationModel[]>([]);
@@ -93,9 +92,9 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
 
   const deleteVacation = async (vacationId: number) => {
     try {
-      if (confirm("Are you sure?")) {
+      if (confirm('Are you sure?')) {
         await vacationService.deleteVacation(vacationId);
-        notificationService.success("Vacation has been deleted!");
+        notificationService.success('Vacation has been deleted!');
         const remainingVacation = vacations.filter(
           (vacation) => vacation.vacationId !== vacationId
         );
@@ -114,7 +113,7 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
     try {
       await vacationService.followVacation(vacationId, isFollowing);
       notificationService.success(
-        !isFollowing ? "Vacation has been added!" : "Vacation has been removed!"
+        !isFollowing ? 'Vacation has been added!' : 'Vacation has been removed!'
       );
     } catch (err: any) {
       notificationService.error(err.message);
@@ -149,25 +148,26 @@ function Home({ filterVacations }: { filterVacations: string }): JSX.Element {
           <span ref={bottomRef}></span>
           <Box
             sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
               gap: 2,
             }}
           >
-            {currentPosts.map((vacation: VacationModel, index: number) => (
-              <MediaCard
-                key={vacation.vacationUuid}
-                vacation={vacation}
-                duration={(index + 2) * 0.1}
-                delete={deleteVacation}
-                follow={handleFollowVacation}
-              />
-            ))}
+            {currentPosts &&
+              currentPosts.map((vacation: VacationModel, index: number) => (
+                <MediaCard
+                  key={vacation.vacationUuid}
+                  vacation={vacation}
+                  duration={(index + 2) * 0.1}
+                  delete={deleteVacation}
+                  follow={handleFollowVacation}
+                />
+              ))}
           </Box>
           <Box>
             <Pagination
-              sx={{ width: "fit-content", m: "auto", mb: 1, mt: 1 }}
+              sx={{ width: 'fit-content', m: 'auto', mb: 1, mt: 1 }}
               count={paginationPagesCount}
               color="primary"
               onChange={handleChange}

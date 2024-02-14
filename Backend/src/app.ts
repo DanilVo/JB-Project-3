@@ -8,7 +8,7 @@ import { fileSaver } from 'uploaded-file-saver';
 import appConfig from './2-utils/app-config';
 import activities from './4-middleware/activities';
 import catchAll from './4-middleware/catch-all';
-import routeNotFound from './4-middleware/route-not-found';
+import { routeNotFound, pageNotFound } from './4-middleware/not-found';
 import sanitize from './4-middleware/sanitize';
 import authController from './6-controllers/auth-controller';
 import vacationController from './6-controllers/vacation-controller';
@@ -29,13 +29,12 @@ server.use(
 if (appConfig.isDevelopment) {
   server.use(cors());
 } else {
-  server.use(cors({ origin: 'http://www.our-website.com' }));
+  server.use(cors({ origin: '' }));
 }
 
 fileSaver.config(path.join(__dirname, '1-assets'));
 
 server.use(express.json());
-server.use(helmet({ crossOriginResourcePolicy: { policy: 'same-site' } }));
 server.use(expressFileUpload());
 server.use(activities);
 server.use(sanitize);
@@ -47,9 +46,10 @@ server.use(
   mailController,
   gptService
 );
-server.use('*', routeNotFound);
+server.use('/api/*', routeNotFound);
+server.use('/*', pageNotFound);
 server.use(catchAll);
 
 server.listen(appConfig.port, () =>
-  console.log(`Listening on https://localhost:${appConfig.port}`)
+  console.log(`Listening on port: ${appConfig.port}`)
 );

@@ -30,7 +30,7 @@ export default function PasswordRecovery(): JSX.Element {
         ...credentials,
         email: atob(localStorage.getItem('verifyUser')),
       };
-      const response = await authService.setNewPassword(credentials);
+      await authService.setNewPassword(credentials);
       notificationService.success('Password has been successfully updated');
       navigate('/auth/login');
     } catch (err: any) {

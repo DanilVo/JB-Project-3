@@ -99,7 +99,6 @@ export default function Login(props: Props) {
             </Button>
             <Grid container>
               <Grid item xs>
-                {/* <NavLink to="/passwordRecovery">Forgot password?</NavLink> */}
                 <DialogButton />
               </Grid>
               <Grid item>

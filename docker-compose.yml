@@ -1,25 +1,17 @@
-version: "1.1"
+version: '3.8'
 
-# Container
 services:
-  # MySQL service:
   mysql-service:
-    # Image Name:
-    image: danilvo/trip-blitz-mysql:1.0
+    image: trip-blitz-mysql
 
-    # Build image:
     build: ./Database
 
-    # Container name:
     container_name: trip-blitz-mysql
 
-    # Restart:
     restart: unless-stopped
 
-    # Enviroment variables:
     environment:
       MYSQL_HOST: localhost
-      # MYSQL_USER: root
       MYSQL_DATABASE: trip-blitz
       MYSQL_PASSWORD:
       MYSQL_ROOT_PASSWORD:
@@ -30,16 +22,12 @@ services:
 
   #---------------------------------------------------------------------------------------------
 
-  # Rest api service:
   api-service:
-    # Services we depend on:
     depends_on:
       - mysql-service
 
-    # image name:
-    image: danilvo/trip-blitz-api:1.1.0
+    image: trip-blitz-api
 
-    #Build image:
     build: ./Backend
 
     container_name: trip-blitz-api
@@ -51,7 +39,6 @@ services:
 
     environment:
       MYSQL_HOST: mysql-service
-      # MYSQL_USER: root
       MYSQL_PASSWORD:
 
   #---------------------------------------------------------------------------------------------
