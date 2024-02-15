@@ -8,7 +8,7 @@ import { fileSaver } from 'uploaded-file-saver';
 import appConfig from './2-utils/app-config';
 import activities from './4-middleware/activities';
 import catchAll from './4-middleware/catch-all';
-import { routeNotFound, pageNotFound } from './4-middleware/not-found';
+import { routeNotFound } from './4-middleware/not-found';
 import sanitize from './4-middleware/sanitize';
 import authController from './6-controllers/auth-controller';
 import vacationController from './6-controllers/vacation-controller';
@@ -47,9 +47,12 @@ server.use(
   gptService
 );
 server.use('/api/*', routeNotFound);
-server.use('/*', pageNotFound);
 server.use(catchAll);
 
 server.listen(appConfig.port, () =>
   console.log(`Listening on port: ${appConfig.port}`)
 );
+
+export default {
+  server,
+};

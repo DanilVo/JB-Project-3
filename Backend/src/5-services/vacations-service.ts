@@ -1,11 +1,11 @@
-import { OkPacket } from "mysql";
-import path from "path";
-import { fileSaver } from "uploaded-file-saver";
-import appConfig from "../2-utils/app-config";
-import cyber from "../2-utils/cyber";
-import dal from "../2-utils/dal";
-import { ResourceNotFoundError } from "../3-models/error-models";
-import VacationModel from "../3-models/vacation-model";
+import { OkPacket } from 'mysql';
+import path from 'path';
+import { fileSaver } from 'uploaded-file-saver';
+import appConfig from '../2-utils/app-config';
+import cyber from '../2-utils/cyber';
+import dal from '../2-utils/dal';
+import { ResourceNotFoundError } from '../3-models/error-models';
+import VacationModel from '../3-models/vacation-model';
 
 interface VacationInfo {
   userId: number;
@@ -14,9 +14,7 @@ interface VacationInfo {
 
 class VacationService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    "SELECT vacationImageUrl FROM vacations WHERE vacationId = ?";
-  private readonly SELECT_ONE_vacation_SQL =
-    "SELECT * FROM vacations WHERE vacationId = ?";
+    'SELECT vacationImageUrl FROM vacations WHERE vacationId = ?';
   private readonly INSERT_vacation_SQL = `
     INSERT INTO vacations(vacationUuid,destination,description,vacationStartDate,vacationEndDate,price,vacationImageUrl)
     VALUES(?,?,?,?,?,?,?)`;
@@ -25,7 +23,7 @@ class VacationService {
     SET vacationUuid=?, destination=?, description=?, vacationStartDate=?, vacationEndDate=?, price=?, vacationImageUrl=?
     WHERE vacationId = ?`;
   private readonly DELETE_vacation_SQL =
-    "DELETE FROM vacations WHERE vacationId = ?";
+    'DELETE FROM vacations WHERE vacationId = ?';
   private readonly GET_following_vacations = `
         SELECT DISTINCT
         V.*,CONCAT('${appConfig.appHost}','/api/vacations/image/',vacationImageUrl) AS vacationImageUrl,
@@ -36,20 +34,20 @@ class VacationService {
         GROUP BY vacationId
         ORDER BY vacationStartDate`;
   private readonly FOLLOW_VACATION =
-    "INSERT INTO followers (userId, vacationId) VALUES (?, ?)";
+    'INSERT INTO followers (userId, vacationId) VALUES (?, ?)';
   private readonly UNFOLLOW_VACATION =
-    "DELETE FROM followers WHERE followers.userId = ? AND followers.vacationId = ?";
+    'DELETE FROM followers WHERE followers.userId = ? AND followers.vacationId = ?';
 
   private async getExistingImageName(id: number): Promise<string> {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return "";
+    if (!vacation) return '';
     return vacation.vacationImageUrl;
   }
 
   // Get all vacations
-  public async getVacations(userId: number): Promise<VacationModel[]> {    
+  public async getVacations(userId: number): Promise<VacationModel[]> {
     const sql = this.GET_following_vacations;
     const vacations = await dal.execute(sql, [userId]);
     return vacations;
@@ -63,7 +61,7 @@ class VacationService {
     vacation.validation();
     const imageName = await fileSaver.add(
       vacation.image,
-      path.join(__dirname, "..", "1-assets", "vacationImages")
+      path.join(__dirname, '..', '1-assets', 'vacationImages')
     );
     const sql = this.INSERT_vacation_SQL;
 
@@ -83,7 +81,7 @@ class VacationService {
   }
 
   // Update vacation
-  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {    
+  public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.validation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
@@ -93,7 +91,7 @@ class VacationService {
       ? await fileSaver.update(
           existingImageName,
           vacation.image,
-          path.join(__dirname, "..", "1-assets", "vacationImages")
+          path.join(__dirname, '..', '1-assets', 'vacationImages')
         )
       : existingImageName;
     const sql = this.UPDATE_vacation_SQL;
@@ -117,14 +115,13 @@ class VacationService {
   // Delete vacation
   public async deleteVacation(id: number): Promise<void> {
     const sql = this.DELETE_vacation_SQL;
-    const imageToDelete = await this.getExistingImageName(id)
+    const imageToDelete = await this.getExistingImageName(id);
     await fileSaver.delete(
       imageToDelete,
-      path.join(__dirname, "..", "1-assets", "vacationImages")
+      path.join(__dirname, '..', '1-assets', 'vacationImages')
     );
     const info: OkPacket = await dal.execute(sql, [id]);
-    
-    // await fileSaver.delete(imageToDelete)
+
     if (info.affectedRows === 0) throw new ResourceNotFoundError();
   }
 

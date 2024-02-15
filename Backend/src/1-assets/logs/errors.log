@@ -145,7 +145,7 @@ Stack: Error: newUploadedFile can't be empty.
     at C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\src\5-services\vacations-service.ts:8:71
     at new Promise (<anonymous>)
 ----------------------------------------------------------------------------------------------------
-Thu, 25 Jan 2024 12:57:05 GMT
+Thu, 25 Jan 2024 12:57:05 GMT 
 newUploadedFile can't be empty.
 Stack: Error: newUploadedFile can't be empty.
     at FileSaver.<anonymous> (C:\Users\משתמש\OneDrive\Desktop\JB Projects 3\Backend\node_modules\uploaded-file-saver\dist\file-saver.js:34:23)

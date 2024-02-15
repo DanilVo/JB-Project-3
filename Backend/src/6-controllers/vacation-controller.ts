@@ -86,7 +86,7 @@ router.delete(
     try {
       const id = +request.params.id;
       await vacationService.deleteVacation(id);
-      response.sendStatus(StatusCode.OK);
+      response.sendStatus(StatusCode.NoContent);
     } catch (err: any) {
       next(err);
     }

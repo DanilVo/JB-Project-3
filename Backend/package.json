@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A backend service for managing and serving data for JB vacation Project.",
   "scripts": {
-    "start": "nodemon --exec ts-node src/app.ts --quiet"
+    "start": "nodemon --exec ts-node src/app.ts --quiet",
+    "test": "mocha --require ts-node/register test/**/*.test.ts --exit"
   },
   "keywords": [],
   "author": "",
@@ -28,13 +29,21 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/express-fileupload": "^1.4.4",
     "@types/jsonwebtoken": "^9.0.5",
+    "@types/mocha": "^10.0.1",
     "@types/mysql": "^2.15.24",
     "@types/node": "^20.10.3",
     "@types/nodemailer": "^6.4.14",
-    "@types/uuid": "^9.0.7"
+    "@types/supertest": "^6.0.2",
+    "@types/uuid": "^9.0.7",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.4",
+    "ts-node": "^10.9.1"
   }
 }
