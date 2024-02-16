@@ -47,7 +47,7 @@ services:
     depends_on:
       - api-service
 
-    image: danilvo/trip-blitz-react:1.2.0
+    image: trip-blitz-react
 
     build: ./Frontend
 

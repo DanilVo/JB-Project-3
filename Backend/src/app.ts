@@ -26,11 +26,11 @@ server.use(
   })
 );
 
-if (appConfig.isDevelopment) {
-  server.use(cors());
-} else {
-  server.use(cors({ origin: '' }));
-}
+// if (appConfig.isDevelopment) {
+//   server.use(cors());
+// } else {
+//   server.use(cors({ origin: '' }));
+// }
 
 fileSaver.config(path.join(__dirname, '1-assets'));
 
