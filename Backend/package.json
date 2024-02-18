@@ -1,13 +1,13 @@
 {
   "name": "backend",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A backend service for managing and serving data for JB vacation Project.",
   "scripts": {
-    "start": "nodemon --exec ts-node src/app.ts --quiet",
+    "start": "nodemon --exec ts-node src/app.ts --quite --ignore src/1-assets",
     "test": "mocha --require ts-node/register test/**/*.test.ts --exit"
   },
   "keywords": [],
-  "author": "",
+  "author": "Danil Volobuyev",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

@@ -2,7 +2,6 @@ import cors from 'cors';
 import express from 'express';
 import expressFileUpload from 'express-fileupload';
 import expressRateLimit from 'express-rate-limit';
-import helmet from 'helmet';
 import path from 'path';
 import { fileSaver } from 'uploaded-file-saver';
 import appConfig from './2-utils/app-config';
@@ -18,6 +17,7 @@ import gptService from './6-controllers/gpt-controller';
 
 const server = express();
 
+console.log('Server created');
 server.use(
   expressRateLimit({
     windowMs: 10000,
@@ -27,9 +27,9 @@ server.use(
 );
 
 // if (appConfig.isDevelopment) {
-//   server.use(cors());
+  server.use(cors());
 // } else {
-//   server.use(cors({ origin: '' }));
+//   server.use(cors({ origin: 'http://159.89.186.34:5173/' }));
 // }
 
 fileSaver.config(path.join(__dirname, '1-assets'));
@@ -49,9 +49,18 @@ server.use(
 server.use('/api/*', routeNotFound);
 server.use(catchAll);
 
-server.listen(appConfig.port, () =>
-  console.log(`Listening on port: ${appConfig.port}`)
-);
+server.on('error', (err) => {
+  console.error('Server failed to start:', err);
+});
+
+server.listen(appConfig.port, () => {
+  try {
+    console.log(`Express server is running.`);
+    console.log(`Listening on port: ${appConfig.port}`);
+  } catch (error) {
+    console.error('Error starting server:', error);
+  }
+});
 
 export default {
   server,

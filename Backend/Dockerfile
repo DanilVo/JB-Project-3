@@ -10,6 +10,6 @@ COPY package*.json /app
 
 RUN npm i
 
-COPY . ./
+COPY . /app
 
 ENTRYPOINT npm start

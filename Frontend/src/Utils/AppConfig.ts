@@ -1,36 +1,66 @@
 class AppConfig {
-  public readonly baseUrl: string = "http://localhost:4000/";
+  public readonly baseUrl: string;
 
-  public readonly allVacationsUrl: string = `${this.baseUrl}api/vacations/subscriptions/`;
+  public readonly allVacationsUrl: string;
 
-  public readonly loginUserUrl: string = `${this.baseUrl}api/auth/login`;
+  public readonly loginUserUrl: string;
 
-  public readonly registerUserUrl: string = `${this.baseUrl}api/auth/register`;
+  public readonly registerUserUrl: string;
 
-  public readonly vacationActionsUrl: string = `${this.baseUrl}api/vacations/`;
+  public readonly vacationActionsUrl: string;
 
-  public readonly addVacationUrl: string = `${this.baseUrl}api/add-vacation/`;
+  public readonly addVacationUrl: string;
 
-  public readonly addMultipleVacationUrl: string = `${this.baseUrl}api/add-multiple-vacation/`;
+  public readonly addMultipleVacationUrl: string;
 
-  public readonly updateUserUrl: string = `${this.baseUrl}api/user/`;
+  public readonly updateUserUrl: string;
 
-  public readonly userImageUrl: string = `${this.baseUrl}api/user/image/`;
+  public readonly userImageUrl: string;
 
-  public readonly followActionsVacationUrl: string = `${this.baseUrl}api/follow`;
+  public readonly followActionsVacationUrl: string;
 
-  public readonly reportsUrl: string = `${this.baseUrl}api/vacation-reports/`;
+  public readonly reportsUrl: string;
 
-  public readonly sendVerificationEmailUrl: string = `${this.baseUrl}api/password-recovery/`;
+  public readonly sendVerificationEmailUrl: string;
 
-  public readonly verifyCodeUrl: string = `${this.baseUrl}api/verify-code/`;
+  public readonly verifyCodeUrl: string;
 
-  public readonly setNewPasswordUrl: string = `${this.baseUrl}api/update-password/`;
+  public readonly setNewPasswordUrl: string;
 
-  public readonly askGpt: string = `${this.baseUrl}api/ask-gpt/`;
+  public readonly askGpt: string;
 
+  public constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
+    this.allVacationsUrl = `${this.baseUrl}/api/vacations/subscriptions/`;
+    this.loginUserUrl = `${this.baseUrl}/api/auth/login`;
+    this.registerUserUrl = `${this.baseUrl}/api/auth/register`;
+    this.vacationActionsUrl = `${this.baseUrl}/api/vacations/`;
+    this.addVacationUrl = `${this.baseUrl}/api/add-vacation/`;
+    this.addMultipleVacationUrl = `${this.baseUrl}/api/add-multiple-vacation/`;
+    this.updateUserUrl = `${this.baseUrl}/api/user/`;
+    this.userImageUrl = `${this.baseUrl}/api/user/image/`;
+    this.followActionsVacationUrl = `${this.baseUrl}/api/follow`;
+    this.reportsUrl = `${this.baseUrl}/api/vacation-reports/`;
+    this.sendVerificationEmailUrl = `${this.baseUrl}/api/password-recovery/`;
+    this.verifyCodeUrl = `${this.baseUrl}/api/verify-code/`;
+    this.setNewPasswordUrl = `${this.baseUrl}/api/update-password/`;
+    this.askGpt = `${this.baseUrl}/api/ask-gpt/`;
+  }
 }
 
-const appConfig = new AppConfig();
+class DevelopmentConfig extends AppConfig {
+  public constructor() {
+    super("http://localhost:4000");
+  }
+}
+
+class ProductionConfig extends AppConfig {
+  public constructor() {
+    super("http://159.89.186.34:4000");
+  }
+}
+
+// const appConfig = new ProductionConfig();
+const appConfig = new DevelopmentConfig();
 
 export default appConfig;
