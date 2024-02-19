@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "A backend service for managing and serving data for JB vacation Project.",
   "scripts": {
-    "start": "nodemon --exec ts-node src/app.ts --quite --ignore src/1-assets",
+    "start": "nodemon --legacy-watch --exec ts-node src/app.ts",
     "test": "mocha --require ts-node/register test/**/*.test.ts --exit"
   },
   "keywords": [],

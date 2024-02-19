@@ -8,7 +8,7 @@ class AppConfig {
   public password = process.env.MYSQL_PASSWORD;
   public database = process.env.MYSQL_DATABASE;
 
-  public readonly appHost = `http://localhost:${process.env.PORT}`;
+  public readonly appHost = `http://104.248.12.109:${process.env.PORT}`;
 }
 
 class DevelopmentConfig extends AppConfig {

@@ -113,9 +113,6 @@ function LandingPage(): JSX.Element {
             <Typography variant="body1" color="initial">
               This Website Was Designed By Danil Volobuyev.
             </Typography>
-            <Typography variant="body1" color="initial">
-              Inspired by WIX
-            </Typography>
           </motion.div>
         </footer>
       </div>

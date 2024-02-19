@@ -105,8 +105,8 @@ function MediaCard(props: MediaCardProps): JSX.Element {
       <MenuItem onClick={() => setAnchorEl(null)}>
         <FacebookShareButton
           url={window.location.href}
-          title="hello world"
-          hashtag="#hello"
+          title="Visit TripBlitz🌴"
+          hashtag="#TripBlitz"
         >
           <FacebookIcon size={28} round />
         </FacebookShareButton>

@@ -86,14 +86,7 @@ function Header(props: Props): JSX.Element {
                   boxShadow: "1px 1px 10px black",
                   scale: "1.3",
                 }}
-                src={
-                  user.userImageUrl
-                    ? `http://localhost:4000/api/user/image/${user.userImageUrl}`
-                    : `${user.firstName.slice(0, 1)}${user.lastName.slice(
-                        0,
-                        1
-                      )}`
-                }
+                src={`http://localhost:4000/api/user/image/${user.userImageUrl}`}
               ></Avatar>
             </IconButton>
             <Menu

@@ -13,8 +13,9 @@ services:
     environment:
       MYSQL_HOST: localhost
       MYSQL_DATABASE: trip-blitz
-      MYSQL_PASSWORD:
-      MYSQL_ROOT_PASSWORD:
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: 
       MYSQL_ALLOW_EMPTY_PASSWORD: true
 
     volumes:
@@ -37,9 +38,10 @@ services:
 
     restart: unless-stopped
 
-    environment:
+    environment: 
       MYSQL_HOST: mysql-service
-      MYSQL_PASSWORD:
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
 
   #---------------------------------------------------------------------------------------------
 

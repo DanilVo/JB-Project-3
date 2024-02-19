@@ -17,7 +17,6 @@ import gptService from './6-controllers/gpt-controller';
 
 const server = express();
 
-console.log('Server created');
 server.use(
   expressRateLimit({
     windowMs: 10000,
@@ -26,11 +25,7 @@ server.use(
   })
 );
 
-// if (appConfig.isDevelopment) {
-  server.use(cors());
-// } else {
-//   server.use(cors({ origin: 'http://159.89.186.34:5173/' }));
-// }
+server.use(cors({ origin: true }));
 
 fileSaver.config(path.join(__dirname, '1-assets'));
 
@@ -49,17 +44,8 @@ server.use(
 server.use('/api/*', routeNotFound);
 server.use(catchAll);
 
-server.on('error', (err) => {
-  console.error('Server failed to start:', err);
-});
-
 server.listen(appConfig.port, () => {
-  try {
-    console.log(`Express server is running.`);
     console.log(`Listening on port: ${appConfig.port}`);
-  } catch (error) {
-    console.error('Error starting server:', error);
-  }
 });
 
 export default {
