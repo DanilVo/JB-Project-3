@@ -8,7 +8,7 @@ describe('Testing GPT endpoint:', () => {
     const prompt = 'What is the capital of France?';
     const response = await supertest(app.server)
       .post('/api/ask-gpt/')
-      .send({ prompt });
+      .send(prompt);
     expect(response.status).to.equal(200);
     expect(response.body).to.be.a('string'); 
   });

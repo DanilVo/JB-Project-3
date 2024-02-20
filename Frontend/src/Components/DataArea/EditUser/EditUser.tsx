@@ -19,7 +19,11 @@ import appConfig from '../../../Utils/AppConfig';
 import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
 import './EditUser.css';
 import useTitle from '../../../Utils/useTitle';
-import DialogButton from '../../DialogButton/DialogButton';
+import DialogButton from '../../PassRecoveryBackdrop/DialogButton';
+
+interface ErrorMessages {
+  [key: string]: string;
+}
 
 function EditUser(): JSX.Element {
   useTitle('Edit user');
@@ -57,7 +61,18 @@ function EditUser(): JSX.Element {
       notificationService.success('User has been successfully updated');
       navigate('/home');
     } catch (err: any) {
-      notificationService.error('Failed to edit user: ' + err.message);
+      const errorMessages: ErrorMessages = {
+        firstName: 'Missing first name',
+        lastName: 'Missing last name',
+        email: 'Email is missing',
+        image: 'Image is to large',
+      };
+
+      Object.keys(errorMessages).forEach((fieldName) => {
+        if (err.response.data.includes(fieldName)) {
+          notificationService.error(errorMessages[fieldName]);
+        }
+      });
     }
   }
 

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-// import { google } from 'googleapis';
+const { google } = require('googleapis');
 import nodemailer from 'nodemailer';
 import dal from '../2-utils/dal';
 import logger from '../2-utils/logger';
@@ -31,12 +31,11 @@ class MailService {
     };
   };
 
-  private oAuth2Client 
-  // = new google.auth.OAuth2(
-  //   process.env.CLIENT_ID,
-  //   process.env.CLIENT_SECRET,
-  //   process.env.REDIRECT_URI
-  // );
+  private oAuth2Client = new google.auth.OAuth2(
+    process.env.CLIENT_ID,
+    process.env.CLIENT_SECRET,
+    process.env.REDIRECT_URI
+  );
 
   public async passwordRecovery(toEmail: string) {
     const userExists = await this.checkUserExistence(toEmail);

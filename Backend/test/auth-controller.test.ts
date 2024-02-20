@@ -14,37 +14,37 @@ describe('Testing auth controller endpoint:', () => {
     expect(token).to.have.length.gte(100).and.lte(600);
   });
 
-  it('should not login with invalid email ', async () => {
+  it('should not login with invalid email syntax', async () => {
     const response = await supertest(app.server).post('/api/auth/login').send({
       email: 'notValidEmail.com',
-      password: 'Test1234',
+      password: 'notValidPassword1234',
     });
     expect(response.status).to.equals(422);
   });
 
   it('should not login with invalid email ', async () => {
     const response = await supertest(app.server).post('/api/auth/login').send({
-      email: 'test@test.com',
-      password: 'notValidPassword',
+      email: 'notValidEmail@email.com',
+      password: 'notValidPassword1234',
     });
-    expect(response.status).to.equals(422);
+    expect(response.status).to.equals(401);
   });
 
   it('should not login with invalid password ', async () => {
     const response = await supertest(app.server).post('/api/auth/login').send({
       email: 'admin@admin.com',
-      password: 'notValidPassword',
+      password: 'notValidPassword1234',
     });
-    expect(response.status).to.equals(422);
+    expect(response.status).to.equals(401);
   });
 
   it('should register a new user with valid data', async () => {
     const response = await supertest(app.server)
       .post('/api/auth/register')
       .send({
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'johndoe@example.com',
+        firstName: 'Hugh',
+        lastName: 'Jorgan',
+        email: 'hughjorgan1@example.com',
         password: 'Test1234',
       });
     expect(response.status).to.equal(201);
@@ -55,9 +55,9 @@ describe('Testing auth controller endpoint:', () => {
     const response = await supertest(app.server)
       .post('/api/auth/register')
       .send({
-        firstName: 'John',
-        lastName: 'Doe',
-        email: 'admin@admin.com',
+        firstName: 'Hugh',
+        lastName: 'Jorgan',
+        email: 'hughjorgan@example.com',
         password: 'Test1234',
       });
     expect(response.status).to.equal(422);

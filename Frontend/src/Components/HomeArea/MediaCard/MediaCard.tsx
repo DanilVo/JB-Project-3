@@ -104,7 +104,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
     <Box sx={{ display: 'flex', flexDirection: 'row' }} key="socials">
       <MenuItem onClick={() => setAnchorEl(null)}>
         <FacebookShareButton
-          url={window.location.href}
+          url={`${window.location.href}/vacation-card/${props.vacation.vacationUuid}`}
           title="Visit TripBlitz🌴"
           hashtag="#TripBlitz"
         >
@@ -112,7 +112,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         </FacebookShareButton>
       </MenuItem>
       <MenuItem onClick={() => setAnchorEl(null)}>
-        <WhatsappShareButton url={window.location.href}>
+        <WhatsappShareButton url={`${window.location.href}/vacation-card/${props.vacation.vacationUuid}`}>
           <WhatsappIcon size={28} round />
         </WhatsappShareButton>
       </MenuItem>

@@ -9,13 +9,13 @@ import {
   TextField,
 } from '@mui/material';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import authService from '../../Services/AuthService';
 import notificationService from '../../Services/NotificationService';
 import './DialogButton.css';
 
 function DialogButton(): JSX.Element {
-
+  const navigate = useNavigate();
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
 
@@ -39,9 +39,16 @@ function DialogButton(): JSX.Element {
   const verifyCode = async (code: string) => {
     setOpenBackdrop(true);
     try {
-      await authService.verifyCode(+code);
-      setOpenDialog(false);
-      setInputValue('');
+      if (!code) {
+        notificationService.error('Please enter verification code.');
+        return;
+      }
+      const res = await authService.verifyCode(+code);
+      if (res === 202) {
+        setOpenDialog(false);
+        setInputValue('');
+        navigate('/auth/passwordRecovery')
+      }
     } catch (err: any) {
       notificationService.error('Verification code is not valid');
     } finally {
@@ -75,26 +82,38 @@ function DialogButton(): JSX.Element {
             : 'Verification code will be sent to your Email:'}
         </DialogTitle>
         <DialogContent>
-          <TextField
-            required
-            label={emailSended ? 'Verification code:' : 'Enter your Email:'}
-            fullWidth
-            margin="normal"
-            name="email"
-            autoComplete={emailSended ? 'email' : ''}
-            value={inputValue}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setInputValue(e.target.value)
-            }
-          />
+          {emailSended ? (
+            <TextField
+              required
+              label="Verification code:"
+              fullWidth
+              margin="normal"
+              name="verification"
+              value={inputValue}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setInputValue(e.target.value)
+              }
+            />
+          ) : (
+            <TextField
+              required
+              label="Enter your Email:"
+              fullWidth
+              margin="normal"
+              name="email"
+              autoComplete="email"
+              value={inputValue}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setInputValue(e.target.value)
+              }
+            />
+          )}
         </DialogContent>
         <DialogActions>
           {emailSended ? (
-            <NavLink to="/auth/passwordRecovery">
               <Button onClick={() => verifyCode(inputValue)}>
                 Update password
               </Button>
-            </NavLink>
           ) : (
             <Button onClick={() => verificationEmail(inputValue)}>
               Send email

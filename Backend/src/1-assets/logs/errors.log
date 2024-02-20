@@ -1137,3 +1137,495 @@ Incorrect Email or Password
 Sat, 17 Feb 2024 14:13:00 GMT
 "password" with value "asdasdasd" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
 ----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:19:25 GMT
+User with Email volobuyev.stock@gmail.com doesn't exist.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:20:08 GMT
+User with Email volobuyev.stock@gmail.com doesn't exist.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:20:46 GMT
+User with Email volobuyev.stock@gmail.com doesn't exist.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:00 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:00 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:07 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:07 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:11 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:18 GMT
+User with Email volobuyev.stock@gmail.com doesn't exist.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:30 GMT
+Error: 88630000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
+
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:23:11 GMT
+Error: Message failed: 502 5.7.0 Your SMTP account is not yet activated. Please contact us at contact@sendinblue.com to request activation.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:23:32 GMT
+Error: Message failed: 502 5.7.0 Your SMTP account is not yet activated. Please contact us at contact@sendinblue.com to request activation.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:47:31 GMT
+User with Email volobuyev.stock@gmail.com doesn't exist.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:49:25 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\logs\verifyCredentials.json'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\logs\verifyCredentials.json'
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:49:43 GMT
+ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\logs\verifyCredentials.json'
+Stack: Error: ENOENT: no such file or directory, open 'C:\Users\PC\Desktop\JB Project 3\Backend\src\1-assets\logs\verifyCredentials.json'
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:01:57 GMT
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ck8-20020a0564021c0800b0056452477a5esm2758148edb.24 - gsmtp
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:02:17 GMT
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials f19-20020a05600c155300b00411ff030f06sm15858268wmg.9 - gsmtp
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:02:50 GMT
+Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials w3-20020a05600c014300b0040fccf7e8easm15193827wmm.36 - gsmtp
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:22:35 GMT
+Failed deleting file
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:30:01 GMT
+Error: 748A0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:355:
+
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:30:48 GMT
+Error: Message failed: 550 The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved. Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ to see the Sender Identity requirements
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:31:19 GMT
+Error: Message failed: 550 The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved. Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ to see the Sender Identity requirements
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:32:14 GMT
+Error: Message failed: 550 The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved. Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ to see the Sender Identity requirements
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:32:23 GMT
+Error: Message failed: 550 The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved. Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ to see the Sender Identity requirements
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:33:03 GMT
+Error: Greeting never received
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:33:40 GMT
+Error: Greeting never received
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:39:08 GMT
+User with Email volobuyev.stock@gmail.com doesn't exist.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+"firstName" is required
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+"firstName" is required
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:30 GMT
+"firstName" is required
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+"firstName" is required
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+"firstName" is required
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+Incorrect Email or Password
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:35 GMT
+User with Email hughjorgan@example.com already exists.
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:35 GMT
+"firstName" is required
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+Invalid value for 'content': expected a string, got null.
+Stack: Error: Invalid value for 'content': expected a string, got null.
+    at Function.generate (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\error.ts:75:6)
+    at OpenAI.makeStatusError (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:430:15)
+    at OpenAI.makeRequest (C:\Users\PC\Desktop\JB Project 3\Backend\node_modules\openai\src\core.ts:479:18)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+You are not logged in
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+jwt expired
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+Route /api/vacations/undefined not exist
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:52:02 GMT
+"password" with value "soloduha10" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:52:10 GMT
+"password" with value "soloduha10" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:52:23 GMT
+"password" with value "soloduha10" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:03:02 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:03:52 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:04:04 GMT
+"password" with value "asdasdasd" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:04:30 GMT
+"password" with value "asdasdasd" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:05:26 GMT
+"password" with value "asdasdasd" fails to match the required pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:05:36 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:05:42 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:07:18 GMT
+"email" must be a valid email
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:18:26 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:18:39 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:19:00 GMT
+"lastName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:19:05 GMT
+"email" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:19:35 GMT
+"lastName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:23:57 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:24:00 GMT
+"lastName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:24:04 GMT
+"email" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:24:08 GMT
+"password" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:26:56 GMT
+"password" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:28:15 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:28:39 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:29:49 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:30:14 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:31:05 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:42:31 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:42:51 GMT
+"firstName" is not allowed to be empty
+----------------------------------------------------------------------------------------------------

@@ -29,7 +29,7 @@ class UserService {
     const sql = this.UPDATE_user_SQL;
     const info: OkPacket = await dal.execute(sql, [
       user.firstName,
-      user.lastName,
+      user.lastName, 
       user.email,
       imageName,
       user.userId,

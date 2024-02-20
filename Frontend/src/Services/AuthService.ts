@@ -7,7 +7,6 @@ import appConfig from '../Utils/AppConfig';
 
 class AuthService {
   public async logIn(credentials: CredentialsModel): Promise<void> {
-
     const response = await axios.post(appConfig.loginUserUrl, credentials);
     const token = response.data;
     const authAction: AuthAction = {
@@ -39,8 +38,9 @@ class AuthService {
     localStorage.setItem('verifyUser', btoa(email));
   }
 
-  public async verifyCode(code: number): Promise<void> {
-    await axios.get(appConfig.verifyCodeUrl + code);
+  public async verifyCode(code: number): Promise<number> {
+    const res = await axios.get(appConfig.verifyCodeUrl + code);
+    return res.status;
   }
 
   public async setNewPassword(

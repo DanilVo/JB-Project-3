@@ -56,7 +56,7 @@ class DevelopmentConfig extends AppConfig {
 
 class ProductionConfig extends AppConfig {
   public constructor() {
-    super("http://104.248.12.109:4000");
+    super("http://159.89.186.34:4000");
   }
 }
 

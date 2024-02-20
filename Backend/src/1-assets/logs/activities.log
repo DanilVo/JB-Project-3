@@ -26335,3 +26335,1221 @@ Method: GET
 Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
 Body: {}
 ----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:01:54 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:18:52 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:19:25 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:20:08 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:20:46 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:00 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"volobuyev.stock@gmail.com","password":"Rtrtnrf123"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:00 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"volobuyev.stock@gmail.com","password":"Rtrtnrf1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:07 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"volobuyev.stock@gmail.com","password":"Test123"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:07 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"volobuyev.stock@gmail.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:11 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"volobuyev.stock@gmail.com","password":"Rtrtnrf19"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:18 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:22:27 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:23:09 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:23:28 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:46:48 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:47:31 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:47:37 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:49:25 GMT
+
+Method: GET
+Route: /api/verify-code/NaN
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:49:39 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 17:49:43 GMT
+
+Method: GET
+Route: /api/verify-code/0
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:00:46 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:01:15 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:01:55 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:02:15 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:02:49 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:03:47 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:19:10 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:19:55 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:20:15 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:22:13 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:22:30 GMT
+
+Method: GET
+Route: /api/verify-code/NaN
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:22:34 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:30:01 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:30:46 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:31:18 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:32:13 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:32:22 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:32:33 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:33:10 GMT
+
+Method: GET
+Route: /api/password-recovery/admin@admin.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:39:08 GMT
+
+Method: GET
+Route: /api/password-recovery/volobuyev.stock@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:39:15 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:45:34 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 18:46:10 GMT
+
+Method: GET
+Route: /api/password-recovery/dani736@gmail.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail@email.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:13 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {"prompt":"What is the capital of France?"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: GET
+Route: /password-recovery/nonexistent@example.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: DELETE
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:19:14 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail@email.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:13 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {"prompt":"What is the capital of France?"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: GET
+Route: /password-recovery/nonexistent@example.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: DELETE
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:14 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail@email.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:29 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:30 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:30 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {"prompt":"What is the capital of France?"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:30 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: GET
+Route: /password-recovery/nonexistent@example.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: DELETE
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:22:31 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail@email.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:17 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {"prompt":"What is the capital of France?"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:18 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: GET
+Route: /password-recovery/nonexistent@example.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: DELETE
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:23:19 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail@email.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:12 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {"prompt":"What is the capital of France?"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: GET
+Route: /password-recovery/nonexistent@example.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: DELETE
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:25:14 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"notValidEmail@email.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"notValidPassword1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:34 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan1@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:35 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Hugh","lastName":"Jorgan","email":"hughjorgan@example.com","password":"Test1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:35 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:35 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: POST
+Route: /api/ask-gpt/
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: GET
+Route: /password-recovery/nonexistent@example.com
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/1
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: POST
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: DELETE
+Route: /api/follow
+Body: {"userId":35}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: POST
+Route: /api/add-vacation
+Body: {"destination":"test destination","description":"test description","vacationStartDate":"1997.07.23","vacationEndDate":"1998.06.28","price":"666"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:28:36 GMT
+
+Method: DELETE
+Route: /api/vacations/undefined
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:52:02 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Veronica","lastName":"soloduha","email":"soloduha10+q@gmail.com","password":"soloduha10"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:52:10 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Veronica","lastName":"soloduha","email":"soloduha10+q@gmail.com","password":"soloduha10"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 20:52:23 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Veronica","lastName":"soloduha","email":"soloduha10+q@gmail.com","password":"soloduha10"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:02:40 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Veronica","lastName":"soloduha","email":"soloduha10+q@gmail.com","password":"Rtrtnrf19"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:03:02 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"dani7361@gmail.com","password":"asdasdasd"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:03:52 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"dani7361@gmail.com","password":"asdasdasd"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:04:04 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"dani7361@gmail.com","password":"asdasdasd"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:04:30 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"dani7361@gmail.com","password":"asdasdasd"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:05:26 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"dani7361@gmail.com","password":"asdasdasd"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:05:36 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"dani7361gmail.com","password":"Rtrtnrf19"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:05:42 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"Volobuyev","email":"dani7361gmail.com","password":"Rtrtnrf19"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:07:18 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"asd","lastName":"Volobuyev","email":"dani7361gmail.com","password":"Rtrtnrf19"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:18:26 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"Volobuyev","email":"dani7361gmail.com","password":"Rtrtnrf19"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:18:39 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:19:00 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:19:05 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:19:35 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:23:57 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:24:00 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:24:04 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:24:08 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"admin@admin.com","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:26:56 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"Danil","lastName":"Volobuyev","email":"admin@admin.com","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:28:15 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:28:39 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:29:49 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:30:14 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:31:05 GMT
+
+Method: POST
+Route: /api/auth/register
+Body: {"firstName":"","lastName":"","email":"","password":""}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: POST
+Route: /api/auth/login
+Body: {"email":"admin@admin.com","password":"Admin1234"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/subscriptions/36
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/5d96245e-7d02-4461-8503-4f9370bfbc00.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/new_york.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/tokyo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/rome.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/barcelona.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/cairo.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/rio.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/auckland.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:38:11 GMT
+
+Method: GET
+Route: /api/vacations/image/bangkok.jpg
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:42:22 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:42:31 GMT
+
+Method: PUT
+Route: /api/user/36
+Body: {"firstName":"","lastName":"Admin","email":"admin@admin.com","userImageUrl":"ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png","roleId":"1","userId":"36"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:42:44 GMT
+
+Method: PUT
+Route: /api/user/36
+Body: {"firstName":"Admin","lastName":"Admin","email":"admin@admin.com","userImageUrl":"ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png","roleId":"1","userId":"36"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:42:51 GMT
+
+Method: PUT
+Route: /api/user/36
+Body: {"firstName":"","lastName":"Admin","email":"admin@admin.com","userImageUrl":"ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png","roleId":"1","userId":"36"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:43:09 GMT
+
+Method: PUT
+Route: /api/user/36
+Body: {"firstName":"Admin","lastName":"Admin","email":"admin@admin.com","userImageUrl":"ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png","roleId":"1","userId":"36"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:43:12 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:43:15 GMT
+
+Method: PUT
+Route: /api/user/36
+Body: {"firstName":"Admin","lastName":"Admin","email":"admin@admin.com","userImageUrl":"ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png","roleId":"1","userId":"36"}
+----------------------------------------------------------------------------------------------------
+Tue, 20 Feb 2024 21:43:22 GMT
+
+Method: GET
+Route: /api/user/image/ab9c1c3d-b36e-4b54-857a-642dc9b71dc0.png
+Body: {}
+----------------------------------------------------------------------------------------------------

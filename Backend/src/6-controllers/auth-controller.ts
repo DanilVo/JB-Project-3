@@ -13,7 +13,7 @@ router.post(
       const user = new UserModel(request.body);
       const token = await authService.register(user);
       response.status(StatusCode.Created).json(token);
-    } catch (err: any) {
+    } catch (err: any) {      
       next(err);
     }
   }

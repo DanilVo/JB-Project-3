@@ -12,7 +12,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import CredentialsModel from '../../../Models/CredentialsModel';
 import authService from '../../../Services/AuthService';
 import notificationService from '../../../Services/NotificationService';
-import DialogButton from '../../DialogButton/DialogButton';
+import DialogButton from '../../PassRecoveryBackdrop/DialogButton';
 import useTitle from '../../../Utils/useTitle';
 
 interface Props {

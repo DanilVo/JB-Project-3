@@ -1,36 +1,49 @@
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Avatar from "@mui/material/Avatar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import CssBaseline from "@mui/material/CssBaseline";
-import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
-import Typography from "@mui/material/Typography";
-import { useForm } from "react-hook-form";
-import { NavLink, useNavigate } from "react-router-dom";
-import UserModel from "../../../Models/UserModel";
-import authService from "../../../Services/AuthService";
-import notificationService from "../../../Services/NotificationService";
-import useTitle from "../../../Utils/useTitle";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import { useForm } from 'react-hook-form';
+import { NavLink, useNavigate } from 'react-router-dom';
+import UserModel from '../../../Models/UserModel';
+import authService from '../../../Services/AuthService';
+import notificationService from '../../../Services/NotificationService';
+import useTitle from '../../../Utils/useTitle';
 
 interface Props {
   setUserInSystem: Function;
 }
-
+interface ErrorMessages {
+  [key: string]: string;
+}
 export default function Register(props: Props): JSX.Element {
-  useTitle("Register")
+  useTitle('Register');
   const { register, handleSubmit } = useForm<UserModel>();
   const navigate = useNavigate();
 
   async function registerNewUser(credentials: UserModel) {
     try {
       await authService.register(credentials);
-      notificationService.success("User has been successfully created");
+      notificationService.success('User has been successfully created');
       props.setUserInSystem(true);
-      navigate("/home");
+      navigate('/home');
     } catch (err: any) {
-      notificationService.error(err.message);
+      const errorMessages: ErrorMessages = {
+        firstName: 'Missing first name',
+        lastName: 'Missing last name',
+        email: 'Email is not valid',
+        password: 'Password is not valid',
+      };
+
+      Object.keys(errorMessages).forEach((fieldName) => {
+        if (err.response.data.includes(fieldName)) {
+          notificationService.error(errorMessages[fieldName]);
+        }
+      });
     }
   }
 
@@ -40,12 +53,12 @@ export default function Register(props: Props): JSX.Element {
       <Box
         sx={{
           marginTop: 8,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
@@ -66,7 +79,7 @@ export default function Register(props: Props): JSX.Element {
                 fullWidth
                 label="First Name"
                 autoFocus
-                {...register("firstName")}
+                {...register('firstName')}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -76,7 +89,7 @@ export default function Register(props: Props): JSX.Element {
                 label="Last Name"
                 name="lastName"
                 autoComplete="family-name"
-                {...register("lastName")}
+                {...register('lastName')}
               />
             </Grid>
             <Grid item xs={12}>
@@ -86,7 +99,7 @@ export default function Register(props: Props): JSX.Element {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
-                {...register("email")}
+                {...register('email')}
               />
             </Grid>
             <Grid item xs={12}>
@@ -97,7 +110,7 @@ export default function Register(props: Props): JSX.Element {
                 label="Password"
                 type="password"
                 autoComplete="new-password"
-                {...register("password")}
+                {...register('password')}
               />
             </Grid>
           </Grid>
