@@ -1,45 +1,57 @@
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Avatar from '@mui/material/Avatar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import { useForm } from 'react-hook-form';
-import { NavLink, useNavigate } from 'react-router-dom';
-import CredentialsModel from '../../../Models/CredentialsModel';
-import authService from '../../../Services/AuthService';
-import notificationService from '../../../Services/NotificationService';
-import DialogButton from '../../PassRecoveryBackdrop/DialogButton';
-import useTitle from '../../../Utils/useTitle';
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import { useForm } from "react-hook-form";
+import { NavLink, useNavigate } from "react-router-dom";
+import CredentialsModel from "../../../Models/CredentialsModel";
+import authService from "../../../Services/AuthService";
+import notificationService from "../../../Services/NotificationService";
+import useTitle from "../../../Utils/useTitle";
+import DialogButton from "../../PassRecoveryBackdrop/DialogButton";
+import { useState } from "react";
+import { Backdrop, CircularProgress } from "@mui/material";
 
 interface Props {
   setUserInSystem: Function;
 }
 
 export default function Login(props: Props) {
-  useTitle('Login');
+  useTitle("Login");
   const { register, handleSubmit } = useForm<CredentialsModel>();
+  const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
 
   const navigate = useNavigate();
 
   async function login(credentials: CredentialsModel) {
-    if (localStorage.getItem('verifyUser'))
-      localStorage.removeItem('verifyUser');
+    if (localStorage.getItem("verifyUser"))
+      localStorage.removeItem("verifyUser");
     try {
+      setOpenBackdrop(true);
       await authService.logIn(credentials);
       props.setUserInSystem(true);
-      notificationService.success('You have successfully logged-in');
-      navigate('/home');
+      notificationService.success("You have successfully logged-in");
+      navigate("/home");
     } catch (err: any) {
-      notificationService.error('Email or Password are incorrect!');
+      notificationService.error("Email or Password are incorrect!");
+    } finally {
+      setOpenBackdrop(false);
     }
   }
 
   return (
-    <Grid container component="main" sx={{ height: '100vh' }}>
+    <Grid container component="main" sx={{ height: "100vh" }}>
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={openBackdrop}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <CssBaseline />
       <Grid
         item
@@ -47,10 +59,10 @@ export default function Login(props: Props) {
         sm={4}
         md={7}
         sx={{
-          backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: "url(https://source.unsplash.com/random?wallpapers)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -58,12 +70,12 @@ export default function Login(props: Props) {
           sx={{
             my: 8,
             mx: 4,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -78,7 +90,7 @@ export default function Login(props: Props) {
               name="email"
               autoComplete="email"
               autoFocus
-              {...register('email')}
+              {...register("email")}
             />
             <TextField
               margin="normal"
@@ -87,7 +99,7 @@ export default function Login(props: Props) {
               name="password"
               label="Password"
               type="password"
-              {...register('password')}
+              {...register("password")}
             />
             <Button
               type="submit"

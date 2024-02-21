@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
 import { RouteNotFoundError } from '../3-models/error-models';
-import path from 'path';
 
 export function routeNotFound(
   request: Request,

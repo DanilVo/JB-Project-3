@@ -25,7 +25,7 @@ router.get(
       const code = +request.params.code;
       await mailService.verificationCodeCheck(code);
       response.sendStatus(StatusCode.Accepted);
-      setTimeout(() => logger.deleteVerifyFile(), 5000);
+      setTimeout(() => logger.deleteVerifyFile(), 10000);
     } catch (err: any) {
       next(err);
     }

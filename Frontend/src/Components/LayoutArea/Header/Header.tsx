@@ -49,7 +49,7 @@ function Header(props: Props): JSX.Element {
           component="img"
           src={logo}
           alt="logo"
-          sx={{ height: 80 }}
+          sx={{ height: 80, width: 110 }}
           onClick={() => navigate("/home")}
         />
         <Toolbar disableGutters>

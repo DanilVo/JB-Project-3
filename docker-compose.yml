@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mysql-service:
-    image: trip-blitz-mysql
+    image: danilvo/trip-blitz-mysql:3.0
 
     build: ./Database
 
@@ -27,7 +27,7 @@ services:
     depends_on:
       - mysql-service
 
-    image: trip-blitz-api
+    image: danilvo/trip-blitz-api:3.0
 
     build: ./Backend
 
@@ -49,7 +49,7 @@ services:
     depends_on:
       - api-service
 
-    image: trip-blitz-react
+    image: danilvo/trip-blitz-react:3.0
 
     build: ./Frontend
 

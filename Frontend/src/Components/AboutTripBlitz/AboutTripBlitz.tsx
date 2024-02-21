@@ -114,6 +114,7 @@ function AboutTripBlitz(): JSX.Element {
             width: { md: "50%" },
             m: "auto",
             mt: 10,
+            mb: 5,
             p: 5,
             boxShadow: "20px 20px 60px #bebebe,-20px -20px 60px #ffffff",
             borderRadius: "50px",
