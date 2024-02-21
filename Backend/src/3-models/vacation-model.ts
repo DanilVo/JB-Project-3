@@ -34,10 +34,28 @@ export default class VacationModel {
     vacationUuid: Joi.any().optional(),
     destination: Joi.string().required().min(2).max(25),
     description: Joi.string().required().min(5).max(75),
+    vacationStartDate: Joi.date()
+      .required()
+      .greater(Date.now() - 12 * 60 * 60 * 1000),
+    vacationEndDate: Joi.date()
+      .required()
+      .greater(Joi.ref("vacationStartDate")),
+    price: Joi.number().required().min(0).max(10000).positive(),
+    followersCount: Joi.number().optional().min(0),
+    isFollowing: Joi.number().optional().min(0),
+    vacationImageUrl: Joi.string().optional(),
+    image: Joi.object().optional(),
+  });
+
+  private static updateValidationSchema = Joi.object({
+    vacationId: Joi.number().optional().integer().positive(),
+    vacationUuid: Joi.any().optional(),
+    destination: Joi.string().required().min(2).max(25),
+    description: Joi.string().required().min(5).max(75),
     vacationStartDate: Joi.date().required(),
     vacationEndDate: Joi.date()
       .required()
-      .greater(Joi.ref('vacationStartDate')),
+      .greater(Joi.ref("vacationStartDate")),
     price: Joi.number().required().min(0).max(10000).positive(),
     followersCount: Joi.number().optional().min(0),
     isFollowing: Joi.number().optional().min(0),
@@ -49,6 +67,13 @@ export default class VacationModel {
     const result = VacationModel.validationSchema.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
     if (this.image && this.image.size > 1000000)
-      throw new ValidationError('Image to large');
+      throw new ValidationError("Image to large");
+  }
+
+  public updateValidation(): void {
+    const result = VacationModel.validationSchema.validate(this);
+    if (result?.error?.message) throw new ValidationError(result.error.message);
+    if (this.image && this.image.size > 1000000)
+      throw new ValidationError("Image to large");
   }
 }

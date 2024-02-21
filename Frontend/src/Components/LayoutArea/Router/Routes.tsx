@@ -1,20 +1,21 @@
-import { Route, Routes } from 'react-router-dom';
-import AddVacation from '../../DataArea/AddVacation/AddVacation';
-import EditUser from '../../DataArea/EditUser/EditUser';
-import EditVacation from '../../DataArea/EditVacation/EditVacation';
-import Home from '../../HomeArea/Home/Home';
-import AllReports from '../../ReportsArea/AllReports/AllReports';
-import PageNotFound from '../PageNotFound/PageNotFound';
-import { authStore } from '../../../Redux/AuthState';
-import { RoleModel } from '../../../Models/RoleModel';
-import AboutTripBlitz from '../../AboutTripBlitz/AboutTripBlitz';
-import PasswordRecovery from '../../AuthArea/PasswordRecovery/PasswordRecovery';
+import { Route, Routes } from "react-router-dom";
+import AddVacation from "../../DataArea/AddVacation/AddVacation";
+import EditUser from "../../DataArea/EditUser/EditUser";
+import EditVacation from "../../DataArea/EditVacation/EditVacation";
+import Home from "../../HomeArea/Home/Home";
+import AllReports from "../../ReportsArea/AllReports/AllReports";
+import PageNotFound from "../PageNotFound/PageNotFound";
+import { authStore } from "../../../Redux/AuthState";
+import { RoleModel } from "../../../Models/RoleModel";
+import AboutTripBlitz from "../../AboutTripBlitz/AboutTripBlitz";
+import PasswordRecovery from "../../AuthArea/PasswordRecovery/PasswordRecovery";
 
 function Routing({
   filterVacations,
 }: {
   filterVacations: string;
 }): JSX.Element {
+  const user = authStore.getState().user;
   return (
     <div className="Routing">
       <Routes>
@@ -28,13 +29,17 @@ function Routing({
         <Route path="/" element={<Home filterVacations={filterVacations} />} />
 
         {/* Update Vacation */}
-        <Route path="/edit/:vacationUuid" element={<EditVacation />} />
+        {user.roleId === RoleModel.Admin && (
+          <Route path="/edit/:vacationUuid" element={<EditVacation />} />
+        )}
 
         {/* Update User */}
         <Route path="edit/user/:userUuid" element={<EditUser />} />
 
         {/* Add vacation */}
-        <Route path="/add-vacation" element={<AddVacation />} />
+        {user.roleId === RoleModel.Admin && (
+          <Route path="/add-vacation" element={<AddVacation />} />
+        )}
 
         {/* About Trip Blitz */}
         <Route path="/about-us" element={<AboutTripBlitz />} />

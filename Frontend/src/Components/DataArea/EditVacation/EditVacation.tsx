@@ -102,8 +102,8 @@ function EditVacation(): JSX.Element {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ ease: 'easeOut', duration: 2 }}
-        style={{ display: 'flex', flexDirection: 'column' }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        style={{ display: "flex", flexDirection: "column" }}
       >
         <Typography
           variant="h4"
@@ -117,17 +117,17 @@ function EditVacation(): JSX.Element {
           component="form"
           onSubmit={handleSubmit(editVacation)}
           sx={{
-            m: 'auto',
+            m: "auto",
           }}
         >
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <Box
                 sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'left',
-                  width: '80%',
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "left",
+                  width: "80%",
                 }}
               >
                 <TextField
@@ -136,24 +136,25 @@ function EditVacation(): JSX.Element {
                   type="text"
                   label="Destination:"
                   variant="outlined"
-                  {...register('destination')}
+                  {...register("destination")}
                 />
                 <TextField
                   required
-                  sx={{ mt: 2, maxWidth: '100%' }}
+                  sx={{ mt: 2, maxWidth: "100%" }}
                   type="text"
                   label="Description:"
                   variant="outlined"
                   multiline
-                  {...register('description')}
+                  {...register("description")}
                 />
                 <TextField
                   required
                   sx={{ mt: 2 }}
                   type="number"
                   label="Price:"
+                  inputProps={{ min: 0, max: 10000 }}
                   variant="outlined"
-                  {...register('price')}
+                  {...register("price")}
                 />
                 <TextField
                   required
@@ -162,7 +163,7 @@ function EditVacation(): JSX.Element {
                   type="date"
                   variant="outlined"
                   focused
-                  {...register('vacationStartDate', { valueAsDate: true })}
+                  {...register("vacationStartDate", { valueAsDate: true })}
                 />
                 <TextField
                   required
@@ -171,17 +172,17 @@ function EditVacation(): JSX.Element {
                   type="date"
                   variant="outlined"
                   focused
-                  {...register('vacationEndDate', { valueAsDate: true })}
+                  {...register("vacationEndDate", { valueAsDate: true })}
                 />
               </Box>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />
             <Grid item xs={12} sm={5}>
               {imageToUpload ? (
-                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ display: "flex", flexDirection: "column" }}>
                   <Button
                     variant="outlined"
-                    sx={{ width: 'fit-content', m: 'auto' }}
+                    sx={{ width: "fit-content", m: "auto" }}
                     color="error"
                     onClick={() => {
                       setImageToUpload(false);
@@ -194,19 +195,19 @@ function EditVacation(): JSX.Element {
                     component="img"
                     src={previewImage}
                     style={{
-                      display: 'flex',
-                      margin: 'auto',
-                      paddingTop: '15px',
-                      height: '300px',
-                      width: '380px',
+                      display: "flex",
+                      margin: "auto",
+                      paddingTop: "15px",
+                      height: "300px",
+                      width: "380px",
                     }}
                   />
                 </Box>
               ) : (
                 <Box
                   sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
+                    display: "flex",
+                    justifyContent: "center",
                     mt: { sm: 10 },
                   }}
                 >
@@ -221,9 +222,9 @@ function EditVacation(): JSX.Element {
               item
               xs={12}
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
               <Button variant="outlined" type="submit">

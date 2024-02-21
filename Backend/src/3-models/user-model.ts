@@ -34,7 +34,7 @@ export default class UserModel {
     email: Joi.string().email().required().min(2).max(50),
     password: Joi.string()
       .optional()
-      .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{4,}$/),
+      .regex(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]?).{4,}$/),
     roleId: Joi.number().optional(),
     userImageUrl: Joi.string().optional(),
     image: Joi.object().optional(),

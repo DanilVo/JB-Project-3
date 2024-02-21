@@ -6,6 +6,7 @@ import VacationModel from "../3-models/vacation-model";
 import verifyAdmin from "../4-middleware/verify-admin";
 import verifyToken from "../4-middleware/verify-token";
 import vacationService from "../5-services/vacations-service";
+import verifyNotAdmin from "../4-middleware/verify-not-admin";
 
 const router = express.Router();
 
@@ -15,7 +16,7 @@ router.post(
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
-      request.body.image = request.files?.image;
+      request.body.image = request.files?.image;      
       const vacation = new VacationModel(request.body);
       const addedVacation = await vacationService.addVacation(vacation);
       response.status(StatusCode.Created).json(addedVacation);
@@ -128,7 +129,7 @@ router.get(
 
 router.post(
   "/follow",
-  verifyToken,
+  verifyNotAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       await vacationService.followVacation(request.body);
@@ -141,7 +142,7 @@ router.post(
 
 router.delete(
   "/follow",
-  verifyToken,
+  verifyNotAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       await vacationService.unFollowVacation(request.body);

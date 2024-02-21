@@ -57,7 +57,7 @@ class VacationService {
   public async addVacation(vacation: VacationModel): Promise<VacationModel> {
     vacation.vacationUuid = cyber.hashData(
       vacation.description + vacation.destination
-    );
+    );    
     vacation.validation();
     const imageName = await fileSaver.add(
       vacation.image,
@@ -82,7 +82,7 @@ class VacationService {
 
   // Update vacation
   public async updateVacation(vacation: VacationModel): Promise<VacationModel> {
-    vacation.validation();
+    vacation.updateValidation();
     const existingImageName = await this.getExistingImageName(
       vacation.vacationId
     );

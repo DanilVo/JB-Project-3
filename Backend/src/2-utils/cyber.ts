@@ -10,7 +10,6 @@ class Cyber {
   private expiresIn = "1d";
 
   public getNewToken(user: UserModel): string {
-    
     delete user.password;
     const container = { user };
     const options = { expiresIn: this.expiresIn };
@@ -32,8 +31,17 @@ class Cyber {
     this.verifyToken(token);
     const container = jwt.verify(token, this.secretKey) as { user: UserModel };
     const user = container.user;
-    
+
     if (user.roleId !== RoleModel.admin)
+      throw new UnauthorizedError("Access denied");
+  }
+
+  public verifyNotAdmin(token: string): void {
+    this.verifyToken(token);
+    const container = jwt.verify(token, this.secretKey) as { user: UserModel };
+    const user = container.user;
+
+    if (user.roleId === RoleModel.admin)
       throw new UnauthorizedError("Access denied");
   }
 
