@@ -71,7 +71,7 @@ export default class VacationModel {
   }
 
   public updateValidation(): void {
-    const result = VacationModel.validationSchema.validate(this);
+    const result = VacationModel.updateValidationSchema.validate(this);
     if (result?.error?.message) throw new ValidationError(result.error.message);
     if (this.image && this.image.size > 1000000)
       throw new ValidationError("Image to large");

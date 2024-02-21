@@ -19,6 +19,10 @@ import DragDropFileUpload from '../DragDropFileUpload/DragDropFileUpload';
 import './EditVacation.css';
 import useTitle from '../../../Utils/useTitle';
 
+interface ErrorMessages {
+  [key: string]: string;
+}
+
 function EditVacation(): JSX.Element {
   useTitle('Edit vacation');
 
@@ -83,7 +87,18 @@ function EditVacation(): JSX.Element {
       notificationService.success('Vacation has been successfully updated');
       navigate('/home');
     } catch (err: any) {
-      notificationService.error('Failed to edit vacation: ' + err.message);
+      const errorMessages: ErrorMessages = {
+        now: "Start date must be greater than now",
+        destination: "Missing destination field",
+        description: "Missing description field",
+        price: "Missing price field",
+      };
+
+      Object.keys(errorMessages).forEach((fieldName) => {
+        if (err.response.data.includes(fieldName)) {
+          notificationService.error(errorMessages[fieldName]);
+        }
+      });
     }
   }
 
