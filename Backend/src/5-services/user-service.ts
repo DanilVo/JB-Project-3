@@ -1,18 +1,19 @@
-import { OkPacket } from 'mysql';
-import path from 'path';
-import { fileSaver } from 'uploaded-file-saver';
-import cyber from '../2-utils/cyber';
-import dal from '../2-utils/dal';
-import { ResourceNotFoundError } from '../3-models/error-models';
-import UserModel from '../3-models/user-model';
+import { OkPacket } from "mysql";
+import path from "path";
+import { fileSaver } from "uploaded-file-saver";
+import cyber from "../2-utils/cyber";
+import dal from "../2-utils/dal";
+import { ResourceNotFoundError } from "../3-models/error-models";
+import UserModel from "../3-models/user-model";
 
 class UserService {
   private readonly SELECT_EXISTING_IMAGE_NAME =
-    'SELECT userImageUrl FROM users WHERE userId = ?';
+    "SELECT userImageUrl FROM users WHERE userId = ?";
   private readonly UPDATE_user_SQL = `
     UPDATE users
     SET firstName=?, lastName=?, email=?, userImageUrl = ?
     WHERE userId = ?`;
+  private readonly DELETE_USER = `DELETE FROM users where uuid = ?`;
 
   // UpdateUser
   public async updateUser(user: UserModel): Promise<string> {
@@ -22,14 +23,14 @@ class UserService {
       ? await fileSaver.update(
           existingImageName,
           user.image,
-          path.join(__dirname, '..', '1-assets', 'user-images')
+          path.join(__dirname, "..", "1-assets", "user-images")
         )
       : existingImageName;
     user.userImageUrl = imageName;
     const sql = this.UPDATE_user_SQL;
     const info: OkPacket = await dal.execute(sql, [
       user.firstName,
-      user.lastName, 
+      user.lastName,
       user.email,
       imageName,
       user.userId,
@@ -46,8 +47,13 @@ class UserService {
     const sql = this.SELECT_EXISTING_IMAGE_NAME;
     const vacations = await dal.execute(sql, [id]);
     const vacation = vacations[0];
-    if (!vacation) return '';
+    if (!vacation) return "";
     return vacation.userImageUrl;
+  }
+
+  public async deleteUser(userUuid: string): Promise<void> {
+    const sql = this.DELETE_USER;
+    await dal.execute(sql, [userUuid]);
   }
 }
 

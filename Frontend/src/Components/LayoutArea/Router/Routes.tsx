@@ -12,8 +12,10 @@ import PasswordRecovery from "../../AuthArea/PasswordRecovery/PasswordRecovery";
 
 function Routing({
   filterVacations,
+  setUserInSystem,
 }: {
   filterVacations: string;
+  setUserInSystem:Function
 }): JSX.Element {
   const user = authStore.getState().user;
   return (
@@ -34,7 +36,10 @@ function Routing({
         )}
 
         {/* Update User */}
-        <Route path="edit/user/:userUuid" element={<EditUser />} />
+        <Route
+          path="edit/user/:userUuid"
+          element={<EditUser setUserInSystem={setUserInSystem} />}
+        />
 
         {/* Add vacation */}
         {user.roleId === RoleModel.Admin && (

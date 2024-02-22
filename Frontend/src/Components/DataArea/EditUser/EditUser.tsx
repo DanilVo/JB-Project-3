@@ -22,12 +22,13 @@ import useTitle from "../../../Utils/useTitle";
 import DialogButton from "../../PassRecoveryBackdrop/DialogButton";
 import DragDropFileUpload from "../DragDropFileUpload/DragDropFileUpload";
 import "./EditUser.css";
+import DeleteButton from "../../ComponentAssets/DeleteButton/DeleteButton";
 
 interface ErrorMessages {
   [key: string]: string;
 }
 
-function EditUser(): JSX.Element {
+function EditUser({ setUserInSystem }: { setUserInSystem :Function}): JSX.Element {
   useTitle("Edit user");
   const userFromState: UserModel = authStore.getState().user;
   const [openBackdrop, setOpenBackdrop] = useState<boolean>(false);
@@ -152,6 +153,10 @@ function EditUser(): JSX.Element {
                   {...register("email")}
                 />
                 <DialogButton />
+                <DeleteButton
+                  userUuid={userFromState.uuid}
+                  setUserInSystem={setUserInSystem}
+                />
               </Box>
             </Grid>
             <Divider orientation="vertical" variant="middle" flexItem />

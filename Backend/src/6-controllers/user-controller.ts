@@ -1,17 +1,18 @@
-import express, { NextFunction, Request, Response } from 'express';
-import path from 'path';
-import { fileSaver } from 'uploaded-file-saver';
-import logger from '../2-utils/logger';
-import UserModel from '../3-models/user-model';
-import verifyAdmin from '../4-middleware/verify-admin';
-import verifyToken from '../4-middleware/verify-token';
-import userService from '../5-services/user-service';
+import express, { NextFunction, Request, Response } from "express";
+import path from "path";
+import { fileSaver } from "uploaded-file-saver";
+import logger from "../2-utils/logger";
+import UserModel from "../3-models/user-model";
+import verifyAdmin from "../4-middleware/verify-admin";
+import verifyToken from "../4-middleware/verify-token";
+import userService from "../5-services/user-service";
+import StatusCode from "../3-models/status-codes";
 
 const router = express.Router();
 
 // Update user
 router.put(
-  '/user/:userUuid',
+  "/user/:userUuid",
   verifyToken,
   async (request: Request, response: Response, next: NextFunction) => {
     try {
@@ -27,15 +28,18 @@ router.put(
 
 // Download report
 router.get(
-  '/vacation-reports/:id([0-9]+)',
+  "/vacation-reports/:id([0-9]+)",
   verifyAdmin,
   async (request: Request, response: Response, next: NextFunction) => {
-    const reportFilePath = path.resolve(__dirname, '../1-assets/reports/reports.csv');
+    const reportFilePath = path.resolve(
+      __dirname,
+      "../1-assets/reports/reports.csv"
+    );
     try {
       const id = +request.params.id;
-      const file = await logger.generateReport(id,reportFilePath);
+      const file = await logger.generateReport(id, reportFilePath);
       if (file) {
-        response.download(reportFilePath, 'reports.csv');
+        response.download(reportFilePath, "reports.csv");
       }
       setTimeout(() => logger.deleteReport(reportFilePath), 5000);
     } catch (err: any) {
@@ -46,16 +50,30 @@ router.get(
 
 // Get image
 router.get(
-  '/user/image/:imageName',
+  "/user/image/:imageName",
   async (request: Request, response: Response, next: NextFunction) => {
     try {
       const imageName = request.params.imageName;
       const absolutePath = fileSaver.getFilePath(
         imageName,
         true,
-        path.join(__dirname, '..', '1-assets', 'user-images')
+        path.join(__dirname, "..", "1-assets", "user-images")
       );
       response.sendFile(absolutePath);
+    } catch (err: any) {
+      next(err);
+    }
+  }
+);
+
+router.delete(
+  "/delete-user/:userUuid",
+  verifyToken,
+  async (request: Request, response: Response, next: NextFunction) => {
+    try {
+      const userUuid = request.params.userUuid
+      await userService.deleteUser(userUuid)      
+      response.sendStatus(StatusCode.NoContent);
     } catch (err: any) {
       next(err);
     }

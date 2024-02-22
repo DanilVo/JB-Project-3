@@ -8,4 +8,5 @@ export default class UserModel {
   public roleId: number;
   public userImageUrl: string;
   public image: File;
+  userUuid: any;
 }

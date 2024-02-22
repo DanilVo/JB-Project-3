@@ -1,18 +1,18 @@
-import dotenv from 'dotenv';
-const { google } = require('googleapis');
-import nodemailer from 'nodemailer';
-import dal from '../2-utils/dal';
-import logger from '../2-utils/logger';
+import dotenv from "dotenv";
+import { google } from "googleapis";
+import nodemailer from "nodemailer";
+import dal from "../2-utils/dal";
+import logger from "../2-utils/logger";
 import {
   ResourceNotFoundError,
   ValidationError,
-} from '../3-models/error-models';
-import StatusCode from '../3-models/status-codes';
-import VerificationUserModel from '../3-models/verificationUser-model';
+} from "../3-models/error-models";
+import StatusCode from "../3-models/status-codes";
+import VerificationUserModel from "../3-models/verificationUser-model";
 dotenv.config();
 
 class MailService {
-  private readonly COUNT_EMAIL_SQL = 'SELECT * FROM users WHERE email = ?';
+  private readonly COUNT_EMAIL_SQL = "SELECT * FROM users WHERE email = ?";
 
   private verificationCode = Math.floor(100000 + Math.random() * 900000);
 
@@ -20,7 +20,7 @@ class MailService {
     return {
       from: process.env.MY_EMAIL,
       to: toEmail,
-      subject: 'Password recovery',
+      subject: "Password recovery",
       generateTextFromHTML: true,
       html: `
       <p>Verification code: ${this.verificationCode}</p>
@@ -68,9 +68,9 @@ class MailService {
 
   private createEmailTransport(accessToken: string) {
     return nodemailer.createTransport({
-      service: 'gmail',
+      service: "gmail",
       auth: {
-        type: 'OAuth2',
+        type: "OAuth2",
         user: process.env.MY_EMAIL,
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,

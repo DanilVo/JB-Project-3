@@ -4,8 +4,10 @@ import customerService from "../../assets/images/images_near_texts/customer-serv
 import enjoyVacation from "../../assets/images/images_near_texts/enjoy-vacation.png";
 import familyVacation from "../../assets/images/images_near_texts/family-vacation.png";
 import "./AboutTripBlitz.css";
+import useTitle from "../../Utils/useTitle";
 
 function AboutTripBlitz(): JSX.Element {
+  useTitle("About us")
   return (
     <Container>
       <Typography

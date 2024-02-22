@@ -15,7 +15,7 @@ interface decodedToken {
 
 function Layout(): JSX.Element {
   const [userInSystem, setUserInSystem] = useState<boolean>(false);
-
+  
   const [filterVacations, setFilterVacations] = useState<string>('');
 
   const [userRole, setUserRole] = useState<number>();
@@ -46,7 +46,10 @@ function Layout(): JSX.Element {
             />
           </nav>
           <main>
-            <Routing filterVacations={filterVacations} />
+            <Routing
+              filterVacations={filterVacations}
+              setUserInSystem={setUserInSystem}
+            />
           </main>
         </div>
       ) : (

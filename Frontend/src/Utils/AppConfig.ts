@@ -29,6 +29,8 @@ class AppConfig {
 
   public readonly askGpt: string;
 
+  public readonly deleteUserUrl: string;
+
   public constructor(baseUrl: string) {
     this.baseUrl = baseUrl;
     this.allVacationsUrl = `${this.baseUrl}/api/vacations/subscriptions/`;
@@ -45,6 +47,7 @@ class AppConfig {
     this.verifyCodeUrl = `${this.baseUrl}/api/verify-code/`;
     this.setNewPasswordUrl = `${this.baseUrl}/api/update-password/`;
     this.askGpt = `${this.baseUrl}/api/ask-gpt/`;
+    this.deleteUserUrl = `${this.baseUrl}/api/delete-user/`;
   }
 }
 
@@ -60,7 +63,7 @@ class ProductionConfig extends AppConfig {
   }
 }
 
-const appConfig = new ProductionConfig();
-// const appConfig = new DevelopmentConfig();
+// const appConfig = new ProductionConfig();
+const appConfig = new DevelopmentConfig();
 
 export default appConfig;

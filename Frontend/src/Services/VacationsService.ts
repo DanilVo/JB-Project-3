@@ -44,11 +44,12 @@ class VacationService {
     vacation: VacationModel,
     vacationId: number
   ): Promise<void> {
+    
     const { data } = await axios.put(
       appConfig.vacationActionsUrl + vacationId,
       vacation,
       this.options
-    );
+      );
 
     data.followersCount = vacation.followersCount;
     data.isFollowing = vacation.isFollowing;
