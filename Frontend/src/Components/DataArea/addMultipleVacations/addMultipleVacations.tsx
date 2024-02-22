@@ -176,13 +176,16 @@ function AddMultipleVacations(): JSX.Element {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", ml: 3 }}>
               <Typography color="text.secondary" variant="body2">
-                I. Press "Insert"
+                I. Select cell
               </Typography>
               <Typography color="text.secondary" variant="body2">
-                II. "Image"
+                II. Press "Insert"
               </Typography>
               <Typography color="text.secondary" variant="body2">
-                III. "Insert into cell"
+                III. "Image"
+              </Typography>
+              <Typography color="text.secondary" variant="body2">
+                IV. "Insert into cell"
               </Typography>
             </Box>
             <Typography color="text.secondary" variant="body2">

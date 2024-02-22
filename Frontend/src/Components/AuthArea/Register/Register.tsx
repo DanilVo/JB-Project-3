@@ -37,6 +37,7 @@ export default function Register(props: Props): JSX.Element {
         lastName: 'Missing last name',
         email: 'Email is not valid',
         password: 'Password is not valid',
+        already: `User with email ${credentials.email} already exists`
       };
 
       Object.keys(errorMessages).forEach((fieldName) => {
