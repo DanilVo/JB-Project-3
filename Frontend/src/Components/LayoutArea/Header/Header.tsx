@@ -86,7 +86,7 @@ function Header(props: Props): JSX.Element {
                   boxShadow: "1px 1px 10px black",
                   scale: "1.3",
                 }}
-                src={`http://localhost:4000/api/user/image/${user.userImageUrl}`}
+                src={`http://159.89.186.34:4000/api/user/image/${user.userImageUrl}`}
               ></Avatar>
             </IconButton>
             <Menu

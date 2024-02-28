@@ -63,7 +63,7 @@ class ProductionConfig extends AppConfig {
   }
 }
 
-// const appConfig = new ProductionConfig();
-const appConfig = new DevelopmentConfig();
+const appConfig = new ProductionConfig();
+// const appConfig = new DevelopmentConfig();
 
 export default appConfig;
